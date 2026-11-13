@@ -187,7 +187,7 @@ O que a avaliação ensinou:
 
 O baseline erra de formas instrutivas: pegou o EBITDA da *distribuidora* (1.817) em vez do consolidado e não leu rótulos que quebram em duas linhas. **Esse é o argumento para LLM + grounding**: o LLM entende contexto; o grounding impede que ele invente.
 
-> ⚠ **Honestidade metodológica:** o gabarito foi construído **com ajuda de IA, cortando linhas literais dos PDFs**, e todo trecho é verificado mecanicamente (0 falhas). Mesmo assim, **confira por amostragem** antes de tratá-lo como verdade absoluta. A avaliação `--mode llm` foi executada com modelo real (tabela acima); o gabarito é pequeno (28 valores, 3 documentos), então as porcentagens têm margem larga — servem para comparar versões, não como garantia estatística.
+- ⚠️**Honestidade metodológica:** o gabarito foi montado com apoio de IA, cortando linhas literais dos PDFs, e todo trecho é verificado mecanicamente (0 falhas). Além disso, **8 valores foram conferidos manualmente contra os PDFs** (colunas Consolidado vs Controladora, dívida da Brasal contra o balanço, fluxo de caixa da Millet e da Light, EBIT da Light, alavancagem da Light e receita da Millet): todos corretos. A conferência também revelou duas particularidades dos documentos, e não do gabarito: o EBITDA da Light aparece no texto sem sinal (as DFs indicam -R$ 1,18 bi, e o relatório sinaliza a divergência), e o texto da alavancagem da Light repete "2021" nos dois anos (assumi 2022 para o primeiro valor). O gabarito é pequeno (28 valores, 3 documentos), então as porcentagens têm margem larga: servem para comparar versões, não como garantia estatística. A avaliação `--mode llm` foi executada com modelo real (tabela acima).
 
 ## Custo e desempenho
 
