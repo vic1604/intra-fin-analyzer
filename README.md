@@ -14,7 +14,7 @@ Pipeline que lê 3 PDFs financeiros, extrai indicadores **com página e trecho d
 | Caminho LLM **com modelo falso** e **servidor HTTP falso** | ✅ executado | `tests/test_llm_path.py`, `tests/test_llm_http.py`: formato de requisição/resposta, *retry*, tokens, barreira do grounding contra valor inventado |
 | Caminho LLM **com modelo real** | ✅ **executado** com `gemini-3.5-flash-lite` (camada gratuita, 13/11/2026) | `scripts/run_llm_full.sh` → `outputs_llm/`: recall 78,6%, precisão 100%, alucinação 0% contra o gabarito (seção "Avaliação de qualidade"). Ollama, Claude, OpenAI e Azure OpenAI usam o mesmo código, mas **não foram testados com chave real** |
 | Gabarito `data/reference/` | ⚠ montado com ajuda de IA | cada trecho é checado por código contra o PDF; **confira ~8 valores à mão** (guia, Parte C) |
-| Docker | ⚠ **não construído** (sem daemon no ambiente de desenvolvimento) | `docker build` na sua máquina; ver "Docker" |
+| Docker | ✅ build e testes validados em container (106 passed; `run` OK) | `docker build -t intra-fin-analyzer .`; ver "Docker" |
 | Preços de token | ⚠ placeholders | o custo real é medido por execução em `run_manifest.json` |
 
 ## Início rápido
@@ -79,7 +79,7 @@ docker run --rm -v "$PWD/data/input:/app/data/input" -v "$PWD/outputs:/app/outpu
 docker run --rm --env-file .env -v "$PWD/data/input:/app/data/input" -v "$PWD/outputs:/app/outputs" intra-fin-analyzer run --mode llm
 docker run --rm --entrypoint python intra-fin-analyzer -m pytest -q
 ```
-O `Dockerfile` roda como usuário não-root e as chaves entram só por `--env-file`/`-e`. **Não foi construído no ambiente de desenvolvimento** (sem daemon Docker): se `docker build` falhar na sua máquina, abra uma issue/corrija — o caminho local (`pip install`) é o principal.
+O `Dockerfile` roda como usuário não-root e as chaves entram só por `--env-file`/`-e`. **Build e testes validados em container**: `docker build` OK, `pytest` dentro da imagem com 106 passed e `run` em modo reference com 150 evidências e 0 falhas de grounding. O modo `llm` em container usa o mesmo código, mas não foi exercitado lá; o caminho local (`pip install`) continua sendo o principal.
 
 ### O que sai em `outputs/`
 | Arquivo | Conteúdo |
@@ -225,13 +225,13 @@ O baseline erra de formas instrutivas: pegou o EBITDA da *distribuidora* (1.817)
 - **ML tradicional comparado com LLM:** `ml_baseline.py` (z-score robusto + Isolation Forest + léxico) com Anexo B e testes; extrator regex (`baseline.py`) medido contra o gabarito.
 - **Perguntas livres:** `ask` offline (extrativo, citações verificadas) e `ask --mode llm`.
 - **LLM sem chave paga:** Ollama e Gemini gratuito, clientes com *retry* e testes contra servidor HTTP falso.
-- **Docker** (Dockerfile + `.dockerignore`; não construído no desenvolvimento) · **106 testes** · **logs/traços estruturados** (`logs/run.jsonl`) + `run_manifest.json` · **varredura de segredos**.
+- **Docker** (Dockerfile + `.dockerignore`; build e testes validados em container) · **106 testes** · **logs/traços estruturados** (`logs/run.jsonl`) + `run_manifest.json` · **varredura de segredos**.
 
 ## Limitações (ditas com franqueza)
 
 1. **Caminho LLM com modelo real não foi executado pelo autor**; foi testado com `FakeLLM` e servidor HTTP falso. Rode `smoke-llm` e `eval --mode llm` e registre os números.
 2. **Gabarito assistido por IA** — conferir por amostragem (ver acima).
-3. **Docker não foi construído** no ambiente de desenvolvimento.
+3. **Docker** foi validado só no modo `reference` e nos testes; o modo `llm` em container não foi exercitado (usa o mesmo código).
 4. Preços de tokens são placeholders; tempos de modelos locais não foram medidos.
 5. Tom da administração é análise **qualitativa** com justificativa, não medida estatística; para Millet/Brasal a base são notas explicativas (não há relatório da administração), então a confiança é "baixa".
 6. Tabelas sem borda (Millet) dependem do texto com layout, não do `extract_tables`.
