@@ -1,0 +1,417 @@
+{
+  "empresa": "Brasal Brasília Holding S.A.",
+  "periodo_referencia": "31/12/2022",
+  "documento": "brasal.pdf",
+  "tipo_documento": "DFP",
+  "escala_declarada": "mil",
+  "modo_extracao": "llm",
+  "indicadores": {
+    "receita_liquida": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 1325059.0,
+        "unidade": "R$ mil",
+        "rotulo": "Receita operacional líquida",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 8,
+          "trecho": "Receita operacional líquida 21 - - 1.325.059 1.061.410",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 1061410.0,
+        "unidade": "R$ mil",
+        "rotulo": "Receita operacional líquida",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 8,
+          "trecho": "Receita operacional líquida 21 - - 1.325.059 1.061.410",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 24.84
+    },
+    "receita_liquida_ex_construcao": {
+      "status": "não encontrado",
+      "motivo": "O termo ou dado segregado de receita de construção não é citado nas DFs consolidadas."
+    },
+    "ebitda": {
+      "status": "não encontrado",
+      "motivo": "O termo EBITDA ou LAJIDA não aparece explicitamente publicado nas DFs consolidadas."
+    },
+    "margem_ebitda": {
+      "status": "não encontrado",
+      "motivo": "O termo margem EBITDA não consta no documento."
+    },
+    "lucro_liquido": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 174602.0,
+        "unidade": "R$ mil",
+        "rotulo": "Lucro líquido do exercício",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 8,
+          "trecho": "Lucro líquido do exercício 174.602 275.560 174.602 275.560",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 275560.0,
+        "unidade": "R$ mil",
+        "rotulo": "Lucro líquido do exercício",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 8,
+          "trecho": "Lucro líquido do exercício 174.602 275.560 174.602 275.560",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -36.64
+    },
+    "divida_liquida": {
+      "status": "não encontrado",
+      "motivo": "O termo 'dívida líquida' não aparece publicado de forma consolidada nas tabelas."
+    },
+    "alavancagem": {
+      "status": "não encontrado",
+      "motivo": "O indicador de alavancagem não é citado ou publicado no documento."
+    },
+    "fco": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 258248.0,
+        "unidade": "R$ mil",
+        "rotulo": "Caixa líquido gerado pelas atividades operacionais",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 11,
+          "trecho": "Caixa líquido gerado pelas atividades operacionais 887 (4.545) 258.248 121.462",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 121462.0,
+        "unidade": "R$ mil",
+        "rotulo": "Caixa líquido gerado pelas atividades operacionais",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 11,
+          "trecho": "Caixa líquido gerado pelas atividades operacionais 887 (4.545) 258.248 121.462",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 112.62
+    },
+    "capex": {
+      "status": "não encontrado",
+      "motivo": "O valor consolidado de capex precisa ser extraído por componente ou linha de fluxo de caixa conforme regra estrita para não utilizar o total das atividades de investimento.",
+      "complementares": [
+        {
+          "valor": 45761.0,
+          "unidade": "R$ mil",
+          "rotulo": "Imobilizado e intangível",
+          "origem": {
+            "documento": "brasal",
+            "pagina": 11,
+            "trecho": "Imobilizado e intangível - (1.950) (45.761) (53.388)",
+            "verificada": true
+          }
+        }
+      ]
+    }
+  },
+  "insumos_para_derivados": {
+    "ebit": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 192840.0,
+        "unidade": "R$ mil",
+        "rotulo": "Lucro operacional antes das receitas e despesas financeiras",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 8,
+          "trecho": "Lucro operacional antes das receitas e despesas 173.736 275.244 192.840 238.224 financeiras",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 238224.0,
+        "unidade": "R$ mil",
+        "rotulo": "Lucro operacional antes das receitas e despesas financeiras",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 8,
+          "trecho": "Lucro operacional antes das receitas e despesas 173.736 275.244 192.840 238.224 financeiras",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -19.05
+    },
+    "depreciacao_amortizacao": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 29014.0,
+        "unidade": "R$ mil",
+        "rotulo": "Depreciações e amortizações",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 11,
+          "trecho": "Depreciações e amortizações 507 465 29.014 22.837",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 22837.0,
+        "unidade": "R$ mil",
+        "rotulo": "Depreciações e amortizações",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 11,
+          "trecho": "Depreciações e amortizações 507 465 29.014 22.837",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 27.05
+    },
+    "caixa_equivalentes": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 96453.0,
+        "unidade": "R$ mil",
+        "rotulo": "No fim do exercício",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 11,
+          "trecho": "No fim do exercício 3.714 1.145 96.453 62.166",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 62166.0,
+        "unidade": "R$ mil",
+        "rotulo": "No fim do exercício",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 11,
+          "trecho": "No fim do exercício 3.714 1.145 96.453 62.166",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 55.15
+    },
+    "aplicacoes_financeiras": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 78569.0,
+        "unidade": "R$ mil",
+        "rotulo": "Aplicação Financeira",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 48,
+          "trecho": "Aplicação Financeira - - 78.569 78.569",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 95766.0,
+        "unidade": "R$ mil",
+        "rotulo": "Aplicação Financeira",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 48,
+          "trecho": "Aplicação Financeira - - 95.766 95.766",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -17.96
+    },
+    "divida_bruta": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 3417.0,
+        "unidade": "R$ mil",
+        "rotulo": "Empréstimos e financiamentos",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 48,
+          "trecho": "Empréstimos e financiamentos - - 3.417 3.417",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 6478.0,
+        "unidade": "R$ mil",
+        "rotulo": "Empréstimos e financiamentos",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 48,
+          "trecho": "Empréstimos e financiamentos 226 226 6.478 6.478",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -47.25
+    },
+    "receita_construcao": {
+      "status": "não encontrado",
+      "motivo": "Não há menção a receita de construção (IFRIC 12) no documento."
+    }
+  },
+  "indicadores_derivados_calculados_pelo_pipeline": {
+    "ebitda_derivado": {
+      "formula": "EBIT + Depreciação e Amortização (fluxo de caixa)",
+      "unidade": "R$ mil",
+      "periodo_atual": 221854.0,
+      "periodo_comparavel": 261061.0,
+      "entradas": [
+        {
+          "campo": "ebit",
+          "valor_R$_mil": 192840.0,
+          "pagina": 8,
+          "trecho": "Lucro operacional antes das receitas e despesas 173.736 275.244 192.840 238.224 financeiras"
+        },
+        {
+          "campo": "depreciacao_amortizacao",
+          "valor_R$_mil": 29014.0,
+          "pagina": 11,
+          "trecho": "Depreciações e amortizações 507 465 29.014 22.837"
+        }
+      ],
+      "nota": ""
+    },
+    "margem_ebitda_derivada": {
+      "formula": "EBITDA derivado / Receita líquida (DRE)",
+      "unidade": "%",
+      "periodo_atual": 16.743,
+      "periodo_comparavel": 24.5957,
+      "entradas": [
+        {
+          "campo": "receita_liquida",
+          "valor_R$_mil": 1325059.0,
+          "pagina": 8,
+          "trecho": "Receita operacional líquida 21 - - 1.325.059 1.061.410"
+        }
+      ],
+      "nota": "Receita líquida consolidada da DRE."
+    },
+    "divida_liquida_derivada": {
+      "formula": "Dívida bruta − Caixa − Aplicações financeiras",
+      "unidade": "R$ mil",
+      "periodo_atual": -171605.0,
+      "periodo_comparavel": -151454.0,
+      "entradas": [
+        {
+          "campo": "divida_bruta",
+          "valor_R$_mil": 3417.0,
+          "pagina": 48,
+          "trecho": "Empréstimos e financiamentos - - 3.417 3.417"
+        },
+        {
+          "campo": "caixa_equivalentes",
+          "valor_R$_mil": 96453.0,
+          "pagina": 11,
+          "trecho": "No fim do exercício 3.714 1.145 96.453 62.166"
+        },
+        {
+          "campo": "aplicacoes_financeiras",
+          "valor_R$_mil": 78569.0,
+          "pagina": 48,
+          "trecho": "Aplicação Financeira - - 78.569 78.569"
+        }
+      ],
+      "nota": "Valor negativo = caixa líquido (empresa com mais caixa do que dívida)."
+    },
+    "alavancagem_derivada": {
+      "formula": "Dívida líquida / EBITDA derivado",
+      "unidade": "x",
+      "periodo_atual": -0.7735,
+      "periodo_comparavel": -0.5801,
+      "entradas": [],
+      "nota": "n.s. (não significativo) quando o EBITDA é negativo. Dívida líquida = valor reportado, se existir; senão derivada."
+    }
+  },
+  "anomalias_no_documento": [
+    {
+      "id": "BRASAL-A1",
+      "severidade": "media",
+      "descricao": "Uso de ponto e vírgula incorreto nos milhares da linha de custos na nota explicativa 3.3.",
+      "evidencias": [
+        {
+          "pagina": 25,
+          "trecho": "Custos dos imóveis vendidos (839;903) (672.960)",
+          "verificada": true
+        }
+      ]
+    }
+  ],
+  "validacoes": [
+    {
+      "id": "C10",
+      "doc_id": "brasal",
+      "campo": "fco",
+      "status": "alerta",
+      "severidade": "media",
+      "mensagem": "Variação extrema (112,6%): confirme comparabilidade dos períodos (ver anomalias do documento).",
+      "paginas": [
+        11
+      ]
+    },
+    {
+      "id": "C08",
+      "doc_id": "brasal",
+      "campo": "ebitda",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. O termo EBITDA ou LAJIDA não aparece explicitamente publicado nas DFs consolidadas.",
+      "paginas": []
+    },
+    {
+      "id": "C08",
+      "doc_id": "brasal",
+      "campo": "margem_ebitda",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. O termo margem EBITDA não consta no documento.",
+      "paginas": []
+    },
+    {
+      "id": "C08",
+      "doc_id": "brasal",
+      "campo": "divida_liquida",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. O termo 'dívida líquida' não aparece publicado de forma consolidada nas tabelas.",
+      "paginas": []
+    },
+    {
+      "id": "C08",
+      "doc_id": "brasal",
+      "campo": "alavancagem",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. O indicador de alavancagem não é citado ou publicado no documento.",
+      "paginas": []
+    },
+    {
+      "id": "C08",
+      "doc_id": "brasal",
+      "campo": "capex",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. O valor consolidado de capex precisa ser extraído por componente ou linha de fluxo de caixa conforme regra estrita para não utilizar o total das atividades de investimento.",
+      "paginas": []
+    },
+    {
+      "id": "C11",
+      "doc_id": "brasal",
+      "campo": "BRASAL-A1",
+      "status": "alerta",
+      "severidade": "media",
+      "mensagem": "Uso de ponto e vírgula incorreto nos milhares da linha de custos na nota explicativa 3.3.",
+      "paginas": [
+        25
+      ]
+    }
+  ]
+}

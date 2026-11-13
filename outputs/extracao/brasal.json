@@ -1,0 +1,546 @@
+{
+  "empresa": "Brasal Brasília Holding S.A. (consolidado; controla a Brasal Refrigerantes – Coca-Cola/Heineken)",
+  "periodo_referencia": "Exercício de 2022 (findo em 31/12/2022); comparativo 2021 NÃO AUDITADO",
+  "documento": "brasal.pdf",
+  "tipo_documento": "DFs anuais auditadas (EY) + notas explicativas. Não há Relatório da Administração nem release.",
+  "escala_declarada": "R$ mil",
+  "modo_extracao": "reference",
+  "indicadores": {
+    "receita_liquida": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 1325059.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 8,
+          "trecho": "Receita operacional líquida 21 - - 1.325.059 1.061.410",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 1061410.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 8,
+          "trecho": "Receita operacional líquida 21 - - 1.325.059 1.061.410",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 24.84,
+      "observacao": "Coluna 2021 marcada '(não auditado)'."
+    },
+    "ebitda": {
+      "status": "não encontrado",
+      "motivo": "O documento não apresenta EBITDA/LAJIDA.",
+      "termos_buscados_no_pdf": [
+        "EBITDA",
+        "LAJIDA"
+      ]
+    },
+    "margem_ebitda": {
+      "status": "não encontrado",
+      "motivo": "Sem EBITDA no documento, não há margem EBITDA reportada.",
+      "termos_buscados_no_pdf": [
+        "margem ebitda",
+        "margem do ebitda"
+      ]
+    },
+    "lucro_liquido": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 174602.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 8,
+          "trecho": "Lucro líquido do exercício 174.602 275.560 174.602 275.560",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 275560.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 8,
+          "trecho": "Lucro líquido do exercício 174.602 275.560 174.602 275.560",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -36.64
+    },
+    "divida_liquida": {
+      "status": "não encontrado",
+      "motivo": "O documento não apresenta 'dívida líquida'.",
+      "termos_buscados_no_pdf": [
+        "dívida líquida",
+        "divida liquida"
+      ]
+    },
+    "alavancagem": {
+      "status": "não encontrado",
+      "motivo": "O documento não apresenta Dívida líquida/EBITDA nem outra medida de alavancagem numérica.",
+      "termos_buscados_no_pdf": [
+        "dívida líquida/ebitda"
+      ]
+    },
+    "fco": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 258248.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 11,
+          "trecho": "Caixa líquido gerado pelas atividades operacionais 887 (4.545) 258.248 121.462",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 121462.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 11,
+          "trecho": "Caixa líquido gerado pelas atividades operacionais 887 (4.545) 258.248 121.462",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 112.62
+    },
+    "capex": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 45761.0,
+        "unidade": "R$ mil",
+        "rotulo": "Aquisição de imobilizado e intangível (caixa)",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 11,
+          "trecho": "Imobilizado e intangível - (1.950) (45.761) (53.388)",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 53388.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 11,
+          "trecho": "Imobilizado e intangível - (1.950) (45.761) (53.388)",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -14.29
+    }
+  },
+  "insumos_para_derivados": {
+    "ebit": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 192840.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 8,
+          "trecho": "Lucro operacional antes das receitas e despesas 173.736 275.244 192.840 238.224 financeiras",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 238224.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 8,
+          "trecho": "Lucro operacional antes das receitas e despesas 173.736 275.244 192.840 238.224 financeiras",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -19.05
+    },
+    "depreciacao_amortizacao": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 29014.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 11,
+          "trecho": "Depreciações e amortizações 507 465 29.014 22.837",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 22837.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 11,
+          "trecho": "Depreciações e amortizações 507 465 29.014 22.837",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 27.05
+    },
+    "caixa_equivalentes": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 96453.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 6,
+          "trecho": "Caixa e equivalentes de caixa 4 3.714 1.146 96.453 62.166",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 62166.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 6,
+          "trecho": "Caixa e equivalentes de caixa 4 3.714 1.146 96.453 62.166",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 55.15
+    },
+    "aplicacoes_financeiras": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 78569.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 6,
+          "trecho": "Aplicações financeiras 5 - - 78.569 95.766",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 95766.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 6,
+          "trecho": "Aplicações financeiras 5 - - 78.569 95.766",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -17.96
+    },
+    "divida_bruta": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 3417.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 48,
+          "trecho": "Empréstimos e financiamentos - - 3.417 3.417",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 6478.0,
+        "unidade": "R$ mil",
+        "origem": {
+          "documento": "brasal",
+          "pagina": 48,
+          "trecho": "Empréstimos e financiamentos 226 226 6.478 6.478",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -47.25
+    }
+  },
+  "indicadores_derivados_calculados_pelo_pipeline": {
+    "ebitda_derivado": {
+      "formula": "EBIT + Depreciação e Amortização (fluxo de caixa)",
+      "unidade": "R$ mil",
+      "periodo_atual": 221854.0,
+      "periodo_comparavel": 261061.0,
+      "entradas": [
+        {
+          "campo": "ebit",
+          "valor_R$_mil": 192840.0,
+          "pagina": 8,
+          "trecho": "Lucro operacional antes das receitas e despesas 173.736 275.244 192.840 238.224 financeiras"
+        },
+        {
+          "campo": "depreciacao_amortizacao",
+          "valor_R$_mil": 29014.0,
+          "pagina": 11,
+          "trecho": "Depreciações e amortizações 507 465 29.014 22.837"
+        }
+      ],
+      "nota": ""
+    },
+    "margem_ebitda_derivada": {
+      "formula": "EBITDA derivado / Receita líquida (DRE)",
+      "unidade": "%",
+      "periodo_atual": 16.743,
+      "periodo_comparavel": 24.5957,
+      "entradas": [
+        {
+          "campo": "receita_liquida",
+          "valor_R$_mil": 1325059.0,
+          "pagina": 8,
+          "trecho": "Receita operacional líquida 21 - - 1.325.059 1.061.410"
+        }
+      ],
+      "nota": "Receita líquida consolidada da DRE."
+    },
+    "divida_liquida_derivada": {
+      "formula": "Dívida bruta − Caixa − Aplicações financeiras",
+      "unidade": "R$ mil",
+      "periodo_atual": -171605.0,
+      "periodo_comparavel": -151454.0,
+      "entradas": [
+        {
+          "campo": "divida_bruta",
+          "valor_R$_mil": 3417.0,
+          "pagina": 48,
+          "trecho": "Empréstimos e financiamentos - - 3.417 3.417"
+        },
+        {
+          "campo": "caixa_equivalentes",
+          "valor_R$_mil": 96453.0,
+          "pagina": 6,
+          "trecho": "Caixa e equivalentes de caixa 4 3.714 1.146 96.453 62.166"
+        },
+        {
+          "campo": "aplicacoes_financeiras",
+          "valor_R$_mil": 78569.0,
+          "pagina": 6,
+          "trecho": "Aplicações financeiras 5 - - 78.569 95.766"
+        }
+      ],
+      "nota": "Valor negativo = caixa líquido (empresa com mais caixa do que dívida)."
+    },
+    "alavancagem_derivada": {
+      "formula": "Dívida líquida / EBITDA derivado",
+      "unidade": "x",
+      "periodo_atual": -0.7735,
+      "periodo_comparavel": -0.5801,
+      "entradas": [],
+      "nota": "n.s. (não significativo) quando o EBITDA é negativo. Dívida líquida = valor reportado, se existir; senão derivada."
+    }
+  },
+  "anomalias_no_documento": [
+    {
+      "id": "BRASAL-A1",
+      "severidade": "alta",
+      "descricao": "Os valores comparativos de 2021 (DRE, balanço, fluxo de caixa) estão marcados como 'não auditado' e o auditor declara não os ter auditado — variações vs 2021 têm menor confiabilidade.",
+      "evidencias": [
+        {
+          "pagina": 3,
+          "trecho": "de dezembro de 2021, apresentadas para fins de comparação, não foram auditadas por nós ou por",
+          "verificada": true
+        },
+        {
+          "pagina": 8,
+          "trecho": "(não auditado) (não auditado)",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "id": "BRASAL-A2",
+      "severidade": "alta",
+      "descricao": "Comparabilidade do resultado: 2021 inclui R$105.633 mil de 'créditos extemporâneos' (exclusão do ICMS da base do PIS/COFINS) em outras receitas operacionais, vs R$231 mil em 2022 — não recorrente que distorce a variação do lucro.",
+      "evidencias": [
+        {
+          "pagina": 46,
+          "trecho": "Créditos extemporâneos (i) - - 231 105.633",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "id": "BRASAL-A3",
+      "severidade": "media",
+      "descricao": "Nota 20: o capital social é descrito como dividido em 3.256.699 ações e, no parágrafo seguinte, em 1.374.240 ações.",
+      "evidencias": [
+        {
+          "pagina": 42,
+          "trecho": "31 de dezembro de 2021 era de R$94.000 divididos em 3.256.699 ações ordinárias,",
+          "verificada": true
+        },
+        {
+          "pagina": 42,
+          "trecho": "integralizado ao valor de R$154.000 correspondente ao total de 1.374.240 ações ordinárias,",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "id": "BRASAL-A4",
+      "severidade": "media",
+      "descricao": "Nota 24 (IR/CS): o 'resultado contábil antes da tributação' (IRPJ 54.297; CSLL 19.547) não bate com o lucro antes do IR da DRE (R$217.187 mil).",
+      "evidencias": [
+        {
+          "pagina": 47,
+          "trecho": "Resultado contábil antes da 54.297 19.547 86.515 31.145 tributação:",
+          "verificada": true
+        },
+        {
+          "pagina": 8,
+          "trecho": "Lucro antes do imposto de renda e da contribuição social 174.602 275.560 217.187 346.061",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "id": "BRASAL-A5",
+      "severidade": "baixa",
+      "descricao": "Depreciação e amortização: R$20.347 mil na DRE (linha de despesa) vs R$29.014 mil no fluxo de caixa (total, inclui parcela no custo). Usamos o do fluxo de caixa no EBITDA derivado.",
+      "evidencias": [
+        {
+          "pagina": 8,
+          "trecho": "#Depreciações e amortizações 23.d (507) (316) (20.347) (15.275)",
+          "verificada": true
+        },
+        {
+          "pagina": 11,
+          "trecho": "Depreciações e amortizações 507 465 29.014 22.837",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "id": "BRASAL-A6",
+      "severidade": "baixa",
+      "descricao": "Nota 3.3: rubrica 'Custos dos imóveis vendidos' (a empresa é industrial/distribuidora de bebidas) e números com ';' em vez de '.' (1;061;410) — erros de digitação no documento.",
+      "evidencias": [
+        {
+          "pagina": 25,
+          "trecho": "Custos dos imóveis vendidos (839;903) (672.960)",
+          "verificada": true
+        }
+      ]
+    }
+  ],
+  "validacoes": [
+    {
+      "id": "C10",
+      "doc_id": "brasal",
+      "campo": "fco",
+      "status": "alerta",
+      "severidade": "media",
+      "mensagem": "Variação extrema (112,6%): confirme comparabilidade dos períodos (ver anomalias do documento).",
+      "paginas": [
+        11
+      ]
+    },
+    {
+      "id": "C08",
+      "doc_id": "brasal",
+      "campo": "ebitda",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. O documento não apresenta EBITDA/LAJIDA.",
+      "paginas": []
+    },
+    {
+      "id": "C08",
+      "doc_id": "brasal",
+      "campo": "margem_ebitda",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. Sem EBITDA no documento, não há margem EBITDA reportada.",
+      "paginas": []
+    },
+    {
+      "id": "C08",
+      "doc_id": "brasal",
+      "campo": "divida_liquida",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. O documento não apresenta 'dívida líquida'.",
+      "paginas": []
+    },
+    {
+      "id": "C08",
+      "doc_id": "brasal",
+      "campo": "alavancagem",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. O documento não apresenta Dívida líquida/EBITDA nem outra medida de alavancagem numérica.",
+      "paginas": []
+    },
+    {
+      "id": "C11",
+      "doc_id": "brasal",
+      "campo": "BRASAL-A1",
+      "status": "alerta",
+      "severidade": "alta",
+      "mensagem": "Os valores comparativos de 2021 (DRE, balanço, fluxo de caixa) estão marcados como 'não auditado' e o auditor declara não os ter auditado — variações vs 2021 têm menor confiabilidade.",
+      "paginas": [
+        3,
+        8
+      ]
+    },
+    {
+      "id": "C11",
+      "doc_id": "brasal",
+      "campo": "BRASAL-A2",
+      "status": "alerta",
+      "severidade": "alta",
+      "mensagem": "Comparabilidade do resultado: 2021 inclui R$105.633 mil de 'créditos extemporâneos' (exclusão do ICMS da base do PIS/COFINS) em outras receitas operacionais, vs R$231 mil em 2022 — não recorrente que distorce a variação do lucro.",
+      "paginas": [
+        46
+      ]
+    },
+    {
+      "id": "C11",
+      "doc_id": "brasal",
+      "campo": "BRASAL-A3",
+      "status": "alerta",
+      "severidade": "media",
+      "mensagem": "Nota 20: o capital social é descrito como dividido em 3.256.699 ações e, no parágrafo seguinte, em 1.374.240 ações.",
+      "paginas": [
+        42
+      ]
+    },
+    {
+      "id": "C11",
+      "doc_id": "brasal",
+      "campo": "BRASAL-A4",
+      "status": "alerta",
+      "severidade": "media",
+      "mensagem": "Nota 24 (IR/CS): o 'resultado contábil antes da tributação' (IRPJ 54.297; CSLL 19.547) não bate com o lucro antes do IR da DRE (R$217.187 mil).",
+      "paginas": [
+        8,
+        47
+      ]
+    },
+    {
+      "id": "C11",
+      "doc_id": "brasal",
+      "campo": "BRASAL-A5",
+      "status": "alerta",
+      "severidade": "baixa",
+      "mensagem": "Depreciação e amortização: R$20.347 mil na DRE (linha de despesa) vs R$29.014 mil no fluxo de caixa (total, inclui parcela no custo). Usamos o do fluxo de caixa no EBITDA derivado.",
+      "paginas": [
+        8,
+        11
+      ]
+    },
+    {
+      "id": "C11",
+      "doc_id": "brasal",
+      "campo": "BRASAL-A6",
+      "status": "alerta",
+      "severidade": "baixa",
+      "mensagem": "Nota 3.3: rubrica 'Custos dos imóveis vendidos' (a empresa é industrial/distribuidora de bebidas) e números com ';' em vez de '.' (1;061;410) — erros de digitação no documento.",
+      "paginas": [
+        25
+      ]
+    }
+  ]
+}

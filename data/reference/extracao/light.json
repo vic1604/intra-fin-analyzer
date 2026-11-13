@@ -1,0 +1,480 @@
+{
+  "doc_id": "light",
+  "empresa": "Light S.A. (consolidado)",
+  "periodo_referencia": "Exercício de 2022 (findo em 31/12/2022); comparativo: 2021",
+  "tipo_documento": "Relatório da Administração + DFs anuais auditadas (Deloitte). Não é release trimestral.",
+  "moeda_escala_declarada": "DFs em R$ mil; Relatório da Administração em R$ milhões",
+  "receita_liquida": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 13253286.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 20,
+        "trecho": "RECEITA LÍQUIDA 31 - - 13.253.286 14.897.920"
+      }
+    },
+    "anterior": {
+      "valor": 14897920.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 20,
+        "trecho": "RECEITA LÍQUIDA 31 - - 13.253.286 14.897.920"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "observacao": "Receita líquida consolidada da DRE (inclui receita de construção). O texto da administração usa a receita SEM construção (ver campo próprio).",
+    "termos_verificados": []
+  },
+  "receita_liquida_ex_construcao": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 12107.0,
+      "escala": "milhoes",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 9,
+        "trecho": "A receita operacional líquida, desconsiderando a receita de construção, totalizou em 2022 R$12.107 milhões, 13% abaixo da registrada em 2021. Essa redução foi influenciada pelos"
+      }
+    },
+    "variacao_reportada_pct": {
+      "valor": -13.0,
+      "escala": "milhoes",
+      "unidade": "%",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 9,
+        "trecho": "A receita operacional líquida, desconsiderando a receita de construção, totalizou em 2022 R$12.107 milhões, 13% abaixo da registrada em 2021. Essa redução foi influenciada pelos"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "observacao": "Base usada pela administração no texto (R$ milhões, -13%).",
+    "termos_verificados": []
+  },
+  "receita_construcao": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 1146446.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 93,
+        "trecho": "Receita de construção 1.146.446 967.268"
+      }
+    },
+    "anterior": {
+      "valor": 967268.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 93,
+        "trecho": "Receita de construção 1.146.446 967.268"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "observacao": "Nota 31; usada para verificar o -13% da administração.",
+    "termos_verificados": []
+  },
+  "ebitda": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 1180.0,
+      "escala": "milhoes",
+      "unidade": "R$",
+      "rotulo": "EBITDA CVM consolidado (como impresso no texto)",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 9,
+        "trecho": "Em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001"
+      }
+    },
+    "variacao_reportada_abs": {
+      "valor": -3001.0,
+      "escala": "milhoes",
+      "unidade": "R$",
+      "rotulo": "redução reportada",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 9,
+        "trecho": "Em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "observacao": "Texto imprime R$1.180 milhões SEM sinal. A recomposição pelas DFs (EBIT + D&A) dá valor NEGATIVO — ver alertas.",
+    "termos_verificados": []
+  },
+  "margem_ebitda": {
+    "status": "nao_encontrado",
+    "alternativas": [],
+    "complementares": [],
+    "motivo_ausencia": "O Relatório da Administração e as DFs não informam margem EBITDA.",
+    "termos_verificados": [
+      "margem ebitda",
+      "margem do ebitda"
+    ]
+  },
+  "lucro_liquido": {
+    "status": "encontrado",
+    "atual": {
+      "valor": -5672203.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 20,
+        "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO (5.672.203) 397.945 (5.672.203) 397.945"
+      }
+    },
+    "anterior": {
+      "valor": 397945.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 20,
+        "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO (5.672.203) 397.945 (5.672.203) 397.945"
+      }
+    },
+    "variacao_reportada_abs": {
+      "valor": -6070.0,
+      "escala": "milhoes",
+      "unidade": "R$",
+      "rotulo": "queda reportada pela administração",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 10,
+        "trecho": "Em 2022, a Light S.A. apurou um resultado líquido de -R$5.673 milhões, R$6.070 milhões"
+      }
+    },
+    "alternativas": [
+      {
+        "valor": -5673.0,
+        "escala": "milhoes",
+        "unidade": "R$",
+        "rotulo": "resultado líquido segundo o texto da administração",
+        "evidencia": {
+          "documento": "light",
+          "pagina": 10,
+          "trecho": "Em 2022, a Light S.A. apurou um resultado líquido de -R$5.673 milhões, R$6.070 milhões"
+        }
+      }
+    ],
+    "complementares": [],
+    "termos_verificados": []
+  },
+  "divida_liquida": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 9032236.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 105,
+        "trecho": "Dívida líquida (A) 9.032.236 7.352.919"
+      }
+    },
+    "anterior": {
+      "valor": 7352919.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 105,
+        "trecho": "Dívida líquida (A) 9.032.236 7.352.919"
+      }
+    },
+    "variacao_reportada_pct": {
+      "valor": 23.0,
+      "escala": "milhoes",
+      "unidade": "%",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 10,
+        "trecho": "aumento de 23% em comparação a 2021, de R$7.353 milhões."
+      }
+    },
+    "alternativas": [
+      {
+        "valor": 9032.0,
+        "escala": "milhoes",
+        "unidade": "R$",
+        "rotulo": "dívida líquida segundo o texto da administração",
+        "evidencia": {
+          "documento": "light",
+          "pagina": 10,
+          "trecho": "A dívida líquida da Companhia em 31 de dezembro de 2022 totalizou R$9.032 milhões,"
+        }
+      }
+    ],
+    "complementares": [],
+    "termos_verificados": []
+  },
+  "alavancagem": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 3.32,
+      "escala": "unidade",
+      "unidade": "x",
+      "rotulo": "Dívida líquida / EBITDA ajustado p/ covenants",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 10,
+        "trecho": "2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants"
+      }
+    },
+    "anterior": {
+      "valor": 3.48,
+      "escala": "unidade",
+      "unidade": "x",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 10,
+        "trecho": "2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "observacao": "Indicador de covenants (EBITDA ajustado, exclui efeitos não caixa). O texto diz 'encerrou 2021 em 3,32x … (3,48x)' — o ano está trocado; interpretado como 2022 vs 2021.",
+    "termos_verificados": []
+  },
+  "fco": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 200763.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 23,
+        "trecho": "Caixa líquido gerado (aplicado) pelas atividades operacionais 697.508 171.062 200.763 (42.045)"
+      }
+    },
+    "anterior": {
+      "valor": -42045.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 23,
+        "trecho": "Caixa líquido gerado (aplicado) pelas atividades operacionais 697.508 171.062 200.763 (42.045)"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "termos_verificados": []
+  },
+  "capex": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 1506.0,
+      "escala": "milhoes",
+      "unidade": "R$",
+      "rotulo": "investimentos totais (visão da administração)",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 10,
+        "trecho": "O valor total de investimentos no ano de 2022 foi de R$1.506 milhões, 6% acima se"
+      }
+    },
+    "variacao_reportada_pct": {
+      "valor": 6.0,
+      "escala": "milhoes",
+      "unidade": "%",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 10,
+        "trecho": "O valor total de investimentos no ano de 2022 foi de R$1.506 milhões, 6% acima se"
+      }
+    },
+    "alternativas": [],
+    "complementares": [
+      {
+        "valor": 307759.0,
+        "escala": "mil",
+        "unidade": "R$",
+        "rotulo": "capex_componente: imobilizado (caixa)",
+        "evidencia": {
+          "documento": "light",
+          "pagina": 23,
+          "trecho": "Aquisições de bens do ativo imobilizado - - (307.759) (219.601)"
+        }
+      },
+      {
+        "valor": 1162533.0,
+        "escala": "mil",
+        "unidade": "R$",
+        "rotulo": "capex_componente: intangível e ativo de contrato (caixa)",
+        "evidencia": {
+          "documento": "light",
+          "pagina": 23,
+          "trecho": "Aquisições de bens do ativo intangível e do ativo de contrato (234) - (1.162.533) (1.029.744)"
+        }
+      }
+    ],
+    "observacao": "Administração reporta 'investimentos' (R$1.506 mi, base competência). Capex de caixa = soma dos dois componentes do fluxo de caixa.",
+    "termos_verificados": []
+  },
+  "ebit": {
+    "status": "encontrado",
+    "atual": {
+      "valor": -1910411.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 20,
+        "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS (5.681.153) 397.043 (1.910.411) 1.143.301"
+      }
+    },
+    "anterior": {
+      "valor": 1143301.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 20,
+        "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS (5.681.153) 397.043 (1.910.411) 1.143.301"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "termos_verificados": []
+  },
+  "depreciacao_amortizacao": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 730767.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 23,
+        "trecho": "Depreciação e amortização 32 - - 730.767 678.110"
+      }
+    },
+    "anterior": {
+      "valor": 678110.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 23,
+        "trecho": "Depreciação e amortização 32 - - 730.767 678.110"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "termos_verificados": []
+  },
+  "caixa_equivalentes": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 2083551.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "rotulo": "Caixa e equivalentes + TVM",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 105,
+        "trecho": "(-) Caixa e equivalentes de caixa e TVM 2.083.551 3.604.973"
+      }
+    },
+    "anterior": {
+      "valor": 3604973.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 105,
+        "trecho": "(-) Caixa e equivalentes de caixa e TVM 2.083.551 3.604.973"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "termos_verificados": []
+  },
+  "aplicacoes_financeiras": {
+    "status": "nao_encontrado",
+    "alternativas": [],
+    "complementares": [],
+    "motivo_ausencia": "Incluídas na linha 'Caixa e equivalentes de caixa e TVM' da nota 34.3.",
+    "termos_verificados": []
+  },
+  "divida_bruta": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 11115787.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 105,
+        "trecho": "Dívida bruta 11.115.787 10.957.892"
+      }
+    },
+    "anterior": {
+      "valor": 10957892.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "light",
+        "pagina": 105,
+        "trecho": "Dívida bruta 11.115.787 10.957.892"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "termos_verificados": []
+  },
+  "anomalias_documento": [
+    {
+      "id": "LIGHT-A1",
+      "severidade": "alta",
+      "descricao": "EBITDA CVM da distribuidora: o texto diz R$1.817 mi, 'redução de R$2.996 mi' em relação a R$1.179 mi em 2021. Os números não fecham (1.817 − 1.179 = +638, não −2.996). 1.817 + 1.179 = 2.996 sugere que os anos estão invertidos (2021 = +1.817; 2022 = −1.179) e o sinal negativo foi omitido.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 8,
+          "trecho": "Em 2022, o EBITDA CVM1 da distribuidora foi de R$1.817 milhões, uma redução de R$2.996 milhões em relação aos R$1.179 milhões apurados em 2021. Essa retração foi devida,"
+        }
+      ]
+    },
+    {
+      "id": "LIGHT-A2",
+      "severidade": "media",
+      "descricao": "Alavancagem de covenants: o texto diz que o indicador 'encerrou 2021 em 3,32x, menor do que no 2021 (3,48x)' — período repetido; o correto seria 2022 vs 2021.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 10,
+          "trecho": "O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou 2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants"
+        }
+      ]
+    },
+    {
+      "id": "LIGHT-A3",
+      "severidade": "alta",
+      "descricao": "Auditor (Deloitte) chama a atenção para incerteza significativa sobre a continuidade operacional (nota 1.1).",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 111,
+          "trecho": "Incerteza significativa relacionada com a continuidade operacional"
+        }
+      ]
+    }
+  ],
+  "modo": "reference"
+}

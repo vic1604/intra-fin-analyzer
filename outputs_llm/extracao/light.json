@@ -1,0 +1,537 @@
+{
+  "empresa": "Light S.A.",
+  "periodo_referencia": "31/12/2022",
+  "documento": "light.pdf",
+  "tipo_documento": "DFP",
+  "escala_declarada": "mil",
+  "modo_extracao": "llm",
+  "indicadores": {
+    "receita_liquida": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 13253286.0,
+        "unidade": "R$ mil",
+        "rotulo": "RECEITA LÍQUIDA",
+        "origem": {
+          "documento": "light",
+          "pagina": 20,
+          "trecho": "RECEITA LÍQUIDA 31 - - 13.253.286 14.897.920",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 14897920.0,
+        "unidade": "R$ mil",
+        "rotulo": "RECEITA LÍQUIDA",
+        "origem": {
+          "documento": "light",
+          "pagina": 20,
+          "trecho": "RECEITA LÍQUIDA 31 - - 13.253.286 14.897.920",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -11.04
+    },
+    "receita_liquida_ex_construcao": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 12107.0,
+        "unidade": "R$ milhões",
+        "rotulo": "A receita operacional líquida, desconsiderando a receita de construção, totalizou em 2022 R$12.107 milhões",
+        "origem": {
+          "documento": "light",
+          "pagina": 9,
+          "trecho": "A receita operacional líquida, desconsiderando a receita de construção, totalizou em 2022 R$12.107 milhões, 13% abaixo da registrada em 2021.",
+          "verificada": true
+        }
+      }
+    },
+    "ebitda": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 1180.0,
+        "unidade": "R$ milhões",
+        "rotulo": "EBITDA CVM",
+        "origem": {
+          "documento": "light",
+          "pagina": 9,
+          "trecho": "Em 2022, o EBITDA CVM foi de R$1.180 milhões, apresentando uma redução R$3.001 milhões se comparado a 2021.",
+          "verificada": true
+        }
+      }
+    },
+    "margem_ebitda": {
+      "status": "não encontrado",
+      "motivo": "O termo margem EBITDA publicada em percentual não foi encontrado explicitamente no texto fornecido."
+    },
+    "lucro_liquido": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": -5672203.0,
+        "unidade": "R$ mil",
+        "rotulo": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO",
+        "origem": {
+          "documento": "light",
+          "pagina": 20,
+          "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO (5.672.203) 397.945 (5.672.203) 397.945",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 397945.0,
+        "unidade": "R$ mil",
+        "rotulo": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO",
+        "origem": {
+          "documento": "light",
+          "pagina": 20,
+          "trecho": "LUCRO (PREJUÍZO) LÍQUIDO DO EXERCÍCIO (5.672.203) 397.945 (5.672.203) 397.945",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -1525.37
+    },
+    "divida_liquida": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 9032.0,
+        "unidade": "R$ milhões",
+        "rotulo": "A dívida líquida da Companhia em 31 de dezembro de 2022 totalizou R$9.032 milhões",
+        "origem": {
+          "documento": "light",
+          "pagina": 10,
+          "trecho": "A dívida líquida da Companhia em 31 de dezembro de 2022 totalizou R$9.032 milhões, aumento de 23% em comparação a 2021, de R$7.353 milhões.",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 7353.0,
+        "unidade": "R$ milhões",
+        "rotulo": "A dívida líquida da Companhia em 31 de dezembro de 2022 totalizou R$9.032 milhões",
+        "origem": {
+          "documento": "light",
+          "pagina": 10,
+          "trecho": "A dívida líquida da Companhia em 31 de dezembro de 2022 totalizou R$9.032 milhões, aumento de 23% em comparação a 2021, de R$7.353 milhões.",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 22.83
+    },
+    "alavancagem": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 3.32,
+        "unidade": "x",
+        "rotulo": "Dívida Líquida/EBITDA ajustado para fins de covenants",
+        "origem": {
+          "documento": "light",
+          "pagina": 10,
+          "trecho": "O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou 2021 em 3,32x, menor do que no 2021 (3,48x).",
+          "verificada": true
+        }
+      }
+    },
+    "fco": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 200763.0,
+        "unidade": "R$ mil",
+        "rotulo": "Caixa líquido gerado (aplicado) pelas atividades operacionais",
+        "origem": {
+          "documento": "light",
+          "pagina": 23,
+          "trecho": "Caixa líquido gerado (aplicado) pelas atividades operacionais 697.508 171.062 200.763 (42.045)",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": -42045.0,
+        "unidade": "R$ mil",
+        "rotulo": "Caixa líquido gerado (aplicado) pelas atividades operacionais",
+        "origem": {
+          "documento": "light",
+          "pagina": 23,
+          "trecho": "Caixa líquido gerado (aplicado) pelas atividades operacionais 697.508 171.062 200.763 (42.045)",
+          "verificada": true
+        }
+      }
+    },
+    "capex": {
+      "status": "não encontrado",
+      "motivo": "A linha consolidada de Capex não é apresentada em um único montante consolidado nas DFs, havendo apenas linhas separadas de imobilizado e intangível na DFC, portanto listadas como complementar."
+    }
+  },
+  "insumos_para_derivados": {
+    "ebit": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": -1910411.0,
+        "unidade": "R$ mil",
+        "rotulo": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS",
+        "origem": {
+          "documento": "light",
+          "pagina": 20,
+          "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS (5.681.153) 397.043 (1.910.411) 1.143.301",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 1143301.0,
+        "unidade": "R$ mil",
+        "rotulo": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS",
+        "origem": {
+          "documento": "light",
+          "pagina": 20,
+          "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS (5.681.153) 397.043 (1.910.411) 1.143.301",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -267.1
+    },
+    "depreciacao_amortizacao": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 730767.0,
+        "unidade": "R$ mil",
+        "rotulo": "Depreciação e amortização",
+        "origem": {
+          "documento": "light",
+          "pagina": 23,
+          "trecho": "Depreciação e amortização 32 - - 730.767 678.110",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 678110.0,
+        "unidade": "R$ mil",
+        "rotulo": "Depreciação e amortização",
+        "origem": {
+          "documento": "light",
+          "pagina": 23,
+          "trecho": "Depreciação e amortização 32 - - 730.767 678.110",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 7.77
+    },
+    "caixa_equivalentes": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 43886.0,
+        "unidade": "R$ mil",
+        "rotulo": "TOTAL Caixa e equivalente de caixa",
+        "origem": {
+          "documento": "light",
+          "pagina": 47,
+          "trecho": "TOTAL 2.693 9 43.886 396.777",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 396777.0,
+        "unidade": "R$ mil",
+        "rotulo": "TOTAL Caixa e equivalente de caixa",
+        "origem": {
+          "documento": "light",
+          "pagina": 47,
+          "trecho": "TOTAL 2.693 9 43.886 396.777",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -88.94
+    },
+    "aplicacoes_financeiras": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 2039665.0,
+        "unidade": "R$ mil",
+        "rotulo": "TOTAL Títulos e valores mobiliários",
+        "origem": {
+          "documento": "light",
+          "pagina": 47,
+          "trecho": "TOTAL 720.172 62.647 2.039.665 3.208.196",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 3208196.0,
+        "unidade": "R$ mil",
+        "rotulo": "TOTAL Títulos e valores mobiliários",
+        "origem": {
+          "documento": "light",
+          "pagina": 47,
+          "trecho": "TOTAL 720.172 62.647 2.039.665 3.208.196",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -36.42
+    },
+    "divida_bruta": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 11115787.0,
+        "unidade": "R$ mil",
+        "rotulo": "Dívida bruta",
+        "origem": {
+          "documento": "light",
+          "pagina": 105,
+          "trecho": "Dívida bruta 11.115.787 10.957.892",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 10957892.0,
+        "unidade": "R$ mil",
+        "rotulo": "Dívida bruta",
+        "origem": {
+          "documento": "light",
+          "pagina": 105,
+          "trecho": "Dívida bruta 11.115.787 10.957.892",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 1.44
+    },
+    "receita_construcao": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 1146446.0,
+        "unidade": "R$ mil",
+        "rotulo": "Receita de construção",
+        "origem": {
+          "documento": "light",
+          "pagina": 93,
+          "trecho": "Receita de construção 1.146.446 967.268",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 967268.0,
+        "unidade": "R$ mil",
+        "rotulo": "Receita de construção",
+        "origem": {
+          "documento": "light",
+          "pagina": 93,
+          "trecho": "Receita de construção 1.146.446 967.268",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 18.52
+    }
+  },
+  "indicadores_derivados_calculados_pelo_pipeline": {
+    "ebitda_derivado": {
+      "formula": "EBIT + Depreciação e Amortização (fluxo de caixa)",
+      "unidade": "R$ mil",
+      "periodo_atual": -1179644.0,
+      "periodo_comparavel": 1821411.0,
+      "entradas": [
+        {
+          "campo": "ebit",
+          "valor_R$_mil": -1910411.0,
+          "pagina": 20,
+          "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS (5.681.153) 397.043 (1.910.411) 1.143.301"
+        },
+        {
+          "campo": "depreciacao_amortizacao",
+          "valor_R$_mil": 730767.0,
+          "pagina": 23,
+          "trecho": "Depreciação e amortização 32 - - 730.767 678.110"
+        }
+      ],
+      "nota": ""
+    },
+    "margem_ebitda_derivada": {
+      "formula": "EBITDA derivado / Receita líquida (DRE)",
+      "unidade": "%",
+      "periodo_atual": -8.9008,
+      "periodo_comparavel": 12.2259,
+      "entradas": [
+        {
+          "campo": "receita_liquida",
+          "valor_R$_mil": 13253286.0,
+          "pagina": 20,
+          "trecho": "RECEITA LÍQUIDA 31 - - 13.253.286 14.897.920"
+        }
+      ],
+      "nota": "Receita líquida consolidada da DRE."
+    },
+    "margem_ebitda_derivada_ex_construcao": {
+      "formula": "EBITDA derivado / (Receita líquida − receita de construção)",
+      "unidade": "%",
+      "periodo_atual": -9.7436,
+      "periodo_comparavel": 13.0748,
+      "entradas": [
+        {
+          "campo": "receita_liquida",
+          "valor_R$_mil": 13253286.0,
+          "pagina": 20,
+          "trecho": "RECEITA LÍQUIDA 31 - - 13.253.286 14.897.920"
+        },
+        {
+          "campo": "receita_construcao",
+          "valor_R$_mil": 1146446.0,
+          "pagina": 93,
+          "trecho": "Receita de construção 1.146.446 967.268"
+        }
+      ],
+      "nota": "Base de receita usada pela administração da Light no texto."
+    },
+    "divida_liquida_derivada": {
+      "formula": "Dívida bruta − Caixa − Aplicações financeiras",
+      "unidade": "R$ mil",
+      "periodo_atual": 9032236.0,
+      "periodo_comparavel": 7352919.0,
+      "entradas": [
+        {
+          "campo": "divida_bruta",
+          "valor_R$_mil": 11115787.0,
+          "pagina": 105,
+          "trecho": "Dívida bruta 11.115.787 10.957.892"
+        },
+        {
+          "campo": "caixa_equivalentes",
+          "valor_R$_mil": 43886.0,
+          "pagina": 47,
+          "trecho": "TOTAL 2.693 9 43.886 396.777"
+        },
+        {
+          "campo": "aplicacoes_financeiras",
+          "valor_R$_mil": 2039665.0,
+          "pagina": 47,
+          "trecho": "TOTAL 720.172 62.647 2.039.665 3.208.196"
+        }
+      ],
+      "nota": "Valor negativo = caixa líquido (empresa com mais caixa do que dívida)."
+    },
+    "alavancagem_derivada": {
+      "formula": "Dívida líquida / EBITDA derivado",
+      "unidade": "x",
+      "periodo_atual": null,
+      "periodo_comparavel": 4.037,
+      "entradas": [],
+      "nota": "n.s. (não significativo) quando o EBITDA é negativo. Dívida líquida = valor reportado, se existir; senão derivada."
+    }
+  },
+  "anomalias_no_documento": [
+    {
+      "id": "LIGHT-A1",
+      "severidade": "media",
+      "descricao": "Cabeçalho da Demonstração de Resultados Abrangentes apresenta o ano de 2021 repetido três vezes nas colunas.",
+      "evidencias": [
+        {
+          "pagina": 21,
+          "trecho": "Demonstração de Resultados Abrangentes 2022 2021 2021 2021",
+          "verificada": false
+        }
+      ]
+    }
+  ],
+  "validacoes": [
+    {
+      "id": "C04",
+      "doc_id": "light",
+      "campo": "ebitda",
+      "status": "alerta",
+      "severidade": "alta",
+      "mensagem": "EBITDA reportado no texto = 1.180 mi (positivo), mas a recomposição pelas DFs (EBIT + D&A) = -1.179,6 mi (NEGATIVO). Mesmo módulo, sinal oposto: provável omissão do sinal negativo no texto. O pipeline usa o valor recomposto na comparação.",
+      "paginas": [
+        9
+      ]
+    },
+    {
+      "id": "C06",
+      "doc_id": "light",
+      "campo": "divida_liquida[atual]",
+      "status": "ok",
+      "severidade": "info",
+      "mensagem": "Dívida líquida reportada 9.032.000 mil vs bruta − caixa = 9.032.236 mil.",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "C06",
+      "doc_id": "light",
+      "campo": "divida_liquida[anterior]",
+      "status": "ok",
+      "severidade": "info",
+      "mensagem": "Dívida líquida reportada 7.353.000 mil vs bruta − caixa = 7.352.919 mil.",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "C09",
+      "doc_id": "light",
+      "campo": "alavancagem",
+      "status": "info",
+      "severidade": "info",
+      "mensagem": "Alavancagem reportada 3,32x (EBITDA ajustado p/ covenants). Não é replicável com o EBITDA recomposto (≤ 0 → n.s.): o EBITDA de covenants exclui provisões e itens não caixa.",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "C10",
+      "doc_id": "light",
+      "campo": "lucro_liquido",
+      "status": "info",
+      "severidade": "info",
+      "mensagem": "Sinal negativo em um dos períodos (-5.672,2 mi vs 397,9 mi): variação percentual não significativa (n.s.).",
+      "paginas": [
+        20
+      ]
+    },
+    {
+      "id": "C10",
+      "doc_id": "light",
+      "campo": "fco",
+      "status": "info",
+      "severidade": "info",
+      "mensagem": "Sinal negativo em um dos períodos (200,8 mi vs -42,0 mi): variação percentual não significativa (n.s.).",
+      "paginas": [
+        23
+      ]
+    },
+    {
+      "id": "C08",
+      "doc_id": "light",
+      "campo": "margem_ebitda",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. O termo margem EBITDA publicada em percentual não foi encontrado explicitamente no texto fornecido.",
+      "paginas": []
+    },
+    {
+      "id": "C08",
+      "doc_id": "light",
+      "campo": "capex",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. A linha consolidada de Capex não é apresentada em um único montante consolidado nas DFs, havendo apenas linhas separadas de imobilizado e intangível na DFC, portanto listadas como complementar.",
+      "paginas": []
+    },
+    {
+      "id": "C11",
+      "doc_id": "light",
+      "campo": "LIGHT-A1",
+      "status": "alerta",
+      "severidade": "media",
+      "mensagem": "Cabeçalho da Demonstração de Resultados Abrangentes apresenta o ano de 2021 repetido três vezes nas colunas.",
+      "paginas": [
+        21
+      ]
+    },
+    {
+      "id": "C00",
+      "doc_id": "light",
+      "campo": "grounding",
+      "status": "alerta",
+      "severidade": "alta",
+      "mensagem": "1 evidência(s) da extração falharam no grounding.",
+      "paginas": [
+        21
+      ]
+    }
+  ]
+}

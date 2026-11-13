@@ -1,0 +1,21 @@
+{"run_id": "7812ef5a0036", "seq": 1, "ts": "2026-11-13T16:56:26.823+00:00", "evento": "run_inicio", "modo": "llm", "provedor": "gemini", "modelo": "gemini-3.5-flash-lite"}
+{"run_id": "7812ef5a0036", "seq": 2, "ts": "2026-11-13T16:56:26.876+00:00", "evento": "span", "etapa": "ingestao", "duracao_s": 0.053, "status": "ok", "documentos": 3, "paginas": 218}
+{"run_id": "7812ef5a0036", "seq": 3, "ts": "2026-11-13T16:56:27.007+00:00", "evento": "span", "etapa": "seguranca_scan", "duracao_s": 0.13, "status": "ok", "achados": 0}
+{"run_id": "7812ef5a0036", "seq": 4, "ts": "2026-11-13T16:56:41.485+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 14.15, "status": "ok", "doc": "light", "modo": "llm", "campos_encontrados": 13}
+{"run_id": "7812ef5a0036", "seq": 5, "ts": "2026-11-13T16:56:41.499+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 0.013, "status": "ok", "doc": "light", "modo": "llm"}
+{"run_id": "7812ef5a0036", "seq": 6, "ts": "2026-11-13T16:56:41.499+00:00", "evento": "llm_chamada", "doc": "light", "etapa": "extracao:light", "in": 19908, "out": 3726, "s": 14.1, "cache": false}
+{"run_id": "7812ef5a0036", "seq": 7, "ts": "2026-11-13T16:56:41.499+00:00", "evento": "llm_chamada", "doc": "light", "etapa": "qualitativo:light", "in": 15469, "out": 2039, "s": 0.0, "cache": true}
+{"run_id": "7812ef5a0036", "seq": 8, "ts": "2026-11-13T16:56:41.553+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.053, "status": "ok", "doc": "light", "alertas": 5, "falhas_grounding": 4}
+{"run_id": "7812ef5a0036", "seq": 9, "ts": "2026-11-13T16:56:53.368+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 11.816, "status": "ok", "doc": "millet", "modo": "llm", "campos_encontrados": 8}
+{"run_id": "7812ef5a0036", "seq": 10, "ts": "2026-11-13T16:56:53.380+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 0.011, "status": "ok", "doc": "millet", "modo": "llm"}
+{"run_id": "7812ef5a0036", "seq": 11, "ts": "2026-11-13T16:56:53.380+00:00", "evento": "llm_chamada", "doc": "millet", "etapa": "extracao:millet", "in": 15511, "out": 2790, "s": 11.8, "cache": false}
+{"run_id": "7812ef5a0036", "seq": 12, "ts": "2026-11-13T16:56:53.380+00:00", "evento": "llm_chamada", "doc": "millet", "etapa": "qualitativo:millet", "in": 14802, "out": 1047, "s": 0.0, "cache": true}
+{"run_id": "7812ef5a0036", "seq": 13, "ts": "2026-11-13T16:56:53.414+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.033, "status": "ok", "doc": "millet", "alertas": 9, "falhas_grounding": 2}
+{"run_id": "7812ef5a0036", "seq": 14, "ts": "2026-11-13T16:56:59.625+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 6.211, "status": "ok", "doc": "brasal", "modo": "llm", "campos_encontrados": 8}
+{"run_id": "7812ef5a0036", "seq": 15, "ts": "2026-11-13T16:56:59.639+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 0.014, "status": "ok", "doc": "brasal", "modo": "llm"}
+{"run_id": "7812ef5a0036", "seq": 16, "ts": "2026-11-13T16:56:59.639+00:00", "evento": "llm_chamada", "doc": "brasal", "etapa": "extracao:brasal", "in": 14276, "out": 2656, "s": 6.19, "cache": false}
+{"run_id": "7812ef5a0036", "seq": 17, "ts": "2026-11-13T16:56:59.640+00:00", "evento": "llm_chamada", "doc": "brasal", "etapa": "qualitativo:brasal", "in": 11912, "out": 1129, "s": 0.0, "cache": true}
+{"run_id": "7812ef5a0036", "seq": 18, "ts": "2026-11-13T16:56:59.673+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.033, "status": "ok", "doc": "brasal", "alertas": 7, "falhas_grounding": 3}
+{"run_id": "7812ef5a0036", "seq": 19, "ts": "2026-11-13T16:57:05.218+00:00", "evento": "span", "etapa": "ml_tradicional", "duracao_s": 5.544, "status": "ok"}
+{"run_id": "7812ef5a0036", "seq": 20, "ts": "2026-11-13T16:57:05.301+00:00", "evento": "span", "etapa": "relatorio", "duracao_s": 0.082, "status": "ok", "respostas": 5, "tamanho_md": 29575}
+{"run_id": "7812ef5a0036", "seq": 21, "ts": "2026-11-13T16:57:05.334+00:00", "evento": "run_fim", "status": "ok", "total_s": 38.48, "chamadas_llm": 6, "tokens_in": 91878, "tokens_out": 13387}

@@ -1,0 +1,398 @@
+{
+  "doc_id": "millet",
+  "empresa": "Millet Participações S.A. (consolidado; controla 85% da Alibra)",
+  "periodo_referencia": "Exercício de 2022 (findo em 31/12/2022); comparativo: 2021",
+  "tipo_documento": "DFs anuais auditadas + notas explicativas. Não há Relatório da Administração nem release.",
+  "moeda_escala_declarada": "R$ mil",
+  "receita_liquida": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 462127.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 7,
+        "trecho": "Receita operacional líquida 18 - - 462.127 199.259"
+      }
+    },
+    "anterior": {
+      "valor": 199259.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 7,
+        "trecho": "Receita operacional líquida 18 - - 462.127 199.259"
+      }
+    },
+    "alternativas": [],
+    "complementares": [
+      {
+        "valor": 318317.0,
+        "escala": "mil",
+        "unidade": "R$",
+        "rotulo": "pro_forma_anterior: receita da Alibra em 2021 (ano cheio, nota 7)",
+        "evidencia": {
+          "documento": "millet",
+          "pagina": 29,
+          "trecho": "Receita operacional líquida 462.127 318.317"
+        }
+      }
+    ],
+    "observacao": "2021 consolida a Alibra apenas a partir de 18/06/2021: a variação NÃO é comparável (ver alertas).",
+    "termos_verificados": []
+  },
+  "ebitda": {
+    "status": "nao_encontrado",
+    "alternativas": [],
+    "complementares": [],
+    "motivo_ausencia": "O documento não apresenta EBITDA/LAJIDA.",
+    "termos_verificados": [
+      "EBITDA",
+      "LAJIDA"
+    ]
+  },
+  "margem_ebitda": {
+    "status": "nao_encontrado",
+    "alternativas": [],
+    "complementares": [],
+    "motivo_ausencia": "Sem EBITDA no documento, não há margem EBITDA reportada.",
+    "termos_verificados": [
+      "margem ebitda",
+      "margem do ebitda"
+    ]
+  },
+  "lucro_liquido": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 18891.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "rotulo": "Lucro líquido consolidado (inclui minoritários)",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 7,
+        "trecho": "Lucro líquido do exercício 14.743 5.371 18.891 6.470"
+      }
+    },
+    "anterior": {
+      "valor": 6470.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 7,
+        "trecho": "Lucro líquido do exercício 14.743 5.371 18.891 6.470"
+      }
+    },
+    "alternativas": [],
+    "complementares": [
+      {
+        "valor": 14743.0,
+        "escala": "mil",
+        "unidade": "R$",
+        "rotulo": "Lucro líquido atribuível aos controladores",
+        "evidencia": {
+          "documento": "millet",
+          "pagina": 7,
+          "trecho": "Lucro líquido do exercício 14.743 5.371 14.743 5.371"
+        }
+      }
+    ],
+    "termos_verificados": []
+  },
+  "divida_liquida": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 13520.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 42,
+        "trecho": "(=) Dívida líquida (a) 13.520 16.877"
+      }
+    },
+    "anterior": {
+      "valor": 16877.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 42,
+        "trecho": "(=) Dívida líquida (a) 13.520 16.877"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "termos_verificados": []
+  },
+  "alavancagem": {
+    "status": "nao_encontrado",
+    "alternativas": [],
+    "complementares": [
+      {
+        "valor": 0.08,
+        "escala": "unidade",
+        "unidade": "x",
+        "rotulo": "Dívida líquida / patrimônio (não é alavancagem sobre EBITDA)",
+        "evidencia": {
+          "documento": "millet",
+          "pagina": 42,
+          "trecho": "Relação dívida liquida sobre capital ajustado (a)/(b) 0,08 0,11"
+        }
+      }
+    ],
+    "motivo_ausencia": "Não há Dívida líquida/EBITDA. O documento traz apenas dívida líquida / capital ajustado (0,08x).",
+    "termos_verificados": [
+      "dívida líquida/ebitda",
+      "divida liquida/ebitda"
+    ]
+  },
+  "fco": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 24799.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 10,
+        "trecho": "Caixa liquido gerado pelas (consumido nas) 24.799 (317) (860) (14.293) atividades operacionais"
+      }
+    },
+    "anterior": {
+      "valor": -14293.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 10,
+        "trecho": "Caixa liquido gerado pelas (consumido nas) 24.799 (317) (860) (14.293) atividades operacionais"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "termos_verificados": []
+  },
+  "capex": {
+    "status": "nao_encontrado",
+    "alternativas": [],
+    "complementares": [
+      {
+        "valor": 6263.0,
+        "escala": "mil",
+        "unidade": "R$",
+        "rotulo": "capex_componente: imobilizado",
+        "evidencia": {
+          "documento": "millet",
+          "pagina": 10,
+          "trecho": "Aquisição de imobilizado - - (6.263) (3.803)"
+        }
+      },
+      {
+        "valor": 11469.0,
+        "escala": "mil",
+        "unidade": "R$",
+        "rotulo": "capex_componente: intangível",
+        "evidencia": {
+          "documento": "millet",
+          "pagina": 10,
+          "trecho": "Aquisição de intangível - - (11.469) (12)"
+        }
+      }
+    ],
+    "motivo_ausencia": "Não há linha única de capex; há duas linhas de aquisição (imobilizado e intangível).",
+    "termos_verificados": []
+  },
+  "ebit": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 25298.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 7,
+        "trecho": "Resultado antes do resultado 14.750 5.374 25.298 4.482 financeiro"
+      }
+    },
+    "anterior": {
+      "valor": 4482.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 7,
+        "trecho": "Resultado antes do resultado 14.750 5.374 25.298 4.482 financeiro"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "termos_verificados": []
+  },
+  "depreciacao_amortizacao": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 18248.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 10,
+        "trecho": "Depreciação e amortização 13.295 - 18.248 2.975"
+      }
+    },
+    "anterior": {
+      "valor": 2975.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 10,
+        "trecho": "Depreciação e amortização 13.295 - 18.248 2.975"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "termos_verificados": []
+  },
+  "caixa_equivalentes": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 10656.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 6,
+        "trecho": "Caixa e equivalente de caixa 3 355 871 10.656 8.195"
+      }
+    },
+    "anterior": {
+      "valor": 8195.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 6,
+        "trecho": "Caixa e equivalente de caixa 3 355 871 10.656 8.195"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "termos_verificados": []
+  },
+  "aplicacoes_financeiras": {
+    "status": "nao_encontrado",
+    "alternativas": [],
+    "complementares": [],
+    "motivo_ausencia": "Não há linha de aplicações financeiras no balanço consolidado.",
+    "termos_verificados": []
+  },
+  "divida_bruta": {
+    "status": "encontrado",
+    "atual": {
+      "valor": 24176.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 42,
+        "trecho": "Total dos empréstimos com terceiros 24.176 25.072"
+      }
+    },
+    "anterior": {
+      "valor": 25072.0,
+      "escala": "mil",
+      "unidade": "R$",
+      "evidencia": {
+        "documento": "millet",
+        "pagina": 42,
+        "trecho": "Total dos empréstimos com terceiros 24.176 25.072"
+      }
+    },
+    "alternativas": [],
+    "complementares": [],
+    "termos_verificados": []
+  },
+  "anomalias_documento": [
+    {
+      "id": "MILLET-A1",
+      "severidade": "alta",
+      "descricao": "Comparabilidade da receita: a Alibra foi adquirida em 18/06/2021; a receita consolidada de 2021 (R$199.259 mil) reflete só parte do ano. A própria nota 7 mostra a receita da Alibra em 2021 como R$318.317 mil (ano cheio) — a variação like-for-like seria ≈ +45%, não +132%.",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 27,
+          "trecho": "Adquirida. A Transação foi concluída em 18 de junho de 2021, em continuidade à celebração de contrato de"
+        },
+        {
+          "documento": "millet",
+          "pagina": 29,
+          "trecho": "Receita operacional líquida 462.127 318.317"
+        }
+      ]
+    },
+    {
+      "id": "MILLET-A2",
+      "severidade": "media",
+      "descricao": "Patrimônio líquido na nota 22.2 (R$167.233 mil) difere do balanço (R$163.931 mil de controladores; R$185.321 mil consolidado).",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 42,
+          "trecho": "Total do patrimônio líquido (b) 167.233 152.689"
+        },
+        {
+          "documento": "millet",
+          "pagina": 6,
+          "trecho": "Patrimônio líquido 163.931 152.689 163.931 152.689"
+        }
+      ]
+    },
+    {
+      "id": "MILLET-A3",
+      "severidade": "baixa",
+      "descricao": "Empréstimos em 31/12/2021: R$25.072 mil na nota 22.2 vs R$25.075 mil na nota 22.1/22.3 (e na soma do balanço).",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 42,
+          "trecho": "Total dos empréstimos com terceiros 24.176 25.072"
+        },
+        {
+          "documento": "millet",
+          "pagina": 41,
+          "trecho": "Empréstimos e Financiamentos (Taxas Pré-fixadas) 24.176 25.075"
+        }
+      ]
+    },
+    {
+      "id": "MILLET-A4",
+      "severidade": "media",
+      "descricao": "Nota 2.2 diz que as DFs de 2022 foram aprovadas pela administração em 14/03/2022 (data anterior ao fim do exercício) — provável erro de digitação (2023).",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 12,
+          "trecho": "A apresentação das demonstrações financeiras foi aprovada e pela administração em 14 de março de 2022."
+        }
+      ]
+    },
+    {
+      "id": "MILLET-A5",
+      "severidade": "media",
+      "descricao": "Nota 7 (investida Alibra): 'Lucro antes dos impostos' 2022 aparece como (65.750), mas lucro bruto − despesas − resultado financeiro = 98.338 − 63.419 − 2.331 = 32.588 (e 32.588 − 4.070 = 28.518, o lucro líquido informado).",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 29,
+          "trecho": "Lucro antes dos impostos (65.750) 15.412"
+        }
+      ]
+    }
+  ],
+  "modo": "reference"
+}

@@ -1,0 +1,182 @@
+{
+  "doc_id": "brasal",
+  "empresa": "Brasal Brasília Holding S.A.",
+  "fonte_qualitativa": "Apenas notas explicativas (não há relatório da administração)",
+  "nota_cobertura": "Sem comentário de desempenho da administração e sem explicação para a variação da receita. Os 'motivos' abaixo são evidência extraída das DFs, não afirmação gerencial.",
+  "motivos_resultado": [
+    {
+      "texto": "[Evidência documental] O lucro líquido caiu em 2022 em parte porque 2021 incluía R$105.633 mil de créditos extemporâneos (exclusão do ICMS da base do PIS/COFINS) em outras receitas operacionais.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 46,
+          "trecho": "Créditos extemporâneos (i) - - 231 105.633",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "texto": "[Evidência documental] As receitas financeiras recuaram de R$116.653 mil (2021) para R$29.541 mil (2022).",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 8,
+          "trecho": "Receitas financeiras 23.f 959 372 29.541 116.653",
+          "verificada": true
+        }
+      ]
+    }
+  ],
+  "riscos": [
+    {
+      "texto": "Crédito concedido a clientes é apontado como o principal fator de risco de mercado.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 49,
+          "trecho": "O principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes. Para reduzir as possíveis perdas com inadimplência, é adotada uma política de gestão na",
+          "verificada": true
+        }
+      ],
+      "categoria": "credito_inadimplencia"
+    },
+    {
+      "texto": "Oscilação de preços dos produtos em razão da compra de matéria-prima (commodities).",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 49,
+          "trecho": "Os produtos comercializados pela Companhia estão sujeitos a oscilações em razão da compra de matéria-prima. Para mitigar os riscos, a Companhia monitora permanentemente os preços",
+          "verificada": true
+        }
+      ],
+      "categoria": "custo_insumos"
+    },
+    {
+      "texto": "Oscilação de taxas de juros incidentes sobre ativos e passivos financeiros (CDI).",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 49,
+          "trecho": "Decorre da possibilidade de a Companhia sofrer ganhos ou perdas decorrentes de oscilações de taxas de juros incidentes sobre seus ativos e passivos financeiros. Visando à mitigação deste tipo",
+          "verificada": true
+        }
+      ],
+      "categoria": "juros_mercado"
+    },
+    {
+      "texto": "Contratos por prazo determinado com Coca-Cola, Heineken e Leão: dependência de marcas licenciadas.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 12,
+          "trecho": "A Controlada mantém por prazo determinado contrato com a Coca-Cola Indústrias Ltda., com a Cervejaria Heineken e a Leão Alimentos e Bebidas Ltda., para fabricação, venda e revenda no DF,",
+          "verificada": true
+        }
+      ],
+      "categoria": "concentracao_dependencia"
+    },
+    {
+      "texto": "Incentivo fiscal Emprega/DF (crédito presumido de 67% do ICMS) condicionado a manutenção de empregos, regularidade fiscal e contrapartidas.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 12,
+          "trecho": "Federal. Neste programa é concedido um percentual de crédito presumido de 67% incidente sobre o ICMS apurado das saídas de produtos de fabricação própria. A Controlada condiciona-se ao cumprimento de obrigações como manutenção de empregos e regularidade fiscal, além do",
+          "verificada": true
+        }
+      ],
+      "categoria": "regulatorio_concessao"
+    },
+    {
+      "texto": "Ações judiciais de risco possível (52 trabalhistas, 9 cíveis e fiscais — IPI, PIS) não provisionadas; STF (fev/2023) limitou a 'coisa julgada' em tributos recorrentes (sem impacto identificado).",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 41,
+          "trecho": "Existem atualmente 52 (Cinquenta e Dois) ações judiciais e referem-se a pedidos, tais como: indenizações, horas extras, verbas rescisórias e outros, classificadas como possíveis.",
+          "verificada": true
+        },
+        {
+          "documento": "brasal",
+          "pagina": 51,
+          "trecho": "Em decisão tomada no dia 08 de fevereiro 2023, por unanimidade, o Plenário do Supremo Tribunal Federal (STF) considerou que uma decisão definitiva, a chamada \"coisa julgada\",",
+          "verificada": true
+        }
+      ],
+      "categoria": "contingencias_judiciais"
+    },
+    {
+      "texto": "Comparativos de 2021 não auditados.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 3,
+          "trecho": "de dezembro de 2021, apresentadas para fins de comparação, não foram auditadas por nós ou por",
+          "verificada": true
+        }
+      ],
+      "categoria": "qualidade_informacao"
+    }
+  ],
+  "guidance": [],
+  "guidance_numerico_encontrado": false,
+  "eventos_relevantes": [
+    {
+      "texto": "Aumento de capital de R$60.000 mil por capitalização de reservas (28/03/2022), sem emissão de ações.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 42,
+          "trecho": "Em 28 de março de 2022, através de assembleia geral extraordinária foi aprovado um aumento de capital mediante a capitalização de parte das reservas de lucros R$60.000 sem emissão de novas ações, ficando o capital social da Companhia totalmente subscrito e",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "texto": "Dividendos intermediários de R$206.000 mil em 2022 (a partir de reservas de lucros).",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 10,
+          "trecho": "Dividendos intermediários - - - - (206.000) - (206.000)",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "texto": "Incentivo fiscal: R$103.940 mil reconhecidos em 2022 como reserva de incentivos fiscais.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 12,
+          "trecho": "fechamento do balanço anual. Em 2022 foi reconhecido o total de R$103.940 a título de reserva de incentivos fiscais e o saldo da conta em 31 de dezembro de 2022 foi o total de R$143.978",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "texto": "Evento subsequente: decisão do STF (08/02/2023) sobre perda de efeitos da coisa julgada em tributos de trato continuado; administração não identificou impacto.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 51,
+          "trecho": "Em decisão tomada no dia 08 de fevereiro 2023, por unanimidade, o Plenário do Supremo Tribunal Federal (STF) considerou que uma decisão definitiva, a chamada \"coisa julgada\",",
+          "verificada": true
+        }
+      ]
+    }
+  ],
+  "tom": "neutro",
+  "tom_justificativa": "Sem discurso gerencial. As DFs mostram receita +24,8% e caixa líquido positivo, mas lucro −36,6% (2021 tinha ganhos não recorrentes) e comparativos não auditados; a linguagem das notas é técnica e descritiva — classificação neutra com baixa confiança.",
+  "tom_evidencias": [
+    {
+      "documento": "brasal",
+      "pagina": 51,
+      "trecho": "A Administração em conjunto com os assessores jurídicos da Companhia não identificou impactos para estas demonstrações financeiras. No entanto manterá o monitoramento",
+      "verificada": true
+    }
+  ],
+  "confianca_tom": "baixa",
+  "modo": "reference"
+}

@@ -1,0 +1,48 @@
+{
+  "doc_id": "brasal",
+  "empresa": "brasal",
+  "fonte_qualitativa": "Notas Explicativas às Demonstrações Financeiras Individuais e Consolidadas da Brasal Brasília Holding S.A. para o exercício findo em 31 de dezembro de 2022",
+  "nota_cobertura": "completa",
+  "motivos_resultado": [
+    {
+      "texto": "[Evidência documental] O resultado antes do imposto de renda e contribuição social consolidado foi de R$ 217.187 mil em 2022 comparado a R$ 346.061 mil em 2021.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 11,
+          "trecho": "Resultado antes do imposto de renda e contribuição social 174.602 275.560 217.187 346.061",
+          "verificada": true
+        }
+      ]
+    }
+  ],
+  "riscos": [
+    {
+      "texto": "Possibilidade de oscilação de preços de matérias-primas e estoques, mitigada por operações com futuros para açúcar e commodities.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 17,
+          "trecho": "Para mitigar os riscos de preços causados pelas oscilações do mercado dos estoques de matéria prima, principalmente relacionado ao açúcar, a Companhia dispõe de uma política de uso de operações com futuros para minimizar a exposição líquida de estoque de commodities.",
+          "verificada": true
+        }
+      ],
+      "categoria": "custo_insumos"
+    }
+  ],
+  "guidance": [],
+  "guidance_numerico_encontrado": false,
+  "eventos_relevantes": [],
+  "tom": "neutro",
+  "tom_justificativa": "O documento apresenta notas explicativas contábeis padronizadas, focadas em políticas contábeis, variações patrimoniais e detalhamento de saldos sem um discurso gerencial otimista ou pessimista explícito por parte da administração.",
+  "tom_evidencias": [
+    {
+      "documento": "brasal",
+      "pagina": 15,
+      "trecho": "As principais políticas contábeis descritas em detalhes abaixo têm sido aplicadas de maneira consistente com aquelas apresentadas no exercício anterior",
+      "verificada": true
+    }
+  ],
+  "confianca_tom": "baixa",
+  "modo": "llm"
+}

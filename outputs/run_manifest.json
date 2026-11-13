@@ -1,0 +1,47 @@
+{
+  "modo": "reference",
+  "documentos": {
+    "light": {
+      "arquivo": "light.pdf",
+      "sha256": "a87339d097478f1c669e3e56fac205bc9538ef5bd623230369a094dc73300c0f",
+      "paginas": 124,
+      "ingestao_s": 18.94
+    },
+    "millet": {
+      "arquivo": "millet.pdf",
+      "sha256": "42589e4b7ad3999b7df8c09d172c167ce9e8e44902db523ca1c4e6e4aba5572a",
+      "paginas": 43,
+      "ingestao_s": 5.39
+    },
+    "brasal": {
+      "arquivo": "brasal.pdf",
+      "sha256": "5905cd3412e40feaf215b9e51d0b27af7202d8ff7965bb0d434a1dfcf46ce0ec",
+      "paginas": 51,
+      "ingestao_s": 2.25
+    }
+  },
+  "tempos_s": {
+    "ingestao_s": 0.01,
+    "extracao_validacao_light_s": 0.27,
+    "extracao_validacao_millet_s": 0.23,
+    "extracao_validacao_brasal_s": 0.28,
+    "ml_tradicional_s": 1.71,
+    "total_s": 2.67
+  },
+  "grounding": {
+    "light": {
+      "evidencias": 58,
+      "falhas": 0
+    },
+    "millet": {
+      "evidencias": 49,
+      "falhas": 0
+    },
+    "brasal": {
+      "evidencias": 43,
+      "falhas": 0
+    }
+  },
+  "seguranca_achados": 0,
+  "llm": null
+}

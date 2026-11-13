@@ -1,0 +1,353 @@
+{
+  "anomalias": {
+    "metodo": {
+      "zscore_robusto": "|z| >= 3.5 (mediana/MAD)",
+      "isolation_forest": "contamination=0.05, random_state=0 (se scikit-learn instalado)"
+    },
+    "documentos": {
+      "light": {
+        "linhas_extraidas": 138,
+        "linhas_pontuadas": 104,
+        "inversoes_de_sinal": 22,
+        "sinalizadas_zscore": 7,
+        "sinalizadas_iforest": 5,
+        "sinalizadas_ambos": 3,
+        "sinalizadas_que_coincidem_com_alerta_existente": 0,
+        "top": [
+          {
+            "documento": "light",
+            "pagina": 19,
+            "rotulo": "Instrumentos financeiros derivativos swaps",
+            "atual": 396946.0,
+            "anterior": 3975.0,
+            "trecho": "Instrumentos financeiros derivativos swaps 34 - - 396.946 3.975",
+            "log_razao": 4.603775503178182,
+            "z_robusto": 7.295701316817886,
+            "anomalia_zscore": true,
+            "anomalia_iforest": true,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "light",
+            "pagina": 23,
+            "rotulo": "Perdas cambiais e monetárias de atividades financeiras",
+            "atual": 16260.0,
+            "anterior": 743095.0,
+            "trecho": "Perdas cambiais e monetárias de atividades financeiras 33 - - 16.260 743.095",
+            "log_razao": -3.822115792451616,
+            "z_robusto": -5.830734811646713,
+            "anomalia_zscore": true,
+            "anomalia_iforest": true,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "light",
+            "pagina": 20,
+            "rotulo": "LUCRO (PREJUÍZO) ANTES DO IR E CSLL",
+            "atual": -5357738.0,
+            "anterior": -186889.0,
+            "trecho": "LUCRO (PREJUÍZO) ANTES DO IR E CSLL (5.651.661) 399.812 (5.357.738) (186.889)",
+            "log_razao": 3.355782292339297,
+            "z_robusto": 5.351491191613603,
+            "anomalia_zscore": true,
+            "anomalia_iforest": true,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "light",
+            "pagina": 23,
+            "rotulo": "Valor justo do ativo financeiro da concessão 13/31",
+            "atual": -38365.0,
+            "anterior": -574231.0,
+            "trecho": "Valor justo do ativo financeiro da concessão 13/31 - - (38.365) (574.231)",
+            "log_razao": -2.7058861687574636,
+            "z_robusto": -4.091795114226111,
+            "anomalia_zscore": true,
+            "anomalia_iforest": false,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "light",
+            "pagina": 18,
+            "rotulo": "Instrumentos financeiros derivativos swaps",
+            "atual": 13611.0,
+            "anterior": 190409.0,
+            "trecho": "Instrumentos financeiros derivativos swaps 34 - - 13.611 190.409",
+            "log_razao": -2.638296100797752,
+            "z_robusto": -3.986498632362892,
+            "anomalia_zscore": true,
+            "anomalia_iforest": false,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "light",
+            "pagina": 20,
+            "rotulo": "Imposto de renda e contribuição social diferidos",
+            "atual": 47409.0,
+            "anterior": 580582.0,
+            "trecho": "Imposto de renda e contribuição social diferidos 10 - - 47.409 580.582",
+            "log_razao": -2.5052189646035696,
+            "z_robusto": -3.7791818670352955,
+            "anomalia_zscore": true,
+            "anomalia_iforest": false,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "light",
+            "pagina": 20,
+            "rotulo": "Outras receitas (despesas), líquidas",
+            "atual": -379953.0,
+            "anterior": -40014.0,
+            "trecho": "Outras receitas (despesas), líquidas (41.297) 15.878 (379.953) (40.014)",
+            "log_razao": 2.250818167982158,
+            "z_robusto": 3.6301016680932117,
+            "anomalia_zscore": true,
+            "anomalia_iforest": false,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "light",
+            "pagina": 18,
+            "rotulo": "Outros créditos",
+            "atual": 160.0,
+            "anterior": 1121.0,
+            "trecho": "Outros créditos 11 - - 160 1.121",
+            "log_razao": -1.946802607838333,
+            "z_robusto": -2.9092422507990183,
+            "anomalia_zscore": false,
+            "anomalia_iforest": true,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "light",
+            "pagina": 23,
+            "rotulo": "Ganho em investimentos avaliados pelo custo",
+            "atual": -9791.0,
+            "anterior": -3161.0,
+            "trecho": "Ganho em investimentos avaliados pelo custo - - (9.791) (3.161)",
+            "log_razao": 1.1305751631384537,
+            "z_robusto": 1.8849096479840763,
+            "anomalia_zscore": false,
+            "anomalia_iforest": true,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          }
+        ]
+      },
+      "millet": {
+        "linhas_extraidas": 71,
+        "linhas_pontuadas": 61,
+        "inversoes_de_sinal": 3,
+        "sinalizadas_zscore": 4,
+        "sinalizadas_iforest": 3,
+        "sinalizadas_ambos": 3,
+        "sinalizadas_que_coincidem_com_alerta_existente": 0,
+        "top": [
+          {
+            "documento": "millet",
+            "pagina": 10,
+            "rotulo": "Aquisição de intangível",
+            "atual": -11469.0,
+            "anterior": -12.0,
+            "trecho": "Aquisição de intangível - - (11.469) (12)",
+            "log_razao": 6.862496372576522,
+            "z_robusto": 9.028731528758719,
+            "anomalia_zscore": true,
+            "anomalia_iforest": true,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "millet",
+            "pagina": 10,
+            "rotulo": "Juros sobre arrendamentos",
+            "atual": 3752.0,
+            "anterior": 35.0,
+            "trecho": "Juros sobre arrendamentos - - 3.752 35",
+            "log_razao": 4.674696248636701,
+            "z_robusto": 6.035839719930257,
+            "anomalia_zscore": true,
+            "anomalia_iforest": true,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "millet",
+            "pagina": 10,
+            "rotulo": "Saldo inicial de caixa e equivalentes de caixa",
+            "atual": 8195.0,
+            "anterior": 199.0,
+            "trecho": "Saldo inicial de caixa e equivalentes de caixa 871 199 8.195 199",
+            "log_razao": 3.7179746664534377,
+            "z_robusto": 4.727052799537679,
+            "anomalia_zscore": true,
+            "anomalia_iforest": false,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "millet",
+            "pagina": 7,
+            "rotulo": "Diferido",
+            "atual": 166.0,
+            "anterior": 3333.0,
+            "trecho": "Diferido - - 166 3.333",
+            "log_razao": -2.9996402899511962,
+            "z_robusto": -4.462586856246539,
+            "anomalia_zscore": true,
+            "anomalia_iforest": true,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          }
+        ]
+      },
+      "brasal": {
+        "linhas_extraidas": 74,
+        "linhas_pontuadas": 66,
+        "inversoes_de_sinal": 4,
+        "sinalizadas_zscore": 6,
+        "sinalizadas_iforest": 4,
+        "sinalizadas_ambos": 3,
+        "sinalizadas_que_coincidem_com_alerta_existente": 0,
+        "top": [
+          {
+            "documento": "brasal",
+            "pagina": 11,
+            "rotulo": "Crédito ICMS na base de PIS e COFINS",
+            "atual": -233.0,
+            "anterior": -105633.0,
+            "trecho": "Crédito ICMS na base de PIS e COFINS - - (233) (105.633)",
+            "log_razao": -6.116687647870643,
+            "z_robusto": -8.75506963667606,
+            "anomalia_zscore": true,
+            "anomalia_iforest": true,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "brasal",
+            "pagina": 11,
+            "rotulo": "Obrigações fiscais",
+            "atual": -49818.0,
+            "anterior": -125.0,
+            "trecho": "Obrigações fiscais 393 108 (49.818) (125)",
+            "log_razao": 5.987817906187784,
+            "z_robusto": 8.704098462868593,
+            "anomalia_zscore": true,
+            "anomalia_iforest": true,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "brasal",
+            "pagina": 8,
+            "rotulo": "Outras receitas operacionais, líquidas 23.g",
+            "atual": 2182.0,
+            "anterior": 105328.0,
+            "trecho": "Outras receitas operacionais, líquidas 23.g (2.884) (829) 2.182 105.328",
+            "log_razao": -3.8768374033146418,
+            "z_robusto": -5.524378241404826,
+            "anomalia_zscore": true,
+            "anomalia_iforest": false,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "brasal",
+            "pagina": 11,
+            "rotulo": "Ajuste a valor presente do incentivo governamental",
+            "atual": -770.0,
+            "anterior": -36453.0,
+            "trecho": "Ajuste a valor presente do incentivo governamental - - (770) (36.453)",
+            "log_razao": -3.857388523728992,
+            "z_robusto": -5.496325773130333,
+            "anomalia_zscore": true,
+            "anomalia_iforest": true,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "brasal",
+            "pagina": 11,
+            "rotulo": "Empréstimos e financiamentos (incluindo juros pagos)",
+            "atual": -3369.0,
+            "anterior": -112259.0,
+            "trecho": "Empréstimos e financiamentos (incluindo juros pagos) (225) - (3.369) (112.259)",
+            "log_razao": -3.506192737157569,
+            "z_robusto": -4.98977172627408,
+            "anomalia_zscore": true,
+            "anomalia_iforest": false,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "brasal",
+            "pagina": 11,
+            "rotulo": "Aumento (redução) líquido de caixa e equivalentes de caixa",
+            "atual": 34287.0,
+            "anterior": 2938.0,
+            "trecho": "Aumento (redução) líquido de caixa e equivalentes de caixa 2569 (39) 34.287 2.938",
+            "log_razao": 2.457037195831885,
+            "z_robusto": 3.611408499661875,
+            "anomalia_zscore": true,
+            "anomalia_iforest": false,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          },
+          {
+            "documento": "brasal",
+            "pagina": 6,
+            "rotulo": "Depósitos judiciais",
+            "atual": 344.0,
+            "anterior": 1231.0,
+            "trecho": "Depósitos judiciais 19 54 813 344 1.231",
+            "log_razao": -1.2749404688110553,
+            "z_robusto": -1.771481788566471,
+            "anomalia_zscore": false,
+            "anomalia_iforest": true,
+            "inversao_de_sinal": false,
+            "coincide_com_alerta_existente": false
+          }
+        ]
+      }
+    }
+  },
+  "tom": {
+    "light": {
+      "tom_classificado": "negativo",
+      "tom_lexico": "negativo",
+      "score_lexico": -1.0,
+      "pos": 0,
+      "neg": 3,
+      "concorda": true
+    },
+    "millet": {
+      "tom_classificado": "neutro",
+      "tom_lexico": "neutro",
+      "score_lexico": 0.0,
+      "pos": 1,
+      "neg": 1,
+      "concorda": true
+    },
+    "brasal": {
+      "tom_classificado": "neutro",
+      "tom_lexico": "neutro",
+      "score_lexico": 0.0,
+      "pos": 0,
+      "neg": 0,
+      "concorda": true
+    },
+    "_resumo": {
+      "documentos": 3,
+      "concordancias": 3
+    }
+  }
+}

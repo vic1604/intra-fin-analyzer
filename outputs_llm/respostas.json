@@ -1,0 +1,191 @@
+[
+  {
+    "numero": 1,
+    "pergunta": "Qual empresa teve a maior margem EBITDA no período?",
+    "resposta": "**Brasal**, com margem EBITDA de ≈ **16,7%** em 2022 — mas atenção: é uma margem **derivada pelo pipeline**, não publicada. Nenhum dos três documentos informa margem EBITDA, e só a Light publica EBITDA.\nA Light imprime EBITDA CVM de R$ 1.180 mi [Light p.9], porém as DFs mostram EBIT + D&A = −R$ 1,18 bi (**negativo**; ver alerta de sinal).\nPara comparar de forma padronizada usei **EBITDA derivado = EBIT + D&A (fluxo de caixa) ÷ receita líquida da DRE**:\n1. Brasal: **16,7%** (EBITDA derivado R$ 221,9 mi; 2021: 24,6%) [Brasal p.8]\n2. Millet: **9,4%** (EBITDA derivado R$ 43,5 mi; 2021: 3,7%) [Millet p.7]\n3. Light: **−8,9%** (EBITDA derivado −R$ 1,18 bi; 2021: 12,2%) (−9,7% sobre receita ex-construção) [Light p.20]\n*Comparação com ressalvas: os três usam critérios contábeis e setores diferentes (energia, alimentos, bebidas).*",
+    "fontes": [
+      {
+        "documento": "light",
+        "pagina": 20,
+        "trecho": "LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS (5.681.153) 397.043 (1.910.411) 1.143.301"
+      },
+      {
+        "documento": "light",
+        "pagina": 23,
+        "trecho": "Depreciação e amortização 32 - - 730.767 678.110"
+      },
+      {
+        "documento": "light",
+        "pagina": 20,
+        "trecho": "RECEITA LÍQUIDA 31 - - 13.253.286 14.897.920"
+      },
+      {
+        "documento": "millet",
+        "pagina": 7,
+        "trecho": "Resultado antes do resultado 14.750 5.374 25.298 4.482 financeiro"
+      },
+      {
+        "documento": "millet",
+        "pagina": 10,
+        "trecho": "Depreciação e amortização 13.295 - 18.248 2.975"
+      },
+      {
+        "documento": "millet",
+        "pagina": 7,
+        "trecho": "Receita operacional líquida 18 - - 462.127 199.259"
+      },
+      {
+        "documento": "brasal",
+        "pagina": 8,
+        "trecho": "Lucro operacional antes das receitas e despesas 173.736 275.244 192.840 238.224 financeiras"
+      },
+      {
+        "documento": "brasal",
+        "pagina": 11,
+        "trecho": "Depreciações e amortizações 507 465 29.014 22.837"
+      },
+      {
+        "documento": "brasal",
+        "pagina": 8,
+        "trecho": "Receita operacional líquida 21 - - 1.325.059 1.061.410"
+      }
+    ]
+  },
+  {
+    "numero": 2,
+    "pergunta": "O que a administração de cada empresa apontou como principal motivo da variação da receita?",
+    "resposta": "- **Light** (receita R$ 13,25 bi vs R$ 14,90 bi; −11,0%): **Não encontrado**: o documento não traz explicação da administração para a variação da receita. (a DRE total varia −11,0%; o −13% da administração exclui receita de construção)\n- **Millet** (receita R$ 462,1 mi vs R$ 199,3 mi; +131,9%): **Não encontrado**: o documento não traz explicação da administração para a variação da receita.\n- **Brasal** (receita R$ 1,33 bi vs R$ 1,06 bi; +24,8%): **Não encontrado**: o documento não traz explicação da administração para a variação da receita.",
+    "fontes": [
+      {
+        "documento": "light",
+        "pagina": 20,
+        "trecho": "RECEITA LÍQUIDA 31 - - 13.253.286 14.897.920"
+      },
+      {
+        "documento": "millet",
+        "pagina": 7,
+        "trecho": "Receita operacional líquida 18 - - 462.127 199.259"
+      },
+      {
+        "documento": "brasal",
+        "pagina": 8,
+        "trecho": "Receita operacional líquida 21 - - 1.325.059 1.061.410"
+      }
+    ]
+  },
+  {
+    "numero": 3,
+    "pergunta": "Alguma das empresas está com alavancagem acima de 3x? Qual?",
+    "resposta": "**Sim — Light.** Único múltiplo **publicado** acima de 3x: Light.\n- **Light: 3,32x** (Dívida líquida/EBITDA ajustado de covenants, publicado) [Light p.10]; dívida líquida R$ 9,03 bi [Light p.10]; pelo EBITDA CVM recomposto (negativo) o múltiplo é n.s., o que é pior, não melhor\n- Millet: não publica alavancagem sobre EBITDA; **derivado 0,31x** (dívida líquida R$ 13,5 mi ÷ EBITDA derivado R$ 43,5 mi).\n- Brasal: não publica alavancagem; dívida líquida derivada = **−R$ 171,6 mi** (caixa líquido: mais caixa e aplicações do que dívida) — sem alavancagem.",
+    "fontes": [
+      {
+        "documento": "light",
+        "pagina": 10,
+        "trecho": "O indicador de covenants Dívida Líquida/EBITDA ajustado para fins de covenants encerrou 2021 em 3,32x, menor do que no 2021 (3,48x)."
+      },
+      {
+        "documento": "light",
+        "pagina": 10,
+        "trecho": "A dívida líquida da Companhia em 31 de dezembro de 2022 totalizou R$9.032 milhões, aumento de 23% em comparação a 2021, de R$7.353 milhões."
+      },
+      {
+        "documento": "millet",
+        "pagina": 7,
+        "trecho": "Resultado antes do resultado 14.750 5.374 25.298 4.482 financeiro"
+      },
+      {
+        "documento": "millet",
+        "pagina": 10,
+        "trecho": "Depreciação e amortização 13.295 - 18.248 2.975"
+      },
+      {
+        "documento": "millet",
+        "pagina": 42,
+        "trecho": "Total dos empréstimos com terceiros 24.176 25.072"
+      },
+      {
+        "documento": "millet",
+        "pagina": 10,
+        "trecho": "Saldo final de caixa e equivalentes de caixa 354 871 10.655 8.195"
+      },
+      {
+        "documento": "millet",
+        "pagina": 42,
+        "trecho": "(=) Dívida líquida (a) 13.520 16.877"
+      },
+      {
+        "documento": "brasal",
+        "pagina": 8,
+        "trecho": "Lucro operacional antes das receitas e despesas 173.736 275.244 192.840 238.224 financeiras"
+      },
+      {
+        "documento": "brasal",
+        "pagina": 11,
+        "trecho": "Depreciações e amortizações 507 465 29.014 22.837"
+      },
+      {
+        "documento": "brasal",
+        "pagina": 48,
+        "trecho": "Empréstimos e financiamentos - - 3.417 3.417"
+      },
+      {
+        "documento": "brasal",
+        "pagina": 11,
+        "trecho": "No fim do exercício 3.714 1.145 96.453 62.166"
+      },
+      {
+        "documento": "brasal",
+        "pagina": 48,
+        "trecho": "Aplicação Financeira - - 78.569 78.569"
+      }
+    ]
+  },
+  {
+    "numero": 4,
+    "pergunta": "Quais riscos são citados por mais de uma empresa?",
+    "resposta": "**0 categorias de risco aparecem em mais de uma empresa**; 0 aparecem nas três: nenhuma.\n- Citados por **apenas uma** empresa: Liquidez e endividamento (Light); Juros e risco de mercado (Light); Continuidade operacional (Light); Regulatório / fiscal / concessão (Light); Crédito / inadimplência de clientes (Millet); Custo de insumos / matérias-primas (Brasal).\n*Metodologia: cada risco recebe uma categoria de uma taxonomia fixa; a pergunta é respondida pela interseção das categorias (código), não por um parecer livre. Para Millet e Brasal, a base são as notas explicativas (não há relatório da administração).*",
+    "fontes": [
+      {
+        "documento": "light",
+        "pagina": 26,
+        "trecho": "A Administração da Companhia entende que o Grupo Light e sua controlada Light SESA apresentam situação operacional e financeira complexa, com: (i) elevado nível de endividamento; (ii) geração de caixa operacional historicamente insuficiente para sozinha honrar os compromissos;"
+      },
+      {
+        "documento": "light",
+        "pagina": 26,
+        "trecho": "Esta situação foi agravada pelo(a): (i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;"
+      },
+      {
+        "documento": "light",
+        "pagina": 3,
+        "trecho": "Os eventos e condições, anteriormente mencionados, individual ou coletivamente, indicam, no julgamento da Administração da Companhia, a existência de incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional da Light e da Light SESA, controlada da Companhia."
+      },
+      {
+        "documento": "light",
+        "pagina": 26,
+        "trecho": "A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá em junho de 2026. A Administração da Companhia entende que determinados cenários para o futuro do Grupo que dependem (i) da necessidade de processo formal de renovação da concessão e (ii) da necessidade de negociação dos termos e condições da nova concessão, que não estão sob controle da Administração do Grupo Light."
+      },
+      {
+        "documento": "millet",
+        "pagina": 19,
+        "trecho": "A exposição máxima ao risco de crédito do Contas a Receber de clientes na data das demonstrações financeiras é o valor contábil de cada faixa de idade de vencimento."
+      },
+      {
+        "documento": "millet",
+        "pagina": 40,
+        "trecho": "Contas a receber de clientes - - 98.663 69.645"
+      },
+      {
+        "documento": "brasal",
+        "pagina": 17,
+        "trecho": "Para mitigar os riscos de preços causados pelas oscilações do mercado dos estoques de matéria prima, principalmente relacionado ao açúcar, a Companhia dispõe de uma política de uso de operações com futuros para minimizar a exposição líquida de estoque de commodities."
+      }
+    ]
+  },
+  {
+    "numero": 5,
+    "pergunta": "Qual é o guidance de cada empresa para o próximo ano?",
+    "resposta": "**Nenhuma das três empresas divulga guidance numérico para 2023** nos documentos fornecidos (são demonstrações financeiras anuais de 2022, não releases com projeções).\n- **Light** — **nenhum guidance numérico**; o documento também não traz perspectivas/projeções (**não encontrado**).\n- **Millet** — **nenhum guidance numérico**; o documento também não traz perspectivas/projeções (**não encontrado**).\n- **Brasal** — **nenhum guidance numérico**; o documento também não traz perspectivas/projeções (**não encontrado**).",
+    "fontes": []
+  }
+]

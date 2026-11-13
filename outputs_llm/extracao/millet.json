@@ -1,0 +1,498 @@
+{
+  "empresa": "Millet Participações S.A.",
+  "periodo_referencia": "31/12/2022",
+  "documento": "millet.pdf",
+  "tipo_documento": "Demonstrações Financeiras",
+  "escala_declarada": "milhares de Reais",
+  "modo_extracao": "llm",
+  "indicadores": {
+    "receita_liquida": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 462127.0,
+        "unidade": "R$ mil",
+        "rotulo": "Receita operacional líquida",
+        "origem": {
+          "documento": "millet",
+          "pagina": 7,
+          "trecho": "Receita operacional líquida 18 - - 462.127 199.259",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 199259.0,
+        "unidade": "R$ mil",
+        "rotulo": "Receita operacional líquida",
+        "origem": {
+          "documento": "millet",
+          "pagina": 7,
+          "trecho": "Receita operacional líquida 18 - - 462.127 199.259",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 131.92
+    },
+    "receita_liquida_ex_construcao": {
+      "status": "não encontrado",
+      "motivo": "Termo ou valor separado não mencionado no documento."
+    },
+    "ebitda": {
+      "status": "não encontrado",
+      "motivo": "O termo EBITDA ou LAJIDA não aparece explicitamente nas demonstrações financeiras publicadas."
+    },
+    "margem_ebitda": {
+      "status": "não encontrado",
+      "motivo": "O termo Margem EBITDA não aparece explicitamente nas demonstrações financeiras publicadas."
+    },
+    "lucro_liquido": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 18891.0,
+        "unidade": "R$ mil",
+        "rotulo": "Lucro líquido do exercício",
+        "origem": {
+          "documento": "millet",
+          "pagina": 7,
+          "trecho": "Lucro líquido do exercício 14.743 5.371 18.891 6.470",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 6470.0,
+        "unidade": "R$ mil",
+        "rotulo": "Lucro líquido do exercício",
+        "origem": {
+          "documento": "millet",
+          "pagina": 7,
+          "trecho": "Lucro líquido do exercício 14.743 5.371 18.891 6.470",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 191.98
+    },
+    "divida_liquida": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 13520.0,
+        "unidade": "R$ mil",
+        "rotulo": "(=) Dívida líquida (a)",
+        "origem": {
+          "documento": "millet",
+          "pagina": 42,
+          "trecho": "(=) Dívida líquida (a) 13.520 16.877",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 16877.0,
+        "unidade": "R$ mil",
+        "rotulo": "(=) Dívida líquida (a)",
+        "origem": {
+          "documento": "millet",
+          "pagina": 42,
+          "trecho": "(=) Dívida líquida (a) 13.520 16.877",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -19.89
+    },
+    "alavancagem": {
+      "status": "não encontrado",
+      "motivo": "O indicador de alavancagem Dívida líquida / EBITDA não é publicado diretamente no texto."
+    },
+    "fco": {
+      "status": "não verificado (falhou no grounding)",
+      "valor_periodo_atual": {
+        "valor": -14293.0,
+        "unidade": "R$ mil",
+        "rotulo": "Caixa liquido gerado pelas (consumido nas) atividades operacionais",
+        "origem": {
+          "documento": "millet",
+          "pagina": 10,
+          "trecho": "Caixa liquido gerado pelas (consumido nas) 24.799 (317) (860) (14.293) atividades operacionais",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 7424.0,
+        "unidade": "R$ mil",
+        "rotulo": "Caixa liquido gerado pelas (consumido nas) atividades operacionais",
+        "origem": {
+          "documento": "millet",
+          "pagina": 10,
+          "trecho": "Caixa liquido gerado pelas (consumido nas) atividades operacionais 24.799 (317) (860) (14.293)",
+          "verificada": false
+        }
+      },
+      "variacao_pct_calculada": -292.52
+    },
+    "capex": {
+      "status": "não encontrado",
+      "motivo": "A linha consolidada de Capex total não possui um somatório único explícito no DFC, havendo linhas separadas de imobilizado e intangível.",
+      "complementares": [
+        {
+          "valor": 6263.0,
+          "unidade": "R$ mil",
+          "rotulo": "capex_componente: Aquisição de imobilizado",
+          "origem": {
+            "documento": "millet",
+            "pagina": 10,
+            "trecho": "Aquisição de imobilizado - - (6.263) (3.803)",
+            "verificada": true
+          }
+        },
+        {
+          "valor": 11469.0,
+          "unidade": "R$ mil",
+          "rotulo": "capex_componente: Aquisição de intangível",
+          "origem": {
+            "documento": "millet",
+            "pagina": 10,
+            "trecho": "Aquisição de intangível - - (11.469) (12)",
+            "verificada": true
+          }
+        }
+      ]
+    }
+  },
+  "insumos_para_derivados": {
+    "ebit": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 25298.0,
+        "unidade": "R$ mil",
+        "rotulo": "Resultado antes do resultado financeiro",
+        "origem": {
+          "documento": "millet",
+          "pagina": 7,
+          "trecho": "Resultado antes do resultado 14.750 5.374 25.298 4.482 financeiro",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 4482.0,
+        "unidade": "R$ mil",
+        "rotulo": "Resultado antes do resultado financeiro",
+        "origem": {
+          "documento": "millet",
+          "pagina": 7,
+          "trecho": "Resultado antes do resultado 14.750 5.374 25.298 4.482 financeiro",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 464.44
+    },
+    "depreciacao_amortizacao": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 18248.0,
+        "unidade": "R$ mil",
+        "rotulo": "Depreciação e amortização",
+        "origem": {
+          "documento": "millet",
+          "pagina": 10,
+          "trecho": "Depreciação e amortização 13.295 - 18.248 2.975",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 2975.0,
+        "unidade": "R$ mil",
+        "rotulo": "Depreciação e amortização",
+        "origem": {
+          "documento": "millet",
+          "pagina": 10,
+          "trecho": "Depreciação e amortização 13.295 - 18.248 2.975",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 513.38
+    },
+    "caixa_equivalentes": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 10655.0,
+        "unidade": "R$ mil",
+        "rotulo": "Saldo final de caixa e equivalentes de caixa",
+        "origem": {
+          "documento": "millet",
+          "pagina": 10,
+          "trecho": "Saldo final de caixa e equivalentes de caixa 354 871 10.655 8.195",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 8195.0,
+        "unidade": "R$ mil",
+        "rotulo": "Saldo final de caixa e equivalentes de caixa",
+        "origem": {
+          "documento": "millet",
+          "pagina": 10,
+          "trecho": "Saldo final de caixa e equivalentes de caixa 354 871 10.655 8.195",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": 30.02
+    },
+    "aplicacoes_financeiras": {
+      "status": "não encontrado",
+      "motivo": "Não há linha separada para aplicações financeiras distinta de caixa e equivalentes de caixa no balanço consolidado."
+    },
+    "divida_bruta": {
+      "status": "encontrado",
+      "valor_periodo_atual": {
+        "valor": 24176.0,
+        "unidade": "R$ mil",
+        "rotulo": "Total dos empréstimos com terceiros",
+        "origem": {
+          "documento": "millet",
+          "pagina": 42,
+          "trecho": "Total dos empréstimos com terceiros 24.176 25.072",
+          "verificada": true
+        }
+      },
+      "valor_periodo_comparavel": {
+        "valor": 25072.0,
+        "unidade": "R$ mil",
+        "rotulo": "Total dos empréstimos com terceiros",
+        "origem": {
+          "documento": "millet",
+          "pagina": 42,
+          "trecho": "Total dos empréstimos com terceiros 24.176 25.072",
+          "verificada": true
+        }
+      },
+      "variacao_pct_calculada": -3.57
+    },
+    "receita_construcao": {
+      "status": "não encontrado",
+      "motivo": "Termo ou valor não mencionado no documento."
+    }
+  },
+  "indicadores_derivados_calculados_pelo_pipeline": {
+    "ebitda_derivado": {
+      "formula": "EBIT + Depreciação e Amortização (fluxo de caixa)",
+      "unidade": "R$ mil",
+      "periodo_atual": 43546.0,
+      "periodo_comparavel": 7457.0,
+      "entradas": [
+        {
+          "campo": "ebit",
+          "valor_R$_mil": 25298.0,
+          "pagina": 7,
+          "trecho": "Resultado antes do resultado 14.750 5.374 25.298 4.482 financeiro"
+        },
+        {
+          "campo": "depreciacao_amortizacao",
+          "valor_R$_mil": 18248.0,
+          "pagina": 10,
+          "trecho": "Depreciação e amortização 13.295 - 18.248 2.975"
+        }
+      ],
+      "nota": ""
+    },
+    "margem_ebitda_derivada": {
+      "formula": "EBITDA derivado / Receita líquida (DRE)",
+      "unidade": "%",
+      "periodo_atual": 9.423,
+      "periodo_comparavel": 3.7424,
+      "entradas": [
+        {
+          "campo": "receita_liquida",
+          "valor_R$_mil": 462127.0,
+          "pagina": 7,
+          "trecho": "Receita operacional líquida 18 - - 462.127 199.259"
+        }
+      ],
+      "nota": "Receita líquida consolidada da DRE."
+    },
+    "divida_liquida_derivada": {
+      "formula": "Dívida bruta − Caixa − Aplicações financeiras",
+      "unidade": "R$ mil",
+      "periodo_atual": 13521.0,
+      "periodo_comparavel": 16877.0,
+      "entradas": [
+        {
+          "campo": "divida_bruta",
+          "valor_R$_mil": 24176.0,
+          "pagina": 42,
+          "trecho": "Total dos empréstimos com terceiros 24.176 25.072"
+        },
+        {
+          "campo": "caixa_equivalentes",
+          "valor_R$_mil": 10655.0,
+          "pagina": 10,
+          "trecho": "Saldo final de caixa e equivalentes de caixa 354 871 10.655 8.195"
+        }
+      ],
+      "nota": "Valor negativo = caixa líquido (empresa com mais caixa do que dívida)."
+    },
+    "alavancagem_derivada": {
+      "formula": "Dívida líquida / EBITDA derivado",
+      "unidade": "x",
+      "periodo_atual": 0.3105,
+      "periodo_comparavel": 2.2632,
+      "entradas": [],
+      "nota": "n.s. (não significativo) quando o EBITDA é negativo. Dívida líquida = valor reportado, se existir; senão derivada."
+    },
+    "capex_caixa_derivado": {
+      "formula": "Σ aquisições de imobilizado e intangível (fluxo de caixa)",
+      "unidade": "R$ mil",
+      "periodo_atual": 17732.0,
+      "periodo_comparavel": null,
+      "entradas": [
+        {
+          "campo": "capex",
+          "valor_R$_mil": 6263.0,
+          "pagina": 10,
+          "trecho": "Aquisição de imobilizado - - (6.263) (3.803)"
+        },
+        {
+          "campo": "capex",
+          "valor_R$_mil": 11469.0,
+          "pagina": 10,
+          "trecho": "Aquisição de intangível - - (11.469) (12)"
+        }
+      ],
+      "nota": ""
+    }
+  },
+  "anomalias_no_documento": [
+    {
+      "id": "MILLET-A1",
+      "severidade": "media",
+      "descricao": "Na DFC consolidada de 2022, o valor do caixa líquido das atividades operacionais aparece desalinhado na mesma linha dos valores da controladora nas colunas de cabeçalho, exigindo cruzamento com os totais calculados.",
+      "evidencias": [
+        {
+          "pagina": 10,
+          "trecho": "Caixa liquido gerado pelas (consumido nas) 24.799 (317) (860) (14.293) atividades operacionais",
+          "verificada": true
+        }
+      ]
+    }
+  ],
+  "validacoes": [
+    {
+      "id": "C06",
+      "doc_id": "millet",
+      "campo": "divida_liquida[atual]",
+      "status": "ok",
+      "severidade": "info",
+      "mensagem": "Dívida líquida reportada 13.520 mil vs bruta − caixa = 13.521 mil.",
+      "paginas": [
+        42
+      ]
+    },
+    {
+      "id": "C06",
+      "doc_id": "millet",
+      "campo": "divida_liquida[anterior]",
+      "status": "ok",
+      "severidade": "info",
+      "mensagem": "Dívida líquida reportada 16.877 mil vs bruta − caixa = 16.877 mil.",
+      "paginas": [
+        42
+      ]
+    },
+    {
+      "id": "C10",
+      "doc_id": "millet",
+      "campo": "receita_liquida",
+      "status": "alerta",
+      "severidade": "media",
+      "mensagem": "Variação extrema (131,9%): confirme comparabilidade dos períodos (ver anomalias do documento).",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "C10",
+      "doc_id": "millet",
+      "campo": "lucro_liquido",
+      "status": "alerta",
+      "severidade": "media",
+      "mensagem": "Variação extrema (192,0%): confirme comparabilidade dos períodos (ver anomalias do documento).",
+      "paginas": [
+        7
+      ]
+    },
+    {
+      "id": "C10",
+      "doc_id": "millet",
+      "campo": "fco",
+      "status": "info",
+      "severidade": "info",
+      "mensagem": "Sinal negativo em um dos períodos (-14,3 mi vs 7,4 mi): variação percentual não significativa (n.s.).",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "C08",
+      "doc_id": "millet",
+      "campo": "ebitda",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. O termo EBITDA ou LAJIDA não aparece explicitamente nas demonstrações financeiras publicadas.",
+      "paginas": []
+    },
+    {
+      "id": "C08",
+      "doc_id": "millet",
+      "campo": "margem_ebitda",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. O termo Margem EBITDA não aparece explicitamente nas demonstrações financeiras publicadas.",
+      "paginas": []
+    },
+    {
+      "id": "C08",
+      "doc_id": "millet",
+      "campo": "alavancagem",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. O indicador de alavancagem Dívida líquida / EBITDA não é publicado diretamente no texto.",
+      "paginas": []
+    },
+    {
+      "id": "C08",
+      "doc_id": "millet",
+      "campo": "fco",
+      "status": "alerta",
+      "severidade": "alta",
+      "mensagem": "Valor NÃO verificado contra o PDF (grounding falhou) — não usar.",
+      "paginas": []
+    },
+    {
+      "id": "C08",
+      "doc_id": "millet",
+      "campo": "capex",
+      "status": "alerta",
+      "severidade": "info",
+      "mensagem": "Não encontrado no documento. A linha consolidada de Capex total não possui um somatório único explícito no DFC, havendo linhas separadas de imobilizado e intangível.",
+      "paginas": []
+    },
+    {
+      "id": "C11",
+      "doc_id": "millet",
+      "campo": "MILLET-A1",
+      "status": "alerta",
+      "severidade": "media",
+      "mensagem": "Na DFC consolidada de 2022, o valor do caixa líquido das atividades operacionais aparece desalinhado na mesma linha dos valores da controladora nas colunas de cabeçalho, exigindo cruzamento com os totais calculados.",
+      "paginas": [
+        10
+      ]
+    },
+    {
+      "id": "C00",
+      "doc_id": "millet",
+      "campo": "grounding",
+      "status": "alerta",
+      "severidade": "alta",
+      "mensagem": "1 evidência(s) da extração falharam no grounding.",
+      "paginas": [
+        10
+      ]
+    }
+  ]
+}

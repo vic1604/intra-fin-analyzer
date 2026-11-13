@@ -1,0 +1,238 @@
+{
+  "doc_id": "light",
+  "empresa": "Light S.A.",
+  "fonte_qualitativa": "Relatório da Administração (págs. 2-14) + notas explicativas",
+  "nota_cobertura": "Único dos três documentos com comentário da administração. Não traz guidance numérico.",
+  "motivos_resultado": [
+    {
+      "texto": "Provisões de R$2.513 mi no período explicam a queda do EBITDA: devolução de créditos de PIS/COFINS aos consumidores (Lei 14.385/22; −R$1.081 mi), revisão de PECLD (−R$855 mi) e contingências JEC e Cível (−R$379 mi).",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 10,
+          "trecho": "para devolução de créditos de PIS/COFINS aos consumidores, conforme Lei 14.385/22 (- R$1.081 milhões), revisões nas metodologias e estimativas de PECLD (-R$855 milhões) e de provisões para contingências JEC e Cível (-R$379 milhões)."
+        }
+      ]
+    },
+    {
+      "texto": "Prejuízo líquido de R$5,7 bi: além da provisão do PIS/COFINS, houve atualização financeira desses valores (−R$1.584 mi) e impairment do IR/CS diferido (−R$1.634 mi).",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 10,
+          "trecho": "abaixo em relação ao ano anterior. Essa retração ocorreu, principalmente, no segmento de Distribuição, em função do reconhecimento de provisão de -R$1.081 milhões para devolução de créditos de PIS/COFINS aos consumidores, da atualização financeira desses valores, que"
+        }
+      ]
+    },
+    {
+      "texto": "Juros mais altos: a Selic subiu de 2,00% (jan/2021) para 13,75% (ago/2022), agravando o desequilíbrio de capital.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 26,
+          "trecho": "(i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;"
+        }
+      ]
+    }
+  ],
+  "motivo_variacao_receita": {
+    "texto": "Receita líquida (ex-construção) −13%: estornos de faturamento de regularizações, não acionamento das bandeiras tarifárias e variação negativa da CVA.",
+    "evidencias": [
+      {
+        "documento": "light",
+        "pagina": 9,
+        "trecho": "R$12.107 milhões, 13% abaixo da registrada em 2021. Essa redução foi influenciada pelos estornos de faturamento de regularizações, pelo não acionamento das bandeiras tarifárias e pela variação negativa na conta CVA, que é uma compensação para cobertura dos custos"
+      }
+    ]
+  },
+  "riscos": [
+    {
+      "texto": "Incerteza significativa sobre a continuidade operacional do Grupo Light e da Light SESA (reconhecida pela administração e destacada pelo auditor).",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 28,
+          "trecho": "Administração da Companhia, a existência de incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional do Grupo Light e da Light SESA,"
+        }
+      ],
+      "categoria": "continuidade_operacional"
+    },
+    {
+      "texto": "A concessão da Light SESA vence em junho de 2026; a renovação depende de processo formal e de negociação fora do controle da companhia.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 26,
+          "trecho": "A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá em junho de 2026. A Administração da Companhia entende que determinados cenários para o futuro"
+        }
+      ],
+      "categoria": "regulatorio_concessao"
+    },
+    {
+      "texto": "Análise preliminar indica risco de descumprimento dos indicadores de sustentabilidade econômico-financeira exigidos pela ANEEL para 2022.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 27,
+          "trecho": "regulatórias, porém a análise preliminar indica um risco de descumprimento para o exercício de"
+        }
+      ],
+      "categoria": "regulatorio_concessao"
+    },
+    {
+      "texto": "Sem linhas de crédito contratadas e disponíveis em 31/12/2022 e rebaixamentos de rating; cláusula de rating abaixo de BBB- pode causar vencimento antecipado cruzado das dívidas.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 26,
+          "trecho": "A Administração da Companhia informa que não possui linhas de créditos contratadas e disponíveis para utilização em 31 de dezembro de 2022, porém tem buscado alternativas para melhorar a"
+        },
+        {
+          "documento": "light",
+          "pagina": 27,
+          "trecho": "Com relação ao covenant não financeiro relacionado a ratings do Grupo Light, a Administração da Companhia verificou que conforme item XXIX da cláusula 6.28 das escrituras da 8a emissão de debêntures da controlada Light SESA e da 3a emissão de debêntures da controlada Light Energia o"
+        }
+      ],
+      "categoria": "liquidez_endividamento"
+    },
+    {
+      "texto": "Elevado índice de perdas não técnicas (furto de energia) e inadimplência.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 26,
+          "trecho": "(iii) elevado índice de perdas não técnicas (furto de energia) e inadimplência;"
+        }
+      ],
+      "categoria": "credito_inadimplencia"
+    },
+    {
+      "texto": "Devolução de cerca de R$2,8 bi de créditos de PIS/COFINS (exclusão do ICMS da base) aos consumidores e contingências JEC/Cível provisionadas.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 26,
+          "trecho": "(ii) efeito da determinação de devolução de cerca de R$2.8 bilhões de créditos decorrentes da exclusão do ICMS das bases de cálculo do PIS e da COFINS, como explicitado em mais detalhes"
+        }
+      ],
+      "categoria": "contingencias_judiciais"
+    },
+    {
+      "texto": "Juros elevados: a Selic foi de 2,00% para 13,75% no período, pressionando despesa financeira e endividamento.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 26,
+          "trecho": "(i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;"
+        }
+      ],
+      "categoria": "juros_mercado"
+    }
+  ],
+  "guidance": [
+    {
+      "texto": "Perspectiva qualitativa: concentrar investimentos no estritamente necessário até a renovação da concessão, para maximizar o fluxo de caixa nos próximos 36 meses.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 3,
+          "trecho": "Concentramos nossos investimentos naqueles estritamente necessários para a sustentabilidade do nosso serviço até a renovação da concessão, de forma a maximizar o fluxo de caixa nos próximos 36 meses, período que será crucial para o Grupo. Tudo isso,"
+        }
+      ]
+    },
+    {
+      "texto": "Objetivo de antecipar a renovação da concessão da Light SESA (vence em 2026), em bases sustentáveis.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 2,
+          "trecho": "Essas alternativas passam pela renovação da concessão da Light SESA, que vence em 2026. Nosso objetivo é antecipar esse processo. Nós iniciamos discussões com a Aneel e o"
+        }
+      ]
+    },
+    {
+      "texto": "Reajuste tarifário médio de 7,0% aprovado pela ANEEL em 15/03/2023 (evento subsequente) e pleitos sobre perdas não técnicas em análise.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 107,
+          "trecho": "O resultado representa um reajuste tarifário médio para o consumidor de 7,0%, e engloba todas as"
+        }
+      ]
+    }
+  ],
+  "guidance_numerico_encontrado": false,
+  "eventos_relevantes": [
+    {
+      "texto": "Lei 14.385/22 (27/06/2022) obriga o repasse aos consumidores dos créditos tributários de PIS/COFINS sobre ICMS.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 28,
+          "trecho": "1.2 Promulgação da Lei no 14.385 em 27 de junho de 2022"
+        }
+      ]
+    },
+    {
+      "texto": "Revisão tarifária periódica de 2022: reajuste médio de 14,68% nas contas de energia.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 4,
+          "trecho": "O efeito conjunto desse processo resultará um reajuste médio das contas de energia elétrica da Light SESA de 14,68%, conforme detalhado no gráfico abaixo. Os clientes de baixa tensão"
+        }
+      ]
+    },
+    {
+      "texto": "Troca de liderança: novo CEO assumiu em agosto de 2022 e a companhia intensificou a reestruturação interna.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 2,
+          "trecho": "Assumi, em agosto de 2022, a liderança da Light, uma empresa essencial para o setor elétrico"
+        },
+        {
+          "documento": "light",
+          "pagina": 3,
+          "trecho": "Nos últimos meses, intensificamos o processo de reestruturação interna da Light, com o"
+        }
+      ]
+    },
+    {
+      "texto": "Rebaixamentos de rating em fev/2023 (Fitch CCC(bra)/CCC+; Moody's B.br/B3; S&P brBB-).",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 26,
+          "trecho": "Fitch CCC(bra) CCC+ 02.02.2023 CCC(bra) CCC+ 02.02.2023"
+        }
+      ]
+    },
+    {
+      "texto": "Compra dos 49% da CEMIG na Axxiom por R$1,00 (contrato de 21/12/2022; aprovado pelo CADE em 25/01/2023).",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 107,
+          "trecho": "Em 21 de dezembro de 2022, a Light S.A. assinou um Contrato de Compra e Venda de Ações e Outras Avenças para aquisição de 49% das ações da controlada em conjunto Axxiom Soluções pertencentes"
+        }
+      ]
+    }
+  ],
+  "tom": "negativo",
+  "tom_justificativa": "Prejuízo de R$5,7 bi, EBITDA CVM negativo, alavancagem de covenants de 3,32x, ratings na faixa CCC/B3, ausência de linhas de crédito disponíveis e parágrafo de incerteza significativa sobre continuidade no relatório do auditor. A mensagem do CEO usa linguagem de 'turnaround' e destaca os melhores DEC/FEC em 20 anos, mas os fatos relatados são predominantemente adversos.",
+  "tom_evidencias": [
+    {
+      "documento": "light",
+      "pagina": 2,
+      "trecho": "Nesse cenário, o desequilíbrio que já existia na estrutura de capital da Light SESA se agravou ainda mais. A Companhia vem trabalhando na busca de alternativas que garantam a"
+    },
+    {
+      "documento": "light",
+      "pagina": 111,
+      "trecho": "Incerteza significativa relacionada com a continuidade operacional"
+    }
+  ],
+  "confianca_tom": "alta",
+  "modo": "reference"
+}

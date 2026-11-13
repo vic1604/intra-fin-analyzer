@@ -1,0 +1,118 @@
+{
+  "global": {
+    "esperados": 28,
+    "preenchidos": 22,
+    "corretos": 22,
+    "recall": 0.786,
+    "precisao": 1.0,
+    "pagina_correta_entre_corretos": 0.909,
+    "ancorados_entre_preenchidos": 1.0,
+    "campos_nao_encontrados_no_gabarito": 9,
+    "alucinacoes": 0,
+    "taxa_alucinacao": 0.0
+  },
+  "por_documento": {
+    "brasal": {
+      "esperados": 8,
+      "preenchidos": 6,
+      "corretos": 6,
+      "recall": 0.75,
+      "precisao": 1.0,
+      "pagina_correta_entre_corretos": 1.0,
+      "ancorados_entre_preenchidos": 1.0,
+      "campos_nao_encontrados_no_gabarito": 4,
+      "alucinacoes": 0,
+      "taxa_alucinacao": 0.0
+    },
+    "light": {
+      "esperados": 12,
+      "preenchidos": 10,
+      "corretos": 10,
+      "recall": 0.833,
+      "precisao": 1.0,
+      "pagina_correta_entre_corretos": 0.8,
+      "ancorados_entre_preenchidos": 1.0,
+      "campos_nao_encontrados_no_gabarito": 1,
+      "alucinacoes": 0,
+      "taxa_alucinacao": 0.0
+    },
+    "millet": {
+      "esperados": 8,
+      "preenchidos": 6,
+      "corretos": 6,
+      "recall": 0.75,
+      "precisao": 1.0,
+      "pagina_correta_entre_corretos": 1.0,
+      "ancorados_entre_preenchidos": 1.0,
+      "campos_nao_encontrados_no_gabarito": 4,
+      "alucinacoes": 0,
+      "taxa_alucinacao": 0.0
+    }
+  },
+  "por_campo": {
+    "receita_liquida": {
+      "esperados": 6,
+      "corretos": 6,
+      "recall": 1.0,
+      "alucinacoes": 0
+    },
+    "ebitda": {
+      "esperados": 1,
+      "corretos": 1,
+      "recall": 1.0,
+      "alucinacoes": 0
+    },
+    "margem_ebitda": {
+      "esperados": 0,
+      "corretos": 0,
+      "recall": null,
+      "alucinacoes": 0
+    },
+    "lucro_liquido": {
+      "esperados": 6,
+      "corretos": 6,
+      "recall": 1.0,
+      "alucinacoes": 0
+    },
+    "divida_liquida": {
+      "esperados": 4,
+      "corretos": 4,
+      "recall": 1.0,
+      "alucinacoes": 0
+    },
+    "alavancagem": {
+      "esperados": 2,
+      "corretos": 1,
+      "recall": 0.5,
+      "alucinacoes": 0
+    },
+    "fco": {
+      "esperados": 6,
+      "corretos": 4,
+      "recall": 0.667,
+      "alucinacoes": 0
+    },
+    "capex": {
+      "esperados": 3,
+      "corretos": 0,
+      "recall": 0.0,
+      "alucinacoes": 0
+    }
+  },
+  "erros": [
+    "light.alavancagem.anterior: ausente",
+    "millet.fco.atual: ausente",
+    "millet.fco.anterior: ausente",
+    "brasal.capex.atual: ausente",
+    "brasal.capex.anterior: ausente",
+    "light.capex.atual: ausente"
+  ],
+  "modo": "llm",
+  "uso_llm": {
+    "chamadas": 3,
+    "tokens_in": 49695,
+    "chamadas_do_cache": 3,
+    "tokens_out": 9172,
+    "segundos": 0.0
+  }
+}

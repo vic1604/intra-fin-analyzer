@@ -1,0 +1,840 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Relatório de Análise Financeira</title><style>
+body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:1180px;margin:2rem auto;padding:0 1.2rem;color:#1b1f24;line-height:1.5}
+h1{border-bottom:3px solid #0b5fff;padding-bottom:.3rem} h2{margin-top:2.2rem;border-bottom:1px solid #d0d7de;padding-bottom:.2rem}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.88rem} th,td{border:1px solid #d0d7de;padding:.4rem .55rem;vertical-align:top}
+th{background:#f3f6fa} tr:nth-child(even) td{background:#fafbfc} code{background:#eef1f5;padding:.05rem .3rem;border-radius:4px;font-size:.85em}
+blockquote{border-left:4px solid #f0ad00;background:#fff8e6;margin:1rem 0;padding:.6rem 1rem} details{margin:.4rem 0 1.2rem;font-size:.88rem}
+summary{cursor:pointer;color:#0b5fff} em{color:#444}
+</style></head><body><h1>Relatório de Análise Financeira — Light, Millet e Brasal</h1>
+<p><em>Gerado em 12/11/2026 12:38 · modo <code>reference</code> · exercício 2022 vs 2021 · valores em R$ (conforme indicado)</em></p>
+<blockquote>
+<p><strong>Leia primeiro:</strong> os 3 PDFs são demonstrações financeiras anuais, não releases trimestrais. Só a Light inclui Relatório da Administração; Millet e Brasal têm apenas DFs e notas explicativas — por isso EBITDA, margem EBITDA, dívida líquida e guidance estão frequentemente <em>não encontrados</em>. Indicadores marcados com ¤ são <strong>calculados</strong> pelo pipeline, nunca extraídos.</p>
+</blockquote>
+<h2>1. Resumo executivo</h2>
+<h3>Light S.A. (consolidado)</h3>
+<ol>
+<li>Receita líquida de <strong>R$ 13,25 bi</strong> em 2022 (−11,0% vs 2021) [Light p.20].</li>
+<li>EBITDA: texto cita R$ 1.180 mi, mas <strong>recomposto pelas DFs = −R$ 1,18 bi</strong> — diverge, ver alertas [Light p.9].</li>
+<li>Lucro líquido de <strong>−R$ 5,67 bi</strong> (−1.525,4% vs 2021) [Light p.20].</li>
+<li>Dívida líquida de <strong>R$ 9,03 bi</strong>; alavancagem de covenants <strong>3,32x</strong> [Light p.105].</li>
+<li>Tom: <strong>negativo</strong> (confiança alta). Alerta: EBITDA CVM da distribuidora: o texto diz R$1.817 mi… [Light p.8]</li>
+</ol>
+<h3>Millet Participações S.A. (consolidado; controla 85% da Alibra)</h3>
+<ol>
+<li>Receita líquida de <strong>R$ 462,1 mi</strong> em 2022 (+131,9% vs 2021) (⚠ 2021 parcial: Alibra só desde jun/21) [Millet p.7].</li>
+<li>EBITDA <strong>não publicado</strong>; derivado (EBIT + D&amp;A) = R$ 43,5 mi, margem ≈ 9,4% (calculado ¤) [Millet p.7].</li>
+<li>Lucro líquido de <strong>R$ 18,9 mi</strong> (+192,0% vs 2021) [Millet p.7].</li>
+<li>Dívida líquida de <strong>R$ 13,5 mi</strong> [Millet p.42].</li>
+<li>Tom: <strong>neutro</strong> (confiança baixa). Alerta: Comparabilidade da receita: a Alibra foi adquirida em 18/06/2021… [Millet p.27]</li>
+</ol>
+<h3>Brasal Brasília Holding S.A. (consolidado; controla a Brasal Refrigerantes – Coca-Cola/Heineken)</h3>
+<ol>
+<li>Receita líquida de <strong>R$ 1,33 bi</strong> em 2022 (+24,8% vs 2021) [Brasal p.8].</li>
+<li>EBITDA <strong>não publicado</strong>; derivado (EBIT + D&amp;A) = R$ 221,9 mi, margem ≈ 16,7% (calculado ¤) [Brasal p.8].</li>
+<li>Lucro líquido de <strong>R$ 174,6 mi</strong> (−36,6% vs 2021) [Brasal p.8].</li>
+<li>Dívida líquida <strong>não publicada</strong>; derivada = <strong>−R$ 171,6 mi</strong> (caixa líquido; calculado ¤) [Brasal p.48].</li>
+<li>Tom: <strong>neutro</strong> (confiança baixa). Alerta: Os valores comparativos de 2021 (DRE, balanço… [Brasal p.3]</li>
+</ol>
+<h2>2. Tabela comparativa</h2>
+<table>
+<thead>
+<tr>
+<th>Indicador (R$ milhões, salvo indicação)</th>
+<th>Light</th>
+<th>Millet</th>
+<th>Brasal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Período</strong></td>
+<td>FY2022 vs FY2021</td>
+<td>FY2022 vs FY2021</td>
+<td>FY2022 vs FY2021</td>
+</tr>
+<tr>
+<td>Receita líquida 2022</td>
+<td>13.253,3 · p.20</td>
+<td>462,1 · p.7</td>
+<td>1.325,1 · p.8</td>
+</tr>
+<tr>
+<td>Receita líquida 2021</td>
+<td>14.897,9 · p.20</td>
+<td>199,3 · p.7</td>
+<td>1.061,4 · p.8</td>
+</tr>
+<tr>
+<td>Variação da receita (calculada)</td>
+<td>−11,0%</td>
+<td>+131,9% ⚠¹</td>
+<td>+24,8% ⚠²</td>
+</tr>
+<tr>
+<td>EBITDA publicado</td>
+<td>1.180 (texto, sem sinal) ⚠³ · p.9</td>
+<td>não encontrado</td>
+<td>não encontrado</td>
+</tr>
+<tr>
+<td>EBITDA derivado (EBIT + D&amp;A)¤</td>
+<td>−1.179,6</td>
+<td>43,5</td>
+<td>221,9</td>
+</tr>
+<tr>
+<td>Margem EBITDA publicada</td>
+<td>não encontrado</td>
+<td>não encontrado</td>
+<td>não encontrado</td>
+</tr>
+<tr>
+<td>Margem EBITDA derivada¤ (2022 / 2021)</td>
+<td>−8,9% / 12,2%</td>
+<td>9,4% / 3,7%</td>
+<td>16,7% / 24,6%</td>
+</tr>
+<tr>
+<td>Lucro líquido 2022</td>
+<td>−5.672,2 · p.20</td>
+<td>18,9 · p.7</td>
+<td>174,6 · p.8</td>
+</tr>
+<tr>
+<td>Lucro líquido 2021</td>
+<td>397,9 · p.20</td>
+<td>6,5 · p.7</td>
+<td>275,6 · p.8</td>
+</tr>
+<tr>
+<td>Variação do lucro (calculada)</td>
+<td>−1.525,4%</td>
+<td>+192,0%</td>
+<td>−36,6%</td>
+</tr>
+<tr>
+<td>Dívida líquida 2022</td>
+<td>9.032,2 · p.105</td>
+<td>13,5 · p.42</td>
+<td>não encontrado (derivada¤: −171,6)</td>
+</tr>
+<tr>
+<td>Dívida líquida / EBITDA</td>
+<td><strong>3,32x</strong> (covenants) · p.10</td>
+<td>não encontrado (derivada¤: 0,31x)</td>
+<td>não encontrado (caixa líquido¤)</td>
+</tr>
+<tr>
+<td>Fluxo de caixa operacional 2022</td>
+<td>200,8 · p.23</td>
+<td>24,8 · p.10</td>
+<td>258,2 · p.11</td>
+</tr>
+<tr>
+<td>Capex 2022</td>
+<td>1.506,0 · p.10</td>
+<td>não encontrado (soma das linhas de caixa¤: 17,7)</td>
+<td>45,8 · p.11</td>
+</tr>
+</tbody>
+</table>
+<p>¤ <strong>Calculado pelo pipeline</strong> a partir de linhas do documento (fórmulas na seção <em>Anexo A</em>); não é número publicado pela empresa.
+¹ Millet: a Alibra foi consolidada só a partir de 18/06/2021; a variação não é comparável (base comparável ≈ +45%).
+² Brasal: coluna 2021 marcada como <em>não auditada</em> pelo auditor.
+³ Light: o texto imprime R$ 1.180 mi <strong>sem sinal</strong>; as DFs (EBIT + D&amp;A) dão −R$ 1.179,6 mi. Light capex: 'investimentos' da administração (competência); capex de caixa = soma das duas linhas do DFC.
+Células com <code>· p.N</code> indicam a página do PDF (1 = capa) onde o valor foi encontrado e verificado.</p>
+<h2>3. Análise qualitativa do comentário da administração</h2>
+<h3>Light</h3>
+<p><em>Fonte da análise:</em> Relatório da Administração (págs. 2-14) + notas explicativas. Único dos três documentos com comentário da administração. Não traz guidance numérico.</p>
+<p><strong>Principais motivos do resultado</strong></p>
+<ul>
+<li>Provisões de R$2.513 mi no período explicam a queda do EBITDA: devolução de créditos de PIS/COFINS aos consumidores (Lei 14.385/22; −R$1.081 mi), revisão de PECLD (−R$855 mi) e contingências JEC e Cível (−R$379 mi). <em>[Light p.10]</em></li>
+<li>Prejuízo líquido de R$5,7 bi: além da provisão do PIS/COFINS, houve atualização financeira desses valores (−R$1.584 mi) e impairment do IR/CS diferido (−R$1.634 mi). <em>[Light p.10]</em></li>
+<li>Juros mais altos: a Selic subiu de 2,00% (jan/2021) para 13,75% (ago/2022), agravando o desequilíbrio de capital. <em>[Light p.26]</em></li>
+</ul>
+<p><strong>Motivo da variação da receita</strong></p>
+<ul>
+<li>Receita líquida (ex-construção) −13%: estornos de faturamento de regularizações, não acionamento das bandeiras tarifárias e variação negativa da CVA. <em>[Light p.9]</em></li>
+</ul>
+<p><strong>Riscos e pontos de atenção</strong></p>
+<ul>
+<li><code>Continuidade operacional</code> Incerteza significativa sobre a continuidade operacional do Grupo Light e da Light SESA (reconhecida pela administração e destacada pelo auditor). <em>[Light p.28]</em></li>
+<li><code>Regulatório / fiscal / concessão</code> A concessão da Light SESA vence em junho de 2026; a renovação depende de processo formal e de negociação fora do controle da companhia. <em>[Light p.26]</em></li>
+<li><code>Regulatório / fiscal / concessão</code> Análise preliminar indica risco de descumprimento dos indicadores de sustentabilidade econômico-financeira exigidos pela ANEEL para 2022. <em>[Light p.27]</em></li>
+<li><code>Liquidez e endividamento</code> Sem linhas de crédito contratadas e disponíveis em 31/12/2022 e rebaixamentos de rating; cláusula de rating abaixo de BBB- pode causar vencimento antecipado cruzado das dívidas. <em>[Light p.26, p.27]</em></li>
+<li><code>Crédito / inadimplência de clientes</code> Elevado índice de perdas não técnicas (furto de energia) e inadimplência. <em>[Light p.26]</em></li>
+<li><code>Contingências judiciais e tributárias</code> Devolução de cerca de R$2,8 bi de créditos de PIS/COFINS (exclusão do ICMS da base) aos consumidores e contingências JEC/Cível provisionadas. <em>[Light p.26]</em></li>
+<li><code>Juros e risco de mercado</code> Juros elevados: a Selic foi de 2,00% para 13,75% no período, pressionando despesa financeira e endividamento. <em>[Light p.26]</em></li>
+</ul>
+<p><strong>Guidance / perspectivas</strong></p>
+<ul>
+<li><strong>Guidance numérico: não encontrado.</strong></li>
+<li>Perspectiva qualitativa: concentrar investimentos no estritamente necessário até a renovação da concessão, para maximizar o fluxo de caixa nos próximos 36 meses. <em>[Light p.3]</em></li>
+<li>Objetivo de antecipar a renovação da concessão da Light SESA (vence em 2026), em bases sustentáveis. <em>[Light p.2]</em></li>
+<li>Reajuste tarifário médio de 7,0% aprovado pela ANEEL em 15/03/2023 (evento subsequente) e pleitos sobre perdas não técnicas em análise. <em>[Light p.107]</em></li>
+</ul>
+<p><strong>Eventos relevantes</strong> (aquisições, reestruturações, contingências, mudanças contábeis)</p>
+<ul>
+<li>Lei 14.385/22 (27/06/2022) obriga o repasse aos consumidores dos créditos tributários de PIS/COFINS sobre ICMS. <em>[Light p.28]</em></li>
+<li>Revisão tarifária periódica de 2022: reajuste médio de 14,68% nas contas de energia. <em>[Light p.4]</em></li>
+<li>Troca de liderança: novo CEO assumiu em agosto de 2022 e a companhia intensificou a reestruturação interna. <em>[Light p.2, p.3]</em></li>
+<li>Rebaixamentos de rating em fev/2023 (Fitch CCC(bra)/CCC+; Moody's B.br/B3; S&amp;P brBB-). <em>[Light p.26]</em></li>
+<li>Compra dos 49% da CEMIG na Axxiom por R$1,00 (contrato de 21/12/2022; aprovado pelo CADE em 25/01/2023). <em>[Light p.107]</em></li>
+</ul>
+<p><strong>Tom geral da administração: NEGATIVO</strong> (confiança alta) — Prejuízo de R$5,7 bi, EBITDA CVM negativo, alavancagem de covenants de 3,32x, ratings na faixa CCC/B3, ausência de linhas de crédito disponíveis e parágrafo de incerteza significativa sobre continuidade no relatório do auditor. A mensagem do CEO usa linguagem de 'turnaround' e destaca os melhores DEC/FEC em 20 anos, mas os fatos relatados são predominantemente adversos. <em>[Light p.2, p.111]</em></p>
+<h3>Millet</h3>
+<p><em>Fonte da análise:</em> Apenas notas explicativas (não há relatório da administração). Sem comentário de desempenho da administração: motivos/tom derivam de notas (1.1, 7, 22) e são evidência documental, não discurso gerencial.</p>
+<p><strong>Principais motivos do resultado</strong></p>
+<ul>
+<li>Nota 1.1: a performance de vendas 'atendeu às projeções', mesmo com demanda mais fraca que o previsto. <em>[Millet p.11]</em></li>
+<li>Custo de matérias-primas (derivados lácteos) continuou subindo, com repasse ao preço; a margem não voltou ao nível pré-pandemia. <em>[Millet p.11]</em></li>
+<li>Amortização da mais-valia da aquisição da Alibra (R$13.295 mil) pressionou o resultado consolidado. <em>[Millet p.7]</em></li>
+</ul>
+<p><strong>Motivo da variação da receita</strong></p>
+<ul>
+<li>[Evidência documental — não é afirmação da administração] A Alibra foi adquirida em 18/06/2021, então a receita consolidada de 2021 cobre só parte do ano; a receita da Alibra em 2021 (ano cheio) foi R$318.317 mil. <em>[Millet p.27, p.29]</em></li>
+</ul>
+<p><strong>Riscos e pontos de atenção</strong></p>
+<ul>
+<li><code>Custo de insumos / matérias-primas</code> Aumento do custo de matérias-primas (derivados lácteos) e dificuldade de recuperar margem. <em>[Millet p.11]</em></li>
+<li><code>Crédito / inadimplência de clientes</code> Risco de crédito: perdas por falha de clientes em cumprir obrigações (contas a receber de R$98,7 mi). <em>[Millet p.40]</em></li>
+<li><code>Liquidez e endividamento</code> Risco de liquidez: dificuldade em cumprir obrigações financeiras; R$18,1 mi de empréstimos vencem em até 12 meses vs caixa de R$10,7 mi. <em>[Millet p.41]</em></li>
+<li><code>Juros e risco de mercado</code> Risco de taxa de juros e de câmbio (dívida a taxas pré-fixadas). <em>[Millet p.41]</em></li>
+<li><code>Contingências judiciais e tributárias</code> Contingências trabalhistas e previdenciárias provisionadas (R$3.284 mil). <em>[Millet p.36]</em></li>
+<li><code>Concentração / dependência de contratos ou investida</code> Dependência de uma única investida: a holding consolida somente a Alibra (85%). <em>[Millet p.12]</em></li>
+</ul>
+<p><strong>Guidance / perspectivas</strong></p>
+<ul>
+<li><strong>Guidance numérico: não encontrado.</strong></li>
+<li>Intenção qualitativa: acumular recursos e reservas para investimentos projetados e para o capital de giro necessário nos próximos anos. <em>[Millet p.42]</em></li>
+</ul>
+<p><strong>Eventos relevantes</strong> (aquisições, reestruturações, contingências, mudanças contábeis)</p>
+<ul>
+<li>Aquisição de 85% da Alibra Ingredientes em junho de 2021 por R$179.350 mil (parte a prazo). <em>[Millet p.27]</em></li>
+<li>Laudo da KPMG (jun/2022) alocou o preço de compra: mais-valia amortizada linearmente (R$13.295 mil em 2022). <em>[Millet p.27, p.28]</em></li>
+<li>Revisão de crédito tributário de ação ajuizada em 2009 (abr/2022): créditos reduzidos. <em>[Millet p.36]</em></li>
+<li>Nenhum evento subsequente exigindo divulgação. <em>[Millet p.43]</em></li>
+</ul>
+<p><strong>Tom geral da administração: NEUTRO</strong> (confiança baixa) — Sem discurso gerencial. As notas combinam um sinal positivo (vendas 'atenderam às projeções') com ressalvas (demanda mais fraca, custo de lácteos, margem abaixo do pré-pandemia). Não há juízo de valor consolidado — classificação neutra com baixa confiança. <em>[Millet p.11]</em></p>
+<h3>Brasal</h3>
+<p><em>Fonte da análise:</em> Apenas notas explicativas (não há relatório da administração). Sem comentário de desempenho da administração e sem explicação para a variação da receita. Os 'motivos' abaixo são evidência extraída das DFs, não afirmação gerencial.</p>
+<p><strong>Principais motivos do resultado</strong></p>
+<ul>
+<li>[Evidência documental] O lucro líquido caiu em 2022 em parte porque 2021 incluía R$105.633 mil de créditos extemporâneos (exclusão do ICMS da base do PIS/COFINS) em outras receitas operacionais. <em>[Brasal p.46]</em></li>
+<li>[Evidência documental] As receitas financeiras recuaram de R$116.653 mil (2021) para R$29.541 mil (2022). <em>[Brasal p.8]</em></li>
+</ul>
+<p><strong>Motivo da variação da receita</strong></p>
+<ul>
+<li>Não encontrado no documento.</li>
+</ul>
+<p><strong>Riscos e pontos de atenção</strong></p>
+<ul>
+<li><code>Crédito / inadimplência de clientes</code> Crédito concedido a clientes é apontado como o principal fator de risco de mercado. <em>[Brasal p.49]</em></li>
+<li><code>Custo de insumos / matérias-primas</code> Oscilação de preços dos produtos em razão da compra de matéria-prima (commodities). <em>[Brasal p.49]</em></li>
+<li><code>Juros e risco de mercado</code> Oscilação de taxas de juros incidentes sobre ativos e passivos financeiros (CDI). <em>[Brasal p.49]</em></li>
+<li><code>Concentração / dependência de contratos ou investida</code> Contratos por prazo determinado com Coca-Cola, Heineken e Leão: dependência de marcas licenciadas. <em>[Brasal p.12]</em></li>
+<li><code>Regulatório / fiscal / concessão</code> Incentivo fiscal Emprega/DF (crédito presumido de 67% do ICMS) condicionado a manutenção de empregos, regularidade fiscal e contrapartidas. <em>[Brasal p.12]</em></li>
+<li><code>Contingências judiciais e tributárias</code> Ações judiciais de risco possível (52 trabalhistas, 9 cíveis e fiscais — IPI, PIS) não provisionadas; STF (fev/2023) limitou a 'coisa julgada' em tributos recorrentes (sem impacto identificado). <em>[Brasal p.41, p.51]</em></li>
+<li><code>Qualidade / auditoria da informação</code> Comparativos de 2021 não auditados. <em>[Brasal p.3]</em></li>
+</ul>
+<p><strong>Guidance / perspectivas</strong></p>
+<ul>
+<li><strong>Guidance numérico: não encontrado.</strong></li>
+</ul>
+<p><strong>Eventos relevantes</strong> (aquisições, reestruturações, contingências, mudanças contábeis)</p>
+<ul>
+<li>Aumento de capital de R$60.000 mil por capitalização de reservas (28/03/2022), sem emissão de ações. <em>[Brasal p.42]</em></li>
+<li>Dividendos intermediários de R$206.000 mil em 2022 (a partir de reservas de lucros). <em>[Brasal p.10]</em></li>
+<li>Incentivo fiscal: R$103.940 mil reconhecidos em 2022 como reserva de incentivos fiscais. <em>[Brasal p.12]</em></li>
+<li>Evento subsequente: decisão do STF (08/02/2023) sobre perda de efeitos da coisa julgada em tributos de trato continuado; administração não identificou impacto. <em>[Brasal p.51]</em></li>
+</ul>
+<p><strong>Tom geral da administração: NEUTRO</strong> (confiança baixa) — Sem discurso gerencial. As DFs mostram receita +24,8% e caixa líquido positivo, mas lucro −36,6% (2021 tinha ganhos não recorrentes) e comparativos não auditados; a linguagem das notas é técnica e descritiva — classificação neutra com baixa confiança. <em>[Brasal p.51]</em></p>
+<h2>4. Respostas às 5 perguntas</h2>
+<h3>1. Qual empresa teve a maior margem EBITDA no período?</h3>
+<p><strong>Brasal</strong>, com margem EBITDA de ≈ <strong>16,7%</strong> em 2022 — mas atenção: é uma margem <strong>derivada pelo pipeline</strong>, não publicada. Nenhum dos três documentos informa margem EBITDA, e só a Light publica EBITDA.
+A Light imprime EBITDA CVM de R$ 1.180 mi [Light p.9], porém as DFs mostram EBIT + D&amp;A = −R$ 1,18 bi (<strong>negativo</strong>; ver alerta de sinal).
+Para comparar de forma padronizada usei <strong>EBITDA derivado = EBIT + D&amp;A (fluxo de caixa) ÷ receita líquida da DRE</strong>:</p>
+<ol>
+<li>Brasal: <strong>16,7%</strong> (EBITDA derivado R$ 221,9 mi; 2021: 24,6%) — 2021 inflado por R$ 105,6 mi de créditos extemporâneos não recorrentes [Brasal p.8]</li>
+<li>Millet: <strong>9,4%</strong> (EBITDA derivado R$ 43,5 mi; 2021: 3,7%) [Millet p.7]</li>
+<li>Light: <strong>−8,9%</strong> (EBITDA derivado −R$ 1,18 bi; 2021: 12,2%) (−9,7% sobre receita ex-construção) [Light p.20]
+<em>Comparação com ressalvas: os três usam critérios contábeis e setores diferentes (energia, alimentos, bebidas).</em></li>
+</ol>
+<details><summary>Fontes (documento · página · trecho)</summary>
+
+- **Light p.20** — “LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS (5.681.153) 397.043 (1.910.411) 1.143.301”
+- **Light p.23** — “Depreciação e amortização 32 - - 730.767 678.110”
+- **Light p.20** — “RECEITA LÍQUIDA 31 - - 13.253.286 14.897.920”
+- **Millet p.7** — “Resultado antes do resultado 14.750 5.374 25.298 4.482 financeiro”
+- **Millet p.10** — “Depreciação e amortização 13.295 - 18.248 2.975”
+- **Millet p.7** — “Receita operacional líquida 18 - - 462.127 199.259”
+- **Brasal p.8** — “Lucro operacional antes das receitas e despesas 173.736 275.244 192.840 238.224 financeiras”
+- **Brasal p.11** — “Depreciações e amortizações 507 465 29.014 22.837”
+- **Brasal p.8** — “Receita operacional líquida 21 - - 1.325.059 1.061.410”
+
+</details>
+
+<h3>2. O que a administração de cada empresa apontou como principal motivo da variação da receita?</h3>
+<ul>
+<li><strong>Light</strong> (receita R$ 13,25 bi vs R$ 14,90 bi; −11,0%): Receita líquida (ex-construção) −13%: estornos de faturamento de regularizações, não acionamento das bandeiras tarifárias e variação negativa da CVA. [Light p.9] (a DRE total varia −11,0%; o −13% da administração exclui receita de construção)</li>
+<li><strong>Millet</strong> (receita R$ 462,1 mi vs R$ 199,3 mi; +131,9%): [Evidência documental — não é afirmação da administração] A Alibra foi adquirida em 18/06/2021, então a receita consolidada de 2021 cobre só parte do ano; a receita da Alibra em 2021 (ano cheio) foi R$318.317 mil. [Millet p.27, p.29] Em base comparável (Alibra com 2021 inteiro) a receita cresceria ≈ +45,2% [Millet p.29].</li>
+<li><strong>Brasal</strong> (receita R$ 1,33 bi vs R$ 1,06 bi; +24,8%): <strong>Não encontrado</strong>: o documento não traz explicação da administração para a variação da receita.</li>
+</ul>
+<details><summary>Fontes (documento · página · trecho)</summary>
+
+- **Light p.9** — “R$12.107 milhões, 13% abaixo da registrada em 2021. Essa redução foi influenciada pelos estornos de faturamento de regularizações, pelo n…”
+- **Light p.20** — “RECEITA LÍQUIDA 31 - - 13.253.286 14.897.920”
+- **Millet p.27** — “Adquirida. A Transação foi concluída em 18 de junho de 2021, em continuidade à celebração de contrato de”
+- **Millet p.29** — “Receita operacional líquida 462.127 318.317”
+- **Millet p.7** — “Receita operacional líquida 18 - - 462.127 199.259”
+- **Brasal p.8** — “Receita operacional líquida 21 - - 1.325.059 1.061.410”
+
+</details>
+
+<h3>3. Alguma das empresas está com alavancagem acima de 3x? Qual?</h3>
+<p><strong>Sim — Light.</strong> Único múltiplo <strong>publicado</strong> acima de 3x: Light.</p>
+<ul>
+<li><strong>Light: 3,32x</strong> (Dívida líquida/EBITDA ajustado de covenants, publicado) [Light p.10]; dívida líquida R$ 9,03 bi [Light p.105]; pelo EBITDA CVM recomposto (negativo) o múltiplo é n.s., o que é pior, não melhor</li>
+<li>Millet: não publica alavancagem sobre EBITDA; <strong>derivado 0,31x</strong> (dívida líquida R$ 13,5 mi ÷ EBITDA derivado R$ 43,5 mi).</li>
+<li>Brasal: não publica alavancagem; dívida líquida derivada = <strong>−R$ 171,6 mi</strong> (caixa líquido: mais caixa e aplicações do que dívida) — sem alavancagem.</li>
+</ul>
+<details><summary>Fontes (documento · página · trecho)</summary>
+
+- **Light p.10** — “2021 em 3,32x, menor do que no 2021 (3,48x). O EBITDA ajustado para fins de covenants”
+- **Light p.105** — “Dívida líquida (A) 9.032.236 7.352.919”
+- **Millet p.7** — “Resultado antes do resultado 14.750 5.374 25.298 4.482 financeiro”
+- **Millet p.10** — “Depreciação e amortização 13.295 - 18.248 2.975”
+- **Millet p.42** — “Total dos empréstimos com terceiros 24.176 25.072”
+- **Millet p.6** — “Caixa e equivalente de caixa 3 355 871 10.656 8.195”
+- **Millet p.42** — “(=) Dívida líquida (a) 13.520 16.877”
+- **Brasal p.8** — “Lucro operacional antes das receitas e despesas 173.736 275.244 192.840 238.224 financeiras”
+- **Brasal p.11** — “Depreciações e amortizações 507 465 29.014 22.837”
+- **Brasal p.48** — “Empréstimos e financiamentos - - 3.417 3.417”
+- **Brasal p.6** — “Caixa e equivalentes de caixa 4 3.714 1.146 96.453 62.166”
+- **Brasal p.6** — “Aplicações financeiras 5 - - 78.569 95.766”
+
+</details>
+
+<h3>4. Quais riscos são citados por mais de uma empresa?</h3>
+<p><strong>7 categorias de risco aparecem em mais de uma empresa</strong>; 3 aparecem nas três: Crédito / inadimplência de clientes, Contingências judiciais e tributárias, Juros e risco de mercado.</p>
+<ul>
+<li><strong>Contingências judiciais e tributárias</strong> — 3 empresas (Light, Millet, Brasal):<ul>
+<li>Light: Devolução de cerca de R$2,8 bi de créditos de PIS/COFINS (exclusão do ICMS da base) aos consumidores e contingências JEC/Cível provisionadas. [Light p.26]</li>
+<li>Millet: Contingências trabalhistas e previdenciárias provisionadas (R$3.284 mil). [Millet p.36]</li>
+<li>Brasal: Ações judiciais de risco possível (52 trabalhistas, 9 cíveis e fiscais — IPI, PIS) não provisionadas; STF (fev/2023) limitou a 'coisa julgada' em… [Brasal p.41]</li>
+</ul>
+</li>
+<li><strong>Crédito / inadimplência de clientes</strong> — 3 empresas (Light, Millet, Brasal):<ul>
+<li>Light: Elevado índice de perdas não técnicas (furto de energia) e inadimplência. [Light p.26]</li>
+<li>Millet: Risco de crédito: perdas por falha de clientes em cumprir obrigações (contas a receber de R$98,7 mi). [Millet p.40]</li>
+<li>Brasal: Crédito concedido a clientes é apontado como o principal fator de risco de mercado. [Brasal p.49]</li>
+</ul>
+</li>
+<li><strong>Juros e risco de mercado</strong> — 3 empresas (Light, Millet, Brasal):<ul>
+<li>Light: Juros elevados: a Selic foi de 2,00% para 13,75% no período, pressionando despesa financeira e endividamento. [Light p.26]</li>
+<li>Millet: Risco de taxa de juros e de câmbio (dívida a taxas pré-fixadas). [Millet p.41]</li>
+<li>Brasal: Oscilação de taxas de juros incidentes sobre ativos e passivos financeiros (CDI). [Brasal p.49]</li>
+</ul>
+</li>
+<li><strong>Concentração / dependência de contratos ou investida</strong> — 2 empresas (Millet, Brasal):<ul>
+<li>Millet: Dependência de uma única investida: a holding consolida somente a Alibra (85%). [Millet p.12]</li>
+<li>Brasal: Contratos por prazo determinado com Coca-Cola, Heineken e Leão: dependência de marcas licenciadas. [Brasal p.12]</li>
+</ul>
+</li>
+<li><strong>Custo de insumos / matérias-primas</strong> — 2 empresas (Millet, Brasal):<ul>
+<li>Millet: Aumento do custo de matérias-primas (derivados lácteos) e dificuldade de recuperar margem. [Millet p.11]</li>
+<li>Brasal: Oscilação de preços dos produtos em razão da compra de matéria-prima (commodities). [Brasal p.49]</li>
+</ul>
+</li>
+<li><strong>Liquidez e endividamento</strong> — 2 empresas (Light, Millet):<ul>
+<li>Light: Sem linhas de crédito contratadas e disponíveis em 31/12/2022 e rebaixamentos de rating; cláusula de rating abaixo de BBB- pode causar vencimento… [Light p.26]</li>
+<li>Millet: Risco de liquidez: dificuldade em cumprir obrigações financeiras; R$18,1 mi de empréstimos vencem em até 12 meses vs caixa de R$10,7 mi. [Millet p.41]</li>
+</ul>
+</li>
+<li><strong>Regulatório / fiscal / concessão</strong> — 2 empresas (Light, Brasal):<ul>
+<li>Light: A concessão da Light SESA vence em junho de 2026; a renovação depende de processo formal e de negociação fora do controle da companhia. [Light p.26]</li>
+<li>Brasal: Incentivo fiscal Emprega/DF (crédito presumido de 67% do ICMS) condicionado a manutenção de empregos, regularidade fiscal e contrapartidas. [Brasal p.12]</li>
+</ul>
+</li>
+<li>Citados por <strong>apenas uma</strong> empresa: Continuidade operacional (Light); Qualidade / auditoria da informação (Brasal).
+<em>Metodologia: cada risco recebe uma categoria de uma taxonomia fixa; a pergunta é respondida pela interseção das categorias (código), não por um parecer livre. Para Millet e Brasal, a base são as notas explicativas (não há relatório da administração).</em></li>
+</ul>
+<details><summary>Fontes (documento · página · trecho)</summary>
+
+- **Light p.26** — “(ii) efeito da determinação de devolução de cerca de R$2.8 bilhões de créditos decorrentes da exclusão do ICMS das bases de cálculo do PI…”
+- **Millet p.36** — “Trabalhistas 722 91 Risco Previdenciário 2.562 2.264”
+- **Brasal p.41** — “Existem atualmente 52 (Cinquenta e Dois) ações judiciais e referem-se a pedidos, tais como: indenizações, horas extras, verbas rescisória…”
+- **Brasal p.51** — “Em decisão tomada no dia 08 de fevereiro 2023, por unanimidade, o Plenário do Supremo Tribunal Federal (STF) considerou que uma decisão d…”
+- **Light p.26** — “(iii) elevado índice de perdas não técnicas (furto de energia) e inadimplência;”
+- **Millet p.40** — “Risco de crédito é o risco de a Companhia incorrer em perdas decorrentes de um cliente ou de uma contraparte em um instrumento financeiro…”
+- **Millet p.40** — “Contas a receber de clientes - - 98.663 69.645”
+- **Brasal p.49** — “O principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes. Para reduzir as possíveis perdas com ina…”
+- **Light p.26** — “(i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;”
+- **Millet p.41** — “Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos) por conta de flutuações nas taxa…”
+- **Brasal p.49** — “Decorre da possibilidade de a Companhia sofrer ganhos ou perdas decorrentes de oscilações de taxas de juros incidentes sobre seus ativos …”
+- **Millet p.12** — “Alibra Ingredientes S.A. ("Alibra") Direta 85,00% 85,00%”
+- **Brasal p.12** — “A Controlada mantém por prazo determinado contrato com a Coca-Cola Indústrias Ltda., com a Cervejaria Heineken e a Leão Alimentos e Bebid…”
+- **Millet p.11** — “era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no custo de matérias primas princ…”
+- **Brasal p.49** — “Os produtos comercializados pela Companhia estão sujeitos a oscilações em razão da compra de matéria-prima. Para mitigar os riscos, a Com…”
+- **Light p.26** — “A Administração da Companhia informa que não possui linhas de créditos contratadas e disponíveis para utilização em 31 de dezembro de 202…”
+- **Light p.27** — “Com relação ao covenant não financeiro relacionado a ratings do Grupo Light, a Administração da Companhia verificou que conforme item XXI…”
+- **Millet p.41** — “Risco de liquidez é o risco em que a Companhia irá encontrar dificuldades em cumprir com as obrigações associadas com seus passivos finan…”
+- **Millet p.41** — “Empréstimos e Financiamentos 24.176 24.176 18.115 6.061 -”
+- **Light p.26** — “A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá em junho de 2026. A Administração da Companhi…”
+- **Brasal p.12** — “Federal. Neste programa é concedido um percentual de crédito presumido de 67% incidente sobre o ICMS apurado das saídas de produtos de fa…”
+- **Light p.28** — “Administração da Companhia, a existência de incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continu…”
+- **Brasal p.3** — “de dezembro de 2021, apresentadas para fins de comparação, não foram auditadas por nós ou por”
+
+</details>
+
+<h3>5. Qual é o guidance de cada empresa para o próximo ano?</h3>
+<p><strong>Nenhuma das três empresas divulga guidance numérico para 2023</strong> nos documentos fornecidos (são demonstrações financeiras anuais de 2022, não releases com projeções).</p>
+<ul>
+<li><strong>Light</strong> — <strong>nenhum guidance numérico</strong>. Perspectivas qualitativas: (1) Perspectiva qualitativa: concentrar investimentos no estritamente necessário até a renovação da concessão, para maximizar o fluxo de caixa nos próximos 36 meses. [Light p.3] (2) Objetivo de antecipar a renovação da concessão da Light SESA (vence em 2026), em bases sustentáveis. [Light p.2] (3) Reajuste tarifário médio de 7,0% aprovado pela ANEEL em 15/03/2023 (evento subsequente) e pleitos sobre perdas não técnicas em análise. [Light p.107]</li>
+<li><strong>Millet</strong> — <strong>nenhum guidance numérico</strong>. Perspectivas qualitativas: (1) Intenção qualitativa: acumular recursos e reservas para investimentos projetados e para o capital de giro necessário nos próximos anos. [Millet p.42]</li>
+<li><strong>Brasal</strong> — <strong>nenhum guidance numérico</strong>; o documento também não traz perspectivas/projeções (<strong>não encontrado</strong>).</li>
+</ul>
+<details><summary>Fontes (documento · página · trecho)</summary>
+
+- **Light p.3** — “Concentramos nossos investimentos naqueles estritamente necessários para a sustentabilidade do nosso serviço até a renovação da concessão…”
+- **Light p.2** — “Essas alternativas passam pela renovação da concessão da Light SESA, que vence em 2026. Nosso objetivo é antecipar esse processo. Nós ini…”
+- **Light p.107** — “O resultado representa um reajuste tarifário médio para o consumidor de 7,0%, e engloba todas as”
+- **Millet p.42** — “acumulando recursos e reservas de lucros de forma a corresponder com os investimentos que estão sendo projetados com a necessidade de cap…”
+
+</details>
+
+<h2>5. Alertas de inconsistência e de informações não encontradas</h2>
+<h3>Inconsistências e alertas de validação</h3>
+<table>
+<thead>
+<tr>
+<th>Sev.</th>
+<th>Empresa</th>
+<th>Check</th>
+<th>Campo</th>
+<th>Descrição</th>
+<th>Págs.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 alta</td>
+<td>Light</td>
+<td>C04</td>
+<td><code>ebitda</code></td>
+<td>EBITDA reportado no texto = 1.180 mi (positivo), mas a recomposição pelas DFs (EBIT + D&amp;A) = -1.179,6 mi (NEGATIVO). Mesmo módulo, sinal oposto: provável omissão do sinal negativo no texto. O pipeline usa o valor recomposto na comparação.</td>
+<td>9</td>
+</tr>
+<tr>
+<td>🔴 alta</td>
+<td>Light</td>
+<td>C11</td>
+<td><code>LIGHT-A1</code></td>
+<td>EBITDA CVM da distribuidora: o texto diz R$1.817 mi, 'redução de R$2.996 mi' em relação a R$1.179 mi em 2021. Os números não fecham (1.817 − 1.179 = +638, não −2.996). 1.817 + 1.179 = 2.996 sugere que os anos estão invertidos (2021 = +1.817; 2022 = −1.179) e o sinal negativo foi omitido.</td>
+<td>8</td>
+</tr>
+<tr>
+<td>🔴 alta</td>
+<td>Light</td>
+<td>C11</td>
+<td><code>LIGHT-A3</code></td>
+<td>Auditor (Deloitte) chama a atenção para incerteza significativa sobre a continuidade operacional (nota 1.1).</td>
+<td>111</td>
+</tr>
+<tr>
+<td>🔴 alta</td>
+<td>Millet</td>
+<td>C11</td>
+<td><code>MILLET-A1</code></td>
+<td>Comparabilidade da receita: a Alibra foi adquirida em 18/06/2021; a receita consolidada de 2021 (R$199.259 mil) reflete só parte do ano. A própria nota 7 mostra a receita da Alibra em 2021 como R$318.317 mil (ano cheio) — a variação like-for-like seria ≈ +45%, não +132%.</td>
+<td>27, 29</td>
+</tr>
+<tr>
+<td>🔴 alta</td>
+<td>Brasal</td>
+<td>C11</td>
+<td><code>BRASAL-A1</code></td>
+<td>Os valores comparativos de 2021 (DRE, balanço, fluxo de caixa) estão marcados como 'não auditado' e o auditor declara não os ter auditado — variações vs 2021 têm menor confiabilidade.</td>
+<td>3, 8</td>
+</tr>
+<tr>
+<td>🔴 alta</td>
+<td>Brasal</td>
+<td>C11</td>
+<td><code>BRASAL-A2</code></td>
+<td>Comparabilidade do resultado: 2021 inclui R$105.633 mil de 'créditos extemporâneos' (exclusão do ICMS da base do PIS/COFINS) em outras receitas operacionais, vs R$231 mil em 2022 — não recorrente que distorce a variação do lucro.</td>
+<td>46</td>
+</tr>
+<tr>
+<td>🟠 média</td>
+<td>Light</td>
+<td>C11</td>
+<td><code>LIGHT-A2</code></td>
+<td>Alavancagem de covenants: o texto diz que o indicador 'encerrou 2021 em 3,32x, menor do que no 2021 (3,48x)' — período repetido; o correto seria 2022 vs 2021.</td>
+<td>10</td>
+</tr>
+<tr>
+<td>🟠 média</td>
+<td>Millet</td>
+<td>C10</td>
+<td><code>receita_liquida</code></td>
+<td>Variação extrema (131,9%): confirme comparabilidade dos períodos (ver anomalias do documento).</td>
+<td>7</td>
+</tr>
+<tr>
+<td>🟠 média</td>
+<td>Millet</td>
+<td>C10</td>
+<td><code>lucro_liquido</code></td>
+<td>Variação extrema (192,0%): confirme comparabilidade dos períodos (ver anomalias do documento).</td>
+<td>7</td>
+</tr>
+<tr>
+<td>🟠 média</td>
+<td>Millet</td>
+<td>C11</td>
+<td><code>MILLET-A2</code></td>
+<td>Patrimônio líquido na nota 22.2 (R$167.233 mil) difere do balanço (R$163.931 mil de controladores; R$185.321 mil consolidado).</td>
+<td>6, 42</td>
+</tr>
+<tr>
+<td>🟠 média</td>
+<td>Millet</td>
+<td>C11</td>
+<td><code>MILLET-A4</code></td>
+<td>Nota 2.2 diz que as DFs de 2022 foram aprovadas pela administração em 14/03/2022 (data anterior ao fim do exercício) — provável erro de digitação (2023).</td>
+<td>12</td>
+</tr>
+<tr>
+<td>🟠 média</td>
+<td>Millet</td>
+<td>C11</td>
+<td><code>MILLET-A5</code></td>
+<td>Nota 7 (investida Alibra): 'Lucro antes dos impostos' 2022 aparece como (65.750), mas lucro bruto − despesas − resultado financeiro = 98.338 − 63.419 − 2.331 = 32.588 (e 32.588 − 4.070 = 28.518, o lucro líquido informado).</td>
+<td>29</td>
+</tr>
+<tr>
+<td>🟠 média</td>
+<td>Brasal</td>
+<td>C10</td>
+<td><code>fco</code></td>
+<td>Variação extrema (112,6%): confirme comparabilidade dos períodos (ver anomalias do documento).</td>
+<td>11</td>
+</tr>
+<tr>
+<td>🟠 média</td>
+<td>Brasal</td>
+<td>C11</td>
+<td><code>BRASAL-A3</code></td>
+<td>Nota 20: o capital social é descrito como dividido em 3.256.699 ações e, no parágrafo seguinte, em 1.374.240 ações.</td>
+<td>42</td>
+</tr>
+<tr>
+<td>🟠 média</td>
+<td>Brasal</td>
+<td>C11</td>
+<td><code>BRASAL-A4</code></td>
+<td>Nota 24 (IR/CS): o 'resultado contábil antes da tributação' (IRPJ 54.297; CSLL 19.547) não bate com o lucro antes do IR da DRE (R$217.187 mil).</td>
+<td>8, 47</td>
+</tr>
+<tr>
+<td>🟡 baixa</td>
+<td>Light</td>
+<td>C03</td>
+<td><code>lucro_liquido</code></td>
+<td>resultado líquido segundo o texto da administração: -5.673,000 mi (escala milhoes) vs DFs -5.672,203 mi — diferença 0,797 mi (0,014%); EXCEDE o arredondamento da escala impressa.</td>
+<td>10, 20</td>
+</tr>
+<tr>
+<td>🟡 baixa</td>
+<td>Millet</td>
+<td>C11</td>
+<td><code>MILLET-A3</code></td>
+<td>Empréstimos em 31/12/2021: R$25.072 mil na nota 22.2 vs R$25.075 mil na nota 22.1/22.3 (e na soma do balanço).</td>
+<td>41, 42</td>
+</tr>
+<tr>
+<td>🟡 baixa</td>
+<td>Brasal</td>
+<td>C11</td>
+<td><code>BRASAL-A5</code></td>
+<td>Depreciação e amortização: R$20.347 mil na DRE (linha de despesa) vs R$29.014 mil no fluxo de caixa (total, inclui parcela no custo). Usamos o do fluxo de caixa no EBITDA derivado.</td>
+<td>8, 11</td>
+</tr>
+<tr>
+<td>🟡 baixa</td>
+<td>Brasal</td>
+<td>C11</td>
+<td><code>BRASAL-A6</code></td>
+<td>Nota 3.3: rubrica 'Custos dos imóveis vendidos' (a empresa é industrial/distribuidora de bebidas) e números com ';' em vez de '.' (1;061;410) — erros de digitação no documento.</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+<p><strong>10 verificações passaram</strong> (variações, margem, dívida líquida = bruta − caixa, reconciliação com notas). Notas informativas:</p>
+<ul>
+<li><em>Light · C07 · receita_liquida:</em> Receita líquida TOTAL da DRE varia -11,0%; a administração comenta -13,0% porque exclui a receita de construção (bases diferentes).</li>
+<li><em>Light · C09 · alavancagem:</em> Alavancagem reportada 3,32x (EBITDA ajustado p/ covenants). Não é replicável com o EBITDA recomposto (≤ 0 → n.s.): o EBITDA de covenants exclui provisões e itens não caixa.</li>
+<li><em>Light · C10 · lucro_liquido:</em> Sinal negativo em um dos períodos (-5.672,2 mi vs 397,9 mi): variação percentual não significativa (n.s.).</li>
+<li><em>Light · C10 · fco:</em> Sinal negativo em um dos períodos (200,8 mi vs -42,0 mi): variação percentual não significativa (n.s.).</li>
+<li><em>Millet · C10 · fco:</em> Sinal negativo em um dos períodos (24,8 mi vs -14,3 mi): variação percentual não significativa (n.s.).</li>
+</ul>
+<h3>Informações não encontradas nos documentos</h3>
+<table>
+<thead>
+<tr>
+<th>Empresa</th>
+<th>Campo</th>
+<th>Motivo</th>
+<th>Ausência re-verificada por busca no PDF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light</td>
+<td><code>margem_ebitda</code></td>
+<td>O Relatório da Administração e as DFs não informam margem EBITDA.</td>
+<td>“margem ebitda”, “margem do ebitda”</td>
+</tr>
+<tr>
+<td>Millet</td>
+<td><code>ebitda</code></td>
+<td>O documento não apresenta EBITDA/LAJIDA.</td>
+<td>“EBITDA”, “LAJIDA”</td>
+</tr>
+<tr>
+<td>Millet</td>
+<td><code>margem_ebitda</code></td>
+<td>Sem EBITDA no documento, não há margem EBITDA reportada.</td>
+<td>“margem ebitda”, “margem do ebitda”</td>
+</tr>
+<tr>
+<td>Millet</td>
+<td><code>alavancagem</code></td>
+<td>Não há Dívida líquida/EBITDA. O documento traz apenas dívida líquida / capital ajustado (0,08x).</td>
+<td>“dívida líquida/ebitda”, “divida liquida/ebitda”</td>
+</tr>
+<tr>
+<td>Millet</td>
+<td><code>capex</code></td>
+<td>Não há linha única de capex; há duas linhas de aquisição (imobilizado e intangível).</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Brasal</td>
+<td><code>ebitda</code></td>
+<td>O documento não apresenta EBITDA/LAJIDA.</td>
+<td>“EBITDA”, “LAJIDA”</td>
+</tr>
+<tr>
+<td>Brasal</td>
+<td><code>margem_ebitda</code></td>
+<td>Sem EBITDA no documento, não há margem EBITDA reportada.</td>
+<td>“margem ebitda”, “margem do ebitda”</td>
+</tr>
+<tr>
+<td>Brasal</td>
+<td><code>divida_liquida</code></td>
+<td>O documento não apresenta 'dívida líquida'.</td>
+<td>“dívida líquida”, “divida liquida”</td>
+</tr>
+<tr>
+<td>Brasal</td>
+<td><code>alavancagem</code></td>
+<td>O documento não apresenta Dívida líquida/EBITDA nem outra medida de alavancagem numérica.</td>
+<td>“dívida líquida/ebitda”</td>
+</tr>
+</tbody>
+</table>
+<p><em>Campos 'não encontrado' </em><em>não foram estimados</em><em>. Quando útil à comparação, o relatório mostra um indicador derivado, sempre rotulado como calculado (¤).</em></p>
+<h3>Verificação de ancoragem (grounding)</h3>
+<p>✅ <strong>150 evidências verificadas, 0 falhas</strong>: todo trecho citado existe literalmente na página indicada e contém o número extraído.</p>
+<h3>Segurança do conteúdo (varredura de prompt injection)</h3>
+<p>✅ Nenhum padrão suspeito em 218 páginas.</p>
+<h2>Anexo A — Indicadores derivados (fórmulas e insumos)</h2>
+<p>Cada indicador <strong>derivado</strong> lista fórmula e as entradas (página + trecho do PDF).</p>
+<p><strong>Light</strong></p>
+<ul>
+<li><code>ebitda_derivado</code> = EBIT + Depreciação e Amortização (fluxo de caixa): 2022 = <strong>−R$ 1,18 bi</strong>, 2021 = R$ 1,82 bi<ul>
+<li>ebit: −R$ 1,91 bi — [Light p.20] “LUCRO (PREJUÍZO) ANTES DO RESULTADO FINANCEIRO E IMPOSTOS (5.681.153) 397.043 (1.910.411) 1.143.301”</li>
+<li>depreciacao_amortizacao: R$ 730,8 mi — [Light p.23] “Depreciação e amortização 32 - - 730.767 678.110”</li>
+</ul>
+</li>
+<li><code>margem_ebitda_derivada</code> = EBITDA derivado / Receita líquida (DRE): 2022 = <strong>−8,9%</strong>, 2021 = 12,2%. Receita líquida consolidada da DRE.<ul>
+<li>receita_liquida: R$ 13,25 bi — [Light p.20] “RECEITA LÍQUIDA 31 - - 13.253.286 14.897.920”</li>
+</ul>
+</li>
+<li><code>margem_ebitda_derivada_ex_construcao</code> = EBITDA derivado / (Receita líquida − receita de construção): 2022 = <strong>−9,7%</strong>, 2021 = 13,1%. Base de receita usada pela administração da Light no texto.<ul>
+<li>receita_liquida: R$ 13,25 bi — [Light p.20] “RECEITA LÍQUIDA 31 - - 13.253.286 14.897.920”</li>
+<li>receita_construcao: R$ 1,15 bi — [Light p.93] “Receita de construção 1.146.446 967.268”</li>
+</ul>
+</li>
+<li><code>divida_liquida_derivada</code> = Dívida bruta − Caixa − Aplicações financeiras: 2022 = <strong>R$ 9,03 bi</strong>, 2021 = R$ 7,35 bi. Valor negativo = caixa líquido (empresa com mais caixa do que dívida).<ul>
+<li>divida_bruta: R$ 11,12 bi — [Light p.105] “Dívida bruta 11.115.787 10.957.892”</li>
+<li>caixa_equivalentes: R$ 2,08 bi — [Light p.105] “(-) Caixa e equivalentes de caixa e TVM 2.083.551 3.604.973”</li>
+</ul>
+</li>
+<li><code>alavancagem_derivada</code> = Dívida líquida / EBITDA derivado: 2022 = <strong>n.s.</strong>, 2021 = 4,04x. n.s. (não significativo) quando o EBITDA é negativo. Dívida líquida = valor reportado, se existir; senão derivada.</li>
+<li><code>capex_caixa_derivado</code> = Σ aquisições de imobilizado e intangível (fluxo de caixa): 2022 = <strong>R$ 1,47 bi</strong>, 2021 = n/d<ul>
+<li>capex: R$ 307,8 mi — [Light p.23] “Aquisições de bens do ativo imobilizado - - (307.759) (219.601)”</li>
+<li>capex: R$ 1,16 bi — [Light p.23] “Aquisições de bens do ativo intangível e do ativo de contrato (234) - (1.162.533) (1.029.744)”</li>
+</ul>
+</li>
+</ul>
+<p><strong>Millet</strong></p>
+<ul>
+<li><code>ebitda_derivado</code> = EBIT + Depreciação e Amortização (fluxo de caixa): 2022 = <strong>R$ 43,5 mi</strong>, 2021 = R$ 7,5 mi<ul>
+<li>ebit: R$ 25,3 mi — [Millet p.7] “Resultado antes do resultado 14.750 5.374 25.298 4.482 financeiro”</li>
+<li>depreciacao_amortizacao: R$ 18,2 mi — [Millet p.10] “Depreciação e amortização 13.295 - 18.248 2.975”</li>
+</ul>
+</li>
+<li><code>margem_ebitda_derivada</code> = EBITDA derivado / Receita líquida (DRE): 2022 = <strong>9,4%</strong>, 2021 = 3,7%. Receita líquida consolidada da DRE.<ul>
+<li>receita_liquida: R$ 462,1 mi — [Millet p.7] “Receita operacional líquida 18 - - 462.127 199.259”</li>
+</ul>
+</li>
+<li><code>divida_liquida_derivada</code> = Dívida bruta − Caixa − Aplicações financeiras: 2022 = <strong>R$ 13,5 mi</strong>, 2021 = R$ 16,9 mi. Valor negativo = caixa líquido (empresa com mais caixa do que dívida).<ul>
+<li>divida_bruta: R$ 24,2 mi — [Millet p.42] “Total dos empréstimos com terceiros 24.176 25.072”</li>
+<li>caixa_equivalentes: R$ 10,7 mi — [Millet p.6] “Caixa e equivalente de caixa 3 355 871 10.656 8.195”</li>
+</ul>
+</li>
+<li><code>alavancagem_derivada</code> = Dívida líquida / EBITDA derivado: 2022 = <strong>0,31x</strong>, 2021 = 2,26x. n.s. (não significativo) quando o EBITDA é negativo. Dívida líquida = valor reportado, se existir; senão derivada.</li>
+<li><code>capex_caixa_derivado</code> = Σ aquisições de imobilizado e intangível (fluxo de caixa): 2022 = <strong>R$ 17,7 mi</strong>, 2021 = n/d<ul>
+<li>capex: R$ 6,3 mi — [Millet p.10] “Aquisição de imobilizado - - (6.263) (3.803)”</li>
+<li>capex: R$ 11,5 mi — [Millet p.10] “Aquisição de intangível - - (11.469) (12)”</li>
+</ul>
+</li>
+</ul>
+<p><strong>Brasal</strong></p>
+<ul>
+<li><code>ebitda_derivado</code> = EBIT + Depreciação e Amortização (fluxo de caixa): 2022 = <strong>R$ 221,9 mi</strong>, 2021 = R$ 261,1 mi<ul>
+<li>ebit: R$ 192,8 mi — [Brasal p.8] “Lucro operacional antes das receitas e despesas 173.736 275.244 192.840 238.224 financeiras”</li>
+<li>depreciacao_amortizacao: R$ 29,0 mi — [Brasal p.11] “Depreciações e amortizações 507 465 29.014 22.837”</li>
+</ul>
+</li>
+<li><code>margem_ebitda_derivada</code> = EBITDA derivado / Receita líquida (DRE): 2022 = <strong>16,7%</strong>, 2021 = 24,6%. Receita líquida consolidada da DRE.<ul>
+<li>receita_liquida: R$ 1,33 bi — [Brasal p.8] “Receita operacional líquida 21 - - 1.325.059 1.061.410”</li>
+</ul>
+</li>
+<li><code>divida_liquida_derivada</code> = Dívida bruta − Caixa − Aplicações financeiras: 2022 = <strong>−R$ 171,6 mi</strong>, 2021 = −R$ 151,5 mi. Valor negativo = caixa líquido (empresa com mais caixa do que dívida).<ul>
+<li>divida_bruta: R$ 3,4 mi — [Brasal p.48] “Empréstimos e financiamentos - - 3.417 3.417”</li>
+<li>caixa_equivalentes: R$ 96,5 mi — [Brasal p.6] “Caixa e equivalentes de caixa 4 3.714 1.146 96.453 62.166”</li>
+<li>aplicacoes_financeiras: R$ 78,6 mi — [Brasal p.6] “Aplicações financeiras 5 - - 78.569 95.766”</li>
+</ul>
+</li>
+<li><code>alavancagem_derivada</code> = Dívida líquida / EBITDA derivado: 2022 = <strong>−0,77x</strong>, 2021 = −0,58x. n.s. (não significativo) quando o EBITDA é negativo. Dívida líquida = valor reportado, se existir; senão derivada.</li>
+</ul>
+<h2>Anexo B — Abordagem tradicional (estatística / ML clássico) vs regras e LLM</h2>
+<p>Comparação entre a abordagem <strong>estatística / ML clássico</strong> (sem LLM, sem rótulos) e as <strong>regras + leitura do documento</strong> usadas no restante do relatório. O detector olha as linhas das demonstrações (DRE, balanço, fluxo de caixa) e procura variações atípicas <strong>dentro de cada documento</strong>: z-score robusto (|z| &gt;= 3.5 (mediana/MAD)) e Isolation Forest. Ele <strong>não explica</strong> nada e <strong>não vê texto</strong>; serve para gerar candidatos a revisão.</p>
+<table>
+<thead>
+<tr>
+<th>Documento</th>
+<th>Linhas pontuadas</th>
+<th>Sinalizadas (z-score)</th>
+<th>Sinalizadas (Isolation Forest)</th>
+<th>Ambos</th>
+<th>Coincidem com alerta existente¹</th>
+<th>Inversões de sinal²</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light</td>
+<td>104</td>
+<td>7</td>
+<td>5</td>
+<td>3</td>
+<td>0</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Millet</td>
+<td>61</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Brasal</td>
+<td>66</td>
+<td>6</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Light — maiores desvios</strong></p>
+<ul>
+<li>Instrumentos financeiros derivativos swaps: 396.946 vs 3.975 (R$ mil), z = +7.3 [Light p.19] — <em>candidato novo</em></li>
+<li>Perdas cambiais e monetárias de atividades financeiras: 16.260 vs 743.095 (R$ mil), z = -5.8 [Light p.23] — <em>candidato novo</em></li>
+<li>LUCRO (PREJUÍZO) ANTES DO IR E CSLL: −5.357.738 vs −186.889 (R$ mil), z = +5.4 [Light p.20] — <em>candidato novo</em></li>
+<li>Valor justo do ativo financeiro da concessão 13/31: −38.365 vs −574.231 (R$ mil), z = -4.1 [Light p.23] — <em>candidato novo</em></li>
+<li>Instrumentos financeiros derivativos swaps: 13.611 vs 190.409 (R$ mil), z = -4.0 [Light p.18] — <em>candidato novo</em></li>
+</ul>
+<p><strong>Millet — maiores desvios</strong></p>
+<ul>
+<li>Aquisição de intangível: −11.469 vs −12 (R$ mil), z = +9.0 [Millet p.10] — <em>candidato novo</em></li>
+<li>Juros sobre arrendamentos: 3.752 vs 35 (R$ mil), z = +6.0 [Millet p.10] — <em>candidato novo</em></li>
+<li>Saldo inicial de caixa e equivalentes de caixa: 8.195 vs 199 (R$ mil), z = +4.7 [Millet p.10] — <em>candidato novo</em></li>
+<li>Diferido: 166 vs 3.333 (R$ mil), z = -4.5 [Millet p.7] — <em>candidato novo</em></li>
+</ul>
+<p><strong>Brasal — maiores desvios</strong></p>
+<ul>
+<li>Crédito ICMS na base de PIS e COFINS: −233 vs −105.633 (R$ mil), z = -8.8 [Brasal p.11] — <em>já coberto por alerta</em></li>
+<li>Obrigações fiscais: −49.818 vs −125 (R$ mil), z = +8.7 [Brasal p.11] — <em>candidato novo</em></li>
+<li>Outras receitas operacionais, líquidas 23.g: 2.182 vs 105.328 (R$ mil), z = -5.5 [Brasal p.8] — <em>já coberto por alerta</em></li>
+<li>Ajuste a valor presente do incentivo governamental: −770 vs −36.453 (R$ mil), z = -5.5 [Brasal p.11] — <em>candidato novo</em></li>
+<li>Empréstimos e financiamentos (incluindo juros pagos): −3.369 vs −112.259 (R$ mil), z = -5.0 [Brasal p.11] — <em>candidato novo</em></li>
+</ul>
+<p><strong>Tom da administração: léxico (sem ML) vs classificação</strong></p>
+<table>
+<thead>
+<tr>
+<th>Documento</th>
+<th>Classificado</th>
+<th>Léxico</th>
+<th>Score léxico</th>
+<th>Concorda</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light</td>
+<td>negativo</td>
+<td>negativo</td>
+<td>-1.00</td>
+<td>sim</td>
+</tr>
+<tr>
+<td>Millet</td>
+<td>neutro</td>
+<td>negativo</td>
+<td>-0.56</td>
+<td>não</td>
+</tr>
+<tr>
+<td>Brasal</td>
+<td>neutro</td>
+<td>neutro</td>
+<td>+0.00</td>
+<td>sim</td>
+</tr>
+</tbody>
+</table>
+<p><em>Leitura honesta:</em> (1) coincidência por palavras do rótulo, heurística imperfeita; (2) linhas que mudam de sinal não têm razão logarítmica e ficam fora da pontuação. Um classificador de tom <strong>supervisionado não foi treinado</strong>: com 3 documentos não há corpus rotulado, e o léxico (n = 3) é só um sanity-check — não prova nada. O detector estatístico acerta números atípicos que as regras não procuram, mas gera ruído e não distingue efeito contábil legítimo de erro; as regras e a leitura do texto dão o <em>porquê</em>. A comparação com o <strong>LLM</strong> só é possível rodando <code>--mode llm</code> (veja o README).</p>
+<h2>Anexo C — Metodologia desta execução</h2>
+<ul>
+<li><strong>Modo de extração:</strong> <code>reference</code> (extração curada + verificada por código; não usa LLM nesta execução)</li>
+<li><strong>Documentos</strong> (SHA-256 abreviado · páginas · tempo de ingestão):<ul>
+<li>Light: <code>light.pdf</code> · <code>a87339d09747</code> · 124 págs · 18.94s (pdftotext)</li>
+<li>Millet: <code>millet.pdf</code> · <code>42589e4b7ad3</code> · 43 págs · 5.39s (pdftotext)</li>
+<li>Brasal: <code>brasal.pdf</code> · <code>5905cd3412e4</code> · 51 págs · 2.25s (pdftotext)</li>
+</ul>
+</li>
+<li><strong>Convenção de páginas:</strong> posição física no PDF (1 = capa); pode diferir do número impresso no rodapé.</li>
+<li><strong>Premissa de escopo:</strong> os PDFs são demonstrações financeiras <strong>anuais de 2022</strong> (não releases trimestrais). 'Período de referência' = exercício 2022 vs 2021.</li>
+</ul></body></html>

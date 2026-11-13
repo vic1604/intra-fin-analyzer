@@ -1,0 +1,115 @@
+{
+  "global": {
+    "esperados": 28,
+    "preenchidos": 19,
+    "corretos": 18,
+    "recall": 0.643,
+    "precisao": 0.947,
+    "pagina_correta_entre_corretos": 0.944,
+    "ancorados_entre_preenchidos": 1.0,
+    "campos_nao_encontrados_no_gabarito": 9,
+    "alucinacoes": 0,
+    "taxa_alucinacao": 0.0
+  },
+  "por_documento": {
+    "brasal": {
+      "esperados": 8,
+      "preenchidos": 6,
+      "corretos": 6,
+      "recall": 0.75,
+      "precisao": 1.0,
+      "pagina_correta_entre_corretos": 1.0,
+      "ancorados_entre_preenchidos": 1.0,
+      "campos_nao_encontrados_no_gabarito": 4,
+      "alucinacoes": 0,
+      "taxa_alucinacao": 0.0
+    },
+    "light": {
+      "esperados": 12,
+      "preenchidos": 8,
+      "corretos": 7,
+      "recall": 0.583,
+      "precisao": 0.875,
+      "pagina_correta_entre_corretos": 0.857,
+      "ancorados_entre_preenchidos": 1.0,
+      "campos_nao_encontrados_no_gabarito": 1,
+      "alucinacoes": 0,
+      "taxa_alucinacao": 0.0
+    },
+    "millet": {
+      "esperados": 8,
+      "preenchidos": 5,
+      "corretos": 5,
+      "recall": 0.625,
+      "precisao": 1.0,
+      "pagina_correta_entre_corretos": 1.0,
+      "ancorados_entre_preenchidos": 1.0,
+      "campos_nao_encontrados_no_gabarito": 4,
+      "alucinacoes": 0,
+      "taxa_alucinacao": 0.0
+    }
+  },
+  "por_campo": {
+    "receita_liquida": {
+      "esperados": 6,
+      "corretos": 6,
+      "recall": 1.0,
+      "alucinacoes": 0
+    },
+    "ebitda": {
+      "esperados": 1,
+      "corretos": 0,
+      "recall": 0.0,
+      "alucinacoes": 0
+    },
+    "margem_ebitda": {
+      "esperados": 0,
+      "corretos": 0,
+      "recall": null,
+      "alucinacoes": 0
+    },
+    "lucro_liquido": {
+      "esperados": 6,
+      "corretos": 6,
+      "recall": 1.0,
+      "alucinacoes": 0
+    },
+    "divida_liquida": {
+      "esperados": 4,
+      "corretos": 2,
+      "recall": 0.5,
+      "alucinacoes": 0
+    },
+    "alavancagem": {
+      "esperados": 2,
+      "corretos": 0,
+      "recall": 0.0,
+      "alucinacoes": 0
+    },
+    "fco": {
+      "esperados": 6,
+      "corretos": 4,
+      "recall": 0.667,
+      "alucinacoes": 0
+    },
+    "capex": {
+      "esperados": 3,
+      "corretos": 0,
+      "recall": 0.0,
+      "alucinacoes": 0
+    }
+  },
+  "erros": [
+    "light.ebitda.atual: previsto 1817.0 (milhoes) vs esperado 1180.0 (milhoes)",
+    "light.divida_liquida.anterior: ausente",
+    "millet.divida_liquida.anterior: ausente",
+    "light.alavancagem.atual: ausente",
+    "light.alavancagem.anterior: ausente",
+    "millet.fco.atual: ausente",
+    "millet.fco.anterior: ausente",
+    "brasal.capex.atual: ausente",
+    "brasal.capex.anterior: ausente",
+    "light.capex.atual: ausente"
+  ],
+  "modo": "baseline"
+}

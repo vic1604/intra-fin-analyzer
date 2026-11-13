@@ -1,0 +1,222 @@
+{
+  "doc_id": "millet",
+  "empresa": "Millet Participações S.A.",
+  "fonte_qualitativa": "Apenas notas explicativas (não há relatório da administração)",
+  "nota_cobertura": "Sem comentário de desempenho da administração: motivos/tom derivam de notas (1.1, 7, 22) e são evidência documental, não discurso gerencial.",
+  "motivos_resultado": [
+    {
+      "texto": "Nota 1.1: a performance de vendas 'atendeu às projeções', mesmo com demanda mais fraca que o previsto.",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 11,
+          "trecho": "performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "texto": "Custo de matérias-primas (derivados lácteos) continuou subindo, com repasse ao preço; a margem não voltou ao nível pré-pandemia.",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 11,
+          "trecho": "era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de venda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem antes da pandemia. A Companhia segue com os protocolos de segurança, seguindo as determinações da",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "texto": "Amortização da mais-valia da aquisição da Alibra (R$13.295 mil) pressionou o resultado consolidado.",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 7,
+          "trecho": "Amortização da Mais-Valia (13.295) - (13.295) -",
+          "verificada": true
+        }
+      ]
+    }
+  ],
+  "motivo_variacao_receita": {
+    "texto": "[Evidência documental — não é afirmação da administração] A Alibra foi adquirida em 18/06/2021, então a receita consolidada de 2021 cobre só parte do ano; a receita da Alibra em 2021 (ano cheio) foi R$318.317 mil.",
+    "evidencias": [
+      {
+        "documento": "millet",
+        "pagina": 27,
+        "trecho": "Adquirida. A Transação foi concluída em 18 de junho de 2021, em continuidade à celebração de contrato de",
+        "verificada": true
+      },
+      {
+        "documento": "millet",
+        "pagina": 29,
+        "trecho": "Receita operacional líquida 462.127 318.317",
+        "verificada": true
+      }
+    ]
+  },
+  "riscos": [
+    {
+      "texto": "Aumento do custo de matérias-primas (derivados lácteos) e dificuldade de recuperar margem.",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 11,
+          "trecho": "era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de venda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem antes da pandemia. A Companhia segue com os protocolos de segurança, seguindo as determinações da",
+          "verificada": true
+        }
+      ],
+      "categoria": "custo_insumos"
+    },
+    {
+      "texto": "Risco de crédito: perdas por falha de clientes em cumprir obrigações (contas a receber de R$98,7 mi).",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 40,
+          "trecho": "Risco de crédito é o risco de a Companhia incorrer em perdas decorrentes de um cliente ou de uma contraparte em um instrumento financeiro, decorrente de falhas destes em cumprir com suas obrigações",
+          "verificada": true
+        },
+        {
+          "documento": "millet",
+          "pagina": 40,
+          "trecho": "Contas a receber de clientes - - 98.663 69.645",
+          "verificada": true
+        }
+      ],
+      "categoria": "credito_inadimplencia"
+    },
+    {
+      "texto": "Risco de liquidez: dificuldade em cumprir obrigações financeiras; R$18,1 mi de empréstimos vencem em até 12 meses vs caixa de R$10,7 mi.",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 41,
+          "trecho": "Risco de liquidez é o risco em que a Companhia irá encontrar dificuldades em cumprir com as obrigações associadas com seus passivos financeiros que são liquidados com pagamentos à vista ou com outro ativo",
+          "verificada": true
+        },
+        {
+          "documento": "millet",
+          "pagina": 41,
+          "trecho": "Empréstimos e Financiamentos 24.176 24.176 18.115 6.061 -",
+          "verificada": true
+        }
+      ],
+      "categoria": "liquidez_endividamento"
+    },
+    {
+      "texto": "Risco de taxa de juros e de câmbio (dívida a taxas pré-fixadas).",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 41,
+          "trecho": "Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos) por conta de flutuações nas taxas de juros incidentes sobre passivos captados e ativos aplicados no mercado.",
+          "verificada": true
+        }
+      ],
+      "categoria": "juros_mercado"
+    },
+    {
+      "texto": "Contingências trabalhistas e previdenciárias provisionadas (R$3.284 mil).",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 36,
+          "trecho": "Trabalhistas 722 91 Risco Previdenciário 2.562 2.264",
+          "verificada": true
+        }
+      ],
+      "categoria": "contingencias_judiciais"
+    },
+    {
+      "texto": "Dependência de uma única investida: a holding consolida somente a Alibra (85%).",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 12,
+          "trecho": "Alibra Ingredientes S.A. (\"Alibra\") Direta 85,00% 85,00%",
+          "verificada": true
+        }
+      ],
+      "categoria": "concentracao_dependencia"
+    }
+  ],
+  "guidance": [
+    {
+      "texto": "Intenção qualitativa: acumular recursos e reservas para investimentos projetados e para o capital de giro necessário nos próximos anos.",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 42,
+          "trecho": "acumulando recursos e reservas de lucros de forma a corresponder com os investimentos que estão sendo projetados com a necessidade de capital de giro necessária para os próximos anos. A gestão de capital da Companhia é feita para equilibrar as fontes de recursos próprias e terceiras, balanceando o retorno para os",
+          "verificada": true
+        }
+      ]
+    }
+  ],
+  "guidance_numerico_encontrado": false,
+  "eventos_relevantes": [
+    {
+      "texto": "Aquisição de 85% da Alibra Ingredientes em junho de 2021 por R$179.350 mil (parte a prazo).",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 27,
+          "trecho": "Em junho de 2021 a Millet Participações S/A adquiriu 85% de participação na Alibra Ingredientes S.A (\"Alibra\"), localizada na cidade de Campinas no Estado de São Paulo e possui filial na cidade e município de Marechal",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "texto": "Laudo da KPMG (jun/2022) alocou o preço de compra: mais-valia amortizada linearmente (R$13.295 mil em 2022).",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 27,
+          "trecho": "Em junho de 2022, foi emitido pela KPMG o Relatório de avaliação de certos ativos adquiridos e passivos assumidos relacionado à aquisição da Alibra Ingredientes LTDA, para fins contábeis e fiscais, à luz do CPC",
+          "verificada": true
+        },
+        {
+          "documento": "millet",
+          "pagina": 28,
+          "trecho": "Amortização da Mais-Valia - - (13.295) (13.295)",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "texto": "Revisão de crédito tributário de ação ajuizada em 2009 (abr/2022): créditos reduzidos.",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 36,
+          "trecho": "Em 04 de abril de 2022, a Companhia revisou os cálculos da ação ajuizada em 2009 e optou pela exclusão dos créditos apurados, compreendidos no período de 2004 a 2008. Diante do exposto, os referidos créditos",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "texto": "Nenhum evento subsequente exigindo divulgação.",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 43,
+          "trecho": "da Companhia, não ocorreram eventos que necessitam de divulgação nas demonstrações financeiras.",
+          "verificada": true
+        }
+      ]
+    }
+  ],
+  "tom": "neutro",
+  "tom_justificativa": "Sem discurso gerencial. As notas combinam um sinal positivo (vendas 'atenderam às projeções') com ressalvas (demanda mais fraca, custo de lácteos, margem abaixo do pré-pandemia). Não há juízo de valor consolidado — classificação neutra com baixa confiança.",
+  "tom_evidencias": [
+    {
+      "documento": "millet",
+      "pagina": 11,
+      "trecho": "performance das vendas atendeu às projeções e expectativas, mesmo com uma demanda mais fraca do que era previsto para o ano. Como ponto residual e contínuo de 2020, verificou-se a continuidade de aumento no custo de matérias primas principalmente dos derivados lácteos, com necessidade de repasse no preço de venda. Apesar desses repasses, em termos percentuais, não foi possível recuperar o mesmo nível de margem",
+      "verificada": true
+    }
+  ],
+  "confianca_tom": "baixa",
+  "modo": "reference"
+}
