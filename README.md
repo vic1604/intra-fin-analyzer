@@ -12,11 +12,11 @@ Pipeline que lê 3 PDFs financeiros, extrai indicadores **com página e trecho d
 |---|---|---|
 | Pipeline completo em modo `reference` (sem LLM) | ✅ executado | `python -m finanalyzer run` → 150 evidências, 0 falhas de grounding, 19 alertas |
 | Valores contra o PDF, **sem usar o código do pipeline** | ✅ executado | `scripts/verify_numbers.py`: 71 valores, 0 falhas; derivados recalculados batem |
-| Testes automatizados | ✅ **111 passam**, também dentro do container | `python -m pytest -q` (grounding, injection, validações com dados sintéticos, clientes HTTP, relatório, log…) |
+| Testes automatizados | ✅ **112 passam**, também dentro do container | `python -m pytest -q` (grounding, injection, validações com dados sintéticos, clientes HTTP, relatório, log…) |
 | Caminho LLM **com modelo falso** e **servidor HTTP falso** | ✅ executado | `tests/test_llm_path.py`, `tests/test_llm_http.py`: formato de requisição/resposta, *retry*, tokens, barreira do grounding contra valor inventado |
 | Caminho LLM **com modelo real** | ✅ **executado** com `gemini-3.5-flash-lite` (camada gratuita, 13/11/2026) | `scripts/run_llm_full.sh` → `outputs_llm/`: recall 78,6%, precisão 100%, alucinação 0% contra o gabarito (seção "Avaliação de qualidade"). Ollama, Claude, OpenAI e Azure OpenAI usam o mesmo código, mas **não foram testados com chave real** |
 | Gabarito `data/reference/` | ✅ montado com apoio de IA e verificado | cada trecho é checado por código contra o PDF e **8 valores foram conferidos à mão: todos corretos** (`docs/CONFERENCIA_MANUAL.md`) |
-| Docker | ✅ build e testes validados em container (111 passed; `run` OK) | `docker build -t intra-fin-analyzer .`; ver "Docker" |
+| Docker | ✅ build e testes validados em container (112 passed; `run` OK) | `docker build -t intra-fin-analyzer .`; ver "Docker" |
 | Preços de token | ⚠ estimativa a preço de tabela | o custo real é medido por execução em `run_manifest.json` (no plano gratuito é US$ 0) |
 
 ## Início rápido
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 # coloque os PDFs em data/input/ com estes nomes: light.pdf  millet.pdf  brasal.pdf
 
 python -m finanalyzer run                     # modo padrão "reference": sem LLM, sem chave → outputs/
-python -m pytest -q                           # 111 testes
+python -m pytest -q                           # 112 testes
 python -m finanalyzer eval --mode baseline    # mede a qualidade do extrator regex contra o gabarito
 python scripts/verify_numbers.py              # re-confere cada valor direto no PDF e recalcula os derivados
 python scripts/check_secrets.py               # garante que não há chave no repositório
@@ -81,7 +81,7 @@ docker run --rm -v "$PWD/data/input:/app/data/input" -v "$PWD/outputs:/app/outpu
 docker run --rm --env-file .env -v "$PWD/data/input:/app/data/input" -v "$PWD/outputs:/app/outputs" intra-fin-analyzer run --mode llm
 docker run --rm --entrypoint python intra-fin-analyzer -m pytest -q
 ```
-O `Dockerfile` roda como usuário não-root e as chaves entram só por `--env-file`/`-e`. **Build e testes validados em container**: `docker build` OK, `pytest` dentro da imagem com 111 passed e `run` em modo reference com 150 evidências e 0 falhas de grounding. O modo `llm` em container usa o mesmo código, mas não foi exercitado lá; o caminho local (`pip install`) continua sendo o principal.
+O `Dockerfile` roda como usuário não-root e as chaves entram só por `--env-file`/`-e`. **Build e testes validados em container**: `docker build` OK, `pytest` dentro da imagem com 112 passed e `run` em modo reference com 150 evidências e 0 falhas de grounding. O modo `llm` em container usa o mesmo código, mas não foi exercitado lá; o caminho local (`pip install`) continua sendo o principal.
 
 ### O que sai em `outputs/`
 | Arquivo | Conteúdo |
@@ -212,7 +212,17 @@ Quatro iterações reais (medir → ler a resposta crua do modelo → corrigir):
 ## Custo e desempenho
 
 - **Modo reference/baseline:** ~2,5 s por execução completa (inclui ML estatístico), US$ 0. Ingestão fria: ~27 s para 218 páginas, uma vez por SHA-256. Tempo por etapa e por documento em `run_manifest.json` e `logs/run.jsonl`.
-- **Modo llm (medido, `gemini-3.5-flash-lite`):** execução fria completa (6 chamadas, 3 documentos, sem cache) em **62,6 s**; ≈ **91–92 mil tokens de entrada e ≈ 13,4–13,7 mil de saída** por execução completa. **Custo real: US$ 0** (camada gratuita). A preço de tabela do modelo (US$ 0,30 entrada / US$ 2,50 saída por 1M de tokens, valores a conferir na página do provedor) seria **≈ US$ 0,06 por execução**. O `run_manifest.json` registra tokens, segundos e custo por chamada; chamadas atendidas pelo cache aparecem como `cache=true` (tokens da chamada original, latência 0).
+- **Modo llm (medido, `gemini-3.5-flash-lite`):** execução fria completa (6 chamadas, 3 documentos, sem cache) em **62,6 s**, ≈ **21 s por documento** (medida antes das últimas melhorias do qualitativo). Na versão final, uma execução completa usa **≈ 104 mil tokens de entrada e ≈ 14 mil de saída**. **Custo real: US$ 0** (camada gratuita). A preço de tabela do modelo (US$ 0,30 entrada / US$ 2,50 saída por 1M de tokens, valores a conferir na página do provedor) são **≈ US$ 0,067 por execução**. O `run_manifest.json` registra tokens, segundos e custo por chamada; chamadas atendidas pelo cache aparecem como `cache=true` (tokens da chamada original, latência 0).
+
+| Documento (páginas) | Tokens entrada | Tokens saída | Custo a preço de tabela |
+|---|---|---|---|
+| Light (124) | 38.944 | 5.771 | ≈ US$ 0,026 |
+| Millet (43) | 34.579 | 4.151 | ≈ US$ 0,021 |
+| Brasal (51) | 30.724 | 4.249 | ≈ US$ 0,020 |
+| **Total** | **104.247** | **14.171** | **≈ US$ 0,067** |
+
+Cada documento usa duas chamadas (extração e qualitativo). O custo depende pouco do número de páginas, porque só as páginas escolhidas por BM25 vão ao modelo (até 18 na extração e 24 no qualitativo).
+- **Projeção (estimativa, não medida):** ≈ US$ 0,022 por documento de tamanho parecido → ≈ **US$ 22 a cada 1.000 documentos** a preço de tabela, sem contar OCR/Document Intelligence, armazenamento nem reprocessamento. Em tempo, ≈ 21 s por documento em sequência (≈ 6 h para 1.000); em produção o processamento seria paralelo e em lote. Hipótese: documentos de 40 a 124 páginas, com texto selecionável.
 - A camada gratuita tem limites por minuto e **por dia, por modelo** (no teste, vários modelos esgotaram a cota diária). Por isso o cliente repete 429/503 com espera e há cache em disco; em produção, usar Azure OpenAI com cota dedicada.
 - Reduzir custo: *prompt caching* do system prompt, modelo menor para extração e maior só para o qualitativo, `TOP_K_PAGES`/`MAX_PAGES` menores.
 
@@ -245,7 +255,7 @@ Quatro iterações reais (medir → ler a resposta crua do modelo → corrigir):
 - **ML tradicional comparado com LLM:** `ml_baseline.py` (z-score robusto + Isolation Forest + léxico) com Anexo B e testes; extrator regex (`baseline.py`) medido contra o gabarito.
 - **Perguntas livres:** `ask` offline (extrativo, citações verificadas) e `ask --mode llm`.
 - **LLM sem chave paga:** Ollama e Gemini gratuito, clientes com *retry* e testes contra servidor HTTP falso.
-- **Docker** (Dockerfile + `.dockerignore`; build e testes validados em container) · **111 testes** · **logs/traços estruturados** (`logs/run.jsonl`) + `run_manifest.json` · **varredura de segredos**.
+- **Docker** (Dockerfile + `.dockerignore`; build e testes validados em container) · **112 testes** · **logs/traços estruturados** (`logs/run.jsonl`) + `run_manifest.json` · **varredura de segredos**.
 
 ## Limitações (ditas com franqueza)
 
@@ -256,7 +266,7 @@ Quatro iterações reais (medir → ler a resposta crua do modelo → corrigir):
 5. Só o Gemini (`gemini-3.5-flash-lite`) foi exercitado com modelo real; Claude, OpenAI, Azure e Ollama usam o mesmo código, validado só com servidor HTTP falso.
 6. Tom da administração é análise **qualitativa** com justificativa, não medida estatística; para Millet/Brasal a base são notas explicativas (não há relatório da administração), então a confiança é "baixa".
 7. Tabelas sem borda (Millet) dependem do texto com layout, não do `extract_tables`.
-8. Documentos desconhecidos só funcionam em modo `llm`/`baseline` (o modo `reference` exige gabarito).
+8. **Documento novo (4º PDF):** o modo `reference` só vale para os 3 PDFs curados (para os demais, aborta com mensagem clara). Em `--mode llm` (e `baseline`) qualquer PDF em `data/input/` entra no pipeline; o relatório e as 5 respostas se adaptam ao número de empresas e trazem "não encontrado" onde faltar dado, em vez de quebrar (teste automatizado com um 4º documento). **Ainda não medi a qualidade do modo `llm` num PDF realmente novo**: a avaliação cobre só os 3 documentos do gabarito. PDFs escaneados (sem texto) exigem OCR, que não está implementado (caminho: Azure Document Intelligence).
 9. O ML estatístico usa rótulos de linha extraídos por regex de texto com layout; pode sinalizar linhas de notas ou rótulos com resíduo (ex.: "23.g"); é um **gerador de candidatos**, não um juiz.
 9. `ask` offline é extrativo: mostra o que os documentos dizem, não sintetiza nem compara em linguagem natural (para isso, `--mode llm`).
 
@@ -298,6 +308,6 @@ Quatro iterações reais (medir → ler a resposta crua do modelo → corrigir):
 finanalyzer/   ingest · retrieval · extract · grounding · derive · validate · qualitative · qa · report · export · pipeline · obs · ml_baseline · baseline · cli · mcp_server · security · llm/
 data/input/    PDFs                        data/reference/  gabarito verificado
 scripts/       build_reference.py · check_secrets.py · verify_numbers.py
-tests/         111 testes                   outputs/         resultados da última execução (inclui logs/run.jsonl)
+tests/         112 testes                   outputs/         resultados da última execução (inclui logs/run.jsonl)
 docs/          roteiro da apresentação · conferência manual de valores
 ```

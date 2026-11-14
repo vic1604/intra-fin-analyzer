@@ -22,11 +22,11 @@
   },
   "tempos_s": {
     "ingestao_s": 0.12,
-    "extracao_validacao_light_s": 10.96,
-    "extracao_validacao_millet_s": 4.38,
-    "extracao_validacao_brasal_s": 5.41,
-    "ml_tradicional_s": 8.92,
-    "total_s": 30.61
+    "extracao_validacao_light_s": 0.55,
+    "extracao_validacao_millet_s": 0.14,
+    "extracao_validacao_brasal_s": 0.17,
+    "ml_tradicional_s": 8.6,
+    "total_s": 10.23
   },
   "grounding": {
     "light": {
@@ -47,10 +47,10 @@
     "provedor": "gemini",
     "modelo": "gemini-3.5-flash-lite",
     "chamadas": 6,
-    "chamadas_do_cache": 3,
+    "chamadas_do_cache": 6,
     "tokens_in": 104247,
     "tokens_out": 14171,
-    "segundos": 19.7,
+    "segundos": 0.0,
     "custo_usd_estimado": 0.0667,
     "log": [
       {
@@ -64,8 +64,8 @@
         "etapa": "qualitativo:light",
         "in": 19036,
         "out": 2045,
-        "s": 10.2,
-        "cache": false
+        "s": 0.0,
+        "cache": true
       },
       {
         "etapa": "extracao:millet",
@@ -78,8 +78,8 @@
         "etapa": "qualitativo:millet",
         "in": 19068,
         "out": 1361,
-        "s": 4.26,
-        "cache": false
+        "s": 0.0,
+        "cache": true
       },
       {
         "etapa": "extracao:brasal",
@@ -92,8 +92,8 @@
         "etapa": "qualitativo:brasal",
         "in": 16448,
         "out": 1593,
-        "s": 5.25,
-        "cache": false
+        "s": 0.0,
+        "cache": true
       }
     ]
   }

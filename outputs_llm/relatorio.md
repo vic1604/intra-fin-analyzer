@@ -1,6 +1,6 @@
 # Relatório de Análise Financeira — Light, Millet e Brasal
 
-*Gerado em 14/11/2026 11:39 · modo `llm` · exercício 2022 vs 2021 · valores em R$ (conforme indicado)*
+*Gerado em 14/11/2026 14:54 · modo `llm` · exercício 2022 vs 2021 · valores em R$ (conforme indicado)*
 
 > **Leia primeiro:** os 3 PDFs são demonstrações financeiras anuais, não releases trimestrais. Só a Light inclui Relatório da Administração; Millet e Brasal têm apenas DFs e notas explicativas — por isso EBITDA, margem EBITDA, dívida líquida e guidance estão frequentemente *não encontrados*. Indicadores marcados com ¤ são **calculados** pelo pipeline, nunca extraídos.
 
@@ -165,7 +165,7 @@ Para comparar de forma padronizada usei **EBITDA derivado = EBIT + D&A (fluxo de
 1. Brasal: **16,7%** (EBITDA derivado R$ 221,9 mi; 2021: 24,6%) [Brasal p.8]
 2. Millet: **9,4%** (EBITDA derivado R$ 43,5 mi; 2021: 3,7%) [Millet p.7]
 3. Light: **−8,9%** (EBITDA derivado −R$ 1,18 bi; 2021: 12,2%) (−9,7% sobre receita ex-construção) [Light p.20]
-*Comparação com ressalvas: os três usam critérios contábeis e setores diferentes (energia, alimentos, bebidas).*
+*Comparação com ressalvas: as empresas usam critérios contábeis e atuam em setores diferentes.*
 
 <details><summary>Fontes (documento · página · trecho)</summary>
 
@@ -225,7 +225,7 @@ Para comparar de forma padronizada usei **EBITDA derivado = EBIT + D&A (fluxo de
 
 ### 4. Quais riscos são citados por mais de uma empresa?
 
-**5 categorias de risco aparecem em mais de uma empresa**; 3 aparecem nas três: Crédito / inadimplência de clientes, Juros e risco de mercado, Contingências judiciais e tributárias.
+**5 categorias de risco aparecem em mais de uma empresa**; 3 aparecem em todas as três: Crédito / inadimplência de clientes, Juros e risco de mercado, Contingências judiciais e tributárias.
 
 - **Contingências judiciais e tributárias** — 3 empresas (Light, Millet, Brasal):
     - Light: Riscos de contingências judiciais cíveis, trabalhistas e fiscais expressivos. [Light p.76]
@@ -270,7 +270,7 @@ Para comparar de forma padronizada usei **EBITDA derivado = EBIT + D&A (fluxo de
 
 ### 5. Qual é o guidance de cada empresa para o próximo ano?
 
-**Nenhuma das três empresas divulga guidance numérico para 2023** nos documentos fornecidos (são demonstrações financeiras anuais de 2022, não releases com projeções).
+**Nenhuma das três empresas divulga guidance numérico para o próximo ano** nos documentos fornecidos (se forem demonstrações anuais, não releases com projeções).
 
 - **Light** — **nenhum guidance numérico**; o documento também não traz perspectivas/projeções (**não encontrado**).
 - **Millet** — **nenhum guidance numérico**; o documento também não traz perspectivas/projeções (**não encontrado**).
@@ -434,6 +434,6 @@ _Leitura honesta:_ (1) coincidência por palavras do rótulo, heurística imperf
     - Light: `light.pdf` · `a87339d09747` · 124 págs · 28.57s (pdftotext)
     - Millet: `millet.pdf` · `42589e4b7ad3` · 43 págs · 7.49s (pdftotext)
     - Brasal: `brasal.pdf` · `5905cd3412e4` · 51 págs · 4.75s (pdftotext)
-- **LLM:** gemini/gemini-3.5-flash-lite · 6 chamadas · 104,247 tokens de entrada · 14,171 de saída · 19.7s · custo estimado US$ 0.067 (preços configuráveis em .env).
+- **LLM:** gemini/gemini-3.5-flash-lite · 6 chamadas · 104,247 tokens de entrada · 14,171 de saída · 0.0s · custo estimado US$ 0.067 (preços configuráveis em .env).
 - **Convenção de páginas:** posição física no PDF (1 = capa); pode diferir do número impresso no rodapé.
 - **Premissa de escopo:** os PDFs são demonstrações financeiras **anuais de 2022** (não releases trimestrais). 'Período de referência' = exercício 2022 vs 2021.

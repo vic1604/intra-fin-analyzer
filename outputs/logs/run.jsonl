@@ -1,15 +1,15 @@
-{"run_id": "4f52362bb08d", "seq": 1, "ts": "2026-11-12T15:38:07.567+00:00", "evento": "run_inicio", "modo": "reference", "provedor": null, "modelo": null}
-{"run_id": "4f52362bb08d", "seq": 2, "ts": "2026-11-12T15:38:07.580+00:00", "evento": "span", "etapa": "ingestao", "duracao_s": 0.013, "status": "ok", "documentos": 3, "paginas": 218}
-{"run_id": "4f52362bb08d", "seq": 3, "ts": "2026-11-12T15:38:07.698+00:00", "evento": "span", "etapa": "seguranca_scan", "duracao_s": 0.118, "status": "ok", "achados": 0}
-{"run_id": "4f52362bb08d", "seq": 4, "ts": "2026-11-12T15:38:07.700+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.002, "status": "ok", "doc": "light", "modo": "reference", "campos_encontrados": 13}
-{"run_id": "4f52362bb08d", "seq": 5, "ts": "2026-11-12T15:38:07.701+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 0.0, "status": "ok", "doc": "light", "modo": "reference"}
-{"run_id": "4f52362bb08d", "seq": 6, "ts": "2026-11-12T15:38:07.971+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.27, "status": "ok", "doc": "light", "alertas": 6, "falhas_grounding": 0}
-{"run_id": "4f52362bb08d", "seq": 7, "ts": "2026-11-12T15:38:07.971+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.0, "status": "ok", "doc": "millet", "modo": "reference", "campos_encontrados": 8}
-{"run_id": "4f52362bb08d", "seq": 8, "ts": "2026-11-12T15:38:07.972+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 0.0, "status": "ok", "doc": "millet", "modo": "reference"}
-{"run_id": "4f52362bb08d", "seq": 9, "ts": "2026-11-12T15:38:08.205+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.233, "status": "ok", "doc": "millet", "alertas": 11, "falhas_grounding": 0}
-{"run_id": "4f52362bb08d", "seq": 10, "ts": "2026-11-12T15:38:08.205+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.0, "status": "ok", "doc": "brasal", "modo": "reference", "campos_encontrados": 9}
-{"run_id": "4f52362bb08d", "seq": 11, "ts": "2026-11-12T15:38:08.206+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 0.0, "status": "ok", "doc": "brasal", "modo": "reference"}
-{"run_id": "4f52362bb08d", "seq": 12, "ts": "2026-11-12T15:38:08.484+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.279, "status": "ok", "doc": "brasal", "alertas": 11, "falhas_grounding": 0}
-{"run_id": "4f52362bb08d", "seq": 13, "ts": "2026-11-12T15:38:10.196+00:00", "evento": "span", "etapa": "ml_tradicional", "duracao_s": 1.711, "status": "ok"}
-{"run_id": "4f52362bb08d", "seq": 14, "ts": "2026-11-12T15:38:10.233+00:00", "evento": "span", "etapa": "relatorio", "duracao_s": 0.037, "status": "ok", "respostas": 5, "tamanho_md": 43122}
-{"run_id": "4f52362bb08d", "seq": 15, "ts": "2026-11-12T15:38:10.239+00:00", "evento": "run_fim", "status": "ok", "total_s": 2.67, "chamadas_llm": 0, "tokens_in": 0, "tokens_out": 0}
+{"run_id": "1bdfa3f8e6da", "seq": 1, "ts": "2026-11-14T17:31:02.850+00:00", "evento": "run_inicio", "modo": "reference", "provedor": null, "modelo": null}
+{"run_id": "1bdfa3f8e6da", "seq": 2, "ts": "2026-11-14T17:31:03.071+00:00", "evento": "span", "etapa": "ingestao", "duracao_s": 0.22, "status": "ok", "documentos": 3, "paginas": 218}
+{"run_id": "1bdfa3f8e6da", "seq": 3, "ts": "2026-11-14T17:31:03.217+00:00", "evento": "span", "etapa": "seguranca_scan", "duracao_s": 0.146, "status": "ok", "achados": 0}
+{"run_id": "1bdfa3f8e6da", "seq": 4, "ts": "2026-11-14T17:31:03.238+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.02, "status": "ok", "doc": "light", "modo": "reference", "campos_encontrados": 13}
+{"run_id": "1bdfa3f8e6da", "seq": 5, "ts": "2026-11-14T17:31:03.258+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 0.019, "status": "ok", "doc": "light", "modo": "reference"}
+{"run_id": "1bdfa3f8e6da", "seq": 6, "ts": "2026-11-14T17:31:03.723+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.465, "status": "ok", "doc": "light", "alertas": 6, "falhas_grounding": 0}
+{"run_id": "1bdfa3f8e6da", "seq": 7, "ts": "2026-11-14T17:31:03.742+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.018, "status": "ok", "doc": "millet", "modo": "reference", "campos_encontrados": 8}
+{"run_id": "1bdfa3f8e6da", "seq": 8, "ts": "2026-11-14T17:31:03.760+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 0.018, "status": "ok", "doc": "millet", "modo": "reference"}
+{"run_id": "1bdfa3f8e6da", "seq": 9, "ts": "2026-11-14T17:31:04.153+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.393, "status": "ok", "doc": "millet", "alertas": 11, "falhas_grounding": 0}
+{"run_id": "1bdfa3f8e6da", "seq": 10, "ts": "2026-11-14T17:31:04.171+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.017, "status": "ok", "doc": "brasal", "modo": "reference", "campos_encontrados": 9}
+{"run_id": "1bdfa3f8e6da", "seq": 11, "ts": "2026-11-14T17:31:04.185+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 0.014, "status": "ok", "doc": "brasal", "modo": "reference"}
+{"run_id": "1bdfa3f8e6da", "seq": 12, "ts": "2026-11-14T17:31:04.629+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.444, "status": "ok", "doc": "brasal", "alertas": 11, "falhas_grounding": 0}
+{"run_id": "1bdfa3f8e6da", "seq": 13, "ts": "2026-11-14T17:31:28.667+00:00", "evento": "span", "etapa": "ml_tradicional", "duracao_s": 24.037, "status": "ok"}
+{"run_id": "1bdfa3f8e6da", "seq": 14, "ts": "2026-11-14T17:31:28.863+00:00", "evento": "span", "etapa": "relatorio", "duracao_s": 0.195, "status": "ok", "respostas": 5, "tamanho_md": 43122}
+{"run_id": "1bdfa3f8e6da", "seq": 15, "ts": "2026-11-14T17:31:29.178+00:00", "evento": "run_fim", "status": "ok", "total_s": 26.03, "chamadas_llm": 0, "tokens_in": 0, "tokens_out": 0}

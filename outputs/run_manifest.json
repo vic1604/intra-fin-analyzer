@@ -5,28 +5,28 @@
       "arquivo": "light.pdf",
       "sha256": "a87339d097478f1c669e3e56fac205bc9538ef5bd623230369a094dc73300c0f",
       "paginas": 124,
-      "ingestao_s": 18.94
+      "ingestao_s": 28.57
     },
     "millet": {
       "arquivo": "millet.pdf",
       "sha256": "42589e4b7ad3999b7df8c09d172c167ce9e8e44902db523ca1c4e6e4aba5572a",
       "paginas": 43,
-      "ingestao_s": 5.39
+      "ingestao_s": 7.49
     },
     "brasal": {
       "arquivo": "brasal.pdf",
       "sha256": "5905cd3412e40feaf215b9e51d0b27af7202d8ff7965bb0d434a1dfcf46ce0ec",
       "paginas": 51,
-      "ingestao_s": 2.25
+      "ingestao_s": 4.75
     }
   },
   "tempos_s": {
-    "ingestao_s": 0.01,
-    "extracao_validacao_light_s": 0.27,
-    "extracao_validacao_millet_s": 0.23,
-    "extracao_validacao_brasal_s": 0.28,
-    "ml_tradicional_s": 1.71,
-    "total_s": 2.67
+    "ingestao_s": 0.24,
+    "extracao_validacao_light_s": 0.51,
+    "extracao_validacao_millet_s": 0.43,
+    "extracao_validacao_brasal_s": 0.48,
+    "ml_tradicional_s": 24.04,
+    "total_s": 26.03
   },
   "grounding": {
     "light": {

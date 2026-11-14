@@ -2,7 +2,14 @@
 
 from __future__ import annotations
 
-DOC_NOME = {"light": "Light", "millet": "Millet", "brasal": "Brasal"}
+class _Nomes(dict):
+    """Nomes de exibição; documento novo (sem entrada) usa o próprio id, em maiúscula inicial."""
+
+    def __missing__(self, key):
+        return str(key).replace("_", " ").title()
+
+
+DOC_NOME = _Nomes({"light": "Light", "millet": "Millet", "brasal": "Brasal"})
 
 
 def n(x: float | None, nd: int = 1) -> str:

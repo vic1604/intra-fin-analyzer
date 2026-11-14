@@ -8,7 +8,7 @@ Para comparar de forma padronizada usei **EBITDA derivado = EBIT + D&A (fluxo de
 1. Brasal: **16,7%** (EBITDA derivado R$ 221,9 mi; 2021: 24,6%) [Brasal p.8]
 2. Millet: **9,4%** (EBITDA derivado R$ 43,5 mi; 2021: 3,7%) [Millet p.7]
 3. Light: **−8,9%** (EBITDA derivado −R$ 1,18 bi; 2021: 12,2%) (−9,7% sobre receita ex-construção) [Light p.20]
-*Comparação com ressalvas: os três usam critérios contábeis e setores diferentes (energia, alimentos, bebidas).*
+*Comparação com ressalvas: as empresas usam critérios contábeis e atuam em setores diferentes.*
 
 **Fontes:** light p.20; light p.23; light p.20; millet p.7; millet p.10; millet p.7; brasal p.8; brasal p.11; brasal p.8
 
@@ -31,7 +31,7 @@ Para comparar de forma padronizada usei **EBITDA derivado = EBIT + D&A (fluxo de
 
 ## 4. Quais riscos são citados por mais de uma empresa?
 
-**5 categorias de risco aparecem em mais de uma empresa**; 3 aparecem nas três: Crédito / inadimplência de clientes, Juros e risco de mercado, Contingências judiciais e tributárias.
+**5 categorias de risco aparecem em mais de uma empresa**; 3 aparecem em todas as três: Crédito / inadimplência de clientes, Juros e risco de mercado, Contingências judiciais e tributárias.
 - **Contingências judiciais e tributárias** — 3 empresas (Light, Millet, Brasal):
     - Light: Riscos de contingências judiciais cíveis, trabalhistas e fiscais expressivos. [Light p.76]
     - Millet: Risco tributário, cível e trabalhista decorrente de processos judiciais em andamento com expectativa de perda provável. [Millet p.17]
@@ -57,7 +57,7 @@ Para comparar de forma padronizada usei **EBITDA derivado = EBIT + D&A (fluxo de
 
 ## 5. Qual é o guidance de cada empresa para o próximo ano?
 
-**Nenhuma das três empresas divulga guidance numérico para 2023** nos documentos fornecidos (são demonstrações financeiras anuais de 2022, não releases com projeções).
+**Nenhuma das três empresas divulga guidance numérico para o próximo ano** nos documentos fornecidos (se forem demonstrações anuais, não releases com projeções).
 - **Light** — **nenhum guidance numérico**; o documento também não traz perspectivas/projeções (**não encontrado**).
 - **Millet** — **nenhum guidance numérico**; o documento também não traz perspectivas/projeções (**não encontrado**).
 - **Brasal** — **nenhum guidance numérico**; o documento também não traz perspectivas/projeções (**não encontrado**).

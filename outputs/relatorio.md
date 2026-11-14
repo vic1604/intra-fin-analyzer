@@ -1,6 +1,6 @@
 # Relatório de Análise Financeira — Light, Millet e Brasal
 
-*Gerado em 12/11/2026 12:38 · modo `reference` · exercício 2022 vs 2021 · valores em R$ (conforme indicado)*
+*Gerado em 14/11/2026 14:31 · modo `reference` · exercício 2022 vs 2021 · valores em R$ (conforme indicado)*
 
 > **Leia primeiro:** os 3 PDFs são demonstrações financeiras anuais, não releases trimestrais. Só a Light inclui Relatório da Administração; Millet e Brasal têm apenas DFs e notas explicativas — por isso EBITDA, margem EBITDA, dívida líquida e guidance estão frequentemente *não encontrados*. Indicadores marcados com ¤ são **calculados** pelo pipeline, nunca extraídos.
 
@@ -471,8 +471,8 @@ _Leitura honesta:_ (1) coincidência por palavras do rótulo, heurística imperf
 
 - **Modo de extração:** `reference` (extração curada + verificada por código; não usa LLM nesta execução)
 - **Documentos** (SHA-256 abreviado · páginas · tempo de ingestão):
-    - Light: `light.pdf` · `a87339d09747` · 124 págs · 18.94s (pdftotext)
-    - Millet: `millet.pdf` · `42589e4b7ad3` · 43 págs · 5.39s (pdftotext)
-    - Brasal: `brasal.pdf` · `5905cd3412e4` · 51 págs · 2.25s (pdftotext)
+    - Light: `light.pdf` · `a87339d09747` · 124 págs · 28.57s (pdftotext)
+    - Millet: `millet.pdf` · `42589e4b7ad3` · 43 págs · 7.49s (pdftotext)
+    - Brasal: `brasal.pdf` · `5905cd3412e4` · 51 págs · 4.75s (pdftotext)
 - **Convenção de páginas:** posição física no PDF (1 = capa); pode diferir do número impresso no rodapé.
 - **Premissa de escopo:** os PDFs são demonstrações financeiras **anuais de 2022** (não releases trimestrais). 'Período de referência' = exercício 2022 vs 2021.

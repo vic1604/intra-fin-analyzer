@@ -1,21 +1,21 @@
-{"run_id": "583fa73bce95", "seq": 1, "ts": "2026-11-14T14:39:27.419+00:00", "evento": "run_inicio", "modo": "llm", "provedor": "gemini", "modelo": "gemini-3.5-flash-lite"}
-{"run_id": "583fa73bce95", "seq": 2, "ts": "2026-11-14T14:39:27.537+00:00", "evento": "span", "etapa": "ingestao", "duracao_s": 0.118, "status": "ok", "documentos": 3, "paginas": 218}
-{"run_id": "583fa73bce95", "seq": 3, "ts": "2026-11-14T14:39:27.693+00:00", "evento": "span", "etapa": "seguranca_scan", "duracao_s": 0.155, "status": "ok", "achados": 0}
-{"run_id": "583fa73bce95", "seq": 4, "ts": "2026-11-14T14:39:28.302+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.052, "status": "ok", "doc": "light", "modo": "llm", "campos_encontrados": 13}
-{"run_id": "583fa73bce95", "seq": 5, "ts": "2026-11-14T14:39:38.793+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 10.491, "status": "ok", "doc": "light", "modo": "llm"}
-{"run_id": "583fa73bce95", "seq": 6, "ts": "2026-11-14T14:39:38.793+00:00", "evento": "llm_chamada", "doc": "light", "etapa": "extracao:light", "in": 19908, "out": 3726, "s": 0.0, "cache": true}
-{"run_id": "583fa73bce95", "seq": 7, "ts": "2026-11-14T14:39:38.793+00:00", "evento": "llm_chamada", "doc": "light", "etapa": "qualitativo:light", "in": 19036, "out": 2045, "s": 10.2, "cache": false}
-{"run_id": "583fa73bce95", "seq": 8, "ts": "2026-11-14T14:39:39.209+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.415, "status": "ok", "doc": "light", "alertas": 5, "falhas_grounding": 3}
-{"run_id": "583fa73bce95", "seq": 9, "ts": "2026-11-14T14:39:39.226+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.017, "status": "ok", "doc": "millet", "modo": "llm", "campos_encontrados": 8}
-{"run_id": "583fa73bce95", "seq": 10, "ts": "2026-11-14T14:39:43.506+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 4.28, "status": "ok", "doc": "millet", "modo": "llm"}
-{"run_id": "583fa73bce95", "seq": 11, "ts": "2026-11-14T14:39:43.507+00:00", "evento": "llm_chamada", "doc": "millet", "etapa": "extracao:millet", "in": 15511, "out": 2790, "s": 0.0, "cache": true}
-{"run_id": "583fa73bce95", "seq": 12, "ts": "2026-11-14T14:39:43.507+00:00", "evento": "llm_chamada", "doc": "millet", "etapa": "qualitativo:millet", "in": 19068, "out": 1361, "s": 4.26, "cache": false}
-{"run_id": "583fa73bce95", "seq": 13, "ts": "2026-11-14T14:39:43.586+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.079, "status": "ok", "doc": "millet", "alertas": 9, "falhas_grounding": 1}
-{"run_id": "583fa73bce95", "seq": 14, "ts": "2026-11-14T14:39:43.604+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.017, "status": "ok", "doc": "brasal", "modo": "llm", "campos_encontrados": 8}
-{"run_id": "583fa73bce95", "seq": 15, "ts": "2026-11-14T14:39:48.871+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 5.266, "status": "ok", "doc": "brasal", "modo": "llm"}
-{"run_id": "583fa73bce95", "seq": 16, "ts": "2026-11-14T14:39:48.871+00:00", "evento": "llm_chamada", "doc": "brasal", "etapa": "extracao:brasal", "in": 14276, "out": 2656, "s": 0.0, "cache": true}
-{"run_id": "583fa73bce95", "seq": 17, "ts": "2026-11-14T14:39:48.872+00:00", "evento": "llm_chamada", "doc": "brasal", "etapa": "qualitativo:brasal", "in": 16448, "out": 1593, "s": 5.25, "cache": false}
-{"run_id": "583fa73bce95", "seq": 18, "ts": "2026-11-14T14:39:48.999+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.127, "status": "ok", "doc": "brasal", "alertas": 7, "falhas_grounding": 0}
-{"run_id": "583fa73bce95", "seq": 19, "ts": "2026-11-14T14:39:57.915+00:00", "evento": "span", "etapa": "ml_tradicional", "duracao_s": 8.916, "status": "ok"}
-{"run_id": "583fa73bce95", "seq": 20, "ts": "2026-11-14T14:39:58.026+00:00", "evento": "span", "etapa": "relatorio", "duracao_s": 0.11, "status": "ok", "respostas": 5, "tamanho_md": 34566}
-{"run_id": "583fa73bce95", "seq": 21, "ts": "2026-11-14T14:39:58.082+00:00", "evento": "run_fim", "status": "ok", "total_s": 30.61, "chamadas_llm": 6, "tokens_in": 104247, "tokens_out": 14171}
+{"run_id": "f9af5df6fae8", "seq": 1, "ts": "2026-11-14T17:53:58.746+00:00", "evento": "run_inicio", "modo": "llm", "provedor": "gemini", "modelo": "gemini-3.5-flash-lite"}
+{"run_id": "f9af5df6fae8", "seq": 2, "ts": "2026-11-14T17:53:58.846+00:00", "evento": "span", "etapa": "ingestao", "duracao_s": 0.1, "status": "ok", "documentos": 3, "paginas": 218}
+{"run_id": "f9af5df6fae8", "seq": 3, "ts": "2026-11-14T17:53:58.992+00:00", "evento": "span", "etapa": "seguranca_scan", "duracao_s": 0.146, "status": "ok", "achados": 0}
+{"run_id": "f9af5df6fae8", "seq": 4, "ts": "2026-11-14T17:53:59.446+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.061, "status": "ok", "doc": "light", "modo": "llm", "campos_encontrados": 13}
+{"run_id": "f9af5df6fae8", "seq": 5, "ts": "2026-11-14T17:53:59.473+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 0.027, "status": "ok", "doc": "light", "modo": "llm"}
+{"run_id": "f9af5df6fae8", "seq": 6, "ts": "2026-11-14T17:53:59.474+00:00", "evento": "llm_chamada", "doc": "light", "etapa": "extracao:light", "in": 19908, "out": 3726, "s": 0.0, "cache": true}
+{"run_id": "f9af5df6fae8", "seq": 7, "ts": "2026-11-14T17:53:59.474+00:00", "evento": "llm_chamada", "doc": "light", "etapa": "qualitativo:light", "in": 19036, "out": 2045, "s": 0.0, "cache": true}
+{"run_id": "f9af5df6fae8", "seq": 8, "ts": "2026-11-14T17:53:59.933+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.459, "status": "ok", "doc": "light", "alertas": 5, "falhas_grounding": 3}
+{"run_id": "f9af5df6fae8", "seq": 9, "ts": "2026-11-14T17:53:59.966+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.032, "status": "ok", "doc": "millet", "modo": "llm", "campos_encontrados": 8}
+{"run_id": "f9af5df6fae8", "seq": 10, "ts": "2026-11-14T17:54:00.000+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 0.034, "status": "ok", "doc": "millet", "modo": "llm"}
+{"run_id": "f9af5df6fae8", "seq": 11, "ts": "2026-11-14T17:54:00.000+00:00", "evento": "llm_chamada", "doc": "millet", "etapa": "extracao:millet", "in": 15511, "out": 2790, "s": 0.0, "cache": true}
+{"run_id": "f9af5df6fae8", "seq": 12, "ts": "2026-11-14T17:54:00.001+00:00", "evento": "llm_chamada", "doc": "millet", "etapa": "qualitativo:millet", "in": 19068, "out": 1361, "s": 0.0, "cache": true}
+{"run_id": "f9af5df6fae8", "seq": 13, "ts": "2026-11-14T17:54:00.076+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.076, "status": "ok", "doc": "millet", "alertas": 9, "falhas_grounding": 1}
+{"run_id": "f9af5df6fae8", "seq": 14, "ts": "2026-11-14T17:54:00.110+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.033, "status": "ok", "doc": "brasal", "modo": "llm", "campos_encontrados": 8}
+{"run_id": "f9af5df6fae8", "seq": 15, "ts": "2026-11-14T17:54:00.141+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 0.031, "status": "ok", "doc": "brasal", "modo": "llm"}
+{"run_id": "f9af5df6fae8", "seq": 16, "ts": "2026-11-14T17:54:00.142+00:00", "evento": "llm_chamada", "doc": "brasal", "etapa": "extracao:brasal", "in": 14276, "out": 2656, "s": 0.0, "cache": true}
+{"run_id": "f9af5df6fae8", "seq": 17, "ts": "2026-11-14T17:54:00.142+00:00", "evento": "llm_chamada", "doc": "brasal", "etapa": "qualitativo:brasal", "in": 16448, "out": 1593, "s": 0.0, "cache": true}
+{"run_id": "f9af5df6fae8", "seq": 18, "ts": "2026-11-14T17:54:00.243+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.101, "status": "ok", "doc": "brasal", "alertas": 7, "falhas_grounding": 0}
+{"run_id": "f9af5df6fae8", "seq": 19, "ts": "2026-11-14T17:54:08.839+00:00", "evento": "span", "etapa": "ml_tradicional", "duracao_s": 8.595, "status": "ok"}
+{"run_id": "f9af5df6fae8", "seq": 20, "ts": "2026-11-14T17:54:08.959+00:00", "evento": "span", "etapa": "relatorio", "duracao_s": 0.119, "status": "ok", "respostas": 5, "tamanho_md": 34550}
+{"run_id": "f9af5df6fae8", "seq": 21, "ts": "2026-11-14T17:54:09.186+00:00", "evento": "run_fim", "status": "ok", "total_s": 10.23, "chamadas_llm": 6, "tokens_in": 104247, "tokens_out": 14171}

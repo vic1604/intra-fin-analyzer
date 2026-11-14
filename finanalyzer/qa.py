@@ -88,6 +88,13 @@ def _mil(v) -> float:
     return to_base(v.valor, v.escala) / 1e3
 
 
+_EXTENSO = {1: "uma", 2: "duas", 3: "três", 4: "quatro", 5: "cinco", 6: "seis", 7: "sete", 8: "oito", 9: "nove", 10: "dez"}
+
+
+def _qtd(n_: int) -> str:
+    return _EXTENSO.get(n_, str(n_))
+
+
 # ---------------------------------------------------------------- Q1 -------
 def q1(ctx: Ctx) -> Resposta:
     fontes: list[Fonte] = []
@@ -102,6 +109,8 @@ def q1(ctx: Ctx) -> Resposta:
         rows.append((d, md.atual, md.anterior, ed.atual, ctx.exts[d]))
     rows_ok = [r for r in rows if r[1] is not None]
     rows_ok.sort(key=lambda r: -r[1])
+    if not rows_ok:
+        return Resposta(1, PERGUNTAS[0], "**Não encontrado**: nenhum documento trouxe EBIT e D&A suficientes para calcular a margem EBITDA (nenhum publica margem).", _dedup(fontes))
     top = rows_ok[0]
     publica = [DOC_NOME[d] for d, *_ , e in rows if e.ebitda.status == "encontrado"]
     publica_margem = [DOC_NOME[d] for d, *_ , e in rows if e.margem_ebitda.status == "encontrado"]
@@ -110,7 +119,7 @@ def q1(ctx: Ctx) -> Resposta:
     L.append(
         f"**{DOC_NOME[top[0]]}**, com margem EBITDA de ≈ **{pct(top[1])}** em 2022 — mas atenção: é uma margem **derivada pelo pipeline**, "
         f"não publicada. "
-        + ("Nenhum dos três documentos informa margem EBITDA" if not publica_margem else f"Só {', '.join(publica_margem)} informa margem EBITDA")
+        + (f"Nenhum dos {_qtd(len(ctx.order))} documentos informa margem EBITDA" if not publica_margem else f"Só {', '.join(publica_margem)} informa margem EBITDA")
         + f", e {('só a ' + ', '.join(publica)) if publica else 'nenhuma empresa'} publica EBITDA."
     )
     light = ctx.exts.get("light")
@@ -129,7 +138,7 @@ def q1(ctx: Ctx) -> Resposta:
             extra = f" ({pct(ctx.ders[d]['margem_ebitda_derivada_ex_construcao'].atual)} sobre receita ex-construção)"
         pg = ext.ebit.atual.evidencia.pagina if ext.ebit.atual else 0
         L.append(f"{i}. {DOC_NOME[d]}: **{pct(m22)}** (EBITDA derivado {mi(e22)}; 2021: {pct(m21)}){extra} {cite(d, pg)}")
-    L.append("*Comparação com ressalvas: os três usam critérios contábeis e setores diferentes (energia, alimentos, bebidas).*")
+    L.append("*Comparação com ressalvas: as empresas usam critérios contábeis e atuam em setores diferentes.*")
     return Resposta(1, PERGUNTAS[0], "\n".join(L), _dedup(fontes))
 
 
@@ -242,7 +251,7 @@ def q4(ctx: Ctx) -> Resposta:
             fontes += [_fe(e) for e in emp[d][0].evidencias]
         L.append("- Citados por **apenas uma** empresa: " + "; ".join(partes) + ".")
     todas = [CATEGORIAS_RISCO.get(c, c) for c, v in comuns.items() if len(v) == len(ctx.order)]
-    head = f"**{len(comuns)} categorias de risco aparecem em mais de uma empresa**; {len(todas)} aparecem nas três: {', '.join(todas) if todas else 'nenhuma'}."
+    head = f"**{len(comuns)} categorias de risco aparecem em mais de uma empresa**; {len(todas)} aparecem em todas as {_qtd(len(ctx.order))}: {', '.join(todas) if todas else 'nenhuma'}."
     nota = "*Metodologia: cada risco recebe uma categoria de uma taxonomia fixa; a pergunta é respondida pela interseção das categorias (código), não por um parecer livre. Para Millet e Brasal, a base são as notas explicativas (não há relatório da administração).*"
     return Resposta(4, PERGUNTAS[3], head + "\n" + "\n".join(L) + "\n" + nota, _dedup(fontes))
 
@@ -266,7 +275,11 @@ def q5(ctx: Ctx) -> Resposta:
             L.append(f"- **{DOC_NOME[d]}** — {tag}. Perspectivas qualitativas: " + " ".join(f"({i}) {t}" for i, t in enumerate(itens, 1)))
         else:
             L.append(f"- **{DOC_NOME[d]}** — {tag}; o documento também não traz perspectivas/projeções (**não encontrado**).")
-    head = "**Nenhuma das três empresas divulga guidance numérico para 2023** nos documentos fornecidos (são demonstrações financeiras anuais de 2022, não releases com projeções)."
+    com_guidance = [DOC_NOME[d] for d in ctx.order if ctx.quals[d].guidance_numerico_encontrado]
+    if com_guidance:
+        head = f"**Guidance numérico encontrado em: {', '.join(com_guidance)}.** As demais empresas não o divulgam nos documentos fornecidos."
+    else:
+        head = f"**Nenhuma das {_qtd(len(ctx.order))} empresas divulga guidance numérico para o próximo ano** nos documentos fornecidos (se forem demonstrações anuais, não releases com projeções)."
     return Resposta(5, PERGUNTAS[4], head + "\n" + "\n".join(L), _dedup(fontes))
 
 

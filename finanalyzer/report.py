@@ -66,21 +66,31 @@ def exec_summary(run, d: str) -> list[str]:
     flag = ""
     if any(a.id == "MILLET-A1" for a in ext.anomalias_documento):
         flag = " (⚠ 2021 parcial: Alibra só desde jun/21)"
-    L.append(f"Receita líquida de **{mi(_mil(rl.atual))}** em 2022 ({pct(var, sign=True)} vs 2021){flag} {cite(d, _pg(rl.atual))}.")
+    if rl.atual is None:
+        L.append("Receita líquida **não encontrada** no documento (ver alertas).")
+    else:
+        L.append(f"Receita líquida de **{mi(_mil(rl.atual))}** em 2022 ({pct(var, sign=True)} vs 2021){flag} {cite(d, _pg(rl.atual))}.")
     ed, md_ = der["ebitda_derivado"], der["margem_ebitda_derivada"]
     if ext.ebitda.status == "encontrado":
         L.append(
             f"EBITDA: texto cita R$ {n(ext.ebitda.atual.valor, 0)} mi, mas **recomposto pelas DFs = {mi(ed.atual)}** — diverge, ver alertas {cite(d, _pg(ext.ebitda.atual))}."
         )
+    elif ed.atual is None:
+        L.append("EBITDA **não encontrado** e não derivável (faltam EBIT e/ou D&A no documento).")
     else:
         L.append(f"EBITDA **não publicado**; derivado (EBIT + D&A) = {mi(ed.atual)}, margem ≈ {pct(md_.atual)} (calculado ¤) {cite(d, _pg(ext.ebit.atual))}.")
     ll = ext.lucro_liquido
     lv = variation_pct(ll)
-    lv_txt = f"{pct(lv, sign=True)} vs 2021" if lv is not None else f"vs {mi(_mil(ll.anterior))} em 2021 (variação % n.s.)"
-    L.append(f"Lucro líquido de **{mi(_mil(ll.atual))}** ({lv_txt}) {cite(d, _pg(ll.atual))}.")
+    if ll.atual is None:
+        L.append("Lucro líquido **não encontrado** no documento (ver alertas).")
+    else:
+        lv_txt = f"{pct(lv, sign=True)} vs 2021" if lv is not None else (f"vs {mi(_mil(ll.anterior))} em 2021 (variação % n.s.)" if ll.anterior is not None else "sem comparativo")
+        L.append(f"Lucro líquido de **{mi(_mil(ll.atual))}** ({lv_txt}) {cite(d, _pg(ll.atual))}.")
     if ext.divida_liquida.status == "encontrado":
         alav = ext.alavancagem.atual.valor if ext.alavancagem.status == "encontrado" else None
         L.append(f"Dívida líquida de **{mi(_mil(ext.divida_liquida.atual))}**" + (f"; alavancagem de covenants **{mult(alav)}**" if alav else "") + f" {cite(d, _pg(ext.divida_liquida.atual))}.")
+    elif der["divida_liquida_derivada"].atual is None:
+        L.append("Dívida líquida **não encontrada** e não derivável (faltam dívida bruta e/ou caixa no documento).")
     else:
         dd = der["divida_liquida_derivada"].atual
         L.append(f"Dívida líquida **não publicada**; derivada = **{mi(dd)}** (caixa líquido; calculado ¤) {cite(d, _pg(ext.divida_bruta.atual))}.")
@@ -135,7 +145,7 @@ def comparative_table(run) -> str:
     row("EBITDA publicado", ebitda_pub)
     row("EBITDA derivado (EBIT + D&A)¤", lambda d: f"{n(run.ders[d]['ebitda_derivado'].atual / 1e3, 1)}" if run.ders[d]["ebitda_derivado"].atual is not None else "n/d")
     row("Margem EBITDA publicada", lambda d: "não encontrado" if run.exts[d].margem_ebitda.status != "encontrado" else pct(run.exts[d].margem_ebitda.atual.valor))
-    row("Margem EBITDA derivada¤ (2022 / 2021)", lambda d: f"{pct(run.ders[d]['margem_ebitda_derivada'].atual)} / {pct(run.ders[d]['margem_ebitda_derivada'].anterior)}")
+    row("Margem EBITDA derivada¤ (2022 / 2021)", lambda d: "n/d" if run.ders[d]["margem_ebitda_derivada"].atual is None else f"{pct(run.ders[d]['margem_ebitda_derivada'].atual)} / {pct(run.ders[d]['margem_ebitda_derivada'].anterior)}")
     row("Lucro líquido 2022", lambda d: _cell_money(run.exts[d].lucro_liquido))
     row("Lucro líquido 2021", lambda d: _cell_money(run.exts[d].lucro_liquido, "anterior"))
     row("Variação do lucro (calculada)", lambda d: var_cell(d, "lucro_liquido"))
@@ -144,7 +154,8 @@ def comparative_table(run) -> str:
         m = run.exts[d].divida_liquida
         if m.status == "encontrado":
             return f"{n(_mil(m.atual) / 1e3, 1)} · p.{_pg(m.atual)}"
-        return f"não encontrado (derivada¤: {n(run.ders[d]['divida_liquida_derivada'].atual / 1e3, 1)})"
+        dd_ = run.ders[d]["divida_liquida_derivada"].atual
+        return f"não encontrado (derivada¤: {n(dd_ / 1e3, 1)})" if dd_ is not None else "não encontrado"
 
     row("Dívida líquida 2022", dl)
 
@@ -156,7 +167,7 @@ def comparative_table(run) -> str:
         dd = run.ders[d]["divida_liquida_derivada"].atual
         if dd is not None and dd < 0:
             return "não encontrado (caixa líquido¤)"
-        return f"não encontrado (derivada¤: {mult(a)})"
+        return f"não encontrado (derivada¤: {mult(a)})" if a is not None else "não encontrado"
 
     row("Dívida líquida / EBITDA", lev)
     row("Fluxo de caixa operacional 2022", lambda d: _cell_money(run.exts[d].fco))
@@ -360,7 +371,9 @@ def _blank_before_lists(md: str) -> str:
 def build_report_md(run, respostas: list[Resposta]) -> str:
     now = datetime.now().strftime("%d/%m/%Y %H:%M")
     L: list[str] = []
-    L.append("# Relatório de Análise Financeira — Light, Millet e Brasal\n")
+    nomes = [DOC_NOME[d] for d in run.order]
+    titulo = ", ".join(nomes[:-1]) + " e " + nomes[-1] if len(nomes) > 1 else (nomes[0] if nomes else "")
+    L.append(f"# Relatório de Análise Financeira — {titulo}\n")
     L.append(f"*Gerado em {now} · modo `{run.mode}` · exercício 2022 vs 2021 · valores em R$ (conforme indicado)*\n")
     L.append("> **Leia primeiro:** os 3 PDFs são demonstrações financeiras anuais, não releases trimestrais. Só a Light inclui Relatório da Administração; "
              "Millet e Brasal têm apenas DFs e notas explicativas — por isso EBITDA, margem EBITDA, dívida líquida e guidance estão frequentemente *não encontrados*. "

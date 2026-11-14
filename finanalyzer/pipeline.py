@@ -88,6 +88,8 @@ class ExtractorAgent:
 
     def extract(self, doc: Document) -> Extracao:
         if self.mode == "reference":
+            if not (self.s.reference_dir / "extracao" / f"{doc.doc_id}.json").exists():
+                raise SystemExit(f"Sem gabarito para '{doc.doc_id}' (data/reference/extracao). O modo reference só vale para os 3 documentos curados; use --mode llm (ou baseline) para documentos novos.")
             return load_reference(self.s, doc.doc_id)
         if self.mode == "baseline":
             return extract_baseline(doc)
@@ -98,6 +100,14 @@ class ExtractorAgent:
 
     def qualitative(self, doc: Document) -> Qualitativo:
         if self.mode in ("reference", "baseline"):
+            if not (self.s.reference_dir / "qualitativo" / f"{doc.doc_id}.json").exists():
+                # documento novo, sem gabarito e sem LLM neste modo: NÃO inventa análise e avisa no relatório
+                return Qualitativo(
+                    doc_id=doc.doc_id, empresa=doc.doc_id, fonte_qualitativa="não gerada",
+                    nota_cobertura="Análise qualitativa não gerada: este modo não usa LLM e não há gabarito para este documento. Rode com --mode llm.",
+                    motivos_resultado=[], riscos=[], eventos_relevantes=[], tom="neutro",
+                    tom_justificativa="Não analisado neste modo.", tom_evidencias=[], confianca_tom="baixa", modo=self.mode,
+                )
             return load_reference_quali(self.s, doc.doc_id)
         assert self.llm and self.index
         return analyze_with_llm(doc, self.index, self.llm, self.meter, self.s)

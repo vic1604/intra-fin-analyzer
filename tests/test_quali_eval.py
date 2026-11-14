@@ -63,3 +63,26 @@ def test_relocacao_de_pagina_so_se_trecho_literal_for_unico():
     # trecho inventado continua reprovado
     q.eventos_relevantes = [Item(texto="y", evidencias=[Evidencia(documento="millet", pagina=5, trecho="frase inventada que não existe em nenhuma página do documento financeiro")])]
     assert ground_qualitativo(doc, q)
+
+
+def test_documento_novo_em_modo_baseline_nao_quebra_e_nao_inventa(tmp_path, monkeypatch):
+    import shutil
+
+    from finanalyzer.config import get_settings
+    from finanalyzer.pipeline import run_pipeline
+
+    s = get_settings()
+    s.input_dir = tmp_path / "in"
+    s.input_dir.mkdir()
+    for nome in ("light", "millet", "brasal"):
+        shutil.copy(get_settings().input_dir / f"{nome}.pdf", s.input_dir / f"{nome}.pdf")
+    shutil.copy(get_settings().input_dir / "millet.pdf", s.input_dir / "nova_empresa.pdf")
+    s.output_dir = tmp_path / "out"
+    s.cache_dir = tmp_path / "cache"
+    run = run_pipeline(s, mode="baseline", write=True, with_tables=False)
+    q = run.quals["nova_empresa"]
+    assert q.riscos == [] and q.confianca_tom == "baixa" and "Rode com --mode llm" in q.nota_cobertura
+    md = (s.output_dir / "relatorio.md").read_text(encoding="utf-8")
+    assert "Nova Empresa" in md  # o relatório é gerado com 4 empresas sem quebrar
+    assert "Light, Millet, Brasal e Nova Empresa" in md
+    assert "Nenhuma das quatro empresas" in (s.output_dir / "respostas.md").read_text(encoding="utf-8")
