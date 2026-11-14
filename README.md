@@ -4,7 +4,17 @@ Pipeline que lê 3 PDFs financeiros, extrai indicadores **com página e trecho d
 
 > **Leia primeiro (descoberta sobre os dados):** os 3 PDFs são **demonstrações financeiras anuais de 2022 (vs 2021)**, não releases trimestrais. Só a Light inclui Relatório da Administração. Por isso EBITDA, margem EBITDA, dívida líquida e guidance aparecem muitas vezes como **"não encontrado"** — e isso é o resultado correto, não uma falha. Veja "Premissas".
 
-> **Qual saída é a "oficial"?** Há duas, de propósito. **`outputs/` = modo `reference`**: valores e análise qualitativa curados, verificados contra o PDF (grounding total) — é o **teto de qualidade** e o que alimenta o relatório e as 5 respostas entregues. **`outputs_llm/` = modo `llm`**: extração real feita por um modelo (`gemini-3.5-flash-lite`) — é a **medida honesta** do que o pipeline consegue sozinho. A avaliação do modo `reference` contra o próprio gabarito é circular e **não é métrica de qualidade**; as métricas de qualidade são as do modo `llm` (seção "Avaliação de qualidade").
+### Duas saídas, não misturar
+
+| | `outputs_llm/` — **automação real (LLM)** | `outputs/` — **referência (gabarito curado)** |
+|---|---|---|
+| Quem extraiu os valores | modelo `gemini-3.5-flash-lite`, lendo os PDFs | curadoria humana, conferida contra o PDF |
+| Chama LLM? | **sim** (`--mode llm`) | não |
+| Para que serve | **demonstra a automação** e é a **única fonte de métricas de qualidade** (recall 78,6%, precisão 100%, alucinação 0%) | teto de qualidade e base de comparação; avaliá-lo contra si mesmo é circular |
+| Como gerar | `bash scripts/run_llm_full.sh` | `python -m finanalyzer run` |
+| Como identificar | cada relatório traz "**Modo de extração: `llm`**" no cabeçalho e o modelo, tokens e custo | cada relatório traz "**Modo de extração: `reference`**" |
+
+Os dois relatórios usam o mesmo pipeline de validação, respostas e escrita; só muda **quem preenche os valores**. Abra `outputs_llm/relatorio.html` para ver o que o programa faz sozinho.
 
 ## O que foi de fato verificado (e o que não foi)
 
