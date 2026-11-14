@@ -43,3 +43,23 @@ def test_quali_out_aceita_lista_em_campos_de_texto():
 
     o = QualiOut.model_validate({"nota_cobertura": ["a", "b"], "tom_justificativa": None})
     assert o.nota_cobertura == "a b" and o.tom_justificativa == ""
+
+
+def test_relocacao_de_pagina_so_se_trecho_literal_for_unico():
+    from finanalyzer.grounding import ground_qualitativo
+    from finanalyzer.schema import Evidencia, Item
+
+    s, docs = _docs()
+    doc = docs["millet"]
+    page = doc.page(27)
+    trecho = " ".join(page.text.split()[10:30])  # literal, longo o bastante
+    q = Qualitativo.model_validate_json((s.reference_dir / "qualitativo" / "millet.json").read_text(encoding="utf-8"))
+    q.eventos_relevantes = [Item(texto="x", evidencias=[Evidencia(documento="millet", pagina=5, trecho=trecho)])]
+    q.motivos_resultado, q.riscos, q.guidance, q.motivo_variacao_receita, q.tom_evidencias = [], [], [], None, []
+    falhas = ground_qualitativo(doc, q)
+    ev = q.eventos_relevantes[0].evidencias[0]
+    assert ev.verificada and ev.pagina != 5 and "página corrigida" in (ev.motivo_falha or "")
+    assert not falhas
+    # trecho inventado continua reprovado
+    q.eventos_relevantes = [Item(texto="y", evidencias=[Evidencia(documento="millet", pagina=5, trecho="frase inventada que não existe em nenhuma página do documento financeiro")])]
+    assert ground_qualitativo(doc, q)

@@ -1,24 +1,35 @@
 {
   "doc_id": "millet",
   "empresa": "millet",
-  "fonte_qualitativa": "Notas Explicativas da Administração",
+  "fonte_qualitativa": "Notas explicativas da Millet Participações S.A.",
   "nota_cobertura": "",
   "motivos_resultado": [
     {
-      "texto": "[Evidência documental] Aumento da receita operacional líquida consolidada impulsionada pelo crescimento das vendas no mercado interno e externo.",
+      "texto": "Aumento da receita operacional líquida em razão da consolidação integral e expansão das operações da controlada Alibra Ingredientes S.A.",
       "evidencias": [
         {
           "documento": "millet",
-          "pagina": 38,
-          "trecho": "Receita operacional liquida 462.127 199.259",
+          "pagina": 29,
+          "trecho": "Receita operacional líquida 462.127 318.317",
           "verificada": true
         }
       ]
     }
   ],
+  "motivo_variacao_receita": {
+    "texto": "A expansão da receita operacional líquida consolidada para R$ 462.127 em 2022 decorre principalmente do crescimento das vendas tanto no mercado interno quanto no mercado externo.",
+    "evidencias": [
+      {
+        "documento": "millet",
+        "pagina": 38,
+        "trecho": "Receita operacional liquida 462.127 199.259",
+        "verificada": true
+      }
+    ]
+  },
   "riscos": [
     {
-      "texto": "[Evidência documental] Risco de crédito associado à inadimplência de clientes e contrapartes em instrumentos financeiros.",
+      "texto": "Risco de crédito associado à inadimplência de clientes no recebimento de títulos e contas a receber.",
       "evidencias": [
         {
           "documento": "millet",
@@ -30,7 +41,7 @@
       "categoria": "credito_inadimplencia"
     },
     {
-      "texto": "[Evidência documental] Risco de liquidez referente a potenciais dificuldades na quitação de passivos financeiros de curto e longo prazos.",
+      "texto": "Risco de liquidez referente a dificuldades potenciais para honrar passivos financeiros de curto e longo prazos.",
       "evidencias": [
         {
           "documento": "millet",
@@ -42,19 +53,19 @@
       "categoria": "liquidez_endividamento"
     },
     {
-      "texto": "[Evidência documental] Risco de taxa de juros oriundo de oscilações nas taxas incidentes sobre passivos captados e aplicações.",
+      "texto": "Risco de taxa de juros decorrente da flutuação nas taxas incidentes sobre passivos captados e ativos aplicados.",
       "evidencias": [
         {
           "documento": "millet",
           "pagina": 41,
-          "trecho": "Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos)",
+          "trecho": "Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos",
           "verificada": true
         }
       ],
       "categoria": "juros_mercado"
     },
     {
-      "texto": "[Evidência documental] Risco de variação cambial vinculado a flutuações de moedas estrangeiras que afetam saldos passivos e despesas.",
+      "texto": "Risco de taxa de câmbio atrelado à oscilação de moedas estrangeiras que afetam despesas e receitas financeiras.",
       "evidencias": [
         {
           "documento": "millet",
@@ -64,13 +75,26 @@
         }
       ],
       "categoria": "juros_mercado"
+    },
+    {
+      "texto": "Exposição a variações de preços e custos de matérias-primas e materiais de uso e consumo na fabricação.",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 38,
+          "trecho": "Matéria-prima e materiais de uso e consumo - (327.291) (140.326)",
+          "verificada": true,
+          "motivo_falha": "página corrigida de 36 para 38 (trecho literal só existe nela)"
+        }
+      ],
+      "categoria": "custo_insumos"
     }
   ],
   "guidance": [],
   "guidance_numerico_encontrado": false,
   "eventos_relevantes": [
     {
-      "texto": "[Evidência documental] Aquisição de 85% de participação societária na Alibra Ingredientes S.A. ocorrida em junho de 2021.",
+      "texto": "Aquisição de 85% de participação na Alibra Ingredientes S.A. ocorrida em junho de 2021 e seus desdobramentos contábeis em 2022.",
       "evidencias": [
         {
           "documento": "millet",
@@ -79,22 +103,24 @@
           "verificada": true
         }
       ]
-    },
-    {
-      "texto": "[Evidência documental] Inexistência de eventos subsequentes entre a data de encerramento do exercício e a aprovação das demonstrações.",
-      "evidencias": [
-        {
-          "documento": "millet",
-          "pagina": 43,
-          "trecho": "Após 31 de dezembro de 2022, até a data da aprovação das demonstrações financeiras pela Administração",
-          "verificada": true
-        }
-      ]
     }
   ],
   "tom": "positivo",
-  "tom_justificativa": "O tom é positivo fundamentado no forte crescimento da receita operacional líquida, expansão do lucro líquido e consolidação bem-sucedida das operações da Alibra.",
-  "tom_evidencias": [],
+  "tom_justificativa": "A companhia apresentou crescimento relevante na receita operacional líquida e lucros sólidos decorrentes da consolidação e expansão das operações da subsidiária.",
+  "tom_evidencias": [
+    {
+      "documento": "millet",
+      "pagina": 29,
+      "trecho": "Receita operacional líquida 462.127 318.317",
+      "verificada": true
+    },
+    {
+      "documento": "millet",
+      "pagina": 29,
+      "trecho": "Lucro líquido do exercício 28.518 17.241",
+      "verificada": true
+    }
+  ],
   "confianca_tom": "alta",
   "modo": "llm"
 }

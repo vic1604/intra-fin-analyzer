@@ -1,11 +1,22 @@
 {
   "doc_id": "brasal",
   "empresa": "brasal",
-  "fonte_qualitativa": "Notas explicativas às demonstrações financeiras consolidadas e individuais e relatório da administração de 2022 da Brasal Brasília Holding S.A.",
+  "fonte_qualitativa": "Notas Explicativas da Administração e Demonstrações Financeiras da Brasal Brasília Holding S.A.",
   "nota_cobertura": "",
   "motivos_resultado": [
     {
-      "texto": "Aumento da receita operacional líquida consolidada impulsionada pelo crescimento das operações da controlada Brasal Refrigerantes S.A.",
+      "texto": "[Evidência documental] O lucro líquido do exercício consolidado foi de R$ 177.244 milhares em 2022 comparado a R$ 276.804 milhares em 2021.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 25,
+          "trecho": "Lucro líquido (prejuízo) do exercício 177.244 276.804",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "texto": "[Evidência documental] A receita operacional líquida consolidada atingiu R$ 1.325.059 milhares no exercício findo em 31 de dezembro de 2022.",
       "evidencias": [
         {
           "documento": "brasal",
@@ -16,9 +27,20 @@
       ]
     }
   ],
+  "motivo_variacao_receita": {
+    "texto": "[Evidência documental] A receita operacional líquida consolidada registrou crescimento em relação ao exercício anterior, passando de R$ 1.061.410 milhares para R$ 1.325.059 milhares.",
+    "evidencias": [
+      {
+        "documento": "brasal",
+        "pagina": 25,
+        "trecho": "Receita operacional líquida 1.325.059 1;061;410",
+        "verificada": true
+      }
+    ]
+  },
   "riscos": [
     {
-      "texto": "Risco de crédito associado à concessão de crédito aos clientes e recebimento de duplicatas.",
+      "texto": "Risco de crédito decorrente da concessão de crédito aos clientes, mitigado por análises de perfil e monitoramento de saldos a receber.",
       "evidencias": [
         {
           "documento": "brasal",
@@ -30,7 +52,7 @@
       "categoria": "credito_inadimplencia"
     },
     {
-      "texto": "Risco de variação no preço de matérias-primas e commodities utilizadas na fabricação de produtos.",
+      "texto": "Risco de variação de preços de matérias-primas e insumos utilizados na fabricação dos produtos comercializados.",
       "evidencias": [
         {
           "documento": "brasal",
@@ -54,7 +76,7 @@
       "categoria": "juros_mercado"
     },
     {
-      "texto": "Risco regulatório e de alteração nas regras de incentivos fiscais de ICMS concedidos pelo governo local.",
+      "texto": "Risco regulatório e de incentivos fiscais, visto que a controlada possui incentivos do programa Emprega/DF condicionados ao cumprimento de obrigações específicas.",
       "evidencias": [
         {
           "documento": "brasal",
@@ -66,7 +88,20 @@
       "categoria": "regulatorio_concessao"
     },
     {
-      "texto": "Risco de concentração operacional na dependência de contratos de fabricação e distribuição com a Coca-Cola e Heineken.",
+      "texto": "Risco de contingências judiciais e administrativas associadas a demandas cíveis, fiscais e trabalhistas avaliadas periodicamente com assessores jurídicos.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 20,
+          "trecho": "As demandas judiciais são avaliadas e revisadas periodicamente, com base em pareceres de advogados internos e externos",
+          "verificada": true,
+          "motivo_falha": "página corrigida de 18 para 20 (trecho literal só existe nela)"
+        }
+      ],
+      "categoria": "contingencias_judiciais"
+    },
+    {
+      "texto": "Risco de concentração ou dependência de contratos de longo prazo com fornecedores de marcas e concentrados, como Coca-Cola e Cervejaria Heineken.",
       "evidencias": [
         {
           "documento": "brasal",
@@ -80,22 +115,44 @@
   ],
   "guidance": [],
   "guidance_numerico_encontrado": false,
-  "eventos_relevantes": [],
+  "eventos_relevantes": [
+    {
+      "texto": "[Evidência documental] Em decisão de fevereiro de 2023, o Plenário do STF considerou que a coisa julgada sobre tributos de trato continuado perde efeitos caso a corte se pronuncie em sentido contrário.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 51,
+          "trecho": "Em decisão tomada no dia 08 de fevereiro 2023, por unanimidade, o Plenário do Supremo Tribunal Federal",
+          "verificada": true
+        }
+      ]
+    },
+    {
+      "texto": "[Evidência documental] A Companhia realizou a migração do incentivo fiscal IDEAS-DF para o Emprega/DF em setembro de 2020, passando a contar com crédito presumido de ICMS.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 12,
+          "trecho": "No mês de setembro de 2020, migrou do então incentivo Fiscal IDEAS-DF para o Emprega/DF - Programa de Incentivo Fiscal à Industrialização",
+          "verificada": true
+        }
+      ]
+    }
+  ],
   "tom": "neutro",
-  "tom_justificativa": "A administração apresenta de forma técnica e transparente os resultados financeiros, os riscos inerentes à operação e os impactos de créditos tributários, sem emitir opiniões subjetivas excessivamente otimistas ou pessimistas sobre o futuro.",
+  "tom_justificativa": "A administração apresenta um relatório financeiro regular com demonstrações auditadas sem ressalvas, evidenciando crescimento na receita líquida, mas redução pontual no lucro líquido do exercício e monitoramento contínuo de riscos de mercado e tributários sem projeções quantitativas futuras.",
   "tom_evidencias": [
     {
       "documento": "brasal",
-      "pagina": 49,
-      "trecho": "A Companhia está exposta a riscos de mercado decorrentes de suas atividades.",
+      "pagina": 3,
+      "trecho": "Em nossa opinião, as demonstrações financeiras acima referidas apresentam adequadamente, em todos os aspectos relevantes, a posição patrimonial e financeira",
       "verificada": true
     },
     {
       "documento": "brasal",
-      "pagina": 49,
-      "trecho": "A Administração em conjunto com os assessores jurídicos da Companhia não identificou impactos para estas demonstrações financeiras.",
-      "verificada": false,
-      "motivo_falha": "trecho não encontrado literalmente na página citada"
+      "pagina": 25,
+      "trecho": "Lucro líquido (prejuízo) do exercício 177.244 276.804",
+      "verificada": true
     }
   ],
   "confianca_tom": "alta",

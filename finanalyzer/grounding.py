@@ -160,11 +160,32 @@ def ground_extraction(doc: Document, ext: Extracao) -> list[GroundingFailure]:
     return failures
 
 
+MIN_RELOCATE_CHARS = 40
+
+
+def _relocate_page(doc: Document, ev: Evidencia) -> tuple[bool, str | None]:
+    """Modelos às vezes citam o número IMPRESSO no rodapé (ex.: 90) em vez da posição física (107).
+    Se o trecho — LITERAL, com pelo menos 40 caracteres — existe em exatamente UMA outra página,
+    a evidência é realocada para ela e a correção fica registrada em `motivo_falha`
+    (nunca silenciosa). Se houver 0 ou 2+ páginas candidatas, continua reprovada."""
+    quote = normalize_text(ev.trecho)
+    if len(quote) < MIN_RELOCATE_CHARS:
+        return False, "trecho não encontrado literalmente na página citada"
+    cands = [p.number for p in doc.pages if p.number != ev.pagina and quote in p.text_norm]
+    if len(cands) != 1:
+        return False, "trecho não encontrado literalmente na página citada"
+    old, ev.pagina = ev.pagina, cands[0]
+    ok, why = verify_evidence(doc, ev)
+    return (True, f"página corrigida de {old} para {ev.pagina} (trecho literal só existe nela)") if ok else (False, why)
+
+
 def ground_qualitativo(doc: Document, q: Qualitativo) -> list[GroundingFailure]:
     failures: list[GroundingFailure] = []
 
     def check(ev: Evidencia, campo: str) -> None:
         ok, why = verify_evidence(doc, ev)
+        if not ok and why and why.startswith("trecho não encontrado"):
+            ok, why = _relocate_page(doc, ev)
         ev.verificada, ev.motivo_falha = ok, why
         if not ok:
             failures.append(GroundingFailure(doc.doc_id, campo, ev.pagina, why or "", ev.trecho))

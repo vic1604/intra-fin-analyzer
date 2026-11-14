@@ -1,72 +1,83 @@
 {
   "doc_id": "light",
   "empresa": "light",
-  "fonte_qualitativa": "Relatório da Administração e Notas Explicativas de 2022",
+  "fonte_qualitativa": "Relatório da Administração e Demonstrações Financeiras de 2022 da Light S.A.",
   "nota_cobertura": "",
   "motivos_resultado": [
     {
-      "texto": "O resultado líquido foi impactado pelo reconhecimento de provisão, atualização financeira de PIS/COFINS e impairment de IR/CS diferidos.",
+      "texto": "O resultado líquido da Light Energia foi beneficiado pela melhora do cenário hidrológico, elevando o GSF e reduzindo os custos de compra de energia.",
       "evidencias": [
         {
           "documento": "light",
-          "pagina": 10,
-          "trecho": "Essa retração ocorreu, principalmente, no segmento de Distribuição, em função do reconhecimento de provisão de -R$1.081 milhões para devolução de créditos de PIS/COFINS aos consumidores, da atualização financeira desses valores, que totalizaram -R$1.584 milhões, e do impairment da recuperabilidade de IR/CS diferidos, no valor de -R$1.634 milhões.",
+          "pagina": 9,
+          "trecho": "Essa variação pode ser explicada pela melhora do cenário hidrológico ao longo do ano de 2022, que levou ao aumento do GSF e à queda do PLD, reduzindo os custos com compra de energia.",
           "verificada": true
         }
       ]
     }
   ],
+  "motivo_variacao_receita": {
+    "texto": "A receita operacional líquida consolidada foi influenciada pelos estornos de faturamento de regularizações, pelo não acionamento das bandeiras tarifárias e pela variação negativa na conta CVA.",
+    "evidencias": [
+      {
+        "documento": "light",
+        "pagina": 9,
+        "trecho": "Essa redução foi influenciada pelos estornos de faturamento de regularizações, pelo não acionamento das bandeiras tarifárias e pela variação negativa na conta CVA, que é uma compensação para cobertura dos custos com a Parcela A.",
+        "verificada": true
+      }
+    ]
+  },
   "riscos": [
     {
-      "texto": "Incerteza significativa que pode levantar dúvida quanto à capacidade de continuidade operacional da Light e da Light SESA.",
-      "evidencias": [
-        {
-          "documento": "light",
-          "pagina": 3,
-          "trecho": "Os eventos e condições, anteriormente mencionados, individual ou coletivamente, indicam, no julgamento da Administração da Companhia, a existência de incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional da Light e da Light SESA, controlada da Companhia.",
-          "verificada": true
-        }
-      ],
-      "categoria": "continuidade_operacional"
-    },
-    {
-      "texto": "A concessão da Light SESA vence em junho de 2026 e sua renovação antecipada depende de negociações sem garantia de êxito.",
+      "texto": "Inadimplência elevada e perdas não técnicas de energia persistentes na área de concessão.",
       "evidencias": [
         {
           "documento": "light",
           "pagina": 2,
-          "trecho": "Essas alternativas passam pela renovação da concessão da Light SESA, que vence em 2026. Nosso objetivo é antecipar esse processo. Nós iniciamos discussões com a Aneel e o Ministério de Minas e Energia em busca da renovação antecipada em bases que garantam a sustentabilidade da concessão e do nosso negócio.",
+          "trecho": "Ao mesmo tempo, as perdas não técnicas - aquelas relacionadas ao furto de energia - e a inadimplência continuam sua gradual trajetória de crescimento.",
           "verificada": true
         }
       ],
-      "categoria": "regulatorio_concessao"
+      "categoria": "credito_inadimplencia"
     },
     {
-      "texto": "Aumento expressivo das taxas de juros Selic impactou a estrutura de capital e o endividamento do grupo.",
+      "texto": "Elevado patamar das taxas de juros que encarece o custo da dívida e pressiona a estrutura de capital.",
       "evidencias": [
         {
           "documento": "light",
-          "pagina": 26,
-          "trecho": "Esta situação foi agravada pelo(a): (i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;",
+          "pagina": 2,
+          "trecho": "E as taxas de juros no Brasil voltaram para um patamar muito alto; a expectativa é que permaneçam nesse patamar.",
           "verificada": true
         }
       ],
       "categoria": "juros_mercado"
     },
     {
-      "texto": "Elevado índice de perdas não técnicas e inadimplência, agravados por dificuldades em Áreas de Severa Restrição Operacional.",
+      "texto": "Nível elevado de endividamento financeiro e geração de caixa operacional insuficiente para honrar compromissos.",
       "evidencias": [
         {
           "documento": "light",
           "pagina": 26,
-          "trecho": "(iii) elevado índice de perdas não técnicas (furto de energia) e inadimplência; (iv) dificuldade de atuação em Áreas de Severa Restrição Operacional.",
+          "trecho": "(i) elevado nível de endividamento; (ii) geração de caixa operacional historicamente insuficiente para sozinha honrar os compromissos;",
           "verificada": true
         }
       ],
-      "categoria": "concentracao_dependencia"
+      "categoria": "liquidez_endividamento"
     },
     {
-      "texto": "Existência de montantes expressivos em contingências judiciais cíveis, trabalhistas e fiscais com risco de perda possível.",
+      "texto": "Riscos regulatórios associados à renovação da concessão da Light SESA que vence em 2026.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 26,
+          "trecho": "A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá em junho de 2026.",
+          "verificada": true
+        }
+      ],
+      "categoria": "regulatorio_concessao"
+    },
+    {
+      "texto": "Elevado volume de contingências judiciais cíveis, trabalhistas e fiscais em aberto.",
       "evidencias": [
         {
           "documento": "light",
@@ -78,34 +89,60 @@
       "categoria": "contingencias_judiciais"
     },
     {
-      "texto": "Presença de cláusulas de vencimento antecipado de dívidas por descumprimento de covenants financeiros ou não financeiros.",
+      "texto": "Existência de incerteza significativa que pode levantar dúvida quanto à capacidade de continuidade operacional.",
       "evidencias": [
         {
           "documento": "light",
-          "pagina": 26,
-          "trecho": "Para o exercício findo em 31 de dezembro de 2022, o Grupo Light possui em seus contratos de empréstimos, financiamentos e debêntures cláusulas que podem gerar antecipação do vencimento de dívidas.",
+          "pagina": 3,
+          "trecho": "Os eventos e condições, anteriormente mencionados, individual ou coletivamente, indicam, no julgamento da Administração da Companhia, a existência de incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional da Light e da Light SESA, controlada da Companhia.",
           "verificada": true
         }
       ],
-      "categoria": "liquidez_endividamento"
+      "categoria": "continuidade_operacional"
+    },
+    {
+      "texto": "Risco hidrológico e escassez de chuvas que podem afetar o volume dos reservatórios e elevar os custos de energia.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 101,
+          "trecho": "Um período prolongado de escassez de chuva pode resultar na redução do volume de água dos reservatórios das usinas, acarretar perdas em função do aumento de custos na aquisição de energia",
+          "verificada": true
+        }
+      ],
+      "categoria": "custo_insumos"
     }
   ],
   "guidance": [],
   "guidance_numerico_encontrado": false,
-  "eventos_relevantes": [],
+  "eventos_relevantes": [
+    {
+      "texto": "Assinatura de contrato de compra e venda para aquisição da totalidade das ações da Axxiom Soluções pertencentes à Cemig.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 107,
+          "trecho": "Em 21 de dezembro de 2022, a Light S.A. assinou um Contrato de Compra e Venda de Ações e Outras Avenças para aquisição de 49% das ações da controlada em conjunto Axxiom Soluções pertencentes a Companhia Energética de Minas Gerais (\"CEMIG\").",
+          "verificada": true,
+          "motivo_falha": "página corrigida de 90 para 107 (trecho literal só existe nela)"
+        }
+      ]
+    }
+  ],
   "tom": "negativo",
-  "tom_justificativa": "A companhia reportou prejuízo bilionário, elevado endividamento, dúvidas sobre a continuidade operacional e necessidade urgente de reestruturação de capital.",
+  "tom_justificativa": "A administração reconhece desafios estruturais severos, necessidade de readequação da estrutura de capital, alto endividamento e a existência de incertezas significativas quanto à continuidade operacional da companhia.",
   "tom_evidencias": [
     {
       "documento": "light",
-      "pagina": 10,
-      "trecho": "Em 2022, a Light S.A. apurou um resultado líquido de -R$5.673 milhões, R$6.070 milhões abaixo em relação ao ano anterior.",
-      "verificada": true
+      "pagina": 2,
+      "trecho": "Minha chegada ocorreu nesse momento especialmente desafiador, em que as dificuldades estruturais históricas da área de concessão da Light SESA... foram agravadas por questões macroeconômicas, tendo sido constatada a necessidade de buscar uma readequação da estrutura de capital da companhia.",
+      "verificada": false,
+      "motivo_falha": "trecho não encontrado literalmente na página citada"
     },
     {
       "documento": "light",
       "pagina": 3,
-      "trecho": "Os eventos e condições, anteriormente mencionados, individual ou coletivamente, indicam, no julgamento da Administração da Companhia, a existência de incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional da Light e da Light SESA",
+      "trecho": "Os eventos e condições, anteriormente mencionados, individual ou coletivamente, indicam, no julgamento da Administração da Companhia, a existência de incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional da Light e da Light SESA, controlada da Companhia.",
       "verificada": true
     }
   ],

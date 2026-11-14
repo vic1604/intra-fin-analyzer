@@ -324,9 +324,9 @@
     "light": {
       "tom_classificado": "negativo",
       "tom_lexico": "negativo",
-      "score_lexico": -0.82,
+      "score_lexico": -0.71,
       "pos": 1,
-      "neg": 10,
+      "neg": 6,
       "concorda": true
     },
     "millet": {
@@ -340,9 +340,9 @@
     "brasal": {
       "tom_classificado": "neutro",
       "tom_lexico": "negativo",
-      "score_lexico": -0.43,
-      "pos": 2,
-      "neg": 5,
+      "score_lexico": -0.75,
+      "pos": 1,
+      "neg": 7,
       "concorda": false
     },
     "_resumo": {

@@ -21,25 +21,25 @@
     }
   },
   "tempos_s": {
-    "ingestao_s": 0.12,
-    "extracao_validacao_light_s": 29.83,
-    "extracao_validacao_millet_s": 10.79,
-    "extracao_validacao_brasal_s": 10.0,
-    "ml_tradicional_s": 8.51,
-    "total_s": 59.94
+    "ingestao_s": 0.09,
+    "extracao_validacao_light_s": 6.33,
+    "extracao_validacao_millet_s": 4.87,
+    "extracao_validacao_brasal_s": 4.83,
+    "ml_tradicional_s": 7.08,
+    "total_s": 23.9
   },
   "grounding": {
     "light": {
-      "evidencias": 33,
-      "falhas": 4
+      "evidencias": 36,
+      "falhas": 3
     },
     "millet": {
-      "evidencias": 26,
+      "evidencias": 29,
       "falhas": 3
     },
     "brasal": {
-      "evidencias": 26,
-      "falhas": 4
+      "evidencias": 31,
+      "falhas": 0
     }
   },
   "seguranca_achados": 0,
@@ -48,10 +48,10 @@
     "modelo": "gemini-3.5-flash-lite",
     "chamadas": 6,
     "chamadas_do_cache": 3,
-    "tokens_in": 103809,
-    "tokens_out": 13620,
-    "segundos": 50.3,
-    "custo_usd_estimado": 0.0652,
+    "tokens_in": 104064,
+    "tokens_out": 13965,
+    "segundos": 15.0,
+    "custo_usd_estimado": 0.0661,
     "log": [
       {
         "etapa": "extracao:light",
@@ -62,9 +62,9 @@
       },
       {
         "etapa": "qualitativo:light",
-        "in": 18890,
-        "out": 1851,
-        "s": 29.71,
+        "in": 18975,
+        "out": 1776,
+        "s": 5.63,
         "cache": false
       },
       {
@@ -76,9 +76,9 @@
       },
       {
         "etapa": "qualitativo:millet",
-        "in": 18922,
-        "out": 1250,
-        "s": 10.7,
+        "in": 19007,
+        "out": 1376,
+        "s": 4.7,
         "cache": false
       },
       {
@@ -90,9 +90,9 @@
       },
       {
         "etapa": "qualitativo:brasal",
-        "in": 16302,
-        "out": 1347,
-        "s": 9.91,
+        "in": 16387,
+        "out": 1641,
+        "s": 4.71,
         "cache": false
       }
     ]

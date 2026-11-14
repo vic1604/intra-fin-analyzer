@@ -12,7 +12,7 @@ Pipeline que lê 3 PDFs financeiros, extrai indicadores **com página e trecho d
 |---|---|---|
 | Pipeline completo em modo `reference` (sem LLM) | ✅ executado | `python -m finanalyzer run` → 150 evidências, 0 falhas de grounding, 19 alertas |
 | Valores contra o PDF, **sem usar o código do pipeline** | ✅ executado | `scripts/verify_numbers.py`: 71 valores, 0 falhas; derivados recalculados batem |
-| Testes automatizados | ✅ **109 passam** (106 já validados também dentro do container; +3 da mini-avaliação do qualitativo) | `python -m pytest -q` (grounding, injection, validações com dados sintéticos, clientes HTTP, relatório, log…) |
+| Testes automatizados | ✅ **111 passam** (106 já validados também dentro do container; os demais cobrem a mini-avaliação do qualitativo e a realocação de página) | `python -m pytest -q` (grounding, injection, validações com dados sintéticos, clientes HTTP, relatório, log…) |
 | Caminho LLM **com modelo falso** e **servidor HTTP falso** | ✅ executado | `tests/test_llm_path.py`, `tests/test_llm_http.py`: formato de requisição/resposta, *retry*, tokens, barreira do grounding contra valor inventado |
 | Caminho LLM **com modelo real** | ✅ **executado** com `gemini-3.5-flash-lite` (camada gratuita, 13/11/2026) | `scripts/run_llm_full.sh` → `outputs_llm/`: recall 78,6%, precisão 100%, alucinação 0% contra o gabarito (seção "Avaliação de qualidade"). Ollama, Claude, OpenAI e Azure OpenAI usam o mesmo código, mas **não foram testados com chave real** |
 | Gabarito `data/reference/` | ✅ montado com apoio de IA e verificado | cada trecho é checado por código contra o PDF e **8 valores foram conferidos à mão: todos corretos** (`docs/CONFERENCIA_MANUAL.md`) |
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 # coloque os PDFs em data/input/ com estes nomes: light.pdf  millet.pdf  brasal.pdf
 
 python -m finanalyzer run                     # modo padrão "reference": sem LLM, sem chave → outputs/
-python -m pytest -q                           # 109 testes
+python -m pytest -q                           # 111 testes
 python -m finanalyzer eval --mode baseline    # mede a qualidade do extrator regex contra o gabarito
 python scripts/verify_numbers.py              # re-confere cada valor direto no PDF e recalcula os derivados
 python scripts/check_secrets.py               # garante que não há chave no repositório
@@ -155,7 +155,7 @@ Leitura honesta: o ML estatístico acha **linhas de movimento grande** (ex.: swa
 ## Como evitamos alucinação (camadas)
 
 1. **Saída estruturada obrigatória** (Pydantic): todo valor exige `pagina` + `trecho`.
-2. **Grounding mecânico**: o trecho tem de existir **literalmente** na página citada **e** conter o número extraído. Falhou → valor rebaixado para "não verificado", nunca aceito.
+2. **Grounding mecânico**: o trecho tem de existir **literalmente** na página citada **e** conter o número extraído. Falhou → valor rebaixado para "não verificado", nunca aceito. **Única exceção, só no qualitativo:** se o modelo cita o número impresso no rodapé (ex.: 90) em vez da posição física (107) e o trecho literal (≥ 40 caracteres) existe em **exatamente uma** outra página, a evidência é realocada e a correção fica registrada em `motivo_falha` ("página corrigida de 90 para 107"). Valores numéricos nunca são realocados.
 3. **"Não encontrado" é resposta válida** e exige motivo; a ausência é **re-verificada** buscando os termos no PDF inteiro (se o termo existe, vira alerta).
 4. **Indicadores calculados** carregam fórmula e insumos com página; ficam em campos separados dos publicados.
 5. **Validações C00–C11** *sinalizam* divergências (nunca sobrescrevem; há teste de que a validação não altera a extração): variação %, variação absoluta, escala (mil × milhões), sinal do EBITDA, margem publicada × calculada, dívida líquida = bruta − caixa, valores extremos, anomalias do documento. Todas exercitadas com **dados sintéticos** em `tests/test_validate_synthetic.py` (nos PDFs reais nem toda regra dispara — p.ex. ninguém publica margem EBITDA —, então os testes provam que ela alertaria se existisse).
@@ -245,7 +245,7 @@ Duas iterações reais (medir → ver o erro → corrigir): a primeira ampliou a
 - **ML tradicional comparado com LLM:** `ml_baseline.py` (z-score robusto + Isolation Forest + léxico) com Anexo B e testes; extrator regex (`baseline.py`) medido contra o gabarito.
 - **Perguntas livres:** `ask` offline (extrativo, citações verificadas) e `ask --mode llm`.
 - **LLM sem chave paga:** Ollama e Gemini gratuito, clientes com *retry* e testes contra servidor HTTP falso.
-- **Docker** (Dockerfile + `.dockerignore`; build e testes validados em container) · **109 testes** · **logs/traços estruturados** (`logs/run.jsonl`) + `run_manifest.json` · **varredura de segredos**.
+- **Docker** (Dockerfile + `.dockerignore`; build e testes validados em container) · **111 testes** · **logs/traços estruturados** (`logs/run.jsonl`) + `run_manifest.json` · **varredura de segredos**.
 
 ## Limitações (ditas com franqueza)
 
@@ -298,6 +298,6 @@ Duas iterações reais (medir → ver o erro → corrigir): a primeira ampliou a
 finanalyzer/   ingest · retrieval · extract · grounding · derive · validate · qualitative · qa · report · export · pipeline · obs · ml_baseline · baseline · cli · mcp_server · security · llm/
 data/input/    PDFs                        data/reference/  gabarito verificado
 scripts/       build_reference.py · check_secrets.py · verify_numbers.py
-tests/         109 testes                   outputs/         resultados da última execução (inclui logs/run.jsonl)
+tests/         111 testes                   outputs/         resultados da última execução (inclui logs/run.jsonl)
 docs/          roteiro da apresentação · conferência manual de valores
 ```

@@ -37,9 +37,9 @@
     "brasal": {
       "tom_ok": true,
       "guidance_flag_ok": true,
-      "categorias_risco_recall": 0.714,
-      "motivo_receita_ok": true,
-      "paginas_citadas_recall": 0.222,
+      "categorias_risco_recall": 0.857,
+      "motivo_receita_ok": false,
+      "paginas_citadas_recall": 0.444,
       "n_itens": {
         "ref": [
           2,
@@ -48,19 +48,19 @@
           4
         ],
         "llm": [
-          1,
-          5,
+          2,
+          6,
           0,
-          0
+          2
         ]
       }
     },
     "light": {
       "tom_ok": true,
       "guidance_flag_ok": true,
-      "categorias_risco_recall": 0.833,
-      "motivo_receita_ok": false,
-      "paginas_citadas_recall": 0.4,
+      "categorias_risco_recall": 1.0,
+      "motivo_receita_ok": true,
+      "paginas_citadas_recall": 0.5,
       "n_itens": {
         "ref": [
           3,
@@ -70,16 +70,16 @@
         ],
         "llm": [
           1,
-          6,
+          7,
           0,
-          0
+          1
         ]
       }
     },
     "millet": {
       "tom_ok": false,
       "guidance_flag_ok": true,
-      "categorias_risco_recall": 0.5,
+      "categorias_risco_recall": 0.667,
       "motivo_receita_ok": false,
       "paginas_citadas_recall": 0.364,
       "n_itens": {
@@ -91,9 +91,9 @@
         ],
         "llm": [
           1,
-          4,
+          5,
           0,
-          2
+          1
         ]
       }
     }
@@ -103,7 +103,7 @@
     "tom_ok": "2/3",
     "guidance_flag_ok": "3/3",
     "motivo_receita_ok": "1/3",
-    "categorias_risco_recall_media": 0.682,
-    "paginas_citadas_recall_media": 0.329
+    "categorias_risco_recall_media": 0.841,
+    "paginas_citadas_recall_media": 0.436
   }
 }

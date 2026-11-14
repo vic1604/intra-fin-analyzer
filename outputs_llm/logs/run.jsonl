@@ -1,21 +1,21 @@
-{"run_id": "d6bf035437e6", "seq": 1, "ts": "2026-11-14T14:00:57.023+00:00", "evento": "run_inicio", "modo": "llm", "provedor": "gemini", "modelo": "gemini-3.5-flash-lite"}
-{"run_id": "d6bf035437e6", "seq": 2, "ts": "2026-11-14T14:00:57.138+00:00", "evento": "span", "etapa": "ingestao", "duracao_s": 0.115, "status": "ok", "documentos": 3, "paginas": 218}
-{"run_id": "d6bf035437e6", "seq": 3, "ts": "2026-11-14T14:00:57.306+00:00", "evento": "span", "etapa": "seguranca_scan", "duracao_s": 0.168, "status": "ok", "achados": 0}
-{"run_id": "d6bf035437e6", "seq": 4, "ts": "2026-11-14T14:00:57.750+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.042, "status": "ok", "doc": "light", "modo": "llm", "campos_encontrados": 13}
-{"run_id": "d6bf035437e6", "seq": 5, "ts": "2026-11-14T14:01:27.472+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 29.722, "status": "ok", "doc": "light", "modo": "llm"}
-{"run_id": "d6bf035437e6", "seq": 6, "ts": "2026-11-14T14:01:27.473+00:00", "evento": "llm_chamada", "doc": "light", "etapa": "extracao:light", "in": 19908, "out": 3726, "s": 0.0, "cache": true}
-{"run_id": "d6bf035437e6", "seq": 7, "ts": "2026-11-14T14:01:27.473+00:00", "evento": "llm_chamada", "doc": "light", "etapa": "qualitativo:light", "in": 18890, "out": 1851, "s": 29.71, "cache": false}
-{"run_id": "d6bf035437e6", "seq": 8, "ts": "2026-11-14T14:01:27.536+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.063, "status": "ok", "doc": "light", "alertas": 5, "falhas_grounding": 4}
-{"run_id": "d6bf035437e6", "seq": 9, "ts": "2026-11-14T14:01:27.552+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.015, "status": "ok", "doc": "millet", "modo": "llm", "campos_encontrados": 8}
-{"run_id": "d6bf035437e6", "seq": 10, "ts": "2026-11-14T14:01:38.273+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 10.721, "status": "ok", "doc": "millet", "modo": "llm"}
-{"run_id": "d6bf035437e6", "seq": 11, "ts": "2026-11-14T14:01:38.274+00:00", "evento": "llm_chamada", "doc": "millet", "etapa": "extracao:millet", "in": 15511, "out": 2790, "s": 0.0, "cache": true}
-{"run_id": "d6bf035437e6", "seq": 12, "ts": "2026-11-14T14:01:38.274+00:00", "evento": "llm_chamada", "doc": "millet", "etapa": "qualitativo:millet", "in": 18922, "out": 1250, "s": 10.7, "cache": false}
-{"run_id": "d6bf035437e6", "seq": 13, "ts": "2026-11-14T14:01:38.323+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.049, "status": "ok", "doc": "millet", "alertas": 9, "falhas_grounding": 3}
-{"run_id": "d6bf035437e6", "seq": 14, "ts": "2026-11-14T14:01:38.340+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.017, "status": "ok", "doc": "brasal", "modo": "llm", "campos_encontrados": 8}
-{"run_id": "d6bf035437e6", "seq": 15, "ts": "2026-11-14T14:01:48.269+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 9.928, "status": "ok", "doc": "brasal", "modo": "llm"}
-{"run_id": "d6bf035437e6", "seq": 16, "ts": "2026-11-14T14:01:48.269+00:00", "evento": "llm_chamada", "doc": "brasal", "etapa": "extracao:brasal", "in": 14276, "out": 2656, "s": 0.0, "cache": true}
-{"run_id": "d6bf035437e6", "seq": 17, "ts": "2026-11-14T14:01:48.269+00:00", "evento": "llm_chamada", "doc": "brasal", "etapa": "qualitativo:brasal", "in": 16302, "out": 1347, "s": 9.91, "cache": false}
-{"run_id": "d6bf035437e6", "seq": 18, "ts": "2026-11-14T14:01:48.318+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.049, "status": "ok", "doc": "brasal", "alertas": 7, "falhas_grounding": 4}
-{"run_id": "d6bf035437e6", "seq": 19, "ts": "2026-11-14T14:01:56.827+00:00", "evento": "span", "etapa": "ml_tradicional", "duracao_s": 8.509, "status": "ok"}
-{"run_id": "d6bf035437e6", "seq": 20, "ts": "2026-11-14T14:01:56.957+00:00", "evento": "span", "etapa": "relatorio", "duracao_s": 0.129, "status": "ok", "respostas": 5, "tamanho_md": 32970}
-{"run_id": "d6bf035437e6", "seq": 21, "ts": "2026-11-14T14:01:57.021+00:00", "evento": "run_fim", "status": "ok", "total_s": 59.94, "chamadas_llm": 6, "tokens_in": 103809, "tokens_out": 13620}
+{"run_id": "9097400d134e", "seq": 1, "ts": "2026-11-14T14:21:54.628+00:00", "evento": "run_inicio", "modo": "llm", "provedor": "gemini", "modelo": "gemini-3.5-flash-lite"}
+{"run_id": "9097400d134e", "seq": 2, "ts": "2026-11-14T14:21:54.713+00:00", "evento": "span", "etapa": "ingestao", "duracao_s": 0.085, "status": "ok", "documentos": 3, "paginas": 218}
+{"run_id": "9097400d134e", "seq": 3, "ts": "2026-11-14T14:21:54.871+00:00", "evento": "span", "etapa": "seguranca_scan", "duracao_s": 0.157, "status": "ok", "achados": 0}
+{"run_id": "9097400d134e", "seq": 4, "ts": "2026-11-14T14:21:55.346+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.05, "status": "ok", "doc": "light", "modo": "llm", "campos_encontrados": 13}
+{"run_id": "9097400d134e", "seq": 5, "ts": "2026-11-14T14:22:00.996+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 5.65, "status": "ok", "doc": "light", "modo": "llm"}
+{"run_id": "9097400d134e", "seq": 6, "ts": "2026-11-14T14:22:00.997+00:00", "evento": "llm_chamada", "doc": "light", "etapa": "extracao:light", "in": 19908, "out": 3726, "s": 0.0, "cache": true}
+{"run_id": "9097400d134e", "seq": 7, "ts": "2026-11-14T14:22:00.997+00:00", "evento": "llm_chamada", "doc": "light", "etapa": "qualitativo:light", "in": 18975, "out": 1776, "s": 5.63, "cache": false}
+{"run_id": "9097400d134e", "seq": 8, "ts": "2026-11-14T14:22:01.630+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.633, "status": "ok", "doc": "light", "alertas": 5, "falhas_grounding": 3}
+{"run_id": "9097400d134e", "seq": 9, "ts": "2026-11-14T14:22:01.653+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.023, "status": "ok", "doc": "millet", "modo": "llm", "campos_encontrados": 8}
+{"run_id": "9097400d134e", "seq": 10, "ts": "2026-11-14T14:22:06.376+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 4.722, "status": "ok", "doc": "millet", "modo": "llm"}
+{"run_id": "9097400d134e", "seq": 11, "ts": "2026-11-14T14:22:06.376+00:00", "evento": "llm_chamada", "doc": "millet", "etapa": "extracao:millet", "in": 15511, "out": 2790, "s": 0.0, "cache": true}
+{"run_id": "9097400d134e", "seq": 12, "ts": "2026-11-14T14:22:06.376+00:00", "evento": "llm_chamada", "doc": "millet", "etapa": "qualitativo:millet", "in": 19007, "out": 1376, "s": 4.7, "cache": false}
+{"run_id": "9097400d134e", "seq": 13, "ts": "2026-11-14T14:22:06.505+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.128, "status": "ok", "doc": "millet", "alertas": 9, "falhas_grounding": 3}
+{"run_id": "9097400d134e", "seq": 14, "ts": "2026-11-14T14:22:06.522+00:00", "evento": "span", "etapa": "extracao", "duracao_s": 0.017, "status": "ok", "doc": "brasal", "modo": "llm", "campos_encontrados": 8}
+{"run_id": "9097400d134e", "seq": 15, "ts": "2026-11-14T14:22:11.252+00:00", "evento": "span", "etapa": "qualitativo", "duracao_s": 4.73, "status": "ok", "doc": "brasal", "modo": "llm"}
+{"run_id": "9097400d134e", "seq": 16, "ts": "2026-11-14T14:22:11.252+00:00", "evento": "llm_chamada", "doc": "brasal", "etapa": "extracao:brasal", "in": 14276, "out": 2656, "s": 0.0, "cache": true}
+{"run_id": "9097400d134e", "seq": 17, "ts": "2026-11-14T14:22:11.253+00:00", "evento": "llm_chamada", "doc": "brasal", "etapa": "qualitativo:brasal", "in": 16387, "out": 1641, "s": 4.71, "cache": false}
+{"run_id": "9097400d134e", "seq": 18, "ts": "2026-11-14T14:22:11.334+00:00", "evento": "span", "etapa": "validacao", "duracao_s": 0.081, "status": "ok", "doc": "brasal", "alertas": 7, "falhas_grounding": 0}
+{"run_id": "9097400d134e", "seq": 19, "ts": "2026-11-14T14:22:18.414+00:00", "evento": "span", "etapa": "ml_tradicional", "duracao_s": 7.079, "status": "ok"}
+{"run_id": "9097400d134e", "seq": 20, "ts": "2026-11-14T14:22:18.518+00:00", "evento": "span", "etapa": "relatorio", "duracao_s": 0.104, "status": "ok", "respostas": 5, "tamanho_md": 35688}
+{"run_id": "9097400d134e", "seq": 21, "ts": "2026-11-14T14:22:18.575+00:00", "evento": "run_fim", "status": "ok", "total_s": 23.9, "chamadas_llm": 6, "tokens_in": 104064, "tokens_out": 13965}
