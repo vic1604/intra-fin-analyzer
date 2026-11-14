@@ -3,6 +3,7 @@
   run          pipeline completo (ingestão -> extração -> validação -> Q&A -> relatório)
   ingest       só ingestão (gera data/cache/*.pages.json)
   eval         mede a qualidade da extração contra o gabarito (data/reference)
+  eval-quali   mini-avaliação do qualitativo (recuperação de páginas + saída llm vs curadoria)
   ask          pergunta livre com citações (padrão: offline, sem LLM; --mode llm usa o modelo configurado)
   smoke-llm    testa suas credenciais/modelo com uma chamada mínima
   serve-mcp    expõe os dados extraídos via servidor MCP (stdio)
@@ -13,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from pathlib import Path
 import sys
 from dataclasses import asdict
 
@@ -89,6 +91,28 @@ def cmd_eval(a) -> int:
     print(f"Avaliação [{a.mode}] — recall {g['recall']:.1%} | precisão {g['precisao']:.1%} | página correta {g['pagina_correta_entre_corretos']:.1%} | alucinação {g['taxa_alucinacao']:.1%}")
     for e in res["erros"]:
         print("  ✗", e)
+    print(f"→ {out}")
+    return 0
+
+
+def cmd_eval_quali(a) -> int:
+    from .evaluate_quali import run_quali_eval
+    from .pipeline import discover_docs
+
+    s = get_settings()
+    llm_dir = Path(a.llm_dir) if a.llm_dir else None
+    res = run_quali_eval(discover_docs(s), s.reference_dir, llm_dir)
+    print(f"Qualitativo — recuperação (páginas do gabarito que chegam ao prompt, teto {res['max_paginas']}): média {res['recuperacao_media']:.1%}")
+    for d, v in res["recuperacao"].items():
+        print(f"  {d}: {v['recall']:.1%} ({v['paginas_gabarito'] - len(v['faltando'])}/{v['paginas_gabarito']}) faltando {v['faltando']}")
+    if res.get("llm_resumo"):
+        print("Qualitativo — saída do LLM vs curadoria:", res["llm_resumo"])
+        for d, v in res["llm"].items():
+            print(f"  {d}: {v}")
+    else:
+        print("(sem saída llm em --llm-dir: rode `bash scripts/run_llm_full.sh` e repita com --llm-dir outputs_llm)")
+    out = (llm_dir or s.output_dir) / "avaliacao_qualitativo.json"
+    out.write_text(json.dumps(res, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"→ {out}")
     return 0
 
@@ -176,6 +200,9 @@ def main(argv: list[str] | None = None) -> None:
     e = sub.add_parser("eval", help="avalia extração vs gabarito")
     e.add_argument("--mode", choices=["baseline", "llm"], default="baseline")
     e.set_defaults(fn=cmd_eval)
+    eq = sub.add_parser("eval-quali", help="mini-avaliação do qualitativo (recuperação + saída llm vs curadoria)")
+    eq.add_argument("--llm-dir", default=None, help="pasta com qualitativo/*.json gerado em modo llm (ex.: outputs_llm)")
+    eq.set_defaults(fn=cmd_eval_quali)
     q = sub.add_parser("ask", help="pergunta livre com citações (offline = sem LLM e sem chave)")
     q.add_argument("pergunta")
     q.add_argument("--mode", choices=["offline", "llm"], default="offline")

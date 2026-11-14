@@ -143,17 +143,62 @@
   {
     "numero": 4,
     "pergunta": "Quais riscos são citados por mais de uma empresa?",
-    "resposta": "**0 categorias de risco aparecem em mais de uma empresa**; 0 aparecem nas três: nenhuma.\n- Citados por **apenas uma** empresa: Liquidez e endividamento (Light); Juros e risco de mercado (Light); Continuidade operacional (Light); Regulatório / fiscal / concessão (Light); Crédito / inadimplência de clientes (Millet); Custo de insumos / matérias-primas (Brasal).\n*Metodologia: cada risco recebe uma categoria de uma taxonomia fixa; a pergunta é respondida pela interseção das categorias (código), não por um parecer livre. Para Millet e Brasal, a base são as notas explicativas (não há relatório da administração).*",
+    "resposta": "**5 categorias de risco aparecem em mais de uma empresa**; 1 aparecem nas três: Juros e risco de mercado.\n- **Juros e risco de mercado** — 3 empresas (Light, Millet, Brasal):\n    - Light: Aumento expressivo das taxas de juros Selic impactou a estrutura de capital e o endividamento do grupo. [Light p.26]\n    - Millet: [Evidência documental] Risco de taxa de juros oriundo de oscilações nas taxas incidentes sobre passivos captados e aplicações. [Millet p.41]\n    - Brasal: Risco de oscilação das taxas de juros incidentes sobre ativos e passivos financeiros da Companhia. [Brasal p.49]\n- **Concentração / dependência de contratos ou investida** — 2 empresas (Light, Brasal):\n    - Light: Elevado índice de perdas não técnicas e inadimplência, agravados por dificuldades em Áreas de Severa Restrição Operacional. [Light p.26]\n    - Brasal: Risco de concentração operacional na dependência de contratos de fabricação e distribuição com a Coca-Cola e Heineken. [Brasal p.12]\n- **Crédito / inadimplência de clientes** — 2 empresas (Millet, Brasal):\n    - Millet: [Evidência documental] Risco de crédito associado à inadimplência de clientes e contrapartes em instrumentos financeiros. [Millet p.40]\n    - Brasal: Risco de crédito associado à concessão de crédito aos clientes e recebimento de duplicatas. [Brasal p.49]\n- **Liquidez e endividamento** — 2 empresas (Light, Millet):\n    - Light: Presença de cláusulas de vencimento antecipado de dívidas por descumprimento de covenants financeiros ou não financeiros. [Light p.26]\n    - Millet: [Evidência documental] Risco de liquidez referente a potenciais dificuldades na quitação de passivos financeiros de curto e longo prazos. [Millet p.41]\n- **Regulatório / fiscal / concessão** — 2 empresas (Light, Brasal):\n    - Light: A concessão da Light SESA vence em junho de 2026 e sua renovação antecipada depende de negociações sem garantia de êxito. [Light p.2]\n    - Brasal: Risco regulatório e de alteração nas regras de incentivos fiscais de ICMS concedidos pelo governo local. [Brasal p.12]\n- Citados por **apenas uma** empresa: Continuidade operacional (Light); Contingências judiciais e tributárias (Light); Custo de insumos / matérias-primas (Brasal).\n*Metodologia: cada risco recebe uma categoria de uma taxonomia fixa; a pergunta é respondida pela interseção das categorias (código), não por um parecer livre. Para Millet e Brasal, a base são as notas explicativas (não há relatório da administração).*",
     "fontes": [
       {
         "documento": "light",
         "pagina": 26,
-        "trecho": "A Administração da Companhia entende que o Grupo Light e sua controlada Light SESA apresentam situação operacional e financeira complexa, com: (i) elevado nível de endividamento; (ii) geração de caixa operacional historicamente insuficiente para sozinha honrar os compromissos;"
+        "trecho": "Esta situação foi agravada pelo(a): (i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;"
+      },
+      {
+        "documento": "millet",
+        "pagina": 41,
+        "trecho": "Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos)"
+      },
+      {
+        "documento": "brasal",
+        "pagina": 49,
+        "trecho": "Decorre da possibilidade de a Companhia sofrer ganhos ou perdas decorrentes de oscilações de taxas de juros incidentes sobre seus ativos e passivos financeiros."
       },
       {
         "documento": "light",
         "pagina": 26,
-        "trecho": "Esta situação foi agravada pelo(a): (i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;"
+        "trecho": "(iii) elevado índice de perdas não técnicas (furto de energia) e inadimplência; (iv) dificuldade de atuação em Áreas de Severa Restrição Operacional."
+      },
+      {
+        "documento": "brasal",
+        "pagina": 12,
+        "trecho": "A Controlada mantém por prazo determinado contrato com a Coca-Cola Indústrias Ltda., com a Cervejaria Heineken e a Leão Alimentos e Bebidas Ltda."
+      },
+      {
+        "documento": "millet",
+        "pagina": 40,
+        "trecho": "Risco de crédito é o risco de a Companhia incorrer em perdas decorrentes de um cliente ou de uma"
+      },
+      {
+        "documento": "brasal",
+        "pagina": 49,
+        "trecho": "O principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes."
+      },
+      {
+        "documento": "light",
+        "pagina": 26,
+        "trecho": "Para o exercício findo em 31 de dezembro de 2022, o Grupo Light possui em seus contratos de empréstimos, financiamentos e debêntures cláusulas que podem gerar antecipação do vencimento de dívidas."
+      },
+      {
+        "documento": "millet",
+        "pagina": 41,
+        "trecho": "Risco de liquidez é o risco em que a Companhia irá encontrar dificuldades em cumprir com as obrigações"
+      },
+      {
+        "documento": "light",
+        "pagina": 2,
+        "trecho": "Essas alternativas passam pela renovação da concessão da Light SESA, que vence em 2026. Nosso objetivo é antecipar esse processo. Nós iniciamos discussões com a Aneel e o Ministério de Minas e Energia em busca da renovação antecipada em bases que garantam a sustentabilidade da concessão e do nosso negócio."
+      },
+      {
+        "documento": "brasal",
+        "pagina": 12,
+        "trecho": "No mês de setembro de 2020, migrou do então incentivo Fiscal IDEAS-DF para o Emprega/DF - Programa de Incentivo Fiscal à Industrialização"
       },
       {
         "documento": "light",
@@ -162,23 +207,13 @@
       },
       {
         "documento": "light",
-        "pagina": 26,
-        "trecho": "A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá em junho de 2026. A Administração da Companhia entende que determinados cenários para o futuro do Grupo que dependem (i) da necessidade de processo formal de renovação da concessão e (ii) da necessidade de negociação dos termos e condições da nova concessão, que não estão sob controle da Administração do Grupo Light."
-      },
-      {
-        "documento": "millet",
-        "pagina": 19,
-        "trecho": "A exposição máxima ao risco de crédito do Contas a Receber de clientes na data das demonstrações financeiras é o valor contábil de cada faixa de idade de vencimento."
-      },
-      {
-        "documento": "millet",
-        "pagina": 40,
-        "trecho": "Contas a receber de clientes - - 98.663 69.645"
+        "pagina": 76,
+        "trecho": "TOTAL 11.983.344 3.030 10.465.349 44.623"
       },
       {
         "documento": "brasal",
-        "pagina": 17,
-        "trecho": "Para mitigar os riscos de preços causados pelas oscilações do mercado dos estoques de matéria prima, principalmente relacionado ao açúcar, a Companhia dispõe de uma política de uso de operações com futuros para minimizar a exposição líquida de estoque de commodities."
+        "pagina": 49,
+        "trecho": "Os produtos comercializados pela Companhia estão sujeitos a oscilações em razão da compra de matéria-prima."
       }
     ]
   },

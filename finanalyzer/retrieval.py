@@ -33,6 +33,9 @@ FIELD_QUERIES: dict[str, str] = {
     "qualitativo_riscos": "risco riscos incerteza covenants rating contingencias inadimplencia liquidez juros",
     "qualitativo_guidance": "perspectivas expectativa projecao proximos anos guidance meta renovacao",
     "qualitativo_eventos": "evento subsequente aquisicao reestruturacao lei revisao tarifaria mudanca contabil",
+    # consultas focadas (itens que o LLM errava/omitia): variação de receita e perspectivas
+    "qualitativo_receita": "receita liquida aumento reducao variacao em relacao ao exercicio anterior devido consolidacao mercado volume tarifa",
+    "qualitativo_perspectivas": "perspectivas expectativa projecoes estimativas investimentos previstos plano de negocios proximo exercicio meta",
 }
 
 

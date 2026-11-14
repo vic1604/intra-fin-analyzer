@@ -1,16 +1,16 @@
 {
   "doc_id": "brasal",
   "empresa": "brasal",
-  "fonte_qualitativa": "Notas Explicativas às Demonstrações Financeiras Individuais e Consolidadas da Brasal Brasília Holding S.A. para o exercício findo em 31 de dezembro de 2022",
-  "nota_cobertura": "completa",
+  "fonte_qualitativa": "Notas explicativas às demonstrações financeiras consolidadas e individuais e relatório da administração de 2022 da Brasal Brasília Holding S.A.",
+  "nota_cobertura": "",
   "motivos_resultado": [
     {
-      "texto": "[Evidência documental] O resultado antes do imposto de renda e contribuição social consolidado foi de R$ 217.187 mil em 2022 comparado a R$ 346.061 mil em 2021.",
+      "texto": "Aumento da receita operacional líquida consolidada impulsionada pelo crescimento das operações da controlada Brasal Refrigerantes S.A.",
       "evidencias": [
         {
           "documento": "brasal",
-          "pagina": 11,
-          "trecho": "Resultado antes do imposto de renda e contribuição social 174.602 275.560 217.187 346.061",
+          "pagina": 25,
+          "trecho": "Receita operacional líquida 1.325.059 1;061;410",
           "verificada": true
         }
       ]
@@ -18,31 +18,86 @@
   ],
   "riscos": [
     {
-      "texto": "Possibilidade de oscilação de preços de matérias-primas e estoques, mitigada por operações com futuros para açúcar e commodities.",
+      "texto": "Risco de crédito associado à concessão de crédito aos clientes e recebimento de duplicatas.",
       "evidencias": [
         {
           "documento": "brasal",
-          "pagina": 17,
-          "trecho": "Para mitigar os riscos de preços causados pelas oscilações do mercado dos estoques de matéria prima, principalmente relacionado ao açúcar, a Companhia dispõe de uma política de uso de operações com futuros para minimizar a exposição líquida de estoque de commodities.",
+          "pagina": 49,
+          "trecho": "O principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes.",
+          "verificada": true
+        }
+      ],
+      "categoria": "credito_inadimplencia"
+    },
+    {
+      "texto": "Risco de variação no preço de matérias-primas e commodities utilizadas na fabricação de produtos.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 49,
+          "trecho": "Os produtos comercializados pela Companhia estão sujeitos a oscilações em razão da compra de matéria-prima.",
           "verificada": true
         }
       ],
       "categoria": "custo_insumos"
+    },
+    {
+      "texto": "Risco de oscilação das taxas de juros incidentes sobre ativos e passivos financeiros da Companhia.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 49,
+          "trecho": "Decorre da possibilidade de a Companhia sofrer ganhos ou perdas decorrentes de oscilações de taxas de juros incidentes sobre seus ativos e passivos financeiros.",
+          "verificada": true
+        }
+      ],
+      "categoria": "juros_mercado"
+    },
+    {
+      "texto": "Risco regulatório e de alteração nas regras de incentivos fiscais de ICMS concedidos pelo governo local.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 12,
+          "trecho": "No mês de setembro de 2020, migrou do então incentivo Fiscal IDEAS-DF para o Emprega/DF - Programa de Incentivo Fiscal à Industrialização",
+          "verificada": true
+        }
+      ],
+      "categoria": "regulatorio_concessao"
+    },
+    {
+      "texto": "Risco de concentração operacional na dependência de contratos de fabricação e distribuição com a Coca-Cola e Heineken.",
+      "evidencias": [
+        {
+          "documento": "brasal",
+          "pagina": 12,
+          "trecho": "A Controlada mantém por prazo determinado contrato com a Coca-Cola Indústrias Ltda., com a Cervejaria Heineken e a Leão Alimentos e Bebidas Ltda.",
+          "verificada": true
+        }
+      ],
+      "categoria": "concentracao_dependencia"
     }
   ],
   "guidance": [],
   "guidance_numerico_encontrado": false,
   "eventos_relevantes": [],
   "tom": "neutro",
-  "tom_justificativa": "O documento apresenta notas explicativas contábeis padronizadas, focadas em políticas contábeis, variações patrimoniais e detalhamento de saldos sem um discurso gerencial otimista ou pessimista explícito por parte da administração.",
+  "tom_justificativa": "A administração apresenta de forma técnica e transparente os resultados financeiros, os riscos inerentes à operação e os impactos de créditos tributários, sem emitir opiniões subjetivas excessivamente otimistas ou pessimistas sobre o futuro.",
   "tom_evidencias": [
     {
       "documento": "brasal",
-      "pagina": 15,
-      "trecho": "As principais políticas contábeis descritas em detalhes abaixo têm sido aplicadas de maneira consistente com aquelas apresentadas no exercício anterior",
+      "pagina": 49,
+      "trecho": "A Companhia está exposta a riscos de mercado decorrentes de suas atividades.",
       "verificada": true
+    },
+    {
+      "documento": "brasal",
+      "pagina": 49,
+      "trecho": "A Administração em conjunto com os assessores jurídicos da Companhia não identificou impactos para estas demonstrações financeiras.",
+      "verificada": false,
+      "motivo_falha": "trecho não encontrado literalmente na página citada"
     }
   ],
-  "confianca_tom": "baixa",
+  "confianca_tom": "alta",
   "modo": "llm"
 }

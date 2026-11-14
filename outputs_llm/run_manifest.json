@@ -21,25 +21,25 @@
     }
   },
   "tempos_s": {
-    "ingestao_s": 0.06,
-    "extracao_validacao_light_s": 14.22,
-    "extracao_validacao_millet_s": 11.86,
-    "extracao_validacao_brasal_s": 6.26,
-    "ml_tradicional_s": 5.55,
-    "total_s": 38.48
+    "ingestao_s": 0.12,
+    "extracao_validacao_light_s": 29.83,
+    "extracao_validacao_millet_s": 10.79,
+    "extracao_validacao_brasal_s": 10.0,
+    "ml_tradicional_s": 8.51,
+    "total_s": 59.94
   },
   "grounding": {
     "light": {
-      "evidencias": 32,
+      "evidencias": 33,
       "falhas": 4
     },
     "millet": {
-      "evidencias": 25,
-      "falhas": 2
+      "evidencias": 26,
+      "falhas": 3
     },
     "brasal": {
-      "evidencias": 21,
-      "falhas": 3
+      "evidencias": 26,
+      "falhas": 4
     }
   },
   "seguranca_achados": 0,
@@ -48,52 +48,52 @@
     "modelo": "gemini-3.5-flash-lite",
     "chamadas": 6,
     "chamadas_do_cache": 3,
-    "tokens_in": 91878,
-    "tokens_out": 13387,
-    "segundos": 32.1,
-    "custo_usd_estimado": 0.061,
+    "tokens_in": 103809,
+    "tokens_out": 13620,
+    "segundos": 50.3,
+    "custo_usd_estimado": 0.0652,
     "log": [
       {
         "etapa": "extracao:light",
         "in": 19908,
         "out": 3726,
-        "s": 14.1,
-        "cache": false
+        "s": 0.0,
+        "cache": true
       },
       {
         "etapa": "qualitativo:light",
-        "in": 15469,
-        "out": 2039,
-        "s": 0.0,
-        "cache": true
+        "in": 18890,
+        "out": 1851,
+        "s": 29.71,
+        "cache": false
       },
       {
         "etapa": "extracao:millet",
         "in": 15511,
         "out": 2790,
-        "s": 11.8,
-        "cache": false
+        "s": 0.0,
+        "cache": true
       },
       {
         "etapa": "qualitativo:millet",
-        "in": 14802,
-        "out": 1047,
-        "s": 0.0,
-        "cache": true
+        "in": 18922,
+        "out": 1250,
+        "s": 10.7,
+        "cache": false
       },
       {
         "etapa": "extracao:brasal",
         "in": 14276,
         "out": 2656,
-        "s": 6.19,
-        "cache": false
+        "s": 0.0,
+        "cache": true
       },
       {
         "etapa": "qualitativo:brasal",
-        "in": 11912,
-        "out": 1129,
-        "s": 0.0,
-        "cache": true
+        "in": 16302,
+        "out": 1347,
+        "s": 9.91,
+        "cache": false
       }
     ]
   }

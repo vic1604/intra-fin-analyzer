@@ -1,6 +1,6 @@
 # Relatório de Análise Financeira — Light, Millet e Brasal
 
-*Gerado em 13/11/2026 13:57 · modo `llm` · exercício 2022 vs 2021 · valores em R$ (conforme indicado)*
+*Gerado em 14/11/2026 11:01 · modo `llm` · exercício 2022 vs 2021 · valores em R$ (conforme indicado)*
 
 > **Leia primeiro:** os 3 PDFs são demonstrações financeiras anuais, não releases trimestrais. Só a Light inclui Relatório da Administração; Millet e Brasal têm apenas DFs e notas explicativas — por isso EBITDA, margem EBITDA, dívida líquida e guidance estão frequentemente *não encontrados*. Indicadores marcados com ¤ são **calculados** pelo pipeline, nunca extraídos.
 
@@ -20,7 +20,7 @@
 2. EBITDA **não publicado**; derivado (EBIT + D&A) = R$ 43,5 mi, margem ≈ 9,4% (calculado ¤) [Millet p.7].
 3. Lucro líquido de **R$ 18,9 mi** (+192,0% vs 2021) [Millet p.7].
 4. Dívida líquida de **R$ 13,5 mi** [Millet p.42].
-5. Tom: **neutro** (confiança baixa).
+5. Tom: **positivo** (confiança alta).
 
 ### Brasal Brasília Holding S.A.
 
@@ -28,7 +28,7 @@
 2. EBITDA **não publicado**; derivado (EBIT + D&A) = R$ 221,9 mi, margem ≈ 16,7% (calculado ¤) [Brasal p.8].
 3. Lucro líquido de **R$ 174,6 mi** (−36,6% vs 2021) [Brasal p.8].
 4. Dívida líquida **não publicada**; derivada = **−R$ 171,6 mi** (caixa líquido; calculado ¤) [Brasal p.48].
-5. Tom: **neutro** (confiança baixa).
+5. Tom: **neutro** (confiança alta).
 
 ## 2. Tabela comparativa
 
@@ -59,11 +59,11 @@ Células com `· p.N` indicam a página do PDF (1 = capa) onde o valor foi encon
 ## 3. Análise qualitativa do comentário da administração
 
 ### Light
-*Fonte da análise:* Relatório da Administração e Notas Explicativas da Light S.A. (2022). Completa para as seções selecionadas do relatório da administração e notas explicativas sobre reestruturação, PIS/COFINS e endividamento.
+*Fonte da análise:* Relatório da Administração e Notas Explicativas de 2022. 
 
 **Principais motivos do resultado**
 
-- [Evidência documental] O resultado líquido consolidado foi impactado negativamente pelo reconhecimento de provisões e atualizações monetárias relacionadas à devolução de créditos de PIS/COFINS aos consumidores e impairment de IR/CS diferidos. *[Light p.10]*
+- O resultado líquido foi impactado pelo reconhecimento de provisão, atualização financeira de PIS/COFINS e impairment de IR/CS diferidos. *[Light p.10]*
 
 **Motivo da variação da receita**
 
@@ -71,61 +71,12 @@ Células com `· p.N` indicam a página do PDF (1 = capa) onde o valor foi encon
 
 **Riscos e pontos de atenção**
 
-- `Liquidez e endividamento` Elevado nível de endividamento e geração de caixa operacional historicamente insuficiente para honrar compromissos sozinhos. *[Light p.26]*
-- `Juros e risco de mercado` Impacto do patamar elevado da taxa Selic na estrutura de capital e nos custos financeiros. *[Light p.26]*
-- `Continuidade operacional` Incerteza significativa quanto à capacidade de continuidade operacional (going concern) da Light e da Light SESA. *[Light p.3]*
-- `Regulatório / fiscal / concessão` Riscos regulatórios associados à necessidade de renovação da concessão da Light SESA, que vence em junho de 2026, cujos termos não estão sob o controle exclusivo da administração. *[Light p.26]*
-
-**Guidance / perspectivas**
-
-- **Guidance numérico: não encontrado.**
-
-**Eventos relevantes** (aquisições, reestruturações, contingências, mudanças contábeis)
-
-- Aprovação da Revisão Tarifária Periódica (RTP) da Light SESA em março de 2022 com reajuste médio de 14,68%. *[Light p.56]*
-
-**Tom geral da administração: NEGATIVO** (confiança alta) — A administração reporta um prejuízo líquido multibilionário, forte queda no EBITDA devido a provisões massivas (créditos de PIS/COFINS e PECLD), aumento da dívida líquida, rebaixamento de ratings e menção explícita de auditores e administração sobre incerteza significativa quanto à continuidade operacional (going concern). *[Light p.3, p.10]*
-
-### Millet
-*Fonte da análise:* Notas Explicativas às Demonstrações Financeiras de 2022 e 2021 da Millet Participações S.A.. Análise baseada em notas explicativas e demonstrações contábeis selecionadas do exercício de 2022.
-
-**Principais motivos do resultado**
-
-- [Evidência documental] O resultado antes dos impostos no consolidado atingiu R$ 22.961 milhares em 2022, comparado a R$ 3.736 milhares em 2021, refletindo o desempenho das operações do grupo. *[Millet p.10]*
-- [Evidência documental] A Companhia registrou lucro líquido do exercício de R$ 28.518 milhares na controlada Alibra em 2022. *[Millet p.28]*
-
-**Motivo da variação da receita**
-
-- Não encontrado no documento.
-
-**Riscos e pontos de atenção**
-
-- `Crédito / inadimplência de clientes` [Evidência documental] A exposição máxima ao risco de crédito do Contas a Receber de clientes na data das demonstrações financeiras é o valor contábil de cada faixa de idade de vencimento, totalizando R$ 98.663 milhares no consolidado em 2022. *[Millet p.19, p.40]*
-
-**Guidance / perspectivas**
-
-- **Guidance numérico: não encontrado.**
-
-**Eventos relevantes** (aquisições, reestruturações, contingências, mudanças contábeis)
-
-- [Evidência documental] Em 2022, a Companhia efetuou investimentos em imobilizado e intangível, destacando-se ampliações na unidade de Marechal Cândido Rondon/PR no montante de imobilizado em andamento de R$ 7.993 milhares. *[Millet p.31]*
-
-**Tom geral da administração: NEUTRO** (confiança baixa) — O tom é estritamente descritivo e baseado em notas explicativas contábeis e demonstrações financeiras, sem discursos prospectivos ou avaliações subjetivas da administração sobre o desempenho comercial. *[Millet p.15]*
-
-### Brasal
-*Fonte da análise:* Notas Explicativas às Demonstrações Financeiras Individuais e Consolidadas da Brasal Brasília Holding S.A. para o exercício findo em 31 de dezembro de 2022. completa
-
-**Principais motivos do resultado**
-
-- [Evidência documental] O resultado antes do imposto de renda e contribuição social consolidado foi de R$ 217.187 mil em 2022 comparado a R$ 346.061 mil em 2021. *[Brasal p.11]*
-
-**Motivo da variação da receita**
-
-- Não encontrado no documento.
-
-**Riscos e pontos de atenção**
-
-- `Custo de insumos / matérias-primas` Possibilidade de oscilação de preços de matérias-primas e estoques, mitigada por operações com futuros para açúcar e commodities. *[Brasal p.17]*
+- `Continuidade operacional` Incerteza significativa que pode levantar dúvida quanto à capacidade de continuidade operacional da Light e da Light SESA. *[Light p.3]*
+- `Regulatório / fiscal / concessão` A concessão da Light SESA vence em junho de 2026 e sua renovação antecipada depende de negociações sem garantia de êxito. *[Light p.2]*
+- `Juros e risco de mercado` Aumento expressivo das taxas de juros Selic impactou a estrutura de capital e o endividamento do grupo. *[Light p.26]*
+- `Concentração / dependência de contratos ou investida` Elevado índice de perdas não técnicas e inadimplência, agravados por dificuldades em Áreas de Severa Restrição Operacional. *[Light p.26]*
+- `Contingências judiciais e tributárias` Existência de montantes expressivos em contingências judiciais cíveis, trabalhistas e fiscais com risco de perda possível. *[Light p.76]*
+- `Liquidez e endividamento` Presença de cláusulas de vencimento antecipado de dívidas por descumprimento de covenants financeiros ou não financeiros. *[Light p.26]*
 
 **Guidance / perspectivas**
 
@@ -135,7 +86,65 @@ Células com `· p.N` indicam a página do PDF (1 = capa) onde o valor foi encon
 
 - Nenhum encontrado.
 
-**Tom geral da administração: NEUTRO** (confiança baixa) — O documento apresenta notas explicativas contábeis padronizadas, focadas em políticas contábeis, variações patrimoniais e detalhamento de saldos sem um discurso gerencial otimista ou pessimista explícito por parte da administração. *[Brasal p.15]*
+**Tom geral da administração: NEGATIVO** (confiança alta) — A companhia reportou prejuízo bilionário, elevado endividamento, dúvidas sobre a continuidade operacional e necessidade urgente de reestruturação de capital. *[Light p.3, p.10]*
+
+### Millet
+*Fonte da análise:* Notas Explicativas da Administração. 
+
+**Principais motivos do resultado**
+
+- [Evidência documental] Aumento da receita operacional líquida consolidada impulsionada pelo crescimento das vendas no mercado interno e externo. *[Millet p.38]*
+
+**Motivo da variação da receita**
+
+- Não encontrado no documento.
+
+**Riscos e pontos de atenção**
+
+- `Crédito / inadimplência de clientes` [Evidência documental] Risco de crédito associado à inadimplência de clientes e contrapartes em instrumentos financeiros. *[Millet p.40]*
+- `Liquidez e endividamento` [Evidência documental] Risco de liquidez referente a potenciais dificuldades na quitação de passivos financeiros de curto e longo prazos. *[Millet p.41]*
+- `Juros e risco de mercado` [Evidência documental] Risco de taxa de juros oriundo de oscilações nas taxas incidentes sobre passivos captados e aplicações. *[Millet p.41]*
+- `Juros e risco de mercado` [Evidência documental] Risco de variação cambial vinculado a flutuações de moedas estrangeiras que afetam saldos passivos e despesas. *[Millet p.41]*
+
+**Guidance / perspectivas**
+
+- **Guidance numérico: não encontrado.**
+
+**Eventos relevantes** (aquisições, reestruturações, contingências, mudanças contábeis)
+
+- [Evidência documental] Aquisição de 85% de participação societária na Alibra Ingredientes S.A. ocorrida em junho de 2021. *[Millet p.27]*
+- [Evidência documental] Inexistência de eventos subsequentes entre a data de encerramento do exercício e a aprovação das demonstrações. *[Millet p.43]*
+
+**Tom geral da administração: POSITIVO** (confiança alta) — O tom é positivo fundamentado no forte crescimento da receita operacional líquida, expansão do lucro líquido e consolidação bem-sucedida das operações da Alibra. *[Millet ]*
+
+### Brasal
+*Fonte da análise:* Notas explicativas às demonstrações financeiras consolidadas e individuais e relatório da administração de 2022 da Brasal Brasília Holding S.A.. 
+
+**Principais motivos do resultado**
+
+- Aumento da receita operacional líquida consolidada impulsionada pelo crescimento das operações da controlada Brasal Refrigerantes S.A. *[Brasal p.25]*
+
+**Motivo da variação da receita**
+
+- Não encontrado no documento.
+
+**Riscos e pontos de atenção**
+
+- `Crédito / inadimplência de clientes` Risco de crédito associado à concessão de crédito aos clientes e recebimento de duplicatas. *[Brasal p.49]*
+- `Custo de insumos / matérias-primas` Risco de variação no preço de matérias-primas e commodities utilizadas na fabricação de produtos. *[Brasal p.49]*
+- `Juros e risco de mercado` Risco de oscilação das taxas de juros incidentes sobre ativos e passivos financeiros da Companhia. *[Brasal p.49]*
+- `Regulatório / fiscal / concessão` Risco regulatório e de alteração nas regras de incentivos fiscais de ICMS concedidos pelo governo local. *[Brasal p.12]*
+- `Concentração / dependência de contratos ou investida` Risco de concentração operacional na dependência de contratos de fabricação e distribuição com a Coca-Cola e Heineken. *[Brasal p.12]*
+
+**Guidance / perspectivas**
+
+- **Guidance numérico: não encontrado.**
+
+**Eventos relevantes** (aquisições, reestruturações, contingências, mudanças contábeis)
+
+- Nenhum encontrado.
+
+**Tom geral da administração: NEUTRO** (confiança alta) — A administração apresenta de forma técnica e transparente os resultados financeiros, os riscos inerentes à operação e os impactos de créditos tributários, sem emitir opiniões subjetivas excessivamente otimistas ou pessimistas sobre o futuro. *[Brasal p.49]*
 
 
 ## 4. Respostas às 5 perguntas
@@ -206,20 +215,43 @@ Para comparar de forma padronizada usei **EBITDA derivado = EBIT + D&A (fluxo de
 
 ### 4. Quais riscos são citados por mais de uma empresa?
 
-**0 categorias de risco aparecem em mais de uma empresa**; 0 aparecem nas três: nenhuma.
+**5 categorias de risco aparecem em mais de uma empresa**; 1 aparecem nas três: Juros e risco de mercado.
 
-- Citados por **apenas uma** empresa: Liquidez e endividamento (Light); Juros e risco de mercado (Light); Continuidade operacional (Light); Regulatório / fiscal / concessão (Light); Crédito / inadimplência de clientes (Millet); Custo de insumos / matérias-primas (Brasal).
+- **Juros e risco de mercado** — 3 empresas (Light, Millet, Brasal):
+    - Light: Aumento expressivo das taxas de juros Selic impactou a estrutura de capital e o endividamento do grupo. [Light p.26]
+    - Millet: [Evidência documental] Risco de taxa de juros oriundo de oscilações nas taxas incidentes sobre passivos captados e aplicações. [Millet p.41]
+    - Brasal: Risco de oscilação das taxas de juros incidentes sobre ativos e passivos financeiros da Companhia. [Brasal p.49]
+- **Concentração / dependência de contratos ou investida** — 2 empresas (Light, Brasal):
+    - Light: Elevado índice de perdas não técnicas e inadimplência, agravados por dificuldades em Áreas de Severa Restrição Operacional. [Light p.26]
+    - Brasal: Risco de concentração operacional na dependência de contratos de fabricação e distribuição com a Coca-Cola e Heineken. [Brasal p.12]
+- **Crédito / inadimplência de clientes** — 2 empresas (Millet, Brasal):
+    - Millet: [Evidência documental] Risco de crédito associado à inadimplência de clientes e contrapartes em instrumentos financeiros. [Millet p.40]
+    - Brasal: Risco de crédito associado à concessão de crédito aos clientes e recebimento de duplicatas. [Brasal p.49]
+- **Liquidez e endividamento** — 2 empresas (Light, Millet):
+    - Light: Presença de cláusulas de vencimento antecipado de dívidas por descumprimento de covenants financeiros ou não financeiros. [Light p.26]
+    - Millet: [Evidência documental] Risco de liquidez referente a potenciais dificuldades na quitação de passivos financeiros de curto e longo prazos. [Millet p.41]
+- **Regulatório / fiscal / concessão** — 2 empresas (Light, Brasal):
+    - Light: A concessão da Light SESA vence em junho de 2026 e sua renovação antecipada depende de negociações sem garantia de êxito. [Light p.2]
+    - Brasal: Risco regulatório e de alteração nas regras de incentivos fiscais de ICMS concedidos pelo governo local. [Brasal p.12]
+- Citados por **apenas uma** empresa: Continuidade operacional (Light); Contingências judiciais e tributárias (Light); Custo de insumos / matérias-primas (Brasal).
 *Metodologia: cada risco recebe uma categoria de uma taxonomia fixa; a pergunta é respondida pela interseção das categorias (código), não por um parecer livre. Para Millet e Brasal, a base são as notas explicativas (não há relatório da administração).*
 
 <details><summary>Fontes (documento · página · trecho)</summary>
 
-- **Light p.26** — “A Administração da Companhia entende que o Grupo Light e sua controlada Light SESA apresentam situação operacional e financeira complexa,…”
 - **Light p.26** — “Esta situação foi agravada pelo(a): (i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;”
+- **Millet p.41** — “Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos)”
+- **Brasal p.49** — “Decorre da possibilidade de a Companhia sofrer ganhos ou perdas decorrentes de oscilações de taxas de juros incidentes sobre seus ativos …”
+- **Light p.26** — “(iii) elevado índice de perdas não técnicas (furto de energia) e inadimplência; (iv) dificuldade de atuação em Áreas de Severa Restrição …”
+- **Brasal p.12** — “A Controlada mantém por prazo determinado contrato com a Coca-Cola Indústrias Ltda., com a Cervejaria Heineken e a Leão Alimentos e Bebid…”
+- **Millet p.40** — “Risco de crédito é o risco de a Companhia incorrer em perdas decorrentes de um cliente ou de uma”
+- **Brasal p.49** — “O principal fator de risco de mercado que afeta o negócio é a concessão de crédito aos clientes.”
+- **Light p.26** — “Para o exercício findo em 31 de dezembro de 2022, o Grupo Light possui em seus contratos de empréstimos, financiamentos e debêntures cláu…”
+- **Millet p.41** — “Risco de liquidez é o risco em que a Companhia irá encontrar dificuldades em cumprir com as obrigações”
+- **Light p.2** — “Essas alternativas passam pela renovação da concessão da Light SESA, que vence em 2026. Nosso objetivo é antecipar esse processo. Nós ini…”
+- **Brasal p.12** — “No mês de setembro de 2020, migrou do então incentivo Fiscal IDEAS-DF para o Emprega/DF - Programa de Incentivo Fiscal à Industrialização”
 - **Light p.3** — “Os eventos e condições, anteriormente mencionados, individual ou coletivamente, indicam, no julgamento da Administração da Companhia, a e…”
-- **Light p.26** — “A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá em junho de 2026. A Administração da Companhi…”
-- **Millet p.19** — “A exposição máxima ao risco de crédito do Contas a Receber de clientes na data das demonstrações financeiras é o valor contábil de cada f…”
-- **Millet p.40** — “Contas a receber de clientes - - 98.663 69.645”
-- **Brasal p.17** — “Para mitigar os riscos de preços causados pelas oscilações do mercado dos estoques de matéria prima, principalmente relacionado ao açúcar…”
+- **Light p.76** — “TOTAL 11.983.344 3.030 10.465.349 44.623”
+- **Brasal p.49** — “Os produtos comercializados pela Companhia estão sujeitos a oscilações em razão da compra de matéria-prima.”
 
 </details>
 
@@ -279,17 +311,19 @@ Para comparar de forma padronizada usei **EBITDA derivado = EBIT + D&A (fluxo de
 
 ### Verificação de ancoragem (grounding)
 
-⚠️ **9 falhas de ancoragem de 78 evidências** — os itens abaixo foram marcados como *não verificado* e NÃO entram nas conclusões:
+⚠️ **11 falhas de ancoragem de 85 evidências** — os itens abaixo foram marcados como *não verificado* e NÃO entram nas conclusões:
 
 - Light p.21 · `anomalia:LIGHT-A1[0]` · trecho não encontrado literalmente na página citada
-- Light p.9 · `motivos[1]` · trecho não encontrado literalmente na página citada
-- Light p.26 · `riscos[2]` · trecho não encontrado literalmente na página citada
-- Light p.56 · `eventos[1]` · trecho não encontrado literalmente na página citada
+- Light p.8 · `motivos[0]` · trecho não encontrado literalmente na página citada
+- Light p.90 · `eventos[0]` · trecho não encontrado literalmente na página citada
+- Light p.90 · `eventos[1]` · trecho não encontrado literalmente na página citada
 - Millet p.10 · `fco.anterior` · valor 7424.0 não aparece no trecho citado
-- Millet p.36 · `riscos[1]` · trecho não encontrado literalmente na página citada
-- Brasal p.26 · `motivos[1]` · trecho não encontrado literalmente na página citada
-- Brasal p.12 · `riscos[1]` · trecho não encontrado literalmente na página citada
-- Brasal p.26 · `eventos[0]` · trecho não encontrado literalmente na página citada
+- Millet p.34 · `riscos[4]` · trecho não encontrado literalmente na página citada
+- Millet p.34 · `riscos[5]` · trecho não encontrado literalmente na página citada
+- Brasal p.12 · `motivos[1]` · trecho não encontrado literalmente na página citada
+- Brasal p.18 · `riscos[3]` · trecho não encontrado literalmente na página citada
+- Brasal p.49 · `eventos[0]` · trecho não encontrado literalmente na página citada
+- Brasal p.49 · `tom` · trecho não encontrado literalmente na página citada
 
 ### Segurança do conteúdo (varredura de prompt injection)
 
@@ -381,9 +415,9 @@ Comparação entre a abordagem **estatística / ML clássico** (sem LLM, sem ró
 
 | Documento | Classificado | Léxico | Score léxico | Concorda |
 |---|---|---|---|---|
-| Light | negativo | negativo | -1.00 | sim |
-| Millet | neutro | neutro | +0.00 | sim |
-| Brasal | neutro | neutro | +0.00 | sim |
+| Light | negativo | negativo | -0.82 | sim |
+| Millet | positivo | negativo | -0.50 | não |
+| Brasal | neutro | negativo | -0.43 | não |
 
 _Leitura honesta:_ (1) coincidência por palavras do rótulo, heurística imperfeita; (2) linhas que mudam de sinal não têm razão logarítmica e ficam fora da pontuação. Um classificador de tom **supervisionado não foi treinado**: com 3 documentos não há corpus rotulado, e o léxico (n = 3) é só um sanity-check — não prova nada. O detector estatístico acerta números atípicos que as regras não procuram, mas gera ruído e não distingue efeito contábil legítimo de erro; as regras e a leitura do texto dão o *porquê*. A comparação com o **LLM** só é possível rodando `--mode llm` (veja o README).
 
@@ -394,6 +428,6 @@ _Leitura honesta:_ (1) coincidência por palavras do rótulo, heurística imperf
     - Light: `light.pdf` · `a87339d09747` · 124 págs · 28.57s (pdftotext)
     - Millet: `millet.pdf` · `42589e4b7ad3` · 43 págs · 7.49s (pdftotext)
     - Brasal: `brasal.pdf` · `5905cd3412e4` · 51 págs · 4.75s (pdftotext)
-- **LLM:** gemini/gemini-3.5-flash-lite · 6 chamadas · 91,878 tokens de entrada · 13,387 de saída · 32.1s · custo estimado US$ 0.061 (preços configuráveis em .env).
+- **LLM:** gemini/gemini-3.5-flash-lite · 6 chamadas · 103,809 tokens de entrada · 13,620 de saída · 50.3s · custo estimado US$ 0.065 (preços configuráveis em .env).
 - **Convenção de páginas:** posição física no PDF (1 = capa); pode diferir do número impresso no rodapé.
 - **Premissa de escopo:** os PDFs são demonstrações financeiras **anuais de 2022** (não releases trimestrais). 'Período de referência' = exercício 2022 vs 2021.

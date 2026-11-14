@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import re
 
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 
 from .config import Settings
 from .ingest import Document
@@ -51,6 +51,12 @@ class _QItem(BaseModel):
         return d
 
 
+def _as_text(v):
+    if isinstance(v, list):
+        return " ".join(str(x) for x in v)
+    return "" if v is None else (v if isinstance(v, str) else str(v))
+
+
 class QualiOut(BaseModel):
     fonte_qualitativa: str = ""
     nota_cobertura: str = ""
@@ -65,22 +71,52 @@ class QualiOut(BaseModel):
     tom_evidencias: list[_QEvid] = Field(default_factory=list)
     confianca_tom: str = "media"
 
+    @field_validator("fonte_qualitativa", "nota_cobertura", "tom_justificativa", mode="before")
+    @classmethod
+    def _texto(cls, v):  # o modelo às vezes devolve lista no lugar de texto
+        return _as_text(v)
+
 
 def _item(doc_id: str, it: _QItem, risco: bool = False) -> Item:
     cat = it.categoria if (risco and it.categoria in CATEGORIAS_RISCO) else None
     return Item(texto=it.texto, categoria=cat, evidencias=[Evidencia(documento=doc_id, pagina=e.pagina, trecho=e.trecho) for e in it.evidencias])
 
 
-def select_quali_pages(doc: Document, index: BM25Index, k: int = 6, max_pages: int = 16) -> list[int]:
-    chosen: set[int] = set()
-    for key in ("qualitativo_motivos", "qualitativo_riscos", "qualitativo_guidance", "qualitativo_eventos"):
-        for h in index.search(FIELD_QUERIES[key], k=k, doc_id=doc.doc_id):
-            chosen.add(h.pagina)
-    return sorted(chosen)[:max_pages]
+QUALI_MAX_PAGES = 24  # teto próprio do qualitativo (calibrado pela mini-avaliação de recuperação)
+QUALI_QUERY_KEYS = (
+    "qualitativo_motivos",
+    "qualitativo_receita",
+    "qualitativo_riscos",
+    "qualitativo_guidance",
+    "qualitativo_perspectivas",
+    "qualitativo_eventos",
+)
+
+
+def select_quali_pages(doc: Document, index: BM25Index, k: int = 8, max_pages: int = 24) -> list[int]:
+    """Escolhe as páginas do prompt qualitativo.
+
+    Round-robin entre as consultas (cada tema — motivos, receita, riscos,
+    guidance, perspectivas, eventos — garante suas melhores páginas) e, se
+    estourar `max_pages`, o corte é por POSIÇÃO NO RANKING, não por número de
+    página (a versão anterior cortava as páginas finais do PDF, onde ficam
+    notas explicativas e eventos subsequentes).
+    """
+    ranked = [[h.pagina for h in index.search(FIELD_QUERIES[key], k=k, doc_id=doc.doc_id)] for key in QUALI_QUERY_KEYS]
+    # âncoras estruturais: início (sumário/relatório/mensagem) e fim (eventos subsequentes, aprovação)
+    anchors = [n for n in (*range(1, 4), *range(doc.n_pages - 1, doc.n_pages + 1)) if 1 <= n <= doc.n_pages]
+    chosen: list[int] = list(dict.fromkeys(anchors))[:max_pages]
+    for rank in range(k):
+        for lst in ranked:
+            if rank < len(lst) and lst[rank] not in chosen:
+                chosen.append(lst[rank])
+                if len(chosen) >= max_pages:
+                    return sorted(chosen)
+    return sorted(chosen)
 
 
 def analyze_with_llm(doc: Document, index: BM25Index, llm: LLMClient, meter: UsageMeter, settings: Settings) -> Qualitativo:
-    pages = select_quali_pages(doc, index, k=settings.top_k_pages, max_pages=min(settings.max_pages, 16))
+    pages = select_quali_pages(doc, index, k=max(settings.top_k_pages, 8), max_pages=QUALI_MAX_PAGES)
     blocos = "\n\n".join(wrap_untrusted(doc.doc_id, n, compact_page_text(doc.page(n).text)) for n in pages)
     system = SYSTEM_QUALI.format(categorias=", ".join(CATEGORIAS_RISCO))
     res = llm.complete(system, USER_QUALI.format(doc_id=doc.doc_id, paginas=blocos), settings.llm_max_tokens, json_schema=QualiOut.model_json_schema())

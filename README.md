@@ -4,18 +4,20 @@ Pipeline que lê 3 PDFs financeiros, extrai indicadores **com página e trecho d
 
 > **Leia primeiro (descoberta sobre os dados):** os 3 PDFs são **demonstrações financeiras anuais de 2022 (vs 2021)**, não releases trimestrais. Só a Light inclui Relatório da Administração. Por isso EBITDA, margem EBITDA, dívida líquida e guidance aparecem muitas vezes como **"não encontrado"** — e isso é o resultado correto, não uma falha. Veja "Premissas".
 
+> **Qual saída é a "oficial"?** Há duas, de propósito. **`outputs/` = modo `reference`**: valores e análise qualitativa curados, verificados contra o PDF (grounding total) — é o **teto de qualidade** e o que alimenta o relatório e as 5 respostas entregues. **`outputs_llm/` = modo `llm`**: extração real feita por um modelo (`gemini-3.5-flash-lite`) — é a **medida honesta** do que o pipeline consegue sozinho. A avaliação do modo `reference` contra o próprio gabarito é circular e **não é métrica de qualidade**; as métricas de qualidade são as do modo `llm` (seção "Avaliação de qualidade").
+
 ## O que foi de fato verificado (e o que não foi)
 
 | Item | Status | Como foi verificado |
 |---|---|---|
 | Pipeline completo em modo `reference` (sem LLM) | ✅ executado | `python -m finanalyzer run` → 150 evidências, 0 falhas de grounding, 19 alertas |
 | Valores contra o PDF, **sem usar o código do pipeline** | ✅ executado | `scripts/verify_numbers.py`: 71 valores, 0 falhas; derivados recalculados batem |
-| Testes automatizados | ✅ **106 passam** | `python -m pytest -q` (grounding, injection, validações com dados sintéticos, clientes HTTP, relatório, log…) |
+| Testes automatizados | ✅ **109 passam** (106 já validados também dentro do container; +3 da mini-avaliação do qualitativo) | `python -m pytest -q` (grounding, injection, validações com dados sintéticos, clientes HTTP, relatório, log…) |
 | Caminho LLM **com modelo falso** e **servidor HTTP falso** | ✅ executado | `tests/test_llm_path.py`, `tests/test_llm_http.py`: formato de requisição/resposta, *retry*, tokens, barreira do grounding contra valor inventado |
 | Caminho LLM **com modelo real** | ✅ **executado** com `gemini-3.5-flash-lite` (camada gratuita, 13/11/2026) | `scripts/run_llm_full.sh` → `outputs_llm/`: recall 78,6%, precisão 100%, alucinação 0% contra o gabarito (seção "Avaliação de qualidade"). Ollama, Claude, OpenAI e Azure OpenAI usam o mesmo código, mas **não foram testados com chave real** |
-| Gabarito `data/reference/` | ⚠ montado com ajuda de IA | cada trecho é checado por código contra o PDF; **confira ~8 valores à mão** (guia, Parte C) |
+| Gabarito `data/reference/` | ✅ montado com apoio de IA e verificado | cada trecho é checado por código contra o PDF e **8 valores foram conferidos à mão: todos corretos** (`docs/CONFERENCIA_MANUAL.md`) |
 | Docker | ✅ build e testes validados em container (106 passed; `run` OK) | `docker build -t intra-fin-analyzer .`; ver "Docker" |
-| Preços de token | ⚠ placeholders | o custo real é medido por execução em `run_manifest.json` |
+| Preços de token | ⚠ estimativa a preço de tabela | o custo real é medido por execução em `run_manifest.json` (no plano gratuito é US$ 0) |
 
 ## Início rápido
 
@@ -26,14 +28,14 @@ pip install -r requirements.txt
 # coloque os PDFs em data/input/ com estes nomes: light.pdf  millet.pdf  brasal.pdf
 
 python -m finanalyzer run                     # modo padrão "reference": sem LLM, sem chave → outputs/
-python -m pytest -q                           # 106 testes
+python -m pytest -q                           # 109 testes
 python -m finanalyzer eval --mode baseline    # mede a qualidade do extrator regex contra o gabarito
 python scripts/verify_numbers.py              # re-confere cada valor direto no PDF e recalcula os derivados
 python scripts/check_secrets.py               # garante que não há chave no repositório
 python -m finanalyzer ask "Qual empresa tem a maior receita líquida?"   # pergunta livre, OFFLINE (sem LLM)
 ```
 
-> **Como os `outputs/` entregues foram gerados:** em modo `reference` — extração e análise qualitativa vêm de um **gabarito verificado** (`data/reference/`); o pipeline **não chama LLM**: ele valida, deriva, responde e escreve o relatório. A extração por LLM é o modo `--mode llm`.
+> **Como os `outputs/` entregues foram gerados:** em modo `reference` — extração e análise qualitativa vêm de um **gabarito verificado** (`data/reference/`); o pipeline **não chama LLM**: ele valida, deriva, responde e escreve o relatório. A extração por LLM é o modo `--mode llm` (saídas em `outputs_llm/`, ver "Qual saída é a oficial?" acima).
 
 ### Rodar o LLM **sem chave paga** (duas opções)
 
@@ -62,7 +64,7 @@ Cautelas: os nomes de modelo e os limites da camada gratuita mudam com frequênc
 
 **Com chave paga (Anthropic / OpenAI / Azure OpenAI):** `LLM_PROVIDER=anthropic|openai|azure_openai` + a chave correspondente no `.env` (`pip install anthropic` ou `openai`).
 
-Depois de rodar com um modelo real, atualize a tabela da seção **Avaliação de qualidade** com os números medidos (`outputs_llm/avaliacao_llm.json`, tokens e tempos em `outputs_llm/run_manifest.json`).
+Números medidos: `outputs_llm/avaliacao_llm.json`; tokens e tempos em `outputs_llm/run_manifest.json`.
 
 ### Demais comandos
 
@@ -114,7 +116,7 @@ flowchart LR
   EXT & VAL & REP -. spans .-> LOG[(logs/run.jsonl)]
 ```
 
-Três papéis explícitos em `finanalyzer/pipeline.py`:
+Três papéis explícitos em `finanalyzer/pipeline.py`. **Aviso de vocabulário:** são *papéis* em código linear (extrair → validar → escrever). Não há laço de decisão do LLM nem escolha de ferramentas pelo modelo; portanto não são "agentes autônomos". O ponto de entrada para agentes de verdade é o servidor MCP (abaixo).
 
 - **ExtractorAgent** — produz a extração (gabarito verificado, LLM ou regex baseline).
 - **ValidatorAgent** — grounding + validações determinísticas + indicadores derivados.
@@ -189,6 +191,24 @@ O baseline erra de formas instrutivas: pegou o EBITDA da *distribuidora* (1.817)
 
 - ⚠️**Honestidade metodológica:** o gabarito foi montado com apoio de IA, cortando linhas literais dos PDFs, e todo trecho é verificado mecanicamente (0 falhas). Além disso, **8 valores foram conferidos manualmente contra os PDFs** (colunas Consolidado vs Controladora, dívida da Brasal contra o balanço, fluxo de caixa da Millet e da Light, EBIT da Light, alavancagem da Light e receita da Millet): todos corretos. A conferência também revelou duas particularidades dos documentos, e não do gabarito: o EBITDA da Light aparece no texto sem sinal (as DFs indicam -R$ 1,18 bi, e o relatório sinaliza a divergência), e o texto da alavancagem da Light repete "2021" nos dois anos (assumi 2022 para o primeiro valor). O gabarito é pequeno (28 valores, 3 documentos), então as porcentagens têm margem larga: servem para comparar versões, não como garantia estatística. A avaliação `--mode llm` foi executada com modelo real (tabela acima).
 
+### Mini-avaliação do qualitativo
+
+`python -m finanalyzer eval-quali --llm-dir outputs_llm` (offline, sem chave) mede duas coisas contra a curadoria de `data/reference/qualitativo`: **(1) recuperação** — as páginas que o gabarito cita chegam ao prompt do LLM? — e **(2) saída do LLM** — tom, flag de guidance numérico, motivo da variação de receita, recall de categorias de risco e de páginas citadas.
+
+| Medida | Antes (seleção por nº de página, 16 págs.; trecho livre) | Depois (round-robin por tema + âncoras, 24 págs.; trecho literal curto) |
+|---|---|---|
+| Páginas do gabarito que chegam ao prompt | 33% (10/30) | **67% (20/30)** |
+| Categorias de risco do gabarito encontradas pelo LLM (média) | 32,6% | **68,2%** |
+| Páginas do gabarito citadas pelo LLM (média) | 16,1% | **32,9%** |
+| Tom igual ao da curadoria | 3/3 | 2/3 (Millet divergiu) |
+| Guidance numérico (existe ou não) | 3/3 | 3/3 |
+| Motivo da variação da receita (página certa) | 1/3 | 1/3 |
+| Falhas de grounding (itens descartados) na execução | 9 | 11 |
+
+Duas iterações reais (medir → ver o erro → corrigir): a primeira ampliou a recuperação; a segunda pediu trechos curtos e literais, porque o modelo parafraseava e o grounding descartava o item. Execução final: `gemini-3.5-flash-lite`, 6 chamadas (3 do cache), ~104 mil tokens de entrada, custo estimado US$ 0,065 a preço de tabela (US$ 0 no plano gratuito).
+
+**O que continua fraco (limitação nº 1):** o LLM devolve bem menos itens que a curadoria (ex.: Light 6 riscos contra 7, mas 0 eventos contra 5; Brasal 5 riscos contra 7 e 0 eventos), quase não acha eventos relevantes, erra o motivo da variação de receita da Light e da Millet e, na Millet, classificou o tom diferente da curadoria. Limite honesto: a curadoria é de uma pessoa, então a métrica mede **cobertura e concordância**, não verdade absoluta, e são só 3 documentos.
+
 ## Custo e desempenho
 
 - **Modo reference/baseline:** ~2,5 s por execução completa (inclui ML estatístico), US$ 0. Ingestão fria: ~27 s para 218 páginas, uma vez por SHA-256. Tempo por etapa e por documento em `run_manifest.json` e `logs/run.jsonl`.
@@ -219,24 +239,25 @@ O baseline erra de formas instrutivas: pegou o EBITDA da *distribuidora* (1.817)
 
 ## Diferenciais entregues
 
-- **Agentes:** 3 papéis (Extractor/Validator/Writer).
+- **Papéis separados (não são agentes autônomos):** Extractor/Validator/Writer em `pipeline.py`; a interface para agentes externos é o servidor MCP.
 - **MCP server:** `serve-mcp` com 6 ferramentas somente leitura (`list_companies`, `get_indicators`, `get_alerts`, `get_qualitative`, `get_answers`, `search_pages`), testado com cliente MCP real via stdio.
 - **Conjunto de avaliação:** `data/reference` + `eval`.
 - **ML tradicional comparado com LLM:** `ml_baseline.py` (z-score robusto + Isolation Forest + léxico) com Anexo B e testes; extrator regex (`baseline.py`) medido contra o gabarito.
 - **Perguntas livres:** `ask` offline (extrativo, citações verificadas) e `ask --mode llm`.
 - **LLM sem chave paga:** Ollama e Gemini gratuito, clientes com *retry* e testes contra servidor HTTP falso.
-- **Docker** (Dockerfile + `.dockerignore`; build e testes validados em container) · **106 testes** · **logs/traços estruturados** (`logs/run.jsonl`) + `run_manifest.json` · **varredura de segredos**.
+- **Docker** (Dockerfile + `.dockerignore`; build e testes validados em container) · **109 testes** · **logs/traços estruturados** (`logs/run.jsonl`) + `run_manifest.json` · **varredura de segredos**.
 
 ## Limitações (ditas com franqueza)
 
-1. **Caminho LLM com modelo real não foi executado pelo autor**; foi testado com `FakeLLM` e servidor HTTP falso. Rode `smoke-llm` e `eval --mode llm` e registre os números.
-2. **Gabarito assistido por IA** — conferir por amostragem (ver acima).
+1. **Qualitativo em modo LLM é mais fraco que a curadoria** (menos itens, quase nenhum evento relevante e motivo da receita errado em 2 de 3 documentos): medido na mini-avaliação abaixo. Causa: uma chamada por documento, recuperação BM25 imperfeita e a regra de descartar itens sem evidência verificada. Caminho de melhoria: uma chamada por tema e recuperação híbrida.
+2. **Gabarito assistido por IA** — 8 valores conferidos à mão e todos os trechos verificados por código; o conjunto é pequeno (28 valores).
 3. **Docker** foi validado só no modo `reference` e nos testes; o modo `llm` em container não foi exercitado (usa o mesmo código).
-4. Preços de tokens são placeholders; tempos de modelos locais não foram medidos.
-5. Tom da administração é análise **qualitativa** com justificativa, não medida estatística; para Millet/Brasal a base são notas explicativas (não há relatório da administração), então a confiança é "baixa".
-6. Tabelas sem borda (Millet) dependem do texto com layout, não do `extract_tables`.
-7. Documentos desconhecidos só funcionam em modo `llm`/`baseline` (o modo `reference` exige gabarito).
-8. O ML estatístico usa rótulos de linha extraídos por regex de texto com layout; pode sinalizar linhas de notas ou rótulos com resíduo (ex.: "23.g"); é um **gerador de candidatos**, não um juiz.
+4. Preços de tokens são estimativa a preço de tabela (custo real no plano gratuito: US$ 0); tempos de modelos locais não foram medidos.
+5. Só o Gemini (`gemini-3.5-flash-lite`) foi exercitado com modelo real; Claude, OpenAI, Azure e Ollama usam o mesmo código, validado só com servidor HTTP falso.
+6. Tom da administração é análise **qualitativa** com justificativa, não medida estatística; para Millet/Brasal a base são notas explicativas (não há relatório da administração), então a confiança é "baixa".
+7. Tabelas sem borda (Millet) dependem do texto com layout, não do `extract_tables`.
+8. Documentos desconhecidos só funcionam em modo `llm`/`baseline` (o modo `reference` exige gabarito).
+9. O ML estatístico usa rótulos de linha extraídos por regex de texto com layout; pode sinalizar linhas de notas ou rótulos com resíduo (ex.: "23.g"); é um **gerador de candidatos**, não um juiz.
 9. `ask` offline é extrativo: mostra o que os documentos dizem, não sintetiza nem compara em linguagem natural (para isso, `--mode llm`).
 
 ## Premissas registradas
@@ -269,7 +290,7 @@ O baseline erra de formas instrutivas: pegou o EBITDA da *distribuidora* (1.817)
 | Rodar com poucos comandos | seção "Início rápido" / `Makefile` |
 | Premissas | seção "Premissas registradas" |
 | Diferenciais: agentes, MCP, eval set, ML tradicional vs LLM, Docker, testes, logs/traços | seção "Diferenciais entregues" |
-| Apresentação (20 + 10 min) | `docs/3_ROTEIRO_APRESENTACAO.md` |
+| Apresentação (20 + 10 min) | `docs/ROTEIRO_APRESENTACAO.md` |
 
 ## Estrutura
 
@@ -277,6 +298,6 @@ O baseline erra de formas instrutivas: pegou o EBITDA da *distribuidora* (1.817)
 finanalyzer/   ingest · retrieval · extract · grounding · derive · validate · qualitative · qa · report · export · pipeline · obs · ml_baseline · baseline · cli · mcp_server · security · llm/
 data/input/    PDFs                        data/reference/  gabarito verificado
 scripts/       build_reference.py · check_secrets.py · verify_numbers.py
-tests/         106 testes                   outputs/         resultados da última execução (inclui logs/run.jsonl)
-docs/          prompt · guia passo a passo · roteiro da apresentação
+tests/         109 testes                   outputs/         resultados da última execução (inclui logs/run.jsonl)
+docs/          roteiro da apresentação · conferência manual de valores
 ```

@@ -35,7 +35,8 @@ tentar() {  # tentar "<descrição>" comando...
   done
 }
 
-echo "== [1/3] smoke-llm"; tentar "smoke-llm" python -m finanalyzer smoke-llm
-echo "== [2/3] run --mode llm (pode demorar)"; tentar "run --mode llm" python -m finanalyzer run --mode llm
-echo "== [3/3] eval --mode llm (reaproveita o cache)"; tentar "eval --mode llm" python -m finanalyzer eval --mode llm
-echo; echo "Pronto. Resultados em $OUTPUT_DIR/ : avaliacao_llm.json, run_manifest.json (tokens/tempo), relatorio.html, logs/run.jsonl"
+echo "== [1/4] smoke-llm"; tentar "smoke-llm" python -m finanalyzer smoke-llm
+echo "== [2/4] run --mode llm (pode demorar)"; tentar "run --mode llm" python -m finanalyzer run --mode llm
+echo "== [3/4] eval --mode llm (reaproveita o cache)"; tentar "eval --mode llm" python -m finanalyzer eval --mode llm
+echo "== [4/4] eval-quali (offline: qualitativo llm vs curadoria)"; python -m finanalyzer eval-quali --llm-dir "$OUTPUT_DIR"
+echo; echo "Pronto. Resultados em $OUTPUT_DIR/ : avaliacao_llm.json, avaliacao_qualitativo.json, run_manifest.json (tokens/tempo), relatorio.html, logs/run.jsonl"

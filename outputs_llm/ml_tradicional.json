@@ -324,30 +324,30 @@
     "light": {
       "tom_classificado": "negativo",
       "tom_lexico": "negativo",
-      "score_lexico": -1.0,
-      "pos": 0,
-      "neg": 3,
+      "score_lexico": -0.82,
+      "pos": 1,
+      "neg": 10,
       "concorda": true
     },
     "millet": {
-      "tom_classificado": "neutro",
-      "tom_lexico": "neutro",
-      "score_lexico": 0.0,
-      "pos": 1,
-      "neg": 1,
-      "concorda": true
+      "tom_classificado": "positivo",
+      "tom_lexico": "negativo",
+      "score_lexico": -0.5,
+      "pos": 2,
+      "neg": 6,
+      "concorda": false
     },
     "brasal": {
       "tom_classificado": "neutro",
-      "tom_lexico": "neutro",
-      "score_lexico": 0.0,
-      "pos": 0,
-      "neg": 0,
-      "concorda": true
+      "tom_lexico": "negativo",
+      "score_lexico": -0.43,
+      "pos": 2,
+      "neg": 5,
+      "concorda": false
     },
     "_resumo": {
       "documentos": 3,
-      "concordancias": 3
+      "concordancias": 1
     }
   }
 }

@@ -39,7 +39,7 @@
 **Diga:** "Para medir qualidade criei um gabarito e um extrator **regex** como baseline: recall **64%**, precisão **95%**, **0 alucinação**. Ele erra de formas instrutivas — pegou o EBITDA da distribuidora (1.817) em vez do consolidado. É o argumento por LLM com grounding." **Diga também (medido com `gemini-3.5-flash-lite`, camada gratuita):** "Com LLM real: recall **78,6%**, precisão **100%**, **0 alucinação**, 62 s para os 3 documentos, custo real US$ 0 (≈ US$ 0,06 a preço de tabela). Fui iterando: a v1 tinha grounding estrito demais; a v2 subiu o recall para 82% mas deixou passar 3 valores errados (escala e coluna); na versão final o modelo prefere dizer 'não encontrado' a chutar. **O grounding garante que o número existe no PDF, não que é o número certo — quem pega isso é o eval set.**"
 **ML tradicional (Anexo B):** "Implementei também a abordagem **sem LLM e sem rótulos**: z-score robusto e Isolation Forest sobre as linhas das demonstrações. Ele sinaliza **linhas de movimento grande** — ex.: swaps da Light de 3,9 mil para 397 mil — mas não vê o EBITDA com sinal omitido nem o comparativo 'não auditado'. Quase não há sobreposição com os alertas: são **complementares**. Não treinei classificador supervisionado porque são 3 documentos e zero rótulos — qualquer acurácia seria ruído."
 **Pergunta livre (demo de 30 s):** `python -m finanalyzer ask "Quais são os riscos de crédito mencionados?"` → mostra linhas com `[doc p.N]` e citações `✓`. Depois `ask "preço do bitcoin"` → **"Sem evidência suficiente"**. "Offline, extrativo: só devolve o que está no documento."
-**Seja franco (isto gera confiança):** "Limites: (1) o gabarito foi construído com ajuda de IA e eu conferi por amostragem; (2) o caminho LLM foi testado com modelo simulado e servidor HTTP falso — *[se rodou Parte D: 'e agora também com modelo real, resultados acima'; se não: 'rodo na sequência com o modelo local']*; (3) preços de tokens são placeholders, o custo real é medido por execução; (4) o Docker eu *[construí e rodei / não consegui construir no ambiente de desenvolvimento]*."
+**Seja franco (isto gera confiança):** "Limites: (1) o gabarito foi montado com apoio de ferramentas de IA e verificado por mim: `verify_numbers.py` confere cada trecho direto no PDF e conferi 8 valores à mão (`docs/CONFERENCIA_MANUAL.md`); (2) o caminho LLM foi testado com modelo simulado, servidor HTTP falso **e com modelo real** (gemini-3.5-flash-lite, números acima); (3) o qualitativo em modo LLM é mais fraco que a curadoria e está medido no README; (4) o Docker foi construído e rodou: 106 testes passaram dentro da imagem."
 
 ## 18:00–20:00 · Segurança, diferenciais e produção  → *README seções "Segurança" e "Azure"*
 - "Chaves só por ambiente; `check_secrets.py` falha se achar chave."
@@ -63,9 +63,22 @@
 **10. O gabarito é confiável?** "Cada trecho é verificado por código contra o PDF; os valores eu conferi por amostragem. Reconheço o viés de ter sido assistido por IA, por isso o relato no README."
 
 **11. Por que não treinou um modelo de ML?** "Três documentos, nenhum rótulo. Um classificador supervisionado seria acurácia inventada. Usei métodos não supervisionados (MAD e Isolation Forest) e mostrei, no Anexo B, o que eles pegam e o que escapa — comparando honestamente com regras e LLM."
-**12. Seu modelo local é pior que um grande?** "Provavelmente erra mais — por isso existe o `eval` (*[cite os números se rodou a Parte D]*) e o grounding garante que, mesmo errando, ele **não inventa**: o erro vira 'não encontrado' ou 'não verificado', nunca um número falso."
+**12. Seu modelo local é pior que um grande?** "Provavelmente erra mais — por isso existe o `eval` (números: recall 78,6%, precisão 100%, alucinação 0%) e o grounding garante que, mesmo errando, ele **não inventa**: o erro vira 'não encontrado' ou 'não verificado', nunca um número falso."
 **13. Os logs vazam dados?** "Não: gravam etapa, documento, duração e contagens — nunca texto de PDF, prompt, resposta ou chave. Há teste automatizado para isso."
 **14. Como o `ask` evita inventar?** "No modo offline ele só devolve linhas existentes e exige cobertura mínima dos termos da pergunta; sem isso responde 'Sem evidência suficiente'. No modo LLM, cada citação é re-checada contra a página."
 
 ## Se algo der errado ao vivo
 Mostre `outputs/` já gerado (ele está na pasta) e diga: "rodei antes para não depender de tempo de execução". Nunca improvise um número: abra o PDF.
+
+
+---
+## Respostas curtas para as perguntas previstas (Q&A)
+
+**Por que a saída principal (`outputs/`) é o modo `reference`?** Porque é o teto de qualidade: valores curados, verificados contra o PDF e com grounding total (150 evidências, 0 falhas). O modo `llm` (`outputs_llm/`) é a extração real e a medição honesta: 78,6% de recall e 100% de precisão contra o gabarito. Os dois estão no repositório e o README diz qual é qual. A avaliação do modo `reference` contra o próprio gabarito é circular e não é medida de qualidade; a medida de qualidade é a do modo `llm`.
+
+**Por que o qualitativo em LLM é pior que a curadoria?** Cada documento vira uma única chamada com até 24 páginas escolhidas por BM25; só entram itens com trecho literal verificado, então o modelo gera menos itens, mas nenhum sem evidência. Medi isso: `python -m finanalyzer eval-quali --llm-dir outputs_llm` (recuperação de páginas, tom, flag de guidance, categorias de risco). É uma limitação declarada no README, e o caminho de melhoria é uma chamada por tema.
+
+**O que significa "agente" aqui?** Três papéis explícitos (Extractor, Validator, Writer) em código linear, sem laço de decisão do LLM e sem escolha de ferramentas pelo modelo. Chamo de papéis porque é isso que são; o diferencial de agente real é o servidor MCP (6 ferramentas) que um agente externo pode chamar.
+
+**Por que o recall caiu de 82% para 78,6% de propósito?** A v2 tinha 82,1% de recall, mas 11,1% de alucinação (3 valores errados por escala e coluna). A versão final prefere "não encontrado" a chutar: recall 78,6%, precisão 100%, alucinação 0%. Em análise financeira, um número ausente é visível; um número errado passa despercebido.
+

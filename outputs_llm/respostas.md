@@ -31,11 +31,27 @@ Para comparar de forma padronizada usei **EBITDA derivado = EBIT + D&A (fluxo de
 
 ## 4. Quais riscos são citados por mais de uma empresa?
 
-**0 categorias de risco aparecem em mais de uma empresa**; 0 aparecem nas três: nenhuma.
-- Citados por **apenas uma** empresa: Liquidez e endividamento (Light); Juros e risco de mercado (Light); Continuidade operacional (Light); Regulatório / fiscal / concessão (Light); Crédito / inadimplência de clientes (Millet); Custo de insumos / matérias-primas (Brasal).
+**5 categorias de risco aparecem em mais de uma empresa**; 1 aparecem nas três: Juros e risco de mercado.
+- **Juros e risco de mercado** — 3 empresas (Light, Millet, Brasal):
+    - Light: Aumento expressivo das taxas de juros Selic impactou a estrutura de capital e o endividamento do grupo. [Light p.26]
+    - Millet: [Evidência documental] Risco de taxa de juros oriundo de oscilações nas taxas incidentes sobre passivos captados e aplicações. [Millet p.41]
+    - Brasal: Risco de oscilação das taxas de juros incidentes sobre ativos e passivos financeiros da Companhia. [Brasal p.49]
+- **Concentração / dependência de contratos ou investida** — 2 empresas (Light, Brasal):
+    - Light: Elevado índice de perdas não técnicas e inadimplência, agravados por dificuldades em Áreas de Severa Restrição Operacional. [Light p.26]
+    - Brasal: Risco de concentração operacional na dependência de contratos de fabricação e distribuição com a Coca-Cola e Heineken. [Brasal p.12]
+- **Crédito / inadimplência de clientes** — 2 empresas (Millet, Brasal):
+    - Millet: [Evidência documental] Risco de crédito associado à inadimplência de clientes e contrapartes em instrumentos financeiros. [Millet p.40]
+    - Brasal: Risco de crédito associado à concessão de crédito aos clientes e recebimento de duplicatas. [Brasal p.49]
+- **Liquidez e endividamento** — 2 empresas (Light, Millet):
+    - Light: Presença de cláusulas de vencimento antecipado de dívidas por descumprimento de covenants financeiros ou não financeiros. [Light p.26]
+    - Millet: [Evidência documental] Risco de liquidez referente a potenciais dificuldades na quitação de passivos financeiros de curto e longo prazos. [Millet p.41]
+- **Regulatório / fiscal / concessão** — 2 empresas (Light, Brasal):
+    - Light: A concessão da Light SESA vence em junho de 2026 e sua renovação antecipada depende de negociações sem garantia de êxito. [Light p.2]
+    - Brasal: Risco regulatório e de alteração nas regras de incentivos fiscais de ICMS concedidos pelo governo local. [Brasal p.12]
+- Citados por **apenas uma** empresa: Continuidade operacional (Light); Contingências judiciais e tributárias (Light); Custo de insumos / matérias-primas (Brasal).
 *Metodologia: cada risco recebe uma categoria de uma taxonomia fixa; a pergunta é respondida pela interseção das categorias (código), não por um parecer livre. Para Millet e Brasal, a base são as notas explicativas (não há relatório da administração).*
 
-**Fontes:** light p.26; light p.26; light p.3; light p.26; millet p.19; millet p.40; brasal p.17
+**Fontes:** light p.26; millet p.41; brasal p.49; light p.26; brasal p.12; millet p.40; brasal p.49; light p.26; millet p.41; light p.2; brasal p.12; light p.3; light p.76; brasal p.49
 
 ## 5. Qual é o guidance de cada empresa para o próximo ano?
 

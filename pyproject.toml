@@ -1,0 +1,32 @@
+[project]
+name = "intra-fin-analyzer"
+version = "1.0.0"
+description = "Análise de demonstrações financeiras (PDF) com extração auditável: evidência por página, grounding e validações automáticas."
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.6",
+    "scikit-learn>=1.4",
+    "pdfplumber>=0.11",
+    "markdown>=3.5",
+    "python-dotenv>=1.0",
+    "mcp>=2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+anthropic = ["anthropic>=0.40"]
+openai = ["openai>=1.50"]
+
+[project.scripts]
+finanalyzer = "finanalyzer.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["finanalyzer*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

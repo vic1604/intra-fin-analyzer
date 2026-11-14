@@ -1,16 +1,16 @@
 {
   "doc_id": "light",
   "empresa": "light",
-  "fonte_qualitativa": "Relatório da Administração e Notas Explicativas da Light S.A. (2022)",
-  "nota_cobertura": "Completa para as seções selecionadas do relatório da administração e notas explicativas sobre reestruturação, PIS/COFINS e endividamento.",
+  "fonte_qualitativa": "Relatório da Administração e Notas Explicativas de 2022",
+  "nota_cobertura": "",
   "motivos_resultado": [
     {
-      "texto": "[Evidência documental] O resultado líquido consolidado foi impactado negativamente pelo reconhecimento de provisões e atualizações monetárias relacionadas à devolução de créditos de PIS/COFINS aos consumidores e impairment de IR/CS diferidos.",
+      "texto": "O resultado líquido foi impactado pelo reconhecimento de provisão, atualização financeira de PIS/COFINS e impairment de IR/CS diferidos.",
       "evidencias": [
         {
           "documento": "light",
           "pagina": 10,
-          "trecho": "Em 2022, a Light S.A. apurou um resultado líquido de -R$5.673 milhões, R$6.070 milhões abaixo em relação ao ano anterior. Essa retração ocorreu, principalmente, no segmento de Distribuição, em função do reconhecimento de provisão de -R$1.081 milhões para devolução de créditos de PIS/COFINS aos consumidores, da atualização financeira desses valores, que totalizaram -R$1.584 milhões, e do impairment da recuperabilidade de IR/CS diferidos, no valor de -R$1.634 milhões.",
+          "trecho": "Essa retração ocorreu, principalmente, no segmento de Distribuição, em função do reconhecimento de provisão de -R$1.081 milhões para devolução de créditos de PIS/COFINS aos consumidores, da atualização financeira desses valores, que totalizaram -R$1.584 milhões, e do impairment da recuperabilidade de IR/CS diferidos, no valor de -R$1.634 milhões.",
           "verificada": true
         }
       ]
@@ -18,31 +18,7 @@
   ],
   "riscos": [
     {
-      "texto": "Elevado nível de endividamento e geração de caixa operacional historicamente insuficiente para honrar compromissos sozinhos.",
-      "evidencias": [
-        {
-          "documento": "light",
-          "pagina": 26,
-          "trecho": "A Administração da Companhia entende que o Grupo Light e sua controlada Light SESA apresentam situação operacional e financeira complexa, com: (i) elevado nível de endividamento; (ii) geração de caixa operacional historicamente insuficiente para sozinha honrar os compromissos;",
-          "verificada": true
-        }
-      ],
-      "categoria": "liquidez_endividamento"
-    },
-    {
-      "texto": "Impacto do patamar elevado da taxa Selic na estrutura de capital e nos custos financeiros.",
-      "evidencias": [
-        {
-          "documento": "light",
-          "pagina": 26,
-          "trecho": "Esta situação foi agravada pelo(a): (i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;",
-          "verificada": true
-        }
-      ],
-      "categoria": "juros_mercado"
-    },
-    {
-      "texto": "Incerteza significativa quanto à capacidade de continuidade operacional (going concern) da Light e da Light SESA.",
+      "texto": "Incerteza significativa que pode levantar dúvida quanto à capacidade de continuidade operacional da Light e da Light SESA.",
       "evidencias": [
         {
           "documento": "light",
@@ -54,46 +30,82 @@
       "categoria": "continuidade_operacional"
     },
     {
-      "texto": "Riscos regulatórios associados à necessidade de renovação da concessão da Light SESA, que vence em junho de 2026, cujos termos não estão sob o controle exclusivo da administração.",
+      "texto": "A concessão da Light SESA vence em junho de 2026 e sua renovação antecipada depende de negociações sem garantia de êxito.",
       "evidencias": [
         {
           "documento": "light",
-          "pagina": 26,
-          "trecho": "A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá em junho de 2026. A Administração da Companhia entende que determinados cenários para o futuro do Grupo que dependem (i) da necessidade de processo formal de renovação da concessão e (ii) da necessidade de negociação dos termos e condições da nova concessão, que não estão sob controle da Administração do Grupo Light.",
+          "pagina": 2,
+          "trecho": "Essas alternativas passam pela renovação da concessão da Light SESA, que vence em 2026. Nosso objetivo é antecipar esse processo. Nós iniciamos discussões com a Aneel e o Ministério de Minas e Energia em busca da renovação antecipada em bases que garantam a sustentabilidade da concessão e do nosso negócio.",
           "verificada": true
         }
       ],
       "categoria": "regulatorio_concessao"
+    },
+    {
+      "texto": "Aumento expressivo das taxas de juros Selic impactou a estrutura de capital e o endividamento do grupo.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 26,
+          "trecho": "Esta situação foi agravada pelo(a): (i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;",
+          "verificada": true
+        }
+      ],
+      "categoria": "juros_mercado"
+    },
+    {
+      "texto": "Elevado índice de perdas não técnicas e inadimplência, agravados por dificuldades em Áreas de Severa Restrição Operacional.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 26,
+          "trecho": "(iii) elevado índice de perdas não técnicas (furto de energia) e inadimplência; (iv) dificuldade de atuação em Áreas de Severa Restrição Operacional.",
+          "verificada": true
+        }
+      ],
+      "categoria": "concentracao_dependencia"
+    },
+    {
+      "texto": "Existência de montantes expressivos em contingências judiciais cíveis, trabalhistas e fiscais com risco de perda possível.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 76,
+          "trecho": "TOTAL 11.983.344 3.030 10.465.349 44.623",
+          "verificada": true
+        }
+      ],
+      "categoria": "contingencias_judiciais"
+    },
+    {
+      "texto": "Presença de cláusulas de vencimento antecipado de dívidas por descumprimento de covenants financeiros ou não financeiros.",
+      "evidencias": [
+        {
+          "documento": "light",
+          "pagina": 26,
+          "trecho": "Para o exercício findo em 31 de dezembro de 2022, o Grupo Light possui em seus contratos de empréstimos, financiamentos e debêntures cláusulas que podem gerar antecipação do vencimento de dívidas.",
+          "verificada": true
+        }
+      ],
+      "categoria": "liquidez_endividamento"
     }
   ],
   "guidance": [],
   "guidance_numerico_encontrado": false,
-  "eventos_relevantes": [
-    {
-      "texto": "Aprovação da Revisão Tarifária Periódica (RTP) da Light SESA em março de 2022 com reajuste médio de 14,68%.",
-      "evidencias": [
-        {
-          "documento": "light",
-          "pagina": 56,
-          "trecho": "Em 14 de março de 2022, foi aprovado pela ANEEL o processo de reajuste das tarifas da controlada Light SESA. O resultado, homologado através da Resolução Homologatória no 3.014/2022, representa um reajuste tarifário médio para o consumidor de 14,68%",
-          "verificada": true
-        }
-      ]
-    }
-  ],
+  "eventos_relevantes": [],
   "tom": "negativo",
-  "tom_justificativa": "A administração reporta um prejuízo líquido multibilionário, forte queda no EBITDA devido a provisões massivas (créditos de PIS/COFINS e PECLD), aumento da dívida líquida, rebaixamento de ratings e menção explícita de auditores e administração sobre incerteza significativa quanto à continuidade operacional (going concern).",
+  "tom_justificativa": "A companhia reportou prejuízo bilionário, elevado endividamento, dúvidas sobre a continuidade operacional e necessidade urgente de reestruturação de capital.",
   "tom_evidencias": [
-    {
-      "documento": "light",
-      "pagina": 3,
-      "trecho": "Os eventos e condições, anteriormente mencionados, individual ou coletivamente, indicam, no julgamento da Administração da Companhia, a existência de incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional da Light e da Light SESA",
-      "verificada": true
-    },
     {
       "documento": "light",
       "pagina": 10,
       "trecho": "Em 2022, a Light S.A. apurou um resultado líquido de -R$5.673 milhões, R$6.070 milhões abaixo em relação ao ano anterior.",
+      "verificada": true
+    },
+    {
+      "documento": "light",
+      "pagina": 3,
+      "trecho": "Os eventos e condições, anteriormente mencionados, individual ou coletivamente, indicam, no julgamento da Administração da Companhia, a existência de incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional da Light e da Light SESA",
       "verificada": true
     }
   ],
