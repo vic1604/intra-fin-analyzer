@@ -12,11 +12,11 @@ Pipeline que lê 3 PDFs financeiros, extrai indicadores **com página e trecho d
 |---|---|---|
 | Pipeline completo em modo `reference` (sem LLM) | ✅ executado | `python -m finanalyzer run` → 150 evidências, 0 falhas de grounding, 19 alertas |
 | Valores contra o PDF, **sem usar o código do pipeline** | ✅ executado | `scripts/verify_numbers.py`: 71 valores, 0 falhas; derivados recalculados batem |
-| Testes automatizados | ✅ **111 passam** (106 já validados também dentro do container; os demais cobrem a mini-avaliação do qualitativo e a realocação de página) | `python -m pytest -q` (grounding, injection, validações com dados sintéticos, clientes HTTP, relatório, log…) |
+| Testes automatizados | ✅ **111 passam**, também dentro do container | `python -m pytest -q` (grounding, injection, validações com dados sintéticos, clientes HTTP, relatório, log…) |
 | Caminho LLM **com modelo falso** e **servidor HTTP falso** | ✅ executado | `tests/test_llm_path.py`, `tests/test_llm_http.py`: formato de requisição/resposta, *retry*, tokens, barreira do grounding contra valor inventado |
 | Caminho LLM **com modelo real** | ✅ **executado** com `gemini-3.5-flash-lite` (camada gratuita, 13/11/2026) | `scripts/run_llm_full.sh` → `outputs_llm/`: recall 78,6%, precisão 100%, alucinação 0% contra o gabarito (seção "Avaliação de qualidade"). Ollama, Claude, OpenAI e Azure OpenAI usam o mesmo código, mas **não foram testados com chave real** |
 | Gabarito `data/reference/` | ✅ montado com apoio de IA e verificado | cada trecho é checado por código contra o PDF e **8 valores foram conferidos à mão: todos corretos** (`docs/CONFERENCIA_MANUAL.md`) |
-| Docker | ✅ build e testes validados em container (106 passed; `run` OK) | `docker build -t intra-fin-analyzer .`; ver "Docker" |
+| Docker | ✅ build e testes validados em container (111 passed; `run` OK) | `docker build -t intra-fin-analyzer .`; ver "Docker" |
 | Preços de token | ⚠ estimativa a preço de tabela | o custo real é medido por execução em `run_manifest.json` (no plano gratuito é US$ 0) |
 
 ## Início rápido
@@ -81,7 +81,7 @@ docker run --rm -v "$PWD/data/input:/app/data/input" -v "$PWD/outputs:/app/outpu
 docker run --rm --env-file .env -v "$PWD/data/input:/app/data/input" -v "$PWD/outputs:/app/outputs" intra-fin-analyzer run --mode llm
 docker run --rm --entrypoint python intra-fin-analyzer -m pytest -q
 ```
-O `Dockerfile` roda como usuário não-root e as chaves entram só por `--env-file`/`-e`. **Build e testes validados em container**: `docker build` OK, `pytest` dentro da imagem com 106 passed e `run` em modo reference com 150 evidências e 0 falhas de grounding. O modo `llm` em container usa o mesmo código, mas não foi exercitado lá; o caminho local (`pip install`) continua sendo o principal.
+O `Dockerfile` roda como usuário não-root e as chaves entram só por `--env-file`/`-e`. **Build e testes validados em container**: `docker build` OK, `pytest` dentro da imagem com 111 passed e `run` em modo reference com 150 evidências e 0 falhas de grounding. O modo `llm` em container usa o mesmo código, mas não foi exercitado lá; o caminho local (`pip install`) continua sendo o principal.
 
 ### O que sai em `outputs/`
 | Arquivo | Conteúdo |
@@ -207,7 +207,7 @@ O baseline erra de formas instrutivas: pegou o EBITDA da *distribuidora* (1.817)
 
 Quatro iterações reais (medir → ler a resposta crua do modelo → corrigir): (1) ampliei a recuperação de páginas; (2) pedi trechos curtos e literais, porque o modelo parafraseava e o grounding descartava o item; (3) a leitura da resposta crua mostrou que o modelo devolvia o motivo da receita sem evidência e citava o número **impresso no rodapé** (ex.: p.90) em vez da posição física (p.107) — corrigi o formato no prompt e criei a realocação de página registrada (ver "Grounding mecânico"); (4) a Millet explicava o +131,9% com "crescimento das vendas" e não com a Alibra; uma regra de prompt (mudança de perímetro vem primeiro) fez o modelo citar a consolidação da Alibra. A categoria de risco caiu de 84% para 79% entre as duas últimas execuções: a variação entre execuções é do modelo, por isso os números são para comparar versões, não garantias. Execução final: `gemini-3.5-flash-lite`, 6 chamadas (3 do cache), ~104 mil tokens de entrada, custo estimado US$ 0,067 a preço de tabela (US$ 0 no plano gratuito).
 
-**O que continua fraco (limitação nº 1):** o LLM devolve menos itens que a curadoria — eventos relevantes (Light 2 contra 5; Brasal 2 contra 4; Millet 2 contra 4), guidance qualitativo (0 contra 3 na Light) e riscos da Millet e da Brasal (5 e 6 contra 6 e 7) —, e na Millet classificou o tom diferente da curadoria. Na pergunta 2, o modo LLM responde às três empresas com trecho verificado na página, mas só a Light coincide com a curadoria na página; a Millet cita a Alibra (p.38, conteúdo certo, página diferente do gabarito) e a Brasal cita um trecho existente (p.25) diferente do escolhido no gabarito (não confirmei se é o melhor motivo). Limite honesto: a curadoria é de uma pessoa, então a métrica mede **cobertura e concordância**, não verdade absoluta, e são só 3 documentos.
+**O que continua fraco (limitação nº 1):** o LLM devolve menos itens que a curadoria — eventos relevantes (Light 2 contra 5; Brasal 2 contra 4; Millet 2 contra 4), guidance qualitativo (0 contra 3 na Light) e riscos da Millet e da Brasal (5 e 6 contra 6 e 7) —, e na Millet classificou o tom diferente da curadoria. Na pergunta 2, o modo LLM responde às três empresas com trecho verificado na página, mas só a Light coincide com a curadoria na página; a Millet cita a Alibra (p.38, conteúdo certo, página diferente do gabarito) e a Brasal cita um trecho existente (p.25) diferente do escolhido no gabarito (descreve o crescimento sem causa e vem marcado "[Evidência documental]"; a saída oficial `reference` responde "Não encontrado", que é mais honesto). Limite honesto: a curadoria é de uma pessoa, então a métrica mede **cobertura e concordância**, não verdade absoluta, e são só 3 documentos.
 
 ## Custo e desempenho
 
