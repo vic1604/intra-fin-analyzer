@@ -14,9 +14,9 @@ Para comparar de forma padronizada usei **EBITDA derivado = EBIT + D&A (fluxo de
 
 ## 2. O que a administração de cada empresa apontou como principal motivo da variação da receita?
 
-- **Light** (receita R$ 13,25 bi vs R$ 14,90 bi; −11,0%): A receita operacional líquida consolidada foi influenciada pelos estornos de faturamento de regularizações, pelo não acionamento das bandeiras tarifárias e pela variação negativa na conta CVA. [Light p.9] (a DRE total varia −11,0%; o −13% da administração exclui receita de construção)
-- **Millet** (receita R$ 462,1 mi vs R$ 199,3 mi; +131,9%): A expansão da receita operacional líquida consolidada para R$ 462.127 em 2022 decorre principalmente do crescimento das vendas tanto no mercado interno quanto no mercado externo. [Millet p.38]
-- **Brasal** (receita R$ 1,33 bi vs R$ 1,06 bi; +24,8%): [Evidência documental] A receita operacional líquida consolidada registrou crescimento em relação ao exercício anterior, passando de R$ 1.061.410 milhares para R$ 1.325.059 milhares. [Brasal p.25]
+- **Light** (receita R$ 13,25 bi vs R$ 14,90 bi; −11,0%): A redução da receita operacional líquida foi influenciada pelos estornos de faturamento de regularizações, pelo não acionamento das bandeiras tarifárias e pela variação negativa na conta CVA. [Light p.9] (a DRE total varia −11,0%; o −13% da administração exclui receita de construção)
+- **Millet** (receita R$ 462,1 mi vs R$ 199,3 mi; +131,9%): [Evidência documental] A variação expressiva da receita operacional líquida consolidada para R$ 462.127 mil em 2022 comparado a R$ 199.259 mil em 2021 reflete a consolidação integral da controlada Alibra Ingredientes S.A. adquirida em junho de 2021. [Millet p.38]
+- **Brasal** (receita R$ 1,33 bi vs R$ 1,06 bi; +24,8%): [Evidência documental] A receita operacional líquida da controlada Brasal Refrigerantes S.A. passou de R$ 1.061.410 em 2021 para R$ 1.325.059 em 2022. [Brasal p.25]
 
 **Fontes:** light p.9; light p.20; millet p.38; millet p.7; brasal p.25; brasal p.8
 
@@ -31,32 +31,29 @@ Para comparar de forma padronizada usei **EBITDA derivado = EBIT + D&A (fluxo de
 
 ## 4. Quais riscos são citados por mais de uma empresa?
 
-**6 categorias de risco aparecem em mais de uma empresa**; 3 aparecem nas três: Crédito / inadimplência de clientes, Juros e risco de mercado, Custo de insumos / matérias-primas.
+**5 categorias de risco aparecem em mais de uma empresa**; 3 aparecem nas três: Crédito / inadimplência de clientes, Juros e risco de mercado, Contingências judiciais e tributárias.
+- **Contingências judiciais e tributárias** — 3 empresas (Light, Millet, Brasal):
+    - Light: Riscos de contingências judiciais cíveis, trabalhistas e fiscais expressivos. [Light p.76]
+    - Millet: Risco tributário, cível e trabalhista decorrente de processos judiciais em andamento com expectativa de perda provável. [Millet p.17]
+    - Brasal: Risco de perdas decorrentes de demandas judiciais e administrativas de natureza cível, fiscal e trabalhista. [Brasal p.14]
 - **Crédito / inadimplência de clientes** — 3 empresas (Light, Millet, Brasal):
-    - Light: Inadimplência elevada e perdas não técnicas de energia persistentes na área de concessão. [Light p.2]
-    - Millet: Risco de crédito associado à inadimplência de clientes no recebimento de títulos e contas a receber. [Millet p.40]
-    - Brasal: Risco de crédito decorrente da concessão de crédito aos clientes, mitigado por análises de perfil e monitoramento de saldos a receber. [Brasal p.49]
-- **Custo de insumos / matérias-primas** — 3 empresas (Light, Millet, Brasal):
-    - Light: Risco hidrológico e escassez de chuvas que podem afetar o volume dos reservatórios e elevar os custos de energia. [Light p.101]
-    - Millet: Exposição a variações de preços e custos de matérias-primas e materiais de uso e consumo na fabricação. [Millet p.38]
-    - Brasal: Risco de variação de preços de matérias-primas e insumos utilizados na fabricação dos produtos comercializados. [Brasal p.49]
+    - Light: Elevado índice de perdas não técnicas e inadimplência na área de concessão. [Light p.26]
+    - Millet: Risco de crédito associado à inadimplência de clientes e contrapartes em instrumentos financeiros. [Millet p.40]
+    - Brasal: Risco de crédito associado à concessão de crédito aos clientes e à realização de contas a receber. [Brasal p.49]
 - **Juros e risco de mercado** — 3 empresas (Light, Millet, Brasal):
-    - Light: Elevado patamar das taxas de juros que encarece o custo da dívida e pressiona a estrutura de capital. [Light p.2]
-    - Millet: Risco de taxa de juros decorrente da flutuação nas taxas incidentes sobre passivos captados e ativos aplicados. [Millet p.41]
+    - Light: Aumento significativo das taxas de juros SELIC no período. [Light p.26]
+    - Millet: Risco de taxa de juros oriundo da possibilidade de oscilações nas taxas incidentes sobre passivos e ativos. [Millet p.41]
     - Brasal: Risco de oscilação das taxas de juros incidentes sobre ativos e passivos financeiros da Companhia. [Brasal p.49]
-- **Contingências judiciais e tributárias** — 2 empresas (Light, Brasal):
-    - Light: Elevado volume de contingências judiciais cíveis, trabalhistas e fiscais em aberto. [Light p.76]
-    - Brasal: Risco de contingências judiciais e administrativas associadas a demandas cíveis, fiscais e trabalhistas avaliadas periodicamente com assessores… [Brasal p.20]
 - **Liquidez e endividamento** — 2 empresas (Light, Millet):
-    - Light: Nível elevado de endividamento financeiro e geração de caixa operacional insuficiente para honrar compromissos. [Light p.26]
-    - Millet: Risco de liquidez referente a dificuldades potenciais para honrar passivos financeiros de curto e longo prazos. [Millet p.41]
+    - Light: Elevado nível de endividamento da Companhia e controlada Light SESA. [Light p.26]
+    - Millet: Risco de liquidez referente à eventual dificuldade em cumprir com as obrigações associadas aos passivos financeiros. [Millet p.41]
 - **Regulatório / fiscal / concessão** — 2 empresas (Light, Brasal):
-    - Light: Riscos regulatórios associados à renovação da concessão da Light SESA que vence em 2026. [Light p.26]
-    - Brasal: Risco regulatório e de incentivos fiscais, visto que a controlada possui incentivos do programa Emprega/DF condicionados ao cumprimento de… [Brasal p.12]
-- Citados por **apenas uma** empresa: Continuidade operacional (Light); Concentração / dependência de contratos ou investida (Brasal).
+    - Light: Dificuldade de atuação em Áreas de Severa Restrição Operacional. [Light p.26]
+    - Brasal: Risco regulatório e de alteração de incentivos fiscais, como as condições exigidas pelo programa Emprega/DF. [Brasal p.12]
+- Citados por **apenas uma** empresa: Custo de insumos / matérias-primas (Brasal); Concentração / dependência de contratos ou investida (Brasal).
 *Metodologia: cada risco recebe uma categoria de uma taxonomia fixa; a pergunta é respondida pela interseção das categorias (código), não por um parecer livre. Para Millet e Brasal, a base são as notas explicativas (não há relatório da administração).*
 
-**Fontes:** light p.2; millet p.40; brasal p.49; light p.101; millet p.38; brasal p.49; light p.2; millet p.41; brasal p.49; light p.76; brasal p.20; light p.26; millet p.41; light p.26; brasal p.12; light p.3; brasal p.12
+**Fontes:** light p.76; millet p.17; brasal p.14; light p.26; millet p.40; brasal p.49; light p.26; millet p.41; brasal p.49; light p.26; millet p.41; light p.26; brasal p.12; brasal p.49; brasal p.12
 
 ## 5. Qual é o guidance de cada empresa para o próximo ano?
 

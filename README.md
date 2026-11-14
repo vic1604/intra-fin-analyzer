@@ -195,19 +195,19 @@ O baseline erra de formas instrutivas: pegou o EBITDA da *distribuidora* (1.817)
 
 `python -m finanalyzer eval-quali --llm-dir outputs_llm` (offline, sem chave) mede duas coisas contra a curadoria de `data/reference/qualitativo`: **(1) recuperação** — as páginas que o gabarito cita chegam ao prompt do LLM? — e **(2) saída do LLM** — tom, flag de guidance numérico, motivo da variação de receita, recall de categorias de risco e de páginas citadas.
 
-| Medida | Antes (seleção por nº de página, 16 págs.; trecho livre) | Depois (round-robin por tema + âncoras, 24 págs.; trecho literal curto) |
+| Medida | Antes (seleção por nº de página, 16 págs.; trecho livre) | Depois (round-robin + âncoras, 24 págs.; trecho literal curto; realocação de página; item de receita com evidência) |
 |---|---|---|
 | Páginas do gabarito que chegam ao prompt | 33% (10/30) | **67% (20/30)** |
-| Categorias de risco do gabarito encontradas pelo LLM (média) | 32,6% | **68,2%** |
-| Páginas do gabarito citadas pelo LLM (média) | 16,1% | **32,9%** |
+| Categorias de risco do gabarito encontradas pelo LLM (média) | 32,6% | **78,6%** |
+| Páginas do gabarito citadas pelo LLM (média) | 16,1% | **42,9%** |
 | Tom igual ao da curadoria | 3/3 | 2/3 (Millet divergiu) |
 | Guidance numérico (existe ou não) | 3/3 | 3/3 |
-| Motivo da variação da receita (página certa) | 1/3 | 1/3 |
-| Falhas de grounding (itens descartados) na execução | 9 | 11 |
+| Motivo da variação da receita com a página do gabarito | 1/3 | 1/3 (a **Light** acerta, p.9). A **Millet** agora cita a consolidação da Alibra, mas na p.38 e não nas p.27/29 do gabarito, então a métrica por página a marca como divergente |
+| Falhas de grounding (itens descartados) na execução | 9 | **4** |
 
-Duas iterações reais (medir → ver o erro → corrigir): a primeira ampliou a recuperação; a segunda pediu trechos curtos e literais, porque o modelo parafraseava e o grounding descartava o item. Execução final: `gemini-3.5-flash-lite`, 6 chamadas (3 do cache), ~104 mil tokens de entrada, custo estimado US$ 0,065 a preço de tabela (US$ 0 no plano gratuito).
+Quatro iterações reais (medir → ler a resposta crua do modelo → corrigir): (1) ampliei a recuperação de páginas; (2) pedi trechos curtos e literais, porque o modelo parafraseava e o grounding descartava o item; (3) a leitura da resposta crua mostrou que o modelo devolvia o motivo da receita sem evidência e citava o número **impresso no rodapé** (ex.: p.90) em vez da posição física (p.107) — corrigi o formato no prompt e criei a realocação de página registrada (ver "Grounding mecânico"); (4) a Millet explicava o +131,9% com "crescimento das vendas" e não com a Alibra; uma regra de prompt (mudança de perímetro vem primeiro) fez o modelo citar a consolidação da Alibra. A categoria de risco caiu de 84% para 79% entre as duas últimas execuções: a variação entre execuções é do modelo, por isso os números são para comparar versões, não garantias. Execução final: `gemini-3.5-flash-lite`, 6 chamadas (3 do cache), ~104 mil tokens de entrada, custo estimado US$ 0,067 a preço de tabela (US$ 0 no plano gratuito).
 
-**O que continua fraco (limitação nº 1):** o LLM devolve bem menos itens que a curadoria (ex.: Light 6 riscos contra 7, mas 0 eventos contra 5; Brasal 5 riscos contra 7 e 0 eventos), quase não acha eventos relevantes, erra o motivo da variação de receita da Light e da Millet e, na Millet, classificou o tom diferente da curadoria. Limite honesto: a curadoria é de uma pessoa, então a métrica mede **cobertura e concordância**, não verdade absoluta, e são só 3 documentos.
+**O que continua fraco (limitação nº 1):** o LLM devolve menos itens que a curadoria — eventos relevantes (Light 2 contra 5; Brasal 2 contra 4; Millet 2 contra 4), guidance qualitativo (0 contra 3 na Light) e riscos da Millet e da Brasal (5 e 6 contra 6 e 7) —, e na Millet classificou o tom diferente da curadoria. Na pergunta 2, o modo LLM responde às três empresas com trecho verificado na página, mas só a Light coincide com a curadoria na página; a Millet cita a Alibra (p.38, conteúdo certo, página diferente do gabarito) e a Brasal cita um trecho existente (p.25) diferente do escolhido no gabarito (não confirmei se é o melhor motivo). Limite honesto: a curadoria é de uma pessoa, então a métrica mede **cobertura e concordância**, não verdade absoluta, e são só 3 documentos.
 
 ## Custo e desempenho
 
@@ -249,7 +249,7 @@ Duas iterações reais (medir → ver o erro → corrigir): a primeira ampliou a
 
 ## Limitações (ditas com franqueza)
 
-1. **Qualitativo em modo LLM é mais fraco que a curadoria** (menos itens, quase nenhum evento relevante e motivo da receita errado em 2 de 3 documentos): medido na mini-avaliação abaixo. Causa: uma chamada por documento, recuperação BM25 imperfeita e a regra de descartar itens sem evidência verificada. Caminho de melhoria: uma chamada por tema e recuperação híbrida.
+1. **Qualitativo em modo LLM é mais fraco que a curadoria** (menos itens, poucos eventos relevantes e guidance qualitativo ausente): medido na mini-avaliação acima. Causa: uma chamada por documento, recuperação BM25 imperfeita e a regra de descartar itens sem evidência verificada. Caminho de melhoria: uma chamada por tema e recuperação híbrida.
 2. **Gabarito assistido por IA** — 8 valores conferidos à mão e todos os trechos verificados por código; o conjunto é pequeno (28 valores).
 3. **Docker** foi validado só no modo `reference` e nos testes; o modo `llm` em container não foi exercitado (usa o mesmo código).
 4. Preços de tokens são estimativa a preço de tabela (custo real no plano gratuito: US$ 0); tempos de modelos locais não foram medidos.

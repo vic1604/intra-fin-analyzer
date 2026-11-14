@@ -1,11 +1,11 @@
 {
   "doc_id": "millet",
   "empresa": "millet",
-  "fonte_qualitativa": "Notas explicativas da Millet Participações S.A.",
+  "fonte_qualitativa": "Notas Explicativas da Millet Participações S.A. para o exercício findo em 31 de dezembro de 2022",
   "nota_cobertura": "",
   "motivos_resultado": [
     {
-      "texto": "Aumento da receita operacional líquida em razão da consolidação integral e expansão das operações da controlada Alibra Ingredientes S.A.",
+      "texto": "[Evidência documental] A expansão do resultado e da receita consolidada decorreu principalmente do crescimento das vendas no mercado interno e externo e da consolidação integral da controlada Alibra.",
       "evidencias": [
         {
           "documento": "millet",
@@ -17,7 +17,7 @@
     }
   ],
   "motivo_variacao_receita": {
-    "texto": "A expansão da receita operacional líquida consolidada para R$ 462.127 em 2022 decorre principalmente do crescimento das vendas tanto no mercado interno quanto no mercado externo.",
+    "texto": "[Evidência documental] A variação expressiva da receita operacional líquida consolidada para R$ 462.127 mil em 2022 comparado a R$ 199.259 mil em 2021 reflete a consolidação integral da controlada Alibra Ingredientes S.A. adquirida em junho de 2021.",
     "evidencias": [
       {
         "documento": "millet",
@@ -29,7 +29,7 @@
   },
   "riscos": [
     {
-      "texto": "Risco de crédito associado à inadimplência de clientes no recebimento de títulos e contas a receber.",
+      "texto": "Risco de crédito associado à inadimplência de clientes e contrapartes em instrumentos financeiros.",
       "evidencias": [
         {
           "documento": "millet",
@@ -41,7 +41,7 @@
       "categoria": "credito_inadimplencia"
     },
     {
-      "texto": "Risco de liquidez referente a dificuldades potenciais para honrar passivos financeiros de curto e longo prazos.",
+      "texto": "Risco de liquidez referente à eventual dificuldade em cumprir com as obrigações associadas aos passivos financeiros.",
       "evidencias": [
         {
           "documento": "millet",
@@ -53,19 +53,19 @@
       "categoria": "liquidez_endividamento"
     },
     {
-      "texto": "Risco de taxa de juros decorrente da flutuação nas taxas incidentes sobre passivos captados e ativos aplicados.",
+      "texto": "Risco de taxa de juros oriundo da possibilidade de oscilações nas taxas incidentes sobre passivos e ativos.",
       "evidencias": [
         {
           "documento": "millet",
           "pagina": 41,
-          "trecho": "Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos",
+          "trecho": "Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos)",
           "verificada": true
         }
       ],
       "categoria": "juros_mercado"
     },
     {
-      "texto": "Risco de taxa de câmbio atrelado à oscilação de moedas estrangeiras que afetam despesas e receitas financeiras.",
+      "texto": "Risco de taxa de câmbio atrelado à possibilidade de alteração nas cotações de moedas estrangeiras afetando o resultado.",
       "evidencias": [
         {
           "documento": "millet",
@@ -77,24 +77,23 @@
       "categoria": "juros_mercado"
     },
     {
-      "texto": "Exposição a variações de preços e custos de matérias-primas e materiais de uso e consumo na fabricação.",
+      "texto": "Risco tributário, cível e trabalhista decorrente de processos judiciais em andamento com expectativa de perda provável.",
       "evidencias": [
         {
           "documento": "millet",
-          "pagina": 38,
-          "trecho": "Matéria-prima e materiais de uso e consumo - (327.291) (140.326)",
-          "verificada": true,
-          "motivo_falha": "página corrigida de 36 para 38 (trecho literal só existe nela)"
+          "pagina": 17,
+          "trecho": "Provisões são constituídas para todas as contingências referentes a processos judiciais para os quais é",
+          "verificada": true
         }
       ],
-      "categoria": "custo_insumos"
+      "categoria": "contingencias_judiciais"
     }
   ],
   "guidance": [],
   "guidance_numerico_encontrado": false,
   "eventos_relevantes": [
     {
-      "texto": "Aquisição de 85% de participação na Alibra Ingredientes S.A. ocorrida em junho de 2021 e seus desdobramentos contábeis em 2022.",
+      "texto": "[Evidência documental] Aquisição de 85% de participação na Alibra Ingredientes S.A. em junho de 2021.",
       "evidencias": [
         {
           "documento": "millet",
@@ -103,21 +102,32 @@
           "verificada": true
         }
       ]
+    },
+    {
+      "texto": "[Evidência documental] Trânsito em julgado favorável em janeiro de 2022 de ação ajuizada em 2009 sobre a exclusão do ICMS da base de cálculo do PIS e da COFINS.",
+      "evidencias": [
+        {
+          "documento": "millet",
+          "pagina": 35,
+          "trecho": "A Companhia ajuizou ação em outubro de 2009 pleiteando o período de 2004 a março de 2017, obtendo trânsito em julgado de sua ação",
+          "verificada": true
+        }
+      ]
     }
   ],
   "tom": "positivo",
-  "tom_justificativa": "A companhia apresentou crescimento relevante na receita operacional líquida e lucros sólidos decorrentes da consolidação e expansão das operações da subsidiária.",
+  "tom_justificativa": "A administração reportou expansão robusta nas receitas e consolidação de operações rentáveis, refletida no crescimento da receita líquida consolidada e manutenção de índices de endividamento controlados.",
   "tom_evidencias": [
     {
       "documento": "millet",
-      "pagina": 29,
-      "trecho": "Receita operacional líquida 462.127 318.317",
+      "pagina": 38,
+      "trecho": "Receita operacional liquida 462.127 199.259",
       "verificada": true
     },
     {
       "documento": "millet",
-      "pagina": 29,
-      "trecho": "Lucro líquido do exercício 28.518 17.241",
+      "pagina": 42,
+      "trecho": "Relação dívida liquida sobre capital ajustado (a)/(b) 0,08 0,11",
       "verificada": true
     }
   ],

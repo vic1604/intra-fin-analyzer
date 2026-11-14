@@ -54,7 +54,7 @@
   {
     "numero": 2,
     "pergunta": "O que a administração de cada empresa apontou como principal motivo da variação da receita?",
-    "resposta": "- **Light** (receita R$ 13,25 bi vs R$ 14,90 bi; −11,0%): A receita operacional líquida consolidada foi influenciada pelos estornos de faturamento de regularizações, pelo não acionamento das bandeiras tarifárias e pela variação negativa na conta CVA. [Light p.9] (a DRE total varia −11,0%; o −13% da administração exclui receita de construção)\n- **Millet** (receita R$ 462,1 mi vs R$ 199,3 mi; +131,9%): A expansão da receita operacional líquida consolidada para R$ 462.127 em 2022 decorre principalmente do crescimento das vendas tanto no mercado interno quanto no mercado externo. [Millet p.38]\n- **Brasal** (receita R$ 1,33 bi vs R$ 1,06 bi; +24,8%): [Evidência documental] A receita operacional líquida consolidada registrou crescimento em relação ao exercício anterior, passando de R$ 1.061.410 milhares para R$ 1.325.059 milhares. [Brasal p.25]",
+    "resposta": "- **Light** (receita R$ 13,25 bi vs R$ 14,90 bi; −11,0%): A redução da receita operacional líquida foi influenciada pelos estornos de faturamento de regularizações, pelo não acionamento das bandeiras tarifárias e pela variação negativa na conta CVA. [Light p.9] (a DRE total varia −11,0%; o −13% da administração exclui receita de construção)\n- **Millet** (receita R$ 462,1 mi vs R$ 199,3 mi; +131,9%): [Evidência documental] A variação expressiva da receita operacional líquida consolidada para R$ 462.127 mil em 2022 comparado a R$ 199.259 mil em 2021 reflete a consolidação integral da controlada Alibra Ingredientes S.A. adquirida em junho de 2021. [Millet p.38]\n- **Brasal** (receita R$ 1,33 bi vs R$ 1,06 bi; +24,8%): [Evidência documental] A receita operacional líquida da controlada Brasal Refrigerantes S.A. passou de R$ 1.061.410 em 2021 para R$ 1.325.059 em 2022. [Brasal p.25]",
     "fontes": [
       {
         "documento": "light",
@@ -158,12 +158,27 @@
   {
     "numero": 4,
     "pergunta": "Quais riscos são citados por mais de uma empresa?",
-    "resposta": "**6 categorias de risco aparecem em mais de uma empresa**; 3 aparecem nas três: Crédito / inadimplência de clientes, Juros e risco de mercado, Custo de insumos / matérias-primas.\n- **Crédito / inadimplência de clientes** — 3 empresas (Light, Millet, Brasal):\n    - Light: Inadimplência elevada e perdas não técnicas de energia persistentes na área de concessão. [Light p.2]\n    - Millet: Risco de crédito associado à inadimplência de clientes no recebimento de títulos e contas a receber. [Millet p.40]\n    - Brasal: Risco de crédito decorrente da concessão de crédito aos clientes, mitigado por análises de perfil e monitoramento de saldos a receber. [Brasal p.49]\n- **Custo de insumos / matérias-primas** — 3 empresas (Light, Millet, Brasal):\n    - Light: Risco hidrológico e escassez de chuvas que podem afetar o volume dos reservatórios e elevar os custos de energia. [Light p.101]\n    - Millet: Exposição a variações de preços e custos de matérias-primas e materiais de uso e consumo na fabricação. [Millet p.38]\n    - Brasal: Risco de variação de preços de matérias-primas e insumos utilizados na fabricação dos produtos comercializados. [Brasal p.49]\n- **Juros e risco de mercado** — 3 empresas (Light, Millet, Brasal):\n    - Light: Elevado patamar das taxas de juros que encarece o custo da dívida e pressiona a estrutura de capital. [Light p.2]\n    - Millet: Risco de taxa de juros decorrente da flutuação nas taxas incidentes sobre passivos captados e ativos aplicados. [Millet p.41]\n    - Brasal: Risco de oscilação das taxas de juros incidentes sobre ativos e passivos financeiros da Companhia. [Brasal p.49]\n- **Contingências judiciais e tributárias** — 2 empresas (Light, Brasal):\n    - Light: Elevado volume de contingências judiciais cíveis, trabalhistas e fiscais em aberto. [Light p.76]\n    - Brasal: Risco de contingências judiciais e administrativas associadas a demandas cíveis, fiscais e trabalhistas avaliadas periodicamente com assessores… [Brasal p.20]\n- **Liquidez e endividamento** — 2 empresas (Light, Millet):\n    - Light: Nível elevado de endividamento financeiro e geração de caixa operacional insuficiente para honrar compromissos. [Light p.26]\n    - Millet: Risco de liquidez referente a dificuldades potenciais para honrar passivos financeiros de curto e longo prazos. [Millet p.41]\n- **Regulatório / fiscal / concessão** — 2 empresas (Light, Brasal):\n    - Light: Riscos regulatórios associados à renovação da concessão da Light SESA que vence em 2026. [Light p.26]\n    - Brasal: Risco regulatório e de incentivos fiscais, visto que a controlada possui incentivos do programa Emprega/DF condicionados ao cumprimento de… [Brasal p.12]\n- Citados por **apenas uma** empresa: Continuidade operacional (Light); Concentração / dependência de contratos ou investida (Brasal).\n*Metodologia: cada risco recebe uma categoria de uma taxonomia fixa; a pergunta é respondida pela interseção das categorias (código), não por um parecer livre. Para Millet e Brasal, a base são as notas explicativas (não há relatório da administração).*",
+    "resposta": "**5 categorias de risco aparecem em mais de uma empresa**; 3 aparecem nas três: Crédito / inadimplência de clientes, Juros e risco de mercado, Contingências judiciais e tributárias.\n- **Contingências judiciais e tributárias** — 3 empresas (Light, Millet, Brasal):\n    - Light: Riscos de contingências judiciais cíveis, trabalhistas e fiscais expressivos. [Light p.76]\n    - Millet: Risco tributário, cível e trabalhista decorrente de processos judiciais em andamento com expectativa de perda provável. [Millet p.17]\n    - Brasal: Risco de perdas decorrentes de demandas judiciais e administrativas de natureza cível, fiscal e trabalhista. [Brasal p.14]\n- **Crédito / inadimplência de clientes** — 3 empresas (Light, Millet, Brasal):\n    - Light: Elevado índice de perdas não técnicas e inadimplência na área de concessão. [Light p.26]\n    - Millet: Risco de crédito associado à inadimplência de clientes e contrapartes em instrumentos financeiros. [Millet p.40]\n    - Brasal: Risco de crédito associado à concessão de crédito aos clientes e à realização de contas a receber. [Brasal p.49]\n- **Juros e risco de mercado** — 3 empresas (Light, Millet, Brasal):\n    - Light: Aumento significativo das taxas de juros SELIC no período. [Light p.26]\n    - Millet: Risco de taxa de juros oriundo da possibilidade de oscilações nas taxas incidentes sobre passivos e ativos. [Millet p.41]\n    - Brasal: Risco de oscilação das taxas de juros incidentes sobre ativos e passivos financeiros da Companhia. [Brasal p.49]\n- **Liquidez e endividamento** — 2 empresas (Light, Millet):\n    - Light: Elevado nível de endividamento da Companhia e controlada Light SESA. [Light p.26]\n    - Millet: Risco de liquidez referente à eventual dificuldade em cumprir com as obrigações associadas aos passivos financeiros. [Millet p.41]\n- **Regulatório / fiscal / concessão** — 2 empresas (Light, Brasal):\n    - Light: Dificuldade de atuação em Áreas de Severa Restrição Operacional. [Light p.26]\n    - Brasal: Risco regulatório e de alteração de incentivos fiscais, como as condições exigidas pelo programa Emprega/DF. [Brasal p.12]\n- Citados por **apenas uma** empresa: Custo de insumos / matérias-primas (Brasal); Concentração / dependência de contratos ou investida (Brasal).\n*Metodologia: cada risco recebe uma categoria de uma taxonomia fixa; a pergunta é respondida pela interseção das categorias (código), não por um parecer livre. Para Millet e Brasal, a base são as notas explicativas (não há relatório da administração).*",
     "fontes": [
       {
         "documento": "light",
-        "pagina": 2,
-        "trecho": "Ao mesmo tempo, as perdas não técnicas - aquelas relacionadas ao furto de energia - e a inadimplência continuam sua gradual trajetória de crescimento."
+        "pagina": 76,
+        "trecho": "Fiscais 10.142.357 897 8.740.113 840"
+      },
+      {
+        "documento": "millet",
+        "pagina": 17,
+        "trecho": "Provisões são constituídas para todas as contingências referentes a processos judiciais para os quais é"
+      },
+      {
+        "documento": "brasal",
+        "pagina": 14,
+        "trecho": "Nota Explicativa no 19 - Provisão riscos cíveis, fiscais e trabalhistas e mensuração e risco e valores"
+      },
+      {
+        "documento": "light",
+        "pagina": 26,
+        "trecho": "(iii) elevado índice de perdas não técnicas (furto de energia) e inadimplência;"
       },
       {
         "documento": "millet",
@@ -177,48 +192,23 @@
       },
       {
         "documento": "light",
-        "pagina": 101,
-        "trecho": "Um período prolongado de escassez de chuva pode resultar na redução do volume de água dos reservatórios das usinas, acarretar perdas em função do aumento de custos na aquisição de energia"
-      },
-      {
-        "documento": "millet",
-        "pagina": 38,
-        "trecho": "Matéria-prima e materiais de uso e consumo - (327.291) (140.326)"
-      },
-      {
-        "documento": "brasal",
-        "pagina": 49,
-        "trecho": "Os produtos comercializados pela Companhia estão sujeitos a oscilações em razão da compra de matéria-prima."
-      },
-      {
-        "documento": "light",
-        "pagina": 2,
-        "trecho": "E as taxas de juros no Brasil voltaram para um patamar muito alto; a expectativa é que permaneçam nesse patamar."
+        "pagina": 26,
+        "trecho": "(i) aumento das taxas de juros SELIC de 2.00% em janeiro de 2021 para 13.75% em agosto de 2022;"
       },
       {
         "documento": "millet",
         "pagina": 41,
-        "trecho": "Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos"
+        "trecho": "Risco de taxa de juros: é oriundo da possibilidade de a Companhia vir a sofrer perdas ou auferir ganhos)"
       },
       {
         "documento": "brasal",
         "pagina": 49,
-        "trecho": "Decorre da possibilidade de a Companhia sofrer ganhos ou perdas decorrentes de oscilações de taxas de juros incidentes sobre seus ativos e passivos financeiros."
-      },
-      {
-        "documento": "light",
-        "pagina": 76,
-        "trecho": "TOTAL 11.983.344 3.030 10.465.349 44.623"
-      },
-      {
-        "documento": "brasal",
-        "pagina": 20,
-        "trecho": "As demandas judiciais são avaliadas e revisadas periodicamente, com base em pareceres de advogados internos e externos"
+        "trecho": "Decorre da possibilidade de a Companhia sofrer ganhos ou perdas decorrentes de oscilações de taxas de juros"
       },
       {
         "documento": "light",
         "pagina": 26,
-        "trecho": "(i) elevado nível de endividamento; (ii) geração de caixa operacional historicamente insuficiente para sozinha honrar os compromissos;"
+        "trecho": "(i) elevado nível de endividamento;"
       },
       {
         "documento": "millet",
@@ -228,22 +218,22 @@
       {
         "documento": "light",
         "pagina": 26,
-        "trecho": "A concessão da controlada Light SESA, a distribuidora de energia elétrica do Grupo, vencerá em junho de 2026."
+        "trecho": "(iv) dificuldade de atuação em Áreas de Severa Restrição Operacional."
       },
       {
         "documento": "brasal",
         "pagina": 12,
-        "trecho": "No mês de setembro de 2020, migrou do então incentivo Fiscal IDEAS-DF para o Emprega/DF - Programa de Incentivo Fiscal à Industrialização"
+        "trecho": "A Controlada condiciona-se ao cumprimento de obrigações como manutenção de empregos e regularidade fiscal"
       },
       {
-        "documento": "light",
-        "pagina": 3,
-        "trecho": "Os eventos e condições, anteriormente mencionados, individual ou coletivamente, indicam, no julgamento da Administração da Companhia, a existência de incerteza significativa que pode levantar dúvida significativa quanto à capacidade de continuidade operacional da Light e da Light SESA, controlada da Companhia."
+        "documento": "brasal",
+        "pagina": 49,
+        "trecho": "Os produtos comercializados pela Companhia estão sujeitos a oscilações em razão da compra de matéria-prima."
       },
       {
         "documento": "brasal",
         "pagina": 12,
-        "trecho": "A Controlada mantém por prazo determinado contrato com a Coca-Cola Indústrias Ltda., com a Cervejaria Heineken e a Leão Alimentos e Bebidas Ltda."
+        "trecho": "A Controlada mantém por prazo determinado contrato com a Coca-Cola Indústrias Ltda., com a Cervejaria Heineken"
       }
     ]
   },

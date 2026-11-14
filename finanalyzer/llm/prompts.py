@@ -61,7 +61,7 @@ REGRAS
 4. Não invente guidance. Se não houver projeção numérica, `guidance_numerico_encontrado=false` e descreva só as perspectivas qualitativas que existirem.
 5. Para cada risco escolha UMA `categoria` da lista: {categorias}.
 6. `tom` ∈ {{positivo, neutro, negativo}} com justificativa baseada em fatos citados; se não há discurso gerencial, use confiança "baixa".
-7. `motivo_variacao_receita`: procure a explicação da variação da receita líquida entre exercícios (volume, tarifa, consolidação de adquirida, mercado). Só use null se NENHUMA página explicar.
+7. `motivo_variacao_receita`: procure a explicação da variação da receita líquida entre exercícios (volume, tarifa, consolidação de adquirida, mercado). Se a receita variou muito (mais de 30%) ou houve aquisição, consolidação ou venda de controlada no período, o motivo principal deve ser essa mudança de perímetro (cite o trecho que a descreve), antes de explicações genéricas como "crescimento das vendas". Só use null se NENHUMA página explicar.
 8. `riscos`: liste de 4 a 8 riscos DISTINTOS (liquidez/covenants, contingências, concentração, crédito, mercado/juros, regulatório...), cada um com sua própria evidência; não repita o mesmo risco com outras palavras.
 9. `eventos_relevantes`: aquisições, reestruturações, eventos subsequentes, mudanças regulatórias ou contábeis (uma evidência por evento).
 10. Se uma seção realmente não tiver suporte nas páginas, devolva lista vazia e explique em `nota_cobertura`; nunca preencha com texto sem trecho literal."""
